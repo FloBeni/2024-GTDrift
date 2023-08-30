@@ -20,9 +20,8 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
 species_clade = data.frame()
 list_sp = c()
 for (file in c(
-  "/home/fbenitiere/Documents/metazoa_requisit_for_dnds.xls",
-  "/home/fbenitiere/Documents/metazoa_species.xls",
-  "/home/fbenitiere/Documents/metazoa_species2.xls"
+  "data/lht_collect/metazoa.xls",
+  "data/lht_collect/embryophyta.xls"
 )){
   mysheets <- read_excel_allsheets(file)
   list_sp = append(list_sp,names(mysheets))

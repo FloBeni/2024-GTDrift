@@ -1,0 +1,28 @@
+alphabet=Codon(letter=DNA)
+genetic_code=Standard
+
+TREE=concatenatAAS.aln.raxml.support
+SEQ=concatenatCDS.aln
+
+
+### Alignment
+input.data1=alignment(format=Fasta, file=./$(REP)/$(SEQ), sites_to_use = all)
+
+
+### Used tree
+input.tree1=user(file=./$(REP)/$(TREE).dnd_1, format = Newick)
+
+
+### File of the modeling
+params = ./$(REP)/model_ml.params
+
+
+### normalization with the same model in which omega=1
+nullProcessParams = YN98.omega*=1
+
+
+### Type of event counted
+map.type = DnDs
+
+
+output.counts = PerBranch(prefix=./$(REP)/dNdS/counts_, splitNorm=true)

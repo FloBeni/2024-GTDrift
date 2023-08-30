@@ -10,8 +10,8 @@ set_color = brewer.pal(8, 'Paired')
 set_color = append(set_color,c("#fdfd99","#e2cc1a"))
 resolution=3
 
-path_pannel = "/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/article/2024-icasdb/figure/pannels/"
-path_figure = "/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/article/2024-icasdb/figure/figure_main/"
+path_pannel = "figure/pannels/"
+path_figure = "figure/figure_main/"
 
 
 Clade_color = c("Other Invertebrates"="#f5b48a","Lepido Diptera"="red","Other Vertebrates"="#A6CEE3","Other Insecta"="#FF7F00",

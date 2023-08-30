@@ -4,7 +4,7 @@ source("figure/figure_main generator/library_path.R")
 
 listNomSpecies = tapply(str_replace_all(data1$species,"_" ," "),data1$clade_group,list)
 
-tree_name <- "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/RAxML/concatenatAAS.aln.raxml.root"
+tree_name <- "data/dnds_phylo/timetree_all.nwk"
 tree <- read.tree(tree_name)
 
 tree$tip.label <- str_replace_all(tree$tip.label,"_"," ")
@@ -37,7 +37,7 @@ names(label_color) = names(Clade_color)
 label_color["branch"] =  ""
 
 
-pA = ggtree(tree, layout="roundrect",size=1)  
+pA = ggtree(tree, layout="ellipse",size=0.2)  
 pA <- pA %<+% node_metadata  + aes(color=color) + 
   scale_color_manual("Clades",values=Clade_color[unique(edge_clade)]
                     ,label_color ) +    theme(
@@ -55,6 +55,7 @@ pA <- pA %<+% node_metadata  + aes(color=color) +
   ) + guides(color = guide_legend(override.aes = list(lwd = 3)))
 pA
 
+resolution=2
 jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 6000/resolution, height = 6000/resolution,res=700/resolution)
 print(pA)
 dev.off()
