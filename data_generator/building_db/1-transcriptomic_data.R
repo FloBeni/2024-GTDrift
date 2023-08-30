@@ -84,21 +84,7 @@ for (species in list_species ){
       filter(Genes != "")
     IntronCoord$id = paste(IntronCoord$Chr,IntronCoord$Genes,IntronCoord$Splice5,IntronCoord$Splice3,IntronCoord$Strand,sep=";")
     by_intron$Annotation = by_intron$id %in% IntronCoord$id 
-    
-    minor_introns = read.delim(file=paste(pathData,"Analyses/",species,"/by_minor_intron.tab",sep=""), header=T , sep="\t",comment.char = "#")
-    minor_introns$id = paste(minor_introns$seqname,minor_introns$gene_id,minor_introns$splice5,minor_introns$splice3,minor_introns$strand,sep=";")
-    rownames(minor_introns) = minor_introns$id
-    by_intron$mira = minor_introns[by_intron$id,]$mira
-    minor_introns$
-      by_intron$criptic_intron = minor_introns[by_intron$id,]$criptic_intron
-    by_intron$distance_from_major = minor_introns[by_intron$id,]$distance_from_major
-    by_intron$frame_shift = minor_introns[by_intron$id,]$frame_shift
-    major_introns = read.delim(paste(pathData,"/Analyses/",species,"/by_intron_major_overlap.tab",sep=""))
-    major_introns$id = paste(major_introns$seqname,major_introns$gene_id,major_introns$splice5,major_introns$splice3,major_introns$strand,sep=";")
-    rownames(major_introns) = major_introns$id
-    by_intron$have_abundant_sv = major_introns[by_intron$id,]$have_abundant_sv
-    
-    
+ 
     txid = get_uid_(species)[[1]]["uid"] # Get TaxID
     con <- file(paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep=""),"r")
     first_line <- readLines(con,n=10)
