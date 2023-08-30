@@ -14,15 +14,7 @@ list_species = list.dirs(paste(pathData,"Annotations/",sep=""),recursive = F,ful
 # species = "Drosophila_melanogaster"
 for (species in list_species ){
   print(species)
-  
-  txid = get_uid_(species)[[1]]["uid"] # Get TaxID
-  con <- file(paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep=""),"r")
-  first_line <- readLines(con,n=10)
-  close(con)
-  print(first_line[5])
-  genome_assembly = first_line[5]
-  genome_assembly = str_replace(genome_assembly,"#!genome-build-accession NCBI_Assembly:","")
-  
+    
   if (file.exists(paste(pathData,"Analyses/",species,"/by_gene_analysis.tab",sep=""))){
     fpkm_cov = read.delim(paste(pathData,"Analyses/",species,"/by_gene_analysis.tab",sep="") , header=T , sep="\t",comment.char = "#")
     rownames(fpkm_cov) = fpkm_cov$gene_id
@@ -107,6 +99,14 @@ for (species in list_species ){
     by_intron$have_abundant_sv = major_introns[by_intron$id,]$have_abundant_sv
     
     
+    txid = get_uid_(species)[[1]]["uid"] # Get TaxID
+    con <- file(paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep=""),"r")
+    first_line <- readLines(con,n=10)
+    close(con)
+    print(first_line[5])
+    genome_assembly = first_line[5]
+    genome_assembly = str_replace(genome_assembly,"#!genome-build-accession NCBI_Assembly:","")
+                             
     dir.create( paste(pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,sep=""),recursive = T)
     write.table(by_intron,paste(pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/by_intron_analysis.tab",sep=""), row.names=F, col.names=T, sep="\t", quote=F)
     write.table(fpkm_cov,paste(pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/by_gene_analysis.tab",sep=""), row.names=F, col.names=T, sep="\t", quote=F)
