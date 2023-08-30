@@ -1,0 +1,3 @@
+busco_id	status	sequence	score	length	gene_id	duplicated_id	cds_length
+EOG091G0262	Complete	KAG5858119.1	1234.5	652	gene-JKG30_000003	EOG091G0262|gene-JKG30_000003	2211
+EOG091G0IRO	Complete	KAG5858124.1	257.7	178	gene-JKG30_000008	EOG091G0IRO|gene-JKG30_000008	1248
