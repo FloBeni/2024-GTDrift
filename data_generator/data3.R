@@ -28,13 +28,10 @@ for (file in c(
   for (species in names(mysheets)) {
     print(species)
     clade = mysheets[[species]]$Clade[1]
-    study = mysheets[[species]]$Group_study[1]
     if (length(mysheets[[species]]$`Longevity (days)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
         clade ,
-        file,
-        study,
         value = as.numeric(mysheets[[species]]$`Longevity (days)`),
         ref = mysheets[[species]]$`Ref longevity`,
         db = as.character(sapply(mysheets[[species]]$`Ref longevity`,function(x) str_split(x," ")[[1]][1])),
@@ -46,8 +43,6 @@ for (file in c(
       species_clade = rbind(species_clade,data.frame(
         species,
         clade ,
-        file,
-        study,
         value = as.numeric(mysheets[[species]]$`Length (cm)`),
         ref = mysheets[[species]]$`Ref length`,
         db = as.character(sapply(mysheets[[species]]$`Ref length`,function(x) str_split(x," ")[[1]][1])),
@@ -59,8 +54,6 @@ for (file in c(
       species_clade = rbind(species_clade,data.frame(
         species,
         clade ,
-        file,
-        study,
         value = as.numeric(mysheets[[species]]$`Weight (kg)`),
         ref = mysheets[[species]]$`Ref weight`,
         db = as.character(sapply(mysheets[[species]]$`Ref weight`,function(x) str_split(x," ")[[1]][1])),
@@ -73,10 +66,10 @@ for (file in c(
 }
 
 
-data1 = read.table("data/data1.tab",header = T,sep="\t")
-rownames(data1) = data1$species
-species_clade$clade_group = data1[species_clade$species,]$clade_group
-species_clade = species_clade[species_clade$species %in%  data1$species,]
+list_species = read.table( paste("database/list_species.tab",sep=""),header = T,sep="\t")
+rownames(list_species) = list_species$species
+species_clade$clade_group = list_species[species_clade$species,]$clade_group
+species_clade = species_clade[species_clade$species %in%  list_species$species,]
 
 
 write.table(species_clade , "data/data3.tab",quote=F,row.names = F,sep="\t")

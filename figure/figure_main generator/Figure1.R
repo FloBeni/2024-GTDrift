@@ -2,7 +2,7 @@ source("figure/figure_main generator/library_path.R")
 
 # PANNEL A
 
-listNomSpecies = tapply(str_replace_all(data1$species,"_" ," "),data1$clade_group,list)
+listNomSpecies = tapply(str_replace_all(list_species$species,"_" ," "),list_species$clade_group,list)
 
 tree_name <- "data/dnds_phylo/timetree_all.nwk"
 tree <- read.tree(tree_name)
@@ -32,7 +32,7 @@ node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
 
 node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates","branch"))
 
-label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
+label_color = paste(names(Clade_color)," N=",table(list_species$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
 label_color["branch"] =  ""
 
@@ -69,9 +69,7 @@ imgA = load.image(paste(path_pannel,"F1pA.jpg",sep=""))
 
 {
   pdf(file= paste(path_figure,"Figure1.pdf",sep=""), width=3*5/2, height=2.75*3)
-  
   m=matrix(rep(NA,1*1), nrow=1)
-  
   m[,1]=c(rep(1,1))
   
   m

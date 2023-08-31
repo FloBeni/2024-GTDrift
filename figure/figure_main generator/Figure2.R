@@ -30,7 +30,7 @@ pA = ggplot(dt_db[dt_db$lifespan != 0,], aes(x = "", y = lifespan/sum(dt_db$life
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
-  scale_fill_manual("database",values = fill_set) +  # Use the custom color palette
+  scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(lifespan), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("lifespan, Nspecies=",length(unique(data3[data3$categorie == "lifespan",]$species)),sep=""))+
   theme(
@@ -49,7 +49,7 @@ pB = ggplot(dt_db[dt_db$length != 0,], aes(x = "", y = length/sum(dt_db$length),
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
-  scale_fill_manual("database",values = fill_set) +  # Use the custom color palette
+  scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(length), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("length, Nspecies=",length(unique(data3[data3$categorie == "length",]$species)),sep=""))+
   theme(
@@ -68,7 +68,7 @@ pC = ggplot(dt_db[dt_db$weight != 0,], aes(x = "", y = weight/sum(dt_db$weight),
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
-  scale_fill_manual("database",values = fill_set) +  # Use the custom color palette
+  scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   # geom_text(aes(label = paste0(round(weight), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   geom_text(aes(label = ifelse(weight >= 10, paste0(round(weight), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("weight, Nspecies=",length(unique(data3[data3$categorie == "weight",]$species)),sep=""))+
@@ -172,7 +172,6 @@ imgF = load.image(paste(path_pannel,"F2pF.jpg",sep=""))
 
 {
   pdf(file= paste(path_figure,"Figure2.pdf",sep=""), width=6.75*5/2, height=2.75*3)
-  
   m=matrix(rep(NA,15*2), nrow=2)
   
   m[1,]=c(rep(1,5),rep(2,5),rep(3,5))

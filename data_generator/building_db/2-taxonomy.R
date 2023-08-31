@@ -20,4 +20,4 @@ for (species in list_species$species){
   taxonomy = rbind(taxonomy,table_ncbi)
 }
 
-write.table(taxonomy , paste("database/taxonomy.tab",sep=""),quote=F,row.names = F,sep="\t")
+write.table(taxonomy , paste("data/taxonomy.tab",sep=""),quote=F,row.names = F,sep="\t")

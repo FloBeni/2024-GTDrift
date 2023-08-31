@@ -30,7 +30,7 @@ for (file in c(
 }
 rownames(species_clade) = species_clade$species
 
-table_ncbi = read.delim(paste("database/taxonomy.tab",sep=""))
+table_ncbi = read.delim(paste("data/taxonomy.tab",sep=""))
 
 species_clade$clade_group = "Other Invertebrates"
 species_clade[ table_ncbi[table_ncbi$name == "Vertebrata",]$species,]$clade_group = "Other Vertebrates"
@@ -51,6 +51,6 @@ species_clade$dnds_data = species_clade$species %in% dnds_data$species
 
 lht_tab = read.delim("database/lht.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab$species
-
+species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x) list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F))
 
 write.table(species_clade , paste("database/list_species.tab",sep=""),quote=F,row.names = F,sep="\t")
