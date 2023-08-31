@@ -48,8 +48,6 @@ for (file in list.files(paste("database/dNdS",sep=""),recursive = F,full.names =
 }
 
 species_clade$dnds_data = species_clade$species %in% dnds_data$species
-species_clade = species_clade[,-c(1)]
-
 
 lht_tab = read.delim("database/lht.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab$species

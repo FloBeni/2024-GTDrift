@@ -1,4 +1,5 @@
 options(stringsAsFactors = F, scipen = 999)
+options(java.parameters = "-Xmx1024m")
 library(stringr)
 library(xlsx)
 
