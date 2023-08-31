@@ -24,17 +24,17 @@ model_name = "deepset/tinyroberta-squad2"
 nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
 
 vec = []
-myfile = open('/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_ML/list_species.tab', 'r')
+myfile = open('list_species.tab', 'r')
 list_species = []
 with myfile as file:
     for line in file:
         list_species.append(line.strip())
 
-os.makedirs("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_ML/"+model_name, exist_ok=True)
+os.makedirs(""+model_name, exist_ok=True)
 
-# path_length_file = '/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_ML/'+model_name+'/length.tab'
-# path_weight_file = '/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_ML/'+model_name+'/weight.tab'
-# path_lifespan_file = '/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_ML/'+model_name+'/lifespan.tab'
+# path_length_file = ''+model_name+'/length.tab'
+# path_weight_file = ''+model_name+'/weight.tab'
+# path_lifespan_file = ''+model_name+'/lifespan.tab'
 
 length_file = open(path_length_file, 'w')
 weight_file = open(path_weight_file, 'w')
