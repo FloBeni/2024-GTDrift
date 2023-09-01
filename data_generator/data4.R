@@ -71,37 +71,3 @@ for ( i in 1:nb ){ # nombre de RNA-seqs compilés
   }
 }
 
-
-library(RColorBrewer)
-library(ggplot2)
-set_color = brewer.pal(8, 'Paired')
-set_color = append(set_color , c("#fdfd99","#e2cc1a"))
-
-
-p = ggplot(df[df$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
-  # geom_point(aes(fill="N1_sup10"),size=3,pch=21)  + 
-  geom_point(aes(y = major,fill="Major"),size=3,pch=21,alpha=.7)+
-  geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+
-  geom_point(aes(y = unclassified ,fill="Unclassified"),size=3,pch=21,alpha=.7)+
-  theme_bw() + theme(
-    axis.title.x = element_text(color="black", size=25,family="serif"),
-    axis.title.y = element_text(color="black", size=25, family="serif"),
-    axis.text.y =  element_text(color="black", size=20, family="serif"),
-    axis.text.x =  element_text(color="black", size=20, family="serif"),
-    title =  element_text(color="black", size=25, family="serif"),
-    text =  element_text(color="black", size=25, family="serif"),
-    legend.text =  element_text(color="black", size=20, family="serif",vjust = 1.5,margin = margin(t = 10)),
-    plot.caption = element_text(hjust = 0.4,  size=20, family="serif"),
-    plot.caption.position =  "plot"
-  ) + scale_fill_manual("Intron classes",values = set_color[c(4,6,2,8)] ) + ylab("Number of introns") + xlab("Sequencing depth")
-# +
-#   labs(
-#     caption = "(median per-base read coverage BUSCO eukaryota genes)"
-#   )
-ggplotly(p)
-p
-resolution=2
-jpeg("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/article/database/seq_depth.jpg",width = 7000/resolution, height = 4000/resolution,res=700/resolution)
-print(p)
-dev.off()
-

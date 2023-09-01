@@ -66,7 +66,6 @@ dev.off()
 
 imgA = load.image(paste(path_pannel,"F1pA.jpg",sep=""))
 
-
 {
   pdf(file= paste(path_figure,"Figure1.pdf",sep=""), width=3*5/2, height=2.75*3)
   m=matrix(rep(NA,1*1), nrow=1)
@@ -77,7 +76,6 @@ imgA = load.image(paste(path_pannel,"F1pA.jpg",sep=""))
   
   par(mar=c(0, 0, 0, 0))
   plot(imgA, axes=F)
-  mtext("A",at=20,adj=-2, side=2, line=1, font=2, cex=3,las=2)
   
   dev.off()
 }

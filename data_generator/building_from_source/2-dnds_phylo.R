@@ -41,13 +41,23 @@ compute_files <- function(name,busco_set,path,dnds){
   bash_command <- paste("sed -i 's#",old_text,"/##g' ","data/dnds_phylo/",name,"/phylogeny/raxml.log",sep="")
   system(bash_command)
   
+  gene_info_tab = read.delim(paste("data/dnds_phylo/",name,"/phylogeny/gene.info",sep=""))
+  file = list.files(paste("data/dnds_phylo/",name,"/phylogeny/",sep=""),pattern=".aln")
+  if (length(file) == 0){
+    nb_species_tokeepsites = 1
+  }else {
+    nb_species_tokeepsites = as.numeric(str_split_1(str_split_1(file,"_cons")[2],".aln")[1])
+  }
   
   summary = t(data.frame(
     busco_set,
     nb_genes=length(list.files(paste(path,"AAS",sep=""))),
     nb_genes_at_least_85percent_species = length(list.files(paste(path,"PRANK_CDS_at_least_85percent",sep=""))),
     nb_species_initially = nrow(read.delim(paste("data/dnds_phylo/",name,"/species_list.tab",sep=""))),
-    nb_species_analyzed = length(read.tree(paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""))$tip.label)
+    nb_species_analyzed = length(read.tree(paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""))$tip.label),
+    nb_genes_raxml = str_split(gene_info_tab[nrow(gene_info_tab),]," ")[[1]][3],
+    nb_species_tokeepsites ,
+    length_raxml_concat = str_split(gene_info_tab[nrow(gene_info_tab),]," ")[[1]][8]
   ))
   
   write.table(summary , paste("data/dnds_phylo/",name,"/readme",sep=""),quote=F,row.names = T,col.names = F,sep="\t")

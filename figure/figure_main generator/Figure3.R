@@ -27,7 +27,7 @@ dev.off()
 
 
 
-#### Figure 3
+# FIGURE 3
 
 imgA = load.image(paste(path_pannel,"F3pA.jpg",sep=""))
 imgB = load.image(paste(path_require,"ns_na_nu.png",sep=""))

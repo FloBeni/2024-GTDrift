@@ -176,7 +176,6 @@ imgF = load.image(paste(path_pannel,"F2pF.jpg",sep=""))
   
   m[1,]=c(rep(1,5),rep(2,5),rep(3,5))
   m[2,]=c(rep(4,5),rep(5,5),rep(6,5))
-  # m[3,]=c(rep(7,5),rep(8,5),rep(9,5))
   
   m
   layout(m)

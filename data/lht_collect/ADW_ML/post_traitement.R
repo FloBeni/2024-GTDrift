@@ -2,6 +2,9 @@ library(stringr)
 library(dplyr)
 library(tidyr)
 
+list_species = read.delim("database/list_species.tab")
+rownames(list_species) = list_species$species
+
 cut_string_at_positions <- function(input_string) {
   pattern = "[^a-z](kg|g|mg|ft|pounds|meter|meters|centimeters|inches|grams|tons|t|month|year|day|months|years|days|m|cm|mm|µm|μm)[^a-z]"
   gregepr = gregexpr(pattern , input_string,ignore.case=T)
@@ -16,13 +19,13 @@ cut_string_at_positions <- function(input_string) {
 }
 
 
-model_name = "deepset/roberta-large-squad2-hp"
 model_name = "deepset/tinyroberta-squad2"
 
 
-all_dt_lht = data.frame()
+ml_data = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = read.csv(paste("data/lht_collect/ADW_ML/",model_name,"/",lht,".tab",sep="") ,quote = "",header = F,sep="\t")
+  lht_auto_df$clade = list_species[lht_auto_df$V1,]$clade_group
   
   # library(ggplot2)
   # ggplot(lht_auto_df,aes(x=V3)) + geom_histogram() + scale_x_log10()
@@ -40,9 +43,9 @@ for (lht in c("weight","lifespan","length")){print(lht)
     unnest(list) %>%
     filter(list != "")
   
-  lht_auto_df = lht_auto_df[!grepl("%|percent",lht_auto_df$V4),]
+  lht_auto_df = lht_auto_df[!grepl("%|percent",lht_auto_df$list),]
   
-  lht_auto_df$value = sapply(lht_auto_df$V4,function(x) {
+  lht_auto_df$value = sapply(lht_auto_df$list,function(x) {
     numeric_positions <- gregexpr("[0-9]", x)[[1]]
     list_num = c()
     num_value=""
@@ -113,24 +116,28 @@ for (lht in c("weight","lifespan","length")){print(lht)
   
   lht_auto_df = lht_auto_df[order(lht_auto_df$value_used,decreasing = T),]
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$V1)) & lht_auto_df$V1 %in% unique(lht_auto_df[lht_auto_df$V2 == lht,]$V1),] # ne prendre reproduction section que si lifespan section existe
-  # lht_auto_df = lht_auto_df[ lht_auto_df$V2 == lht,] 
-  # lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$V1)) & lht_auto_df$V2 == lht,]
+  lht_auto_df$category = lht
   
-  
-  species_clade_sub = species_clade[grepl("ADW",species_clade$db) & species_clade$categorie == lht ,]
-  
-  
-  dt = merge.data.frame(x=species_clade_sub,y=lht_auto_df,by.x="species",by.y="V1",all = T)
-  all_dt_lht = rbind(all_dt_lht,dt)
+  ml_data = rbind(ml_data,lht_auto_df)
   
 }
+ml_data$id = paste(ml_data$V1,ml_data$category,sep=";")
+ml_data = data.frame(ml_data)
+rownames(ml_data) = ml_data$id
+
+species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
+manual_truth = species_clade[grepl("ADW",species_clade$db),]
+manual_truth$id = paste(manual_truth$species,sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
+rownames(manual_truth) = manual_truth$id
+
+manual_truth$ml_value = ml_data[manual_truth$id,]$value_used
+ml_data$manual_value = manual_truth[ml_data$id,]$max_value
+
+ml_data$true_ornot =  as.character(ml_data$value_used) == as.character(ml_data$manual_value) 
+manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
 
 ## success
-all_dt_lht$true_ornot =  as.character(all_dt_lht$value_used) == as.character(all_dt_lht$value.x) 
-table(all_dt_lht$true_ornot,all_dt_lht$categorie)
-print(sum(all_dt_lht$true_ornot,na.rm = T)/sum(!is.na(all_dt_lht$value.x) ,na.rm = T))
+sum(as.character(ml_data$value_used) == as.character(ml_data$manual_value),na.rm = T ) / nrow(ml_data)
+sum(as.character(manual_truth$max_value) == as.character(manual_truth$ml_value),na.rm = T ) / nrow(manual_truth)
 
-all_dt_lht$true_ornot =  as.character(all_dt_lht$value_used) == as.character(all_dt_lht$value.x) 
-table(all_dt_lht$true_ornot,all_dt_lht$categorie)
-print(sum(all_dt_lht$true_ornot,na.rm = T)/sum(!is.na(all_dt_lht$value_used),na.rm = T))
 

@@ -1,19 +1,17 @@
 source("figure/figure_main generator/library_path.R")
 
+data1 = read.delim("data/data1.tab")
 
-euk_dnds = read.delim("database/dNdS/Eukaryota.tab")
-met_dnds = read.delim("database/dNdS/Metazoa.tab")
+label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
+names(label_color) = names(Clade_color)
 
-dt_graph = merge.data.frame(x=euk_dnds,y=met_dnds,by= "species",all=T,suffixes = c("_euk","_met"))
+sum(table(data1$clade_group))
 
-emb_dnds = read.delim("database/dNdS/Embryophyta.tab")
-dt_graph = merge.data.frame(x=dt_graph,y=emb_dnds,by= "species",all=T,suffixes = c("","_emb"))
+data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
-dt_graph$clade_group = list_species[dt_graph$species,]$clade_group
-dt_graph$clade_group = factor(dt_graph$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+# PANNEL A
 
-
-pA=ggplot(dt_graph , aes(x=dNdS_met,y=dNdS_euk,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
+pA=ggplot(data1 , aes(x=max_lifespan_days,y=max_length_cm,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=25, family="economica"),
@@ -24,17 +22,18 @@ pA=ggplot(dt_graph , aes(x=dNdS_met,y=dNdS_euk,fill=clade_group)) + geom_point(p
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
-  ) + guides(fill = guide_legend(override.aes = list(size=5))) +  ggtitle(paste("Nspecies=",nrow(dt_graph[!is.na(dt_graph$dNdS_euk) & !is.na(dt_graph$dNdS_met),]),sep="")) +
-  ylab("Terminal branches dN/dS Eukaryota set") + xlab("Terminal branches dN/dS Metazoa set")
+  ) + guides(fill = guide_legend(override.aes = list(size=5))) + ggtitle(paste("Nspecies=",nrow(data1[!is.na(data1$max_length_cm) & !is.na(data1$max_lifespan_days),]),sep=""))+
+  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500),labels=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500)) + xlab("Longevity (days log scale)")+
+  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)") 
 pA
 
 jpeg(paste(path_pannel,"F5pA.jpg",sep=""),width = 8500/resolution, height = 4000/resolution,res=700/resolution)
 print(pA)
 dev.off()
 
+# PANNEL B
 
-
-pB=ggplot(dt_graph , aes(x=dNdS,y=dNdS_euk,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
+pB=ggplot(data1 , aes(x=max_weight_kg,y=max_length_cm,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=25, family="economica"),
@@ -45,14 +44,16 @@ pB=ggplot(dt_graph , aes(x=dNdS,y=dNdS_euk,fill=clade_group)) + geom_point(pch=2
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
-  ) + guides(fill = guide_legend(override.aes = list(size=5))) +  ggtitle(paste("Nspecies=",nrow(dt_graph[!is.na(dt_graph$dNdS_euk) & !is.na(dt_graph$dNdS),]),sep=""))+
-  theme(legend.position="none")+
-  ylab("Terminal branches dN/dS Eukaryota set") + xlab("Terminal branches dN/dS Embryophyta set")
+  ) + guides(fill = guide_legend(override.aes = list(size=5))) +  ggtitle(paste("Nspecies=",nrow(data1[!is.na(data1$max_length_cm) & !is.na(data1$max_weight_kg),]),sep=""))+
+  scale_x_log10(breaks=c(0.000001,0.001,0.1,1,10,100,5000,1000000),labels=c(0.000001,0.001,0.1,1,10,100,5000,1000000),limits = c(0.000001,1000000)) + xlab("Body Weight (kg log scale)")+
+  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)") +
+  theme(legend.position="none")
 pB
 
 jpeg(paste(path_pannel,"F5pB.jpg",sep=""),width = 6800/resolution, height = 4000/resolution,res=700/resolution)
 print(pB)
 dev.off()
+
 
 
 
@@ -81,4 +82,3 @@ imgB = load.image(paste(path_pannel,"F5pB.jpg",sep=""))
   
   dev.off()
 }
-
