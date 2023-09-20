@@ -5,6 +5,8 @@ library(tidyr)
 path = "/home/fbenitiere/data/"
 path = "/beegfs/data/fbenitiere/"
 
+data1 = read.delim("database/list_species.tab")
+data1 = data1[data1$expression_data,]
 list_species = list.dirs(paste(path,"Projet-SplicedVariants/Analyses/",sep=""), full.names = F,recursive = F)
 
 # table = table[c(1:10),]

@@ -14,11 +14,13 @@ pathData="/beegfs/data/fbenitiere/Projet-SplicedVariants/"
 
 
 list_species = list.dirs(paste(pathData,"Annotations/",sep=""),recursive = F,full.names = F)
-
+list_done = list.dirs(paste(pathData,"per_species/",sep=""),recursive=F,full.names=F)
+print(list_done)
 species = "Acanthocheilonema_viteae"
-for (species in list_species ){
+for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_done)))] ){
   print(species)
   if (file.exists(paste(pathData,"Analyses/",species,"/by_gene_analysis.tab",sep=""))){
+    Sys.sleep(20)
     txid = get_uid_(species)[[1]]["uid"] # Get TaxID
     con <- file(paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep=""),"r")
     first_line <- readLines(con,n=10)
@@ -96,22 +98,19 @@ for (species in list_species ){
       
       bash_command <- paste("mkdir -p ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/",sra,sep="")
       system(bash_command)
-      
-      bash_command <- paste("cp ",pathData,"Analyses/",species,"/by_gene_db.tab.gz ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/",sra,sep="")
-      system(bash_command)
-      
-      bash_command <- paste("python3 transcriptomic_import.py ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/",sra,"/by_gene_db.tab.gz",sep="")
-      system(bash_command)
-      
-      
-      bash_command <- paste("cp ",pathData,"Analyses/",species,"/by_intron_db.tab.gz ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/",sra,sep="")
+  }    
+         
+      bash_command <- paste("python3 transcriptomic_import.py ",pathData,"Analyses/",species,"/by_gene_db.tab.gz ",paste(sra_list,collapse=',')," ", pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/"," /by_gene_db.tab.gz",sep="")
+print(bash_command)
       system(bash_command)
       
       
-      bash_command <- paste("python3 transcriptomic_import.py ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/",sra,"/by_intron_db.tab.gz",sep="")
+      
+      bash_command <- paste("python3 transcriptomic_import.py ", pathData,"Analyses/",species,"/by_intron_db.tab.gz ", paste(sra_list,collapse=',')," ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/Run/"," /by_intron_db.tab.gz",sep="")
+print(bash_command)
       system(bash_command)
     }
-  }
+  
 }
 
 

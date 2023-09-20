@@ -1,5 +1,5 @@
 
-list_species=$(ls /home/fbenitiere/data/Projet-SplicedVariants/Annotations/)
+list_species = $(ls /home/fbenitiere/data/Projet-SplicedVariants/Annotations/)
 
 for species in $list_species
 do
