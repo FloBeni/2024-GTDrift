@@ -1,0 +1,1508 @@
+species	clade	NCBI.txid	clade_group	expression_data	dnds_data	lht_data	assembly_accession
+Rangifer_tarandus	Mammalia	9870	Mammalia	FALSE	FALSE	TRUE	TRUE
+Equus_quagga	Mammalia	89248	Mammalia	FALSE	FALSE	TRUE	TRUE
+Culex_pipiens	Diptera	7175	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Rhinolophus_ferrumequinum	Mammalia	59479	Mammalia	FALSE	FALSE	TRUE	TRUE
+Budorcas_taxicolor	Mammalia	37181	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pediculus_humanus	Invertebrates	121225	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Falco_peregrinus	Aves	8954	Aves	FALSE	FALSE	TRUE	TRUE
+Schistocerca_serialis	Invertebrates	2023354	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Trichonephila_inaurata	Arachnida	2747482	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pieris_napi	Lepidoptera	78633	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Uria_aalge	Aves	13746	Aves	FALSE	FALSE	TRUE	TRUE
+Megadyptes_antipodes	Aves	37085	Aves	FALSE	FALSE	TRUE	TRUE
+Apteryx_mantelli	Aves	2696672	Aves	FALSE	FALSE	FALSE	TRUE
+Perognathus_longimembris	Mammalia	38669	Mammalia	FALSE	FALSE	TRUE	TRUE
+Cervus_hanglu	Mammalia	2100816	Mammalia	FALSE	FALSE	FALSE	TRUE
+Limosa_lapponica	Aves	161683	Aves	FALSE	FALSE	TRUE	TRUE
+Colobus_angolensis	Mammalia	54131	Mammalia	FALSE	FALSE	TRUE	TRUE
+Marmota_marmota	Mammalia	9993	Mammalia	FALSE	FALSE	TRUE	TRUE
+Buceros_rhinoceros	Aves	175835	Aves	FALSE	FALSE	TRUE	TRUE
+Pteronotus_parnellii	Mammalia	59476	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pararge_aegeria	Lepidoptera	116150	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Balearica_regulorum	Aves	925459	Aves	FALSE	FALSE	TRUE	TRUE
+Ovis_ammon	Mammalia	30527	Mammalia	FALSE	FALSE	TRUE	TRUE
+Schistocerca_gregaria	Invertebrates	7010	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Anthonomus_grandis	Coleoptera	7044	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Chrysemys_picta	Testudines	8479	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Orycteropus_afer	Mammalia	9818	Mammalia	FALSE	FALSE	TRUE	TRUE
+Peromyscus_californicus	Mammalia	42520	Mammalia	FALSE	FALSE	TRUE	TRUE
+Accipiter_gentilis	Aves	8957	Aves	FALSE	FALSE	TRUE	TRUE
+Macaca_thibetana	Mammalia	54602	Mammalia	FALSE	FALSE	TRUE	TRUE
+Gulo_gulo	Mammalia	48420	Mammalia	FALSE	FALSE	TRUE	TRUE
+Nycticebus_coucang	Mammalia	9470	Mammalia	FALSE	FALSE	TRUE	TRUE
+Gasterosteus_aculeatus	Teleostei	69293	Teleostei	FALSE	FALSE	TRUE	TRUE
+Pitangus_sulphuratus	Aves	371930	Aves	FALSE	FALSE	TRUE	TRUE
+Bradysia_hygida	NA	null	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Melozone_crissalis	Aves	40204	Aves	FALSE	FALSE	TRUE	TRUE
+Oppia_nitens	Arachnida	1686743	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Anastrepha_obliqua	Diptera	95512	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Tokudaia_osimensis	Mammalia	73109	Mammalia	FALSE	FALSE	TRUE	TRUE
+Indicator_indicator	Aves	1002788	Aves	FALSE	FALSE	TRUE	TRUE
+Muraenolepis_orangiensis	Teleostei	630683	Teleostei	FALSE	FALSE	TRUE	TRUE
+Zophobas_morio	Coleoptera	2755281	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Hemicordylus_capensis	Lepidosauria	884348	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Podarcis_raffonei	Lepidosauria	65483	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Megalurothrips_usitatus	Thysanoptera	439358	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Pleuronectes_platessa	Teleostei	8262	Teleostei	FALSE	FALSE	TRUE	TRUE
+Harpia_harpyja	Aves	202280	Aves	FALSE	FALSE	TRUE	TRUE
+Sorex_cinereus	Mammalia	36803	Mammalia	FALSE	FALSE	TRUE	TRUE
+Tympanuchus_pallidicinctus	Aves	109042	Aves	FALSE	FALSE	TRUE	TRUE
+Manacus_candei	Aves	415023	Aves	FALSE	FALSE	TRUE	TRUE
+Ceutorhynchus_assimilis	Coleoptera	467358	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Diabrotica_balteata	Coleoptera	107213	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Gopherus_flavomarginatus	Testudines	286002	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Daktulosphaira_vitifoliae	Hemiptera	58002	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Phaedon_cochleariae	Coleoptera	80249	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Aphelenchoides_fujianensis	Nematoda	1052528	Nematoda	FALSE	FALSE	FALSE	TRUE
+Aphelenchoides_bicaudatus	Nematoda	293665	Nematoda	FALSE	FALSE	FALSE	TRUE
+Hippocampus_zosterae	Teleostei	109293	Teleostei	FALSE	FALSE	TRUE	TRUE
+Bombus_huntii	Hymenoptera	85661	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Uloborus_diversus	Arachnida	327109	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Bombus_affinis	Hymenoptera	309941	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Syngnathus_scovelli	Teleostei	161590	Teleostei	FALSE	FALSE	TRUE	TRUE
+Euphydryas_editha	Lepidoptera	104508	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Suncus_etruscus	Mammalia	109475	Mammalia	FALSE	FALSE	TRUE	TRUE
+Psylliodes_chrysocephala	Coleoptera	2598218	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Neodiprion_virginianus	Hymenoptera	2961670	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Prochilodus_magdalenae	Teleostei	148989	Teleostei	FALSE	FALSE	TRUE	TRUE
+Brienomyrus_brachyistius	Teleostei	42636	Teleostei	FALSE	FALSE	TRUE	TRUE
+Anopheles_marshallii	Diptera	1521116	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_moucheti	Diptera	186751	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Sabethes_cyaneus	Diptera	53552	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_maculipalpis	Diptera	1496333	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Holotrichia_oblita	Coleoptera	644536	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Polistes_exclamans	Hymenoptera	27506	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Mischocyttarus_mexicanus	Hymenoptera	91405	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Schistocerca_cancellata	Invertebrates	274614	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Schistocerca_nitens	Invertebrates	7011	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Falco_biarmicus	Aves	345155	Aves	FALSE	FALSE	TRUE	TRUE
+Adelges_cooleyi	Hemiptera	133065	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Paramacrobiotus_metropolitanus	Tardigrada	2943436	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pseudoliparis_swirei	Teleostei	2059687	Teleostei	FALSE	FALSE	TRUE	TRUE
+Seison_nebaliae	Invertebrates	104778	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Leguminivora_glycinivorella	Lepidoptera	1035111	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Pangasius_djambal	Teleostei	1691987	Teleostei	FALSE	FALSE	TRUE	TRUE
+Albula_goreensis	Teleostei	1534307	Teleostei	FALSE	FALSE	TRUE	TRUE
+Bactrocera_neohumeralis	Diptera	98809	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Halotydeus_destructor	Arachnida	2874060	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pectinophora_gossypiella	Lepidoptera	13191	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Myiozetetes_cayanensis	Aves	478635	Aves	FALSE	FALSE	FALSE	TRUE
+Patella_vulgata	Mollusca	6465	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Hypsibius_exemplaris	Tardigrada	2072580	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Caenorhabditis_auriculariae	Nematoda	2777116	Nematoda	FALSE	FALSE	FALSE	TRUE
+Belonocnema_kinseyi	Hymenoptera	2817044	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Lampris_incognitus	Teleostei	2546036	Teleostei	FALSE	FALSE	FALSE	TRUE
+Bulinus_truncatus	Mollusca	55810	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Blomia_tropicalis	Arachnida	40697	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Caerostris_extrusa	Arachnida	172846	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Caerostris_darwini	Arachnida	1538125	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Brassicogethes_aeneus	Coleoptera	1431903	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Girardinichthys_multiradiatus	Teleostei	208333	Teleostei	FALSE	FALSE	TRUE	TRUE
+Schistocerca_piceifrons	Invertebrates	274613	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Schistocerca_americana	Invertebrates	7009	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Brenthis_ino	Lepidoptera	405034	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_setifemur	Diptera	2848635	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Zaprionus_bogoriensis	Diptera	309927	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_pseudotakahashii	Diptera	193234	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_pandora	Diptera	1867034	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_ironensis	Diptera	2848634	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_rubida	Diptera	30044	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Diprion_similis	Hymenoptera	362088	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Neodiprion_fabricii	Hymenoptera	2872261	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Sphaerodactylus_townsendi	Lepidosauria	933632	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Seriola_aureovittata	Teleostei	2871759	Teleostei	FALSE	FALSE	TRUE	TRUE
+Eciton_burchellii	Hymenoptera	213866	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Heterotrigona_itama	Hymenoptera	395501	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Cercopithifilaria_johnstoni	Nematoda	2874296	Nematoda	FALSE	FALSE	FALSE	TRUE
+Phrynosoma_platyrhinos	Lepidosauria	52577	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Cotesia_glomerata	Hymenoptera	32391	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Poeciliopsis_prolifica	Teleostei	188132	Teleostei	FALSE	FALSE	TRUE	TRUE
+Eleutherodactylus_coqui	Amphibia	57060	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Muscidifurax_raptorellus	Hymenoptera	51938	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Fragariocoptes_setiger	Arachnida	1670756	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Phthorimaea_operculella	Lepidoptera	192464	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Elysia_marginata	Mollusca	1093978	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Engystomops_pustulosus	Amphibia	76066	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Venturia_canescens	Hymenoptera	32260	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Oedothorax_gibbosus	Arachnida	931172	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Cotesia_congregata	Hymenoptera	51543	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Cotesia_typhae	Hymenoptera	2053667	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Centrocercus_urophasianus	Aves	9002	Aves	FALSE	FALSE	TRUE	TRUE
+Phyllostomus_hastatus	Mammalia	9423	Mammalia	FALSE	FALSE	TRUE	TRUE
+Sceloporus_undulatus	Lepidosauria	8520	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Vespa_crabro	Hymenoptera	7445	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Parelaphostrongylus_tenuis	Nematoda	148309	Nematoda	FALSE	FALSE	FALSE	TRUE
+Ampulex_compressa	Hymenoptera	860918	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Notodromas_monacha	Crustacea	399045	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Darwinula_stevensoni	Crustacea	69355	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Gonioctena_quinquepunctata	Coleoptera	63699	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Iphiclides_podalirius	Lepidoptera	110791	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Chrysoperla_carnea	Invertebrates	189513	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Toxotes_jaculatrix	Teleostei	941984	Teleostei	FALSE	FALSE	TRUE	TRUE
+Corvus_kubaryi	Aves	68294	Aves	FALSE	FALSE	TRUE	TRUE
+Acromyrmex_heyeri	Hymenoptera	230685	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Acromyrmex_charruanus	Hymenoptera	2715315	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Pseudoatta_argentina	Hymenoptera	621737	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Acromyrmex_insinuator	Hymenoptera	230686	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Daphnia_sinensis	Crustacea	1820382	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pieris_macdunnoughi	Lepidoptera	345717	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Rotaria_socialis	Invertebrates	392032	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Didymodactylos_carnosus	Invertebrates	1234261	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Adineta_steineri	Invertebrates	433720	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Rotaria_sordida	Invertebrates	392033	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Daphnia_pulicaria	Crustacea	35523	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Gryllus_bimaculatus	Invertebrates	6999	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Polypterus_senegalus	Vertebrates	55291	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Bufo_bufo	Amphibia	8384	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Aricia_agestis	Lepidoptera	91739	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Pieris_brassicae	Lepidoptera	7116	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_teissieri	Diptera	7243	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Chionoecetes_opilio	Crustacea	41210	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Gracilinanus_agilis	Mammalia	191870	Mammalia	FALSE	FALSE	TRUE	TRUE
+Antechinus_flavipes	Mammalia	38775	Mammalia	FALSE	FALSE	TRUE	TRUE
+Tribolium_madens	Coleoptera	41895	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Elachura_formosa	Aves	1463973	Aves	FALSE	FALSE	FALSE	TRUE
+Cercotrichas_coryphoeus	Aves	614051	Aves	FALSE	FALSE	FALSE	TRUE
+Certhia_familiaris	Aves	73333	Aves	FALSE	FALSE	TRUE	TRUE
+Asarcornis_scutulata	Aves	75869	Aves	FALSE	FALSE	FALSE	TRUE
+Pheucticus_melanocephalus	Aves	371919	Aves	FALSE	FALSE	TRUE	TRUE
+Nothocercus_nigrocapillus	Aves	1977171	Aves	FALSE	FALSE	FALSE	TRUE
+Nothoprocta_pentlandii	Aves	2585814	Aves	FALSE	FALSE	FALSE	TRUE
+Chionis_minor	Aves	227182	Aves	FALSE	FALSE	FALSE	TRUE
+Climacteris_rufus	Aves	47695	Aves	FALSE	FALSE	FALSE	TRUE
+Aegotheles_bennettii	Aves	48278	Aves	FALSE	FALSE	FALSE	TRUE
+Aleadryas_rufinucha	Aves	461220	Aves	FALSE	FALSE	TRUE	TRUE
+Orthonyx_spaldingii	Aves	38397	Aves	FALSE	FALSE	TRUE	TRUE
+Eulacestoma_nigropectus	Aves	461239	Aves	FALSE	FALSE	TRUE	TRUE
+Calcarius_ornatus	Aves	198940	Aves	FALSE	FALSE	TRUE	TRUE
+Thryothorus_ludovicianus	Aves	74200	Aves	FALSE	FALSE	TRUE	TRUE
+Irena_cyanogastra	Aves	175120	Aves	FALSE	FALSE	FALSE	TRUE
+Edolisoma_coerulescens	Aves	2585810	Aves	FALSE	FALSE	FALSE	TRUE
+Sterrhoptilus_dennistouni	Aves	2585820	Aves	FALSE	FALSE	FALSE	TRUE
+Rhabdornis_inornatus	Aves	237438	Aves	FALSE	FALSE	TRUE	TRUE
+Pachycephala_philippinensis	Aves	449367	Aves	FALSE	FALSE	TRUE	TRUE
+Oceanodroma_tethys	Aves	79633	Aves	FALSE	FALSE	TRUE	TRUE
+Myiagra_hebetior	Aves	381031	Aves	FALSE	FALSE	TRUE	TRUE
+Dicaeum_eximium	Aves	667154	Aves	FALSE	FALSE	TRUE	TRUE
+Baryphthengus_martii	Aves	176943	Aves	FALSE	FALSE	TRUE	TRUE
+Bucco_capensis	Aves	135168	Aves	FALSE	FALSE	TRUE	TRUE
+Stercorarius_parasiticus	Aves	54059	Aves	FALSE	FALSE	TRUE	TRUE
+Loxia_leucoptera	Aves	96539	Aves	FALSE	FALSE	TRUE	TRUE
+Psilopogon_haemacephalus	Aves	2585815	Aves	FALSE	FALSE	FALSE	TRUE
+Corythaeola_cristata	Aves	103954	Aves	FALSE	FALSE	TRUE	TRUE
+Ciccaba_nigrolineata	Aves	1118524	Aves	FALSE	FALSE	TRUE	TRUE
+Sclerurus_mexicanus	Aves	265632	Aves	FALSE	FALSE	TRUE	TRUE
+Grallaria_varia	Aves	117165	Aves	FALSE	FALSE	TRUE	TRUE
+Sakesphorus_luctuosus	Aves	419690	Aves	FALSE	FALSE	TRUE	TRUE
+Eubucco_bourcierii	Aves	91767	Aves	FALSE	FALSE	TRUE	TRUE
+Campylorhamphus_procurvoides	Aves	190295	Aves	FALSE	FALSE	TRUE	TRUE
+Penelope_pileata	Aves	1118817	Aves	FALSE	FALSE	TRUE	TRUE
+Nyctibius_bracteatus	Aves	48426	Aves	FALSE	FALSE	TRUE	TRUE
+Rhodinocichla_rosea	Aves	58203	Aves	FALSE	FALSE	TRUE	TRUE
+Ptilorrhoa_leucosticta	Aves	449384	Aves	FALSE	FALSE	TRUE	TRUE
+Chaetorhynchus_papuensis	Aves	254446	Aves	FALSE	FALSE	TRUE	TRUE
+Smithornis_capensis	Aves	363769	Aves	FALSE	FALSE	TRUE	TRUE
+Ardeotis_kori	Aves	89386	Aves	FALSE	FALSE	TRUE	TRUE
+Ceyx_cyanopectus	Aves	390723	Aves	FALSE	FALSE	FALSE	TRUE
+Glareola_pratincola	Aves	43316	Aves	FALSE	FALSE	FALSE	TRUE
+Brachypteracias_leptosomus	Aves	135165	Aves	FALSE	FALSE	TRUE	TRUE
+Urocolius_indicus	Aves	458196	Aves	FALSE	FALSE	FALSE	TRUE
+Pteruthius_melanotis	Aves	357074	Aves	FALSE	FALSE	TRUE	TRUE
+Xiphorhynchus_elegans	Aves	269412	Aves	FALSE	FALSE	TRUE	TRUE
+Cettia_cetti	Aves	68486	Aves	FALSE	FALSE	TRUE	TRUE
+Calonectris_borealis	Aves	1323832	Aves	FALSE	FALSE	FALSE	TRUE
+Passerina_amoena	Aves	142471	Aves	FALSE	FALSE	TRUE	TRUE
+Cepphus_grylle	Aves	28697	Aves	FALSE	FALSE	TRUE	TRUE
+Horornis_vulcanius	Aves	2585811	Aves	FALSE	FALSE	FALSE	TRUE
+Atrichornis_clamosus	Aves	449594	Aves	FALSE	FALSE	TRUE	TRUE
+Drymodes_brunneopygia	Aves	626378	Aves	FALSE	FALSE	TRUE	TRUE
+Turnix_velox	Aves	2529409	Aves	FALSE	FALSE	TRUE	TRUE
+Thalassarche_chlororhynchos	Aves	54017	Aves	FALSE	FALSE	TRUE	TRUE
+Zapornia_atra	Aves	2585822	Aves	FALSE	FALSE	FALSE	TRUE
+Pluvianellus_socialis	Aves	227228	Aves	FALSE	FALSE	TRUE	TRUE
+Centropus_bengalensis	Aves	1463675	Aves	FALSE	FALSE	FALSE	TRUE
+Chaetops_frenatus	Aves	221966	Aves	FALSE	FALSE	TRUE	TRUE
+Pelecanoides_urinatrix	Aves	37079	Aves	FALSE	FALSE	TRUE	TRUE
+Pomatostomus_ruficeps	Aves	9176	Aves	FALSE	FALSE	TRUE	TRUE
+Oxylabes_madagascariensis	Aves	98144	Aves	FALSE	FALSE	TRUE	TRUE
+Neodrepanis_coruscans	Aves	254563	Aves	FALSE	FALSE	TRUE	TRUE
+Mystacornis_crossleyi	Aves	98133	Aves	FALSE	FALSE	TRUE	TRUE
+Syrrhaptes_paradoxus	Aves	302527	Aves	FALSE	FALSE	TRUE	TRUE
+Hypocryptadius_cinnamomeus	Aves	589841	Aves	FALSE	FALSE	TRUE	TRUE
+Chloropsis_cyanopogon	Aves	1218682	Aves	FALSE	FALSE	TRUE	TRUE
+Erpornis_zantholeuca	Aves	1112836	Aves	FALSE	FALSE	FALSE	TRUE
+Tricholaema_leucomelas	Aves	240729	Aves	FALSE	FALSE	FALSE	TRUE
+Pycnonotus_jocosus	Aves	182897	Aves	FALSE	FALSE	TRUE	TRUE
+Scytalopus_superciliaris	Aves	312124	Aves	FALSE	FALSE	TRUE	TRUE
+Vidua_macroura	Aves	187451	Aves	FALSE	FALSE	FALSE	TRUE
+Thinocorus_orbignyianus	Aves	161742	Aves	FALSE	FALSE	TRUE	TRUE
+Eurystomus_gularis	Aves	325343	Aves	FALSE	FALSE	TRUE	TRUE
+Larus_smithsonianus	Aves	243888	Aves	FALSE	FALSE	FALSE	TRUE
+Rhadina_sibilatrix	Aves	2585818	Aves	FALSE	FALSE	FALSE	TRUE
+Cisticola_juncidis	Aves	52622	Aves	FALSE	FALSE	FALSE	TRUE
+Locustella_ochotensis	Aves	187437	Aves	FALSE	FALSE	FALSE	TRUE
+Hippolais_icterina	Aves	68497	Aves	FALSE	FALSE	TRUE	TRUE
+Nycticryphes_semicollaris	Aves	227226	Aves	FALSE	FALSE	FALSE	TRUE
+Rynchops_niger	Aves	227184	Aves	FALSE	FALSE	TRUE	TRUE
+Ploceus_nigricollis	Aves	441696	Aves	FALSE	FALSE	TRUE	TRUE
+Cinclus_mexicanus	Aves	161649	Aves	FALSE	FALSE	TRUE	TRUE
+Illadopsis_cleaveri	Aves	201329	Aves	FALSE	FALSE	TRUE	TRUE
+Serilophus_lunatus	Aves	239386	Aves	FALSE	FALSE	TRUE	TRUE
+Oxyruncus_cristatus	Aves	114331	Aves	FALSE	FALSE	TRUE	TRUE
+Leptocoma_aspasia	Aves	2585812	Aves	FALSE	FALSE	FALSE	TRUE
+Zosterops_hypoxanthus	Aves	2485327	Aves	FALSE	FALSE	TRUE	TRUE
+Tyrannus_savana	Aves	137541	Aves	FALSE	FALSE	TRUE	TRUE
+Mesembrinibis_cayennensis	Aves	1118748	Aves	FALSE	FALSE	TRUE	TRUE
+Formicarius_rufipectus	Aves	1118560	Aves	FALSE	FALSE	TRUE	TRUE
+Chordeiles_acutipennis	Aves	118183	Aves	FALSE	FALSE	TRUE	TRUE
+Amazona_guildingii	Aves	175529	Aves	FALSE	FALSE	TRUE	TRUE
+Podilymbus_podiceps	Aves	9252	Aves	FALSE	FALSE	TRUE	TRUE
+Phaetusa_simplex	Aves	297813	Aves	FALSE	FALSE	TRUE	TRUE
+Corythaixoides_concolor	Aves	103956	Aves	FALSE	FALSE	TRUE	TRUE
+Anthoscopus_minutus	Aves	156561	Aves	FALSE	FALSE	TRUE	TRUE
+Nyctiprogne_leucopyga	Aves	382315	Aves	FALSE	FALSE	TRUE	TRUE
+Alopecoenas_beccarii	Aves	262131	Aves	FALSE	FALSE	FALSE	TRUE
+Fregetta_grallaria	Aves	79628	Aves	FALSE	FALSE	TRUE	TRUE
+Trogon_melanurus	Aves	56311	Aves	FALSE	FALSE	TRUE	TRUE
+Rhipidura_dahli	Aves	667186	Aves	FALSE	FALSE	TRUE	TRUE
+Dicrurus_megarhynchus	Aves	450177	Aves	FALSE	FALSE	TRUE	TRUE
+Odontophorus_gujanensis	Aves	886794	Aves	FALSE	FALSE	TRUE	TRUE
+Chloroceryle_aenea	Aves	176938	Aves	FALSE	FALSE	TRUE	TRUE
+Ramphastos_sulfuratus	Aves	322582	Aves	FALSE	FALSE	TRUE	TRUE
+Quiscalus_mexicanus	Aves	64278	Aves	FALSE	FALSE	TRUE	TRUE
+Galbula_dea	Aves	1109041	Aves	FALSE	FALSE	TRUE	TRUE
+Catharus_fuscescens	Aves	159581	Aves	FALSE	FALSE	TRUE	TRUE
+Callaeas_wilsoni	Aves	1347786	Aves	FALSE	FALSE	FALSE	TRUE
+Ceuthmochares_aereus	Aves	1961834	Aves	FALSE	FALSE	TRUE	TRUE
+Prunella_himalayana	Aves	670356	Aves	FALSE	FALSE	TRUE	TRUE
+Mohoua_ochrocephala	Aves	874463	Aves	FALSE	FALSE	TRUE	TRUE
+Ibidorhyncha_struthersii	Aves	425643	Aves	FALSE	FALSE	TRUE	TRUE
+Nesospiza_acunhae	Aves	381881	Aves	FALSE	FALSE	TRUE	TRUE
+Falcunculus_frontatus	Aves	254539	Aves	FALSE	FALSE	TRUE	TRUE
+Oreocharis_arfaki	Aves	979223	Aves	FALSE	FALSE	TRUE	TRUE
+Malurus_elegans	Aves	720584	Aves	FALSE	FALSE	TRUE	TRUE
+Machaerirhynchus_nigripectus	Aves	1160894	Aves	FALSE	FALSE	TRUE	TRUE
+Grantiella_picta	Aves	266360	Aves	FALSE	FALSE	TRUE	TRUE
+Dasyornis_broadbenti	Aves	243059	Aves	FALSE	FALSE	TRUE	TRUE
+Origma_solitaria	Aves	720586	Aves	FALSE	FALSE	TRUE	TRUE
+Probosciger_aterrimus	Aves	141839	Aves	FALSE	FALSE	TRUE	TRUE
+Chroicocephalus_maculipennis	Aves	287016	Aves	FALSE	FALSE	FALSE	TRUE
+Columbina_picui	Aves	115618	Aves	FALSE	FALSE	TRUE	TRUE
+Ptilonorhynchus_violaceus	Aves	28724	Aves	FALSE	FALSE	TRUE	TRUE
+Urocynchramus_pylzowi	Aves	571890	Aves	FALSE	FALSE	FALSE	TRUE
+Pterocles_burchelli	Aves	2585816	Aves	FALSE	FALSE	TRUE	TRUE
+Neopipo_cinnamomea	Aves	456388	Aves	FALSE	FALSE	TRUE	TRUE
+Furnarius_figulus	Aves	463165	Aves	FALSE	FALSE	TRUE	TRUE
+Erythrocercus_mccallii	Aves	107208	Aves	FALSE	FALSE	TRUE	TRUE
+Toxostoma_redivivum	Aves	99882	Aves	FALSE	FALSE	TRUE	TRUE
+Polioptila_caerulea	Aves	66707	Aves	FALSE	FALSE	TRUE	TRUE
+Burhinus_bistriatus	Aves	240201	Aves	FALSE	FALSE	TRUE	TRUE
+Lanius_ludovicianus	Aves	28713	Aves	FALSE	FALSE	TRUE	TRUE
+Pachyramphus_minor	Aves	369605	Aves	FALSE	FALSE	TRUE	TRUE
+Regulus_satrapa	Aves	13245	Aves	FALSE	FALSE	TRUE	TRUE
+Vireo_altiloquus	Aves	34956	Aves	FALSE	FALSE	TRUE	TRUE
+Cephalopterus_ornatus	Aves	114276	Aves	FALSE	FALSE	TRUE	TRUE
+Glaucidium_brasilianum	Aves	78217	Aves	FALSE	FALSE	TRUE	TRUE
+Circaetus_pectoralis	Aves	321084	Aves	FALSE	FALSE	TRUE	TRUE
+Sylvietta_virens	Aves	208069	Aves	FALSE	FALSE	TRUE	TRUE
+Herpetotheres_cachinnans	Aves	56343	Aves	FALSE	FALSE	TRUE	TRUE
+Piprites_chloris	Aves	114369	Aves	FALSE	FALSE	TRUE	TRUE
+Spizaetus_tyrannus	Aves	252798	Aves	FALSE	FALSE	TRUE	TRUE
+Nothocercus_julius	Aves	2585813	Aves	FALSE	FALSE	FALSE	TRUE
+Copsychus_sechellarum	Aves	797021	Aves	FALSE	FALSE	TRUE	TRUE
+Brachypodius_atriceps	Aves	182895	Aves	FALSE	FALSE	FALSE	TRUE
+Aphelocoma_coerulescens	Aves	39617	Aves	FALSE	FALSE	TRUE	TRUE
+Nothoprocta_ornata	Aves	83376	Aves	FALSE	FALSE	FALSE	TRUE
+Onychorhynchus_coronatus	Aves	360224	Aves	FALSE	FALSE	TRUE	TRUE
+Centropus_unirufus	Aves	1118519	Aves	FALSE	FALSE	TRUE	TRUE
+Halcyon_senegalensis	Aves	342381	Aves	FALSE	FALSE	FALSE	TRUE
+Mionectes_macconnelli	Aves	254557	Aves	FALSE	FALSE	TRUE	TRUE
+Crotophaga_sulcirostris	Aves	33598	Aves	FALSE	FALSE	FALSE	TRUE
+Tachuris_rubrigastra	Aves	495162	Aves	FALSE	FALSE	TRUE	TRUE
+Lophotis_ruficrista	Aves	172689	Aves	FALSE	FALSE	FALSE	TRUE
+Chunga_burmeisteri	Aves	1352770	Aves	FALSE	FALSE	TRUE	TRUE
+Cochlearius_cochlearius	Aves	110676	Aves	FALSE	FALSE	TRUE	TRUE
+Chloropsis_hardwickii	Aves	667144	Aves	FALSE	FALSE	TRUE	TRUE
+Pitta_sordida	Aves	9163	Aves	FALSE	FALSE	TRUE	TRUE
+Calyptomena_viridis	Aves	135972	Aves	FALSE	FALSE	FALSE	TRUE
+Dryoscopus_gambensis	Aves	85069	Aves	FALSE	FALSE	TRUE	TRUE
+Sula_dactylatra	Aves	56068	Aves	FALSE	FALSE	TRUE	TRUE
+Piaya_cayana	Aves	33601	Aves	FALSE	FALSE	TRUE	TRUE
+Crypturellus_soui	Aves	458187	Aves	FALSE	FALSE	TRUE	TRUE
+Crypturellus_undulatus	Aves	48396	Aves	FALSE	FALSE	TRUE	TRUE
+Danio_aesculapii	Teleostei	1142201	Teleostei	FALSE	FALSE	TRUE	TRUE
+Etheostoma_cragini	Teleostei	417921	Teleostei	FALSE	FALSE	TRUE	TRUE
+Alaudala_cheleensis	Aves	670337	Aves	FALSE	FALSE	FALSE	TRUE
+Pogonophryne_albipinna	Teleostei	1090488	Teleostei	FALSE	FALSE	TRUE	TRUE
+Eudyptes_sclateri	Aves	92688	Aves	FALSE	FALSE	TRUE	TRUE
+Eudyptes_moseleyi	Aves	2495534	Aves	FALSE	FALSE	FALSE	TRUE
+Eudyptula_albosignata	Aves	345258	Aves	FALSE	FALSE	FALSE	TRUE
+Eudyptes_schlegeli	Aves	57240	Aves	FALSE	FALSE	TRUE	TRUE
+Eudyptula_novaehollandiae	Aves	2052820	Aves	FALSE	FALSE	FALSE	TRUE
+Lontra_canadensis	Mammalia	76717	Mammalia	FALSE	FALSE	TRUE	TRUE
+Caenorhabditis_bovis	Nematoda	2654633	Nematoda	FALSE	FALSE	FALSE	TRUE
+Corvus_moneduloides	Aves	1196302	Aves	FALSE	FALSE	TRUE	TRUE
+Spea_bombifrons	Amphibia	233779	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Eolophus_roseicapilla	Aves	176039	Aves	FALSE	FALSE	TRUE	TRUE
+Atlantisia_rogersi	Aves	2478892	Aves	FALSE	FALSE	TRUE	TRUE
+Dunckerocampus_dactyliophorus	Teleostei	161453	Teleostei	FALSE	FALSE	TRUE	TRUE
+Indicator_maculatus	Aves	545262	Aves	FALSE	FALSE	TRUE	TRUE
+Syngnathus_acus	Teleostei	161584	Teleostei	FALSE	FALSE	TRUE	TRUE
+Neopelma_chrysocephalum	Aves	114329	Aves	FALSE	FALSE	TRUE	TRUE
+Corapipo_altera	Aves	415028	Aves	FALSE	FALSE	TRUE	TRUE
+Dinothrombium_tinctorium	Arachnida	1965070	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Athene_cunicularia	Aves	194338	Aves	FALSE	FALSE	TRUE	TRUE
+Empidonax_traillii	Aves	164674	Aves	FALSE	FALSE	TRUE	TRUE
+Ameiurus_melas	Teleostei	219545	Teleostei	FALSE	FALSE	TRUE	TRUE
+Coryphaenoides_rupestris	Teleostei	163118	Teleostei	FALSE	FALSE	TRUE	TRUE
+Eupeodes_corollae	Diptera	290404	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Spheniscus_magellanicus	Aves	37081	Aves	FALSE	FALSE	TRUE	TRUE
+Prunella_fulvescens	Aves	670355	Aves	FALSE	FALSE	TRUE	TRUE
+Acanthoscelides_obtectus	Coleoptera	200917	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Dryococelus_australis	Invertebrates	614101	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Psammomys_obesus	Mammalia	48139	Mammalia	FALSE	FALSE	TRUE	TRUE
+Macrosteles_quadrilineatus	Hemiptera	74068	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Euroglyphus_maynei	Arachnida	6958	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Emberiza_fucata	Aves	337179	Aves	FALSE	FALSE	FALSE	TRUE
+Eublepharis_macularius	Lepidosauria	481883	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Caloenas_nicobarica	Aves	187106	Aves	FALSE	FALSE	TRUE	TRUE
+Rhagoletis_zephyria	Diptera	28612	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Falco_naumanni	Aves	148594	Aves	FALSE	FALSE	TRUE	TRUE
+Pomatorhinus_ruficollis	Aves	932028	Aves	FALSE	FALSE	TRUE	TRUE
+Callipepla_squamata	Aves	9009	Aves	FALSE	FALSE	FALSE	TRUE
+Notiomystis_cincta	Aves	366454	Aves	FALSE	FALSE	FALSE	TRUE
+Enteromyxum_leei	Cnidaria	188704	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Puma_yagouaroundi	Mammalia	1608482	Mammalia	FALSE	FALSE	TRUE	TRUE
+Cyprinodon_tularosa	Teleostei	77115	Teleostei	FALSE	FALSE	TRUE	TRUE
+Plodia_interpunctella	Lepidoptera	58824	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Clarias_gariepinus	Teleostei	13013	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oreotrochilus_melanogaster	Aves	689266	Aves	FALSE	FALSE	TRUE	TRUE
+Oopsacas_minuta	Invertebrates	111878	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Asbolus_verrucosus	Coleoptera	1661398	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Cygnus_olor	Aves	8869	Aves	FALSE	FALSE	TRUE	TRUE
+Corvus_hawaiiensis	Aves	134902	Aves	FALSE	FALSE	TRUE	TRUE
+Mandrillus_leucophaeus	Mammalia	9568	Mammalia	FALSE	FALSE	TRUE	TRUE
+Schistosoma_mattheei	Platyhelminthes	31246	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Schistosoma_curassoni	Platyhelminthes	6186	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Soboliphyme_baturini	Nematoda	241478	Nematoda	FALSE	FALSE	TRUE	TRUE
+Haemonchus_placei	Nematoda	6290	Nematoda	FALSE	FALSE	FALSE	TRUE
+Rodentolepis_nana	Platyhelminthes	102285	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Gongylonema_pulchrum	Nematoda	637853	Nematoda	FALSE	FALSE	TRUE	TRUE
+Brugia_timori	Nematoda	42155	Nematoda	FALSE	FALSE	FALSE	TRUE
+Echinostoma_caproni	Platyhelminthes	27848	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Protopolystoma_xenopodis	Platyhelminthes	117903	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Nanorana_parkeri	Amphibia	125878	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Phrynocephalus_forsythii	Lepidosauria	171643	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Mustela_erminea	Mammalia	36723	Mammalia	FALSE	FALSE	TRUE	TRUE
+Chlamydotis_macqueenii	Aves	187382	Aves	FALSE	FALSE	FALSE	TRUE
+Dicrocoelium_dendriticum	Platyhelminthes	57078	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Parnassius_apollo	Lepidoptera	110799	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Danaus_chrysippus	Lepidoptera	151541	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Argiope_bruennichi	Arachnida	94029	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Synchiropus_splendidus	Teleostei	270530	Teleostei	FALSE	FALSE	TRUE	TRUE
+Chaetura_pelagica	Aves	8897	Aves	FALSE	FALSE	TRUE	TRUE
+Nestor_notabilis	Aves	176057	Aves	FALSE	FALSE	TRUE	TRUE
+Haliaeetus_leucocephalus	Aves	52644	Aves	FALSE	FALSE	TRUE	TRUE
+Tinamus_guttatus	Aves	94827	Aves	FALSE	FALSE	TRUE	TRUE
+Tauraco_erythrolophus	Aves	121530	Aves	FALSE	FALSE	TRUE	TRUE
+Apaloderma_vittatum	Aves	57397	Aves	FALSE	FALSE	TRUE	TRUE
+Charadrius_vociferus	Aves	50402	Aves	FALSE	FALSE	TRUE	TRUE
+Antrostomus_carolinensis	Aves	279965	Aves	FALSE	FALSE	FALSE	TRUE
+Pterocles_gutturalis	Aves	240206	Aves	FALSE	FALSE	TRUE	TRUE
+Corvus_brachyrhynchos	Aves	85066	Aves	FALSE	FALSE	TRUE	TRUE
+Mesitornis_unicolor	Aves	54374	Aves	FALSE	FALSE	TRUE	TRUE
+Acanthisitta_chloris	Aves	57068	Aves	FALSE	FALSE	FALSE	TRUE
+Merops_nubicus	Aves	57421	Aves	FALSE	FALSE	TRUE	TRUE
+Haliaeetus_albicilla	Aves	8969	Aves	FALSE	FALSE	TRUE	TRUE
+Fulmarus_glacialis	Aves	30455	Aves	FALSE	FALSE	TRUE	TRUE
+Colius_striatus	Aves	57412	Aves	FALSE	FALSE	TRUE	TRUE
+Pelecanus_crispus	Aves	36300	Aves	FALSE	FALSE	TRUE	TRUE
+Jacana_jacana	Aves	54508	Aves	FALSE	FALSE	TRUE	TRUE
+Equus_przewalskii	Mammalia	9798	Mammalia	FALSE	FALSE	FALSE	TRUE
+Pontoporia_blainvillei	Mammalia	48723	Mammalia	FALSE	FALSE	TRUE	TRUE
+Mythimna_separata	Lepidoptera	271217	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Spheniscus_demersus	Aves	92683	Aves	FALSE	FALSE	TRUE	TRUE
+Sitodiplosis_mosellana	Diptera	263140	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Scomber_japonicus	Teleostei	13676	Teleostei	FALSE	FALSE	TRUE	TRUE
+Anopheles_nili	Diptera	185578	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Hyaena_hyaena	Mammalia	95912	Mammalia	FALSE	FALSE	TRUE	TRUE
+Grus_americana	Aves	9117	Aves	FALSE	FALSE	TRUE	TRUE
+Neogale_vison	Mammalia	452646	Mammalia	FALSE	FALSE	FALSE	TRUE
+Ursus_maritimus	Mammalia	29073	Mammalia	FALSE	FALSE	TRUE	TRUE
+Fukomys_damarensis	Mammalia	885580	Mammalia	FALSE	FALSE	FALSE	TRUE
+Hippocampus_comes	Teleostei	109280	Teleostei	FALSE	FALSE	TRUE	TRUE
+Aphis_craccivora	Hemiptera	307492	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Neotoma_lepida	Mammalia	56216	Mammalia	FALSE	FALSE	TRUE	TRUE
+Hyalella_azteca	Crustacea	294128	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Geotrypetes_seraphini	Amphibia	260995	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Epinephelus_fuscoguttatus	Teleostei	293821	Teleostei	FALSE	FALSE	TRUE	TRUE
+Cataglyphis_hispanica	Hymenoptera	1086592	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Triplophysa_rosa	Teleostei	992332	Teleostei	FALSE	FALSE	TRUE	TRUE
+Clupea_harengus	Teleostei	7950	Teleostei	FALSE	FALSE	TRUE	TRUE
+Bactrocera_tryoni	Diptera	59916	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Agelaius_phoeniceus	Aves	39638	Aves	FALSE	FALSE	TRUE	TRUE
+Capitella_teleta	Annelida	283909	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Pseudopodoces_humilis	Aves	181119	Aves	FALSE	FALSE	FALSE	TRUE
+Lottia_gigantea	Mollusca	225164	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Helobdella_robusta	Annelida	6412	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Apis_dorsata	Hymenoptera	7462	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Hipposideros_armiger	Mammalia	186990	Mammalia	FALSE	FALSE	FALSE	TRUE
+Anastrepha_ludens	Diptera	28586	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Lipotes_vexillifer	Mammalia	118797	Mammalia	FALSE	FALSE	TRUE	TRUE
+Misgurnus_anguillicaudatus	Teleostei	75329	Teleostei	FALSE	FALSE	TRUE	TRUE
+Labrus_bergylta	Teleostei	56723	Teleostei	FALSE	FALSE	TRUE	TRUE
+Frankliniella_occidentalis	Thysanoptera	133901	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Thelazia_callipaeda	Nematoda	103827	Nematoda	FALSE	FALSE	FALSE	TRUE
+Gavialis_gangeticus	Crocodylia	94835	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Poecilia_mexicana	Teleostei	48701	Teleostei	FALSE	FALSE	TRUE	TRUE
+Myotis_davidii	Mammalia	225400	Mammalia	FALSE	FALSE	FALSE	TRUE
+Lasius_niger	Hymenoptera	67767	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Meloidogyne_graminicola	Nematoda	189291	Nematoda	FALSE	FALSE	FALSE	TRUE
+Dissostichus_eleginoides	Teleostei	100907	Teleostei	FALSE	FALSE	TRUE	TRUE
+Notechis_scutatus	Lepidosauria	8663	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Spodoptera_litura	Lepidoptera	69820	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Falco_cherrug	Aves	345164	Aves	FALSE	FALSE	TRUE	TRUE
+Micropterus_dolomieu	Teleostei	147949	Teleostei	FALSE	FALSE	TRUE	TRUE
+Papilio_xuthus	Lepidoptera	66420	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Protopterus_annectens	Vertebrates	7888	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Epinephelus_moara	Teleostei	300413	Teleostei	FALSE	FALSE	TRUE	TRUE
+Homalodisca_vitripennis	Hemiptera	197043	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Trichuris_trichiura	Nematoda	36087	Nematoda	FALSE	FALSE	TRUE	TRUE
+Tegillarca_granosa	Mollusca	220873	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Portunus_trituberculatus	Crustacea	210409	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Sarcophaga_bullata	Diptera	7385	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Helicoverpa_armigera	Lepidoptera	29058	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Zalophus_californianus	Mammalia	9704	Mammalia	FALSE	FALSE	TRUE	TRUE
+Chelonia_mydas	Testudines	8469	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Cercocebus_atys	Mammalia	9531	Mammalia	FALSE	FALSE	TRUE	TRUE
+Geospiza_fortis	Aves	48883	Aves	FALSE	FALSE	TRUE	TRUE
+Hypomesus_transpacificus	Teleostei	137520	Teleostei	FALSE	FALSE	TRUE	TRUE
+Parasteatoda_tepidariorum	Arachnida	114398	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Teleopsis_dalmanni	Diptera	139649	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Orchesella_cincta	Invertebrates	48709	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Lytechinus_pictus	Echinodermata	7653	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Solea_senegalensis	Teleostei	28829	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ursus_americanus	Mammalia	9643	Mammalia	FALSE	FALSE	TRUE	TRUE
+Dreissena_polymorpha	Mollusca	45954	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Folsomia_candida	Invertebrates	158441	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pimephales_promelas	Teleostei	90988	Teleostei	FALSE	FALSE	TRUE	TRUE
+Cherax_quadricarinatus	Crustacea	27406	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Austrofundulus_limnaeus	Teleostei	52670	Teleostei	FALSE	FALSE	TRUE	TRUE
+Mytilus_californianus	Mollusca	6549	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Chlorocebus_sabaeus	Mammalia	60711	Mammalia	FALSE	FALSE	TRUE	TRUE
+Rattus_rattus	Mammalia	10117	Mammalia	FALSE	FALSE	TRUE	TRUE
+Dermacentor_andersoni	Arachnida	34620	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Chilo_suppressalis	Lepidoptera	168631	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Tenebrio_molitor	Coleoptera	7067	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Cyprinodon_variegatus	Teleostei	28743	Teleostei	FALSE	FALSE	TRUE	TRUE
+Stegastes_partitus	Teleostei	144197	Teleostei	FALSE	FALSE	TRUE	TRUE
+Astyanax_mexicanus	Teleostei	7994	Teleostei	FALSE	FALSE	TRUE	TRUE
+Chaenocephalus_aceratus	Teleostei	36190	Teleostei	FALSE	FALSE	TRUE	TRUE
+Physeter_catodon	Mammalia	9755	Mammalia	FALSE	FALSE	TRUE	TRUE
+Tupaia_chinensis	Mammalia	246437	Mammalia	FALSE	FALSE	FALSE	TRUE
+Caretta_caretta	Testudines	8467	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Oryzias_melastigma	Teleostei	30732	Teleostei	FALSE	FALSE	TRUE	TRUE
+Stegodyphus_mimosarum	Arachnida	407821	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Episyrphus_balteatus	Diptera	286459	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Parus_major	Aves	9157	Aves	FALSE	FALSE	TRUE	TRUE
+Agrilus_planipennis	Coleoptera	224129	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Coregonus_clupeaformis	Teleostei	59861	Teleostei	FALSE	FALSE	TRUE	TRUE
+Helicoverpa_zea	Lepidoptera	7113	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Microplitis_demolitor	Hymenoptera	69319	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Anoplopoma_fimbria	Teleostei	229290	Teleostei	FALSE	FALSE	TRUE	TRUE
+Nannospalax_galili	Mammalia	1026970	Mammalia	FALSE	FALSE	FALSE	TRUE
+Copidosoma_floridanum	Hymenoptera	29053	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Megalopta_genalis	Hymenoptera	115081	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Scyliorhinus_torazame	Chondrichthyes	75743	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Labeo_rohita	Teleostei	84645	Teleostei	FALSE	FALSE	TRUE	TRUE
+Plakobranchus_ocellatus	Mollusca	259542	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Spodoptera_littoralis	Lepidoptera	7109	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Ictalurus_furcatus	Teleostei	66913	Teleostei	FALSE	FALSE	TRUE	TRUE
+Seriola_dumerili	Teleostei	41447	Teleostei	FALSE	FALSE	TRUE	TRUE
+Symphalangus_syndactylus	Mammalia	9590	Mammalia	FALSE	FALSE	TRUE	TRUE
+Branchiostoma_lanceolatum	Cephalochordata	7740	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Anhinga_rufa	Aves	317792	Aves	FALSE	FALSE	FALSE	TRUE
+Chiloscyllium_punctatum	Chondrichthyes	137246	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Mauremys_reevesii	Testudines	260615	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Eriocheir_sinensis	Crustacea	95602	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Crassostrea_angulata	Mollusca	558553	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Bugula_neritina	Invertebrates	10212	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Tigriopus_californicus	Crustacea	6832	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Branchiostoma_belcheri	Cephalochordata	7741	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Salvelinus_fontinalis	Teleostei	8038	Teleostei	FALSE	FALSE	TRUE	TRUE
+Anopheles_sinensis	Diptera	74873	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Oryx_dammah	Mammalia	59534	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pteropus_alecto	Mammalia	9402	Mammalia	FALSE	FALSE	TRUE	TRUE
+Panonychus_citri	Arachnida	50023	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Apostichopus_japonicus	Echinodermata	307972	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Megalobrama_amblycephala	Teleostei	75352	Teleostei	FALSE	FALSE	TRUE	TRUE
+Hippoglossus_hippoglossus	Teleostei	8267	Teleostei	FALSE	FALSE	TRUE	TRUE
+Tachyglossus_aculeatus	Mammalia	9261	Mammalia	FALSE	FALSE	TRUE	TRUE
+Penaeus_monodon	Crustacea	6687	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Desmophyllum_pertusum	Cnidaria	174260	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Boleophthalmus_pectinirostris	Teleostei	150288	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ostrea_edulis	Mollusca	37623	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Onchocerca_flexuosa	Nematoda	387005	Nematoda	FALSE	FALSE	FALSE	TRUE
+Camelus_ferus	Mammalia	419612	Mammalia	FALSE	FALSE	FALSE	TRUE
+Ficedula_albicollis	Aves	59894	Aves	FALSE	FALSE	TRUE	TRUE
+Octodon_degus	Mammalia	10160	Mammalia	FALSE	FALSE	TRUE	TRUE
+Trichinella_pseudospiralis	Nematoda	6337	Nematoda	FALSE	FALSE	TRUE	TRUE
+Elephantulus_edwardii	Mammalia	28737	Mammalia	FALSE	FALSE	TRUE	TRUE
+Chrysochloris_asiatica	Mammalia	185453	Mammalia	FALSE	FALSE	TRUE	TRUE
+Bursaphelenchus_xylophilus	Nematoda	6326	Nematoda	FALSE	FALSE	FALSE	TRUE
+Zeugodacus_cucurbitae	Diptera	28588	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Cynoglossus_semilaevis	Teleostei	244447	Teleostei	FALSE	FALSE	TRUE	TRUE
+Eptesicus_fuscus	Mammalia	29078	Mammalia	FALSE	FALSE	TRUE	TRUE
+Anopheles_merus	Diptera	30066	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_arabiensis	Diptera	7173	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Stomoxys_calcitrans	Diptera	35570	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Adineta_ricciae	Invertebrates	249248	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Serinus_canaria	Aves	9135	Aves	FALSE	FALSE	TRUE	TRUE
+Leiothrix_lutea	Aves	36275	Aves	FALSE	FALSE	TRUE	TRUE
+Amphibalanus_amphitrite	Crustacea	1232801	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Phlebotomus_papatasi	Diptera	29031	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Daphnia_magna	Crustacea	35525	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Leucoraja_erinacea	Chondrichthyes	7782	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Drosophila_miranda	Diptera	7229	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Condylura_cristata	Mammalia	143302	Mammalia	FALSE	FALSE	TRUE	TRUE
+Anguilla_anguilla	Teleostei	7936	Teleostei	FALSE	FALSE	TRUE	TRUE
+Paralichthys_olivaceus	Teleostei	8255	Teleostei	FALSE	FALSE	TRUE	TRUE
+Dracunculus_medinensis	Nematoda	318479	Nematoda	FALSE	FALSE	TRUE	TRUE
+Pongo_pygmaeus	Mammalia	9600	Mammalia	FALSE	FALSE	TRUE	TRUE
+Hydatigera_taeniaeformis	Platyhelminthes	6205	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Strongylus_vulgaris	Nematoda	40348	Nematoda	FALSE	FALSE	TRUE	TRUE
+Dendronephthya_gigantea	Cnidaria	151771	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Diatraea_saccharalis	Lepidoptera	40085	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Sinocyclocheilus_grahami	Teleostei	75366	Teleostei	FALSE	FALSE	TRUE	TRUE
+Dermatophagoides_farinae	Arachnida	6954	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Angiostrongylus_costaricensis	Nematoda	334426	Nematoda	FALSE	FALSE	FALSE	TRUE
+Cygnus_atratus	Aves	8868	Aves	FALSE	FALSE	TRUE	TRUE
+Moschus_berezovskii	Mammalia	68408	Mammalia	FALSE	FALSE	TRUE	TRUE
+Chiloscyllium_plagiosum	Chondrichthyes	36176	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Dermatophagoides_pteronyssinus	Arachnida	6956	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Bambusicola_thoracicus	Aves	9083	Aves	FALSE	FALSE	TRUE	TRUE
+Nezara_viridula	Hemiptera	85310	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Geococcyx_californianus	Aves	8947	Aves	FALSE	FALSE	TRUE	TRUE
+Enterobius_vermicularis	Nematoda	51028	Nematoda	FALSE	FALSE	TRUE	TRUE
+Chelydra_serpentina	Testudines	8475	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Menidia_menidia	Teleostei	238744	Teleostei	FALSE	FALSE	TRUE	TRUE
+Opisthorchis_felineus	Platyhelminthes	147828	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Spirometra_erinaceieuropaei	Platyhelminthes	99802	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Ochotona_curzoniae	Mammalia	130825	Mammalia	FALSE	FALSE	TRUE	TRUE
+Acanthopagrus_latus	Teleostei	8177	Teleostei	FALSE	FALSE	TRUE	TRUE
+Toxocara_canis	Nematoda	6265	Nematoda	FALSE	FALSE	TRUE	TRUE
+Panthera_uncia	Mammalia	29064	Mammalia	FALSE	FALSE	TRUE	TRUE
+Panthera_pardus	Mammalia	9691	Mammalia	FALSE	FALSE	TRUE	TRUE
+Xyrauchen_texanus	Teleostei	154827	Teleostei	FALSE	FALSE	TRUE	TRUE
+Lucilia_sericata	Diptera	13632	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Hippoglossus_stenolepis	Teleostei	195615	Teleostei	FALSE	FALSE	TRUE	TRUE
+Trichobilharzia_regenti	Platyhelminthes	157069	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Mauremys_mutica	Testudines	74926	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Amphiprion_ocellaris	Teleostei	80972	Teleostei	FALSE	FALSE	TRUE	TRUE
+Dibothriocephalus_latus	Platyhelminthes	60516	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Phacochoerus_africanus	Mammalia	41426	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pandion_haliaetus	Aves	56262	Aves	FALSE	FALSE	TRUE	TRUE
+Apus_apus	Aves	8895	Aves	FALSE	FALSE	TRUE	TRUE
+Bufo_gargarizans	Amphibia	30331	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Galemys_pyrenaicus	Mammalia	202257	Mammalia	FALSE	FALSE	TRUE	TRUE
+Podiceps_cristatus	Aves	345573	Aves	FALSE	FALSE	TRUE	TRUE
+Nipponia_nippon	Aves	128390	Aves	FALSE	FALSE	TRUE	TRUE
+Atractosteus_spatula	Vertebrates	7917	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Schistosoma_spindale	Platyhelminthes	6189	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Platysternon_megacephalum	Testudines	55544	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Anisakis_simplex	Nematoda	6269	Nematoda	FALSE	FALSE	TRUE	TRUE
+Acanthaster_planci	Echinodermata	133434	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Cathartes_aura	Aves	43455	Aves	FALSE	FALSE	TRUE	TRUE
+Leptotrombidium_deliense	Arachnida	299467	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Alectura_lathami	Aves	81907	Aves	FALSE	FALSE	TRUE	TRUE
+Gavia_stellata	Aves	37040	Aves	FALSE	FALSE	TRUE	TRUE
+Pogona_vitticeps	Lepidosauria	103695	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Choloepus_didactylus	Mammalia	27675	Mammalia	FALSE	FALSE	TRUE	TRUE
+Bombina_bombina	Amphibia	8345	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Pangasianodon_gigas	Teleostei	30993	Teleostei	FALSE	FALSE	TRUE	TRUE
+Rhinatrema_bivittatum	Amphibia	194408	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Erpetoichthys_calabaricus	Vertebrates	27687	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Dallia_pectoralis	Teleostei	75939	Teleostei	FALSE	FALSE	TRUE	TRUE
+Muntiacus_muntjak	Mammalia	9888	Mammalia	FALSE	FALSE	TRUE	TRUE
+Polyodon_spathula	Vertebrates	7913	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Caranx_melampygus	Teleostei	181461	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ixodes_persulcatus	Arachnida	34615	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Bombyx_mandarina	Lepidoptera	7092	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Vombatus_ursinus	Mammalia	29139	Mammalia	FALSE	FALSE	TRUE	TRUE
+Mugil_cephalus	Teleostei	48193	Teleostei	FALSE	FALSE	TRUE	TRUE
+Trichosurus_vulpecula	Mammalia	9337	Mammalia	FALSE	FALSE	TRUE	TRUE
+Amblyraja_radiata	Chondrichthyes	386614	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Phoca_vitulina	Mammalia	9720	Mammalia	FALSE	FALSE	TRUE	TRUE
+Eudyptula_minor	Aves	37083	Aves	FALSE	FALSE	TRUE	TRUE
+Dromiciops_gliroides	Mammalia	33562	Mammalia	FALSE	FALSE	TRUE	TRUE
+Albula_glossodonta	Teleostei	121402	Teleostei	FALSE	FALSE	TRUE	TRUE
+Megalops_cyprinoides	Teleostei	118141	Teleostei	FALSE	FALSE	TRUE	TRUE
+Megalops_atlanticus	Teleostei	7932	Teleostei	FALSE	FALSE	TRUE	TRUE
+Drosophila_rhopaloa	Diptera	1041015	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Strongyloides_ratti	Nematoda	34506	Nematoda	FALSE	FALSE	TRUE	TRUE
+Lytechinus_variegatus	Echinodermata	7654	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Galendromus_occidentalis	Arachnida	34638	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pundamilia_nyererei	Teleostei	303518	Teleostei	FALSE	FALSE	TRUE	TRUE
+Neolamprologus_brichardi	Teleostei	32507	Teleostei	FALSE	FALSE	TRUE	TRUE
+Haplochromis_burtoni	Teleostei	8153	Teleostei	FALSE	FALSE	TRUE	TRUE
+Latimeria_chalumnae	Vertebrates	7897	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Caenorhabditis_angaria	Nematoda	860376	Nematoda	FALSE	FALSE	FALSE	TRUE
+Chironomus_riparius	Diptera	315576	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Nilaparvata_lugens	Hemiptera	108931	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Patiria_miniata	Echinodermata	46514	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Rhipicephalus_microplus	Arachnida	6941	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Cricetulus_griseus	Mammalia	10029	Mammalia	FALSE	FALSE	TRUE	TRUE
+Rhipicephalus_sanguineus	Arachnida	34632	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Rhagoletis_pomonella	Diptera	28610	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Amphimedon_queenslandica	Invertebrates	400682	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Dicentrarchus_labrax	Teleostei	13489	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ctenopharyngodon_idella	Teleostei	7959	Teleostei	FALSE	FALSE	TRUE	TRUE
+Maylandia_zebra	Teleostei	106582	Teleostei	FALSE	FALSE	TRUE	TRUE
+Anopheles_darlingi	Diptera	43151	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Galeopterus_variegatus	Mammalia	482537	Mammalia	FALSE	FALSE	TRUE	TRUE
+Priapulus_caudatus	Invertebrates	37621	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Limulus_polyphemus	Invertebrates	6850	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Dipodomys_ordii	Mammalia	10020	Mammalia	FALSE	FALSE	TRUE	TRUE
+Ochotona_princeps	Mammalia	9978	Mammalia	FALSE	FALSE	TRUE	TRUE
+Lutzomyia_longipalpis	Diptera	7200	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Oryzias_latipes	Teleostei	8090	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ictidomys_tridecemlineatus	Mammalia	43179	Mammalia	FALSE	FALSE	TRUE	TRUE
+Otolemur_garnettii	Mammalia	30611	Mammalia	FALSE	FALSE	TRUE	TRUE
+Aplysia_californica	Mollusca	6500	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Oikopleura_dioica	Invertebrates	34765	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Lemur_catta	Mammalia	9447	Mammalia	FALSE	FALSE	TRUE	TRUE
+Saccoglossus_kowalevskii	Invertebrates	10224	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Biomphalaria_glabrata	Mollusca	6526	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Trichoplax_adhaerens	Invertebrates	10228	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Ancylostoma_duodenale	Nematoda	51022	Nematoda	FALSE	FALSE	TRUE	TRUE
+Ancylostoma_caninum	Nematoda	29170	Nematoda	FALSE	FALSE	TRUE	TRUE
+Daphnia_pulex	Crustacea	6669	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Petromyzon_marinus	Vertebrates	7757	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Drosophila_mojavensis	Diptera	7230	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Caenorhabditis_brenneri	Nematoda	135651	Nematoda	FALSE	FALSE	FALSE	TRUE
+Caenorhabditis_remanei	Nematoda	31234	Nematoda	FALSE	FALSE	FALSE	TRUE
+Drosophila_willistoni	Diptera	7260	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Pristionchus_pacificus	Nematoda	54126	Nematoda	FALSE	FALSE	FALSE	TRUE
+Trichinella_spiralis	Nematoda	6334	Nematoda	FALSE	FALSE	TRUE	TRUE
+Schistosoma_mansoni	Platyhelminthes	6183	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Dasypus_novemcinctus	Mammalia	9361	Mammalia	FALSE	FALSE	TRUE	TRUE
+Echinops_telfairi	Mammalia	9371	Mammalia	FALSE	FALSE	TRUE	TRUE
+Cavia_porcellus	Mammalia	10141	Mammalia	FALSE	FALSE	TRUE	TRUE
+Nematostella_vectensis	Cnidaria	45351	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Sorex_araneus	Mammalia	42254	Mammalia	FALSE	FALSE	TRUE	TRUE
+Tetraodon_nigroviridis	Teleostei	99883	Teleostei	FALSE	FALSE	TRUE	TRUE
+Drosophila_yakuba	Diptera	7245	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Vidua_chalybeata	Aves	81927	Aves	FALSE	FALSE	TRUE	TRUE
+Arenaria_interpres	Aves	54971	Aves	FALSE	FALSE	TRUE	TRUE
+Meleagris_gallopavo	Aves	9103	Aves	FALSE	FALSE	TRUE	TRUE
+Strongylocentrotus_purpuratus	Echinodermata	7668	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Saimiri_boliviensis	Mammalia	27679	Mammalia	FALSE	FALSE	TRUE	TRUE
+Microtus_ochrogaster	Mammalia	79684	Mammalia	FALSE	TRUE	TRUE	TRUE
+Melospiza_melodia	Aves	44397	Aves	FALSE	TRUE	TRUE	TRUE
+Lonchura_striata	Aves	40157	Aves	FALSE	TRUE	TRUE	TRUE
+Cyprinus_carpio	Teleostei	7962	Teleostei	TRUE	FALSE	TRUE	TRUE
+Callithrix_jacchus	Mammalia	9483	Mammalia	TRUE	TRUE	TRUE	TRUE
+Pelodiscus_sinensis	Testudines	13735	Other Vertebrates	FALSE	TRUE	FALSE	TRUE
+Panthera_tigris	Mammalia	9694	Mammalia	FALSE	TRUE	TRUE	TRUE
+Monodelphis_domestica	Mammalia	13616	Mammalia	FALSE	TRUE	TRUE	TRUE
+Heterocephalus_glaber	Mammalia	10181	Mammalia	FALSE	TRUE	TRUE	TRUE
+Macaca_mulatta	Mammalia	9544	Mammalia	FALSE	TRUE	TRUE	TRUE
+Ornithorhynchus_anatinus	Mammalia	9258	Mammalia	FALSE	TRUE	TRUE	TRUE
+Erinaceus_europaeus	Mammalia	9365	Mammalia	FALSE	TRUE	TRUE	TRUE
+Felis_catus	Mammalia	9685	Mammalia	FALSE	TRUE	TRUE	TRUE
+Oryctolagus_cuniculus	Mammalia	9986	Mammalia	FALSE	FALSE	TRUE	TRUE
+Rattus_norvegicus	Mammalia	10116	Mammalia	FALSE	TRUE	TRUE	TRUE
+Mus_musculus	Mammalia	10090	Mammalia	FALSE	TRUE	TRUE	TRUE
+Bos_taurus	Mammalia	9913	Mammalia	TRUE	TRUE	TRUE	TRUE
+Crocodylus_porosus	Crocodylia	8502	Other Vertebrates	TRUE	TRUE	TRUE	TRUE
+Gallus_gallus	Aves	9031	Aves	FALSE	TRUE	TRUE	TRUE
+Loxodonta_africana	Mammalia	9785	Mammalia	FALSE	TRUE	TRUE	TRUE
+Cervus_elaphus	Mammalia	9860	Mammalia	TRUE	TRUE	TRUE	TRUE
+Sus_scrofa	Mammalia	9823	Mammalia	FALSE	TRUE	TRUE	TRUE
+Canis_lupus	Mammalia	9612	Mammalia	TRUE	TRUE	TRUE	TRUE
+Danio_rerio	Teleostei	7955	Teleostei	TRUE	FALSE	TRUE	TRUE
+Xenopus_tropicalis	Amphibia	8364	Other Vertebrates	FALSE	TRUE	FALSE	TRUE
+Xenopus_laevis	Amphibia	8355	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Callorhinchus_milii	Chondrichthyes	7868	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Homo_sapiens	Mammalia	9606	Mammalia	FALSE	TRUE	TRUE	TRUE
+Equus_caballus	Mammalia	9796	Mammalia	FALSE	TRUE	TRUE	TRUE
+Blattella_germanica	Blattodea	6973	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Cryptotermes_secundus	Blattodea	105785	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Zootermopsis_nevadensis	Blattodea	136037	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Acyrthosiphon_pisum	Hemiptera	7029	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Cimex_lectularius	Hemiptera	79782	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Halyomorpha_halys	Hemiptera	286706	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Athalia_rosae	Hymenoptera	37344	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Cephus_cinctus	Hymenoptera	211228	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Orussus_abietinus	Hymenoptera	222816	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Nasonia_vitripennis	Hymenoptera	7425	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Trichogramma_pretiosum	Hymenoptera	7493	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Harpegnathos_saltator	Hymenoptera	610380	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Linepithema_humile	Hymenoptera	83485	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Camponotus_floridanus	Hymenoptera	104421	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Pogonomyrmex_barbatus	Hymenoptera	144034	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Polistes_canadensis	Hymenoptera	91411	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Polistes_dominula	Hymenoptera	743375	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Solenopsis_invicta	Hymenoptera	13686	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Acromyrmex_echinatior	Hymenoptera	103372	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Atta_cephalotes	Hymenoptera	12957	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Dufourea_novaeangliae	Hymenoptera	178035	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Megachile_rotundata	Hymenoptera	143995	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Habropoda_laboriosa	Hymenoptera	597456	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Eufriesea_mexicana	Hymenoptera	516756	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Apis_mellifera	Hymenoptera	7460	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Apis_florea	Hymenoptera	7463	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Apis_cerana	Hymenoptera	7461	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Melipona_quadrifasciata	Hymenoptera	166423	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Bombus_terrestris	Hymenoptera	30195	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Onthophagus_taurus	Coleoptera	166361	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Tribolium_castaneum	Coleoptera	7070	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Dendroctonus_ponderosae	Coleoptera	77166	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Anoplophora_glabripennis	Coleoptera	217634	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Leptinotarsa_decemlineata	Coleoptera	7539	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Plutella_xylostella	Lepidoptera	51655	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Bombyx_mori	Lepidoptera	7091	Lepido Diptera	TRUE	TRUE	TRUE	TRUE
+Danaus_plexippus	Lepidoptera	13037	Lepido Diptera	TRUE	TRUE	FALSE	TRUE
+Aedes_aegypti	Diptera	7159	Lepido Diptera	TRUE	TRUE	TRUE	TRUE
+Culex_quinquefasciatus	Diptera	7176	Lepido Diptera	TRUE	TRUE	FALSE	TRUE
+Anopheles_gambiae	Diptera	7165	Lepido Diptera	TRUE	TRUE	TRUE	TRUE
+Drosophila_grimshawi	Diptera	7222	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Drosophila_pseudoobscura	Diptera	7237	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Drosophila_melanogaster	Diptera	7227	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Drosophila_suzukii	Diptera	28584	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Ceratitis_capitata	Diptera	7213	Lepido Diptera	TRUE	TRUE	TRUE	TRUE
+Lucilia_cuprina	Diptera	7375	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Musca_domestica	Diptera	7370	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Enhydra_lutris	Mammalia	34882	Mammalia	FALSE	TRUE	TRUE	TRUE
+Carassius_auratus	Teleostei	7957	Teleostei	TRUE	FALSE	TRUE	TRUE
+Motacilla_alba	Aves	45807	Aves	FALSE	TRUE	TRUE	TRUE
+Patagioenas_fasciata	Aves	372321	Aves	FALSE	TRUE	TRUE	TRUE
+Terrapene_carolina	Testudines	158814	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Osmia_bicornis	Hymenoptera	1437190	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Neophocaena_asiaeorientalis	Mammalia	189058	Mammalia	FALSE	TRUE	TRUE	TRUE
+Ovis_aries	Mammalia	9940	Mammalia	FALSE	TRUE	TRUE	TRUE
+Lamprotornis_superbus	Aves	245042	Aves	FALSE	TRUE	TRUE	TRUE
+Nematolebias_whitei	Teleostei	451745	Teleostei	FALSE	TRUE	TRUE	TRUE
+Tetranychus_urticae	Arachnida	32264	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Ixodes_scapularis	Arachnida	6945	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Centruroides_sculpturatus	Arachnida	218467	Other Invertebrates	TRUE	TRUE	FALSE	TRUE
+Eurytemora_affinis	Crustacea	88015	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Tyto_alba	Aves	56313	Aves	FALSE	TRUE	TRUE	TRUE
+Anser_cygnoides	Aves	8845	Aves	TRUE	TRUE	TRUE	TRUE
+Ursus_arctos	Mammalia	9644	Mammalia	FALSE	TRUE	TRUE	TRUE
+Seriola_lalandi	Teleostei	302047	Teleostei	FALSE	TRUE	TRUE	TRUE
+Balaenoptera_acutorostrata	Mammalia	9767	Mammalia	TRUE	TRUE	TRUE	TRUE
+Bison_bison	Mammalia	9901	Mammalia	FALSE	FALSE	TRUE	TRUE
+Podarcis_muralis	Lepidosauria	64176	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Anas_platyrhynchos	Aves	8839	Aves	TRUE	TRUE	TRUE	TRUE
+Odocoileus_virginianus	Mammalia	9874	Mammalia	FALSE	TRUE	TRUE	TRUE
+Diabrotica_virgifera	Coleoptera	50389	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Trachemys_scripta	Testudines	34903	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Glossina_fuscipes	Diptera	7396	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Ceratosolen_solmsi	Hymenoptera	142686	Hymenoptera	TRUE	TRUE	FALSE	TRUE
+Bombus_vancouverensis	Hymenoptera	2705177	Hymenoptera	TRUE	TRUE	FALSE	TRUE
+Peromyscus_maniculatus	Mammalia	10042	Mammalia	FALSE	TRUE	TRUE	TRUE
+Equus_asinus	Mammalia	9793	Mammalia	FALSE	TRUE	TRUE	TRUE
+Gorilla_gorilla	Mammalia	9593	Mammalia	FALSE	TRUE	TRUE	TRUE
+Vicugna_pacos	Mammalia	30538	Mammalia	FALSE	TRUE	TRUE	TRUE
+Pan_troglodytes	Mammalia	9598	Mammalia	FALSE	TRUE	TRUE	TRUE
+Struthio_camelus	Aves	8801	Aves	FALSE	TRUE	TRUE	TRUE
+Vespula_vulgaris	Hymenoptera	7454	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Vespula_pensylvanica	Hymenoptera	30213	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Arvicola_amphibius	Mammalia	1047088	Mammalia	TRUE	TRUE	TRUE	TRUE
+Clarias_magur	Teleostei	1594786	Teleostei	TRUE	FALSE	TRUE	TRUE
+Oenanthe_oenanthe	Aves	279966	Aves	FALSE	TRUE	TRUE	TRUE
+Chelonus_insularis	Hymenoptera	460826	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Exaiptasia_diaphana	Cnidaria	2652724	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Branchiostoma_floridae	Cephalochordata	7739	Other Invertebrates	TRUE	TRUE	TRUE	TRUE
+Cloeon_dipterum	Ephemeroptera	197152	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Gymnodraco_acuticeps	Teleostei	8218	Teleostei	FALSE	TRUE	TRUE	TRUE
+Pseudochaenichthys_georgianus	Teleostei	52239	Teleostei	FALSE	TRUE	TRUE	TRUE
+Molothrus_ater	Aves	84834	Aves	FALSE	TRUE	TRUE	TRUE
+Zerene_cesonia	Lepidoptera	33412	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Osmia_lignaria	Hymenoptera	473952	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Bombus_vosnesenskii	Hymenoptera	207650	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Bombus_bifarius	Hymenoptera	103933	Hymenoptera	TRUE	TRUE	TRUE	TRUE
+Pollicipes_pollicipes	Crustacea	41117	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Dissostichus_mawsoni	Teleostei	36200	Teleostei	FALSE	FALSE	TRUE	TRUE
+Arvicanthis_niloticus	Mammalia	61156	Mammalia	TRUE	TRUE	TRUE	TRUE
+Anneissia_japonica	Echinodermata	1529436	Other Invertebrates	TRUE	TRUE	FALSE	TRUE
+Oxyura_jamaicensis	Aves	8884	Aves	FALSE	TRUE	TRUE	TRUE
+Ignelater_luminosus	Coleoptera	2038154	Other Insecta	FALSE	TRUE	FALSE	TRUE
+Belonocnema_treatae	Hymenoptera	1159321	Hymenoptera	TRUE	TRUE	FALSE	TRUE
+Stegodyphus_dumicola	Arachnida	202533	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Odontomachus_brunneus	Hymenoptera	486640	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Eudyptes_filholi	Aves	1419345	Aves	FALSE	TRUE	TRUE	TRUE
+Chiroxiphia_lanceolata	Aves	296741	Aves	TRUE	TRUE	TRUE	TRUE
+Cyclopterus_lumpus	Teleostei	8103	Teleostei	TRUE	TRUE	TRUE	TRUE
+Notolabrus_celidotus	Teleostei	1203425	Teleostei	FALSE	TRUE	TRUE	TRUE
+Pecten_maximus	Mollusca	6579	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Photinus_pyralis	Coleoptera	7054	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Actinia_tenebrosa	Cnidaria	6105	Other Invertebrates	TRUE	FALSE	FALSE	TRUE
+Camarhynchus_parvulus	Aves	87175	Aves	TRUE	TRUE	TRUE	TRUE
+Asterias_rubens	Echinodermata	7604	Other Invertebrates	TRUE	TRUE	TRUE	TRUE
+Gopherus_evgoodei	Testudines	1825980	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Archocentrus_centrarchus	Teleostei	63155	Teleostei	TRUE	TRUE	TRUE	TRUE
+Dermochelys_coriacea	Testudines	27794	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Thrips_palmi	Thysanoptera	161013	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Eumeta_japonica	Lepidoptera	151549	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Nylanderia_fulva	Hymenoptera	613905	Hymenoptera	FALSE	TRUE	FALSE	TRUE
+Varanus_komodoensis	Lepidosauria	61221	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Anarrhichthys_ocellatus	Teleostei	433405	Teleostei	TRUE	TRUE	TRUE	TRUE
+Cottoperca_gobio	Teleostei	56716	Teleostei	TRUE	TRUE	TRUE	TRUE
+Phyllostomus_discolor	Mammalia	89673	Mammalia	FALSE	TRUE	TRUE	TRUE
+Onychomys_torridus	Mammalia	38674	Mammalia	FALSE	TRUE	TRUE	TRUE
+Suricata_suricatta	Mammalia	37032	Mammalia	FALSE	TRUE	TRUE	TRUE
+Strigops_habroptila	Aves	2489341	Aves	FALSE	TRUE	TRUE	TRUE
+Drosophila_guanche	Diptera	7266	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Anabarilius_grahami	Teleostei	495550	Teleostei	TRUE	FALSE	TRUE	TRUE
+Marmota_flaviventris	Mammalia	93162	Mammalia	FALSE	TRUE	TRUE	TRUE
+Electrophorus_electricus	Teleostei	8005	Teleostei	FALSE	TRUE	TRUE	TRUE
+Bos_indicus	Mammalia	9915	Mammalia	TRUE	FALSE	TRUE	TRUE
+Apteryx_rowi	Aves	308060	Aves	TRUE	TRUE	TRUE	TRUE
+Malaclemys_terrapin	Testudines	8485	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Ceratotherium_simum	Mammalia	9807	Mammalia	TRUE	TRUE	TRUE	TRUE
+Micropterus_salmoides	Teleostei	27706	Teleostei	FALSE	TRUE	TRUE	TRUE
+Drosophila_subpulchrella	Diptera	1486046	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Molossus_molossus	Mammalia	27622	Mammalia	FALSE	TRUE	TRUE	TRUE
+Pipistrellus_kuhlii	Mammalia	59472	Mammalia	FALSE	TRUE	TRUE	TRUE
+Arctia_plantaginis	Lepidoptera	874455	Lepido Diptera	TRUE	TRUE	FALSE	TRUE
+Contarinia_nasturtii	Diptera	265458	Lepido Diptera	TRUE	TRUE	TRUE	TRUE
+Talpa_occidentalis	Mammalia	50954	Mammalia	FALSE	TRUE	TRUE	TRUE
+Grammomys_surdaster	Mammalia	491861	Mammalia	FALSE	TRUE	FALSE	TRUE
+Pipra_filicauda	Aves	649802	Aves	FALSE	TRUE	TRUE	TRUE
+Nothoprocta_perdicaria	Aves	30464	Aves	FALSE	FALSE	FALSE	TRUE
+Cyanistes_caeruleus	Aves	156563	Aves	TRUE	TRUE	TRUE	TRUE
+Paramormyrops_kingsleyae	Teleostei	1676925	Teleostei	FALSE	TRUE	TRUE	TRUE
+Melanaphis_sacchari	Hemiptera	742174	Other Insecta	FALSE	TRUE	FALSE	TRUE
+Piliocolobus_tephrosceles	Mammalia	591936	Mammalia	FALSE	TRUE	TRUE	TRUE
+Mastomys_coucha	Mammalia	35658	Mammalia	FALSE	TRUE	TRUE	TRUE
+Acanthochromis_polyacanthus	Teleostei	80966	Teleostei	TRUE	TRUE	TRUE	TRUE
+Mus_pahari	Mammalia	10093	Mammalia	FALSE	TRUE	FALSE	TRUE
+Miniopterus_natalensis	Mammalia	291302	Mammalia	FALSE	TRUE	TRUE	TRUE
+Myotis_myotis	Mammalia	51298	Mammalia	FALSE	TRUE	TRUE	TRUE
+Sturnus_vulgaris	Aves	9172	Aves	FALSE	TRUE	TRUE	TRUE
+Octopus_bimaculoides	Mollusca	37653	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Lynx_pardinus	Mammalia	191816	Mammalia	FALSE	TRUE	TRUE	TRUE
+Lynx_canadensis	Mammalia	61383	Mammalia	FALSE	TRUE	TRUE	TRUE
+Calidris_pugnax	Aves	198806	Aves	TRUE	TRUE	TRUE	TRUE
+Nicrophorus_vespilloides	Coleoptera	110193	Other Insecta	FALSE	TRUE	TRUE	TRUE
+Dinoponera_quadriceps	Hymenoptera	609295	Hymenoptera	FALSE	TRUE	TRUE	TRUE
+Gekko_japonicus	Lepidosauria	146911	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Pantherophis_guttatus	Lepidosauria	94885	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Sinocyclocheilus_rhinocerous	Teleostei	307959	Teleostei	FALSE	FALSE	TRUE	TRUE
+Sinocyclocheilus_anshuiensis	Teleostei	1608454	Teleostei	FALSE	FALSE	TRUE	TRUE
+Hermetia_illucens	Diptera	343691	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Scaptodrosophila_lebanonensis	Diptera	7225	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Zootoca_vivipara	Lepidosauria	8524	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Manis_javanica	Mammalia	9974	Mammalia	FALSE	TRUE	TRUE	TRUE
+Sander_lucioperca	Teleostei	283035	Teleostei	FALSE	TRUE	TRUE	TRUE
+Meloidogyne_enterolobii	Nematoda	390850	Nematoda	FALSE	FALSE	TRUE	TRUE
+Colossoma_macropomum	Teleostei	42526	Teleostei	TRUE	TRUE	TRUE	TRUE
+Perca_fluviatilis	Teleostei	8168	Teleostei	FALSE	TRUE	TRUE	TRUE
+Periophthalmus_magnuspinnatus	Teleostei	409849	Teleostei	FALSE	TRUE	TRUE	TRUE
+Ophiophagus_hannah	Lepidosauria	8665	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Crotalus_tigris	Lepidosauria	88082	Other Vertebrates	TRUE	TRUE	TRUE	TRUE
+Bothrops_jararaca	Lepidosauria	8724	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Thamnophis_sirtalis	Lepidosauria	35019	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Thamnophis_elegans	Lepidosauria	35005	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Naja_naja	Lepidosauria	35670	Other Vertebrates	FALSE	TRUE	TRUE	TRUE
+Aquila_chrysaetos	Aves	8962	Aves	TRUE	TRUE	TRUE	TRUE
+Catharus_ustulatus	Aves	91951	Aves	TRUE	TRUE	TRUE	TRUE
+Corvus_cornix	Aves	181096	Aves	TRUE	TRUE	TRUE	TRUE
+Hirundo_rustica	Aves	43150	Aves	FALSE	TRUE	TRUE	TRUE
+Panthera_leo	Mammalia	9689	Mammalia	FALSE	TRUE	TRUE	TRUE
+Pteropus_giganteus	Mammalia	143291	Mammalia	FALSE	TRUE	TRUE	TRUE
+Myotis_brandtii	Mammalia	109478	Mammalia	FALSE	TRUE	TRUE	TRUE
+Phascolarctos_cinereus	Mammalia	38626	Mammalia	FALSE	TRUE	TRUE	TRUE
+Trichechus_manatus	Mammalia	9778	Mammalia	FALSE	TRUE	TRUE	TRUE
+Caenorhabditis_elegans	Nematoda	6239	Nematoda	TRUE	TRUE	TRUE	TRUE
+Meriones_unguiculatus	Mammalia	10047	Mammalia	FALSE	TRUE	TRUE	TRUE
+Zonotrichia_albicollis	Aves	44394	Aves	FALSE	FALSE	TRUE	TRUE
+Bactrocera_oleae	Diptera	104688	Lepido Diptera	TRUE	TRUE	FALSE	TRUE
+Bagarius_yarrelli	Teleostei	175774	Teleostei	TRUE	FALSE	TRUE	TRUE
+Gigantopelta_aegis	Mollusca	1735272	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Trichonephila_clavipes	Arachnida	2585209	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Oncorhynchus_mykiss	Teleostei	8022	Teleostei	FALSE	FALSE	TRUE	TRUE
+Salmo_salar	Teleostei	8030	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oncorhynchus_kisutch	Teleostei	8019	Teleostei	FALSE	FALSE	TRUE	TRUE
+Acinonyx_jubatus	Mammalia	32536	Mammalia	TRUE	TRUE	TRUE	TRUE
+Neomonachus_schauinslandi	Mammalia	29088	Mammalia	FALSE	TRUE	TRUE	TRUE
+Vulpes_lagopus	Mammalia	494514	Mammalia	FALSE	TRUE	TRUE	TRUE
+Halichoerus_grypus	Mammalia	9711	Mammalia	FALSE	TRUE	TRUE	TRUE
+Nyctereutes_procyonoides	Mammalia	34880	Mammalia	FALSE	TRUE	TRUE	TRUE
+Vulpes_vulpes	Mammalia	9627	Mammalia	FALSE	TRUE	TRUE	TRUE
+Leptonychotes_weddellii	Mammalia	9713	Mammalia	FALSE	TRUE	TRUE	TRUE
+Mirounga_leonina	Mammalia	9715	Mammalia	FALSE	TRUE	TRUE	TRUE
+Puma_concolor	Mammalia	9696	Mammalia	FALSE	TRUE	TRUE	TRUE
+Aphelenchus_avenae	Nematoda	70226	Nematoda	TRUE	FALSE	TRUE	TRUE
+Orbicella_faveolata	Cnidaria	48498	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Hydra_vulgaris	Cnidaria	6087	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Stylophora_pistillata	Cnidaria	50429	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Teladorsagia_circumcincta	Nematoda	45464	Nematoda	FALSE	FALSE	FALSE	TRUE
+Ancylostoma_ceylanicum	Nematoda	53326	Nematoda	TRUE	TRUE	TRUE	TRUE
+Alligator_mississippiensis	Crocodylia	8496	Other Vertebrates	TRUE	TRUE	TRUE	TRUE
+Caligus_rogercresseyi	Crustacea	217165	Other Invertebrates	TRUE	FALSE	TRUE	TRUE
+Daphnia_galeata	Crustacea	27404	Other Invertebrates	TRUE	TRUE	TRUE	TRUE
+Armadillidium_vulgare	Crustacea	13347	Other Invertebrates	TRUE	FALSE	TRUE	TRUE
+Ramazzottius_varieornatus	Tardigrada	947166	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Puntigrus_tetrazona	Teleostei	1606681	Teleostei	FALSE	TRUE	TRUE	TRUE
+Caenorhabditis_nigoni	Nematoda	1611254	Nematoda	TRUE	TRUE	FALSE	TRUE
+Lepidothrix_coronata	Aves	321398	Aves	FALSE	TRUE	FALSE	TRUE
+Owenia_fusiformis	Annelida	6347	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Macrostomum_lignano	Platyhelminthes	282301	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Lingula_anatina	Brachiopoda	7574	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Betta_splendens	Teleostei	158456	Teleostei	TRUE	TRUE	TRUE	TRUE
+Onychostruthus_taczanowskii	Aves	356909	Aves	FALSE	TRUE	FALSE	TRUE
+Numida_meleagris	Aves	8996	Aves	FALSE	TRUE	TRUE	TRUE
+Papilio_machaon	Lepidoptera	76193	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Mustela_putorius	Mammalia	9668	Mammalia	FALSE	TRUE	TRUE	TRUE
+Lates_calcarifer	Teleostei	8187	Teleostei	FALSE	TRUE	TRUE	TRUE
+Takifugu_flavidus	Teleostei	433684	Teleostei	FALSE	TRUE	TRUE	TRUE
+Tursiops_truncatus	Mammalia	9739	Mammalia	FALSE	TRUE	TRUE	TRUE
+Elysia_chlorotica	Mollusca	188477	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Haliotis_rufescens	Mollusca	6454	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Angiostrongylus_cantonensis	Nematoda	6313	Nematoda	TRUE	FALSE	TRUE	TRUE
+Trichuris_suis	Nematoda	68888	Nematoda	FALSE	TRUE	TRUE	TRUE
+Homarus_americanus	Crustacea	6706	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Penaeus_vannamei	Crustacea	6689	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Echinococcus_granulosus	Platyhelminthes	6210	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Schistosoma_haematobium	Platyhelminthes	6185	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Acropora_digitifera	Cnidaria	70779	Other Invertebrates	TRUE	TRUE	FALSE	TRUE
+Pieris_rapae	Lepidoptera	64459	Lepido Diptera	FALSE	TRUE	TRUE	TRUE
+Coptotermes_formosanus	Blattodea	36987	Other Insecta	TRUE	TRUE	TRUE	TRUE
+Myotis_lucifugus	Mammalia	59463	Mammalia	FALSE	TRUE	TRUE	TRUE
+Anolis_carolinensis	Lepidosauria	28377	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Gymnogyps_californianus	Aves	33616	Aves	FALSE	TRUE	TRUE	TRUE
+Fundulus_heteroclitus	Teleostei	8078	Teleostei	FALSE	TRUE	TRUE	TRUE
+Pteropus_vampyrus	Mammalia	132908	Mammalia	FALSE	TRUE	TRUE	TRUE
+Necator_americanus	Nematoda	51031	Nematoda	FALSE	TRUE	TRUE	TRUE
+Microcebus_murinus	Mammalia	30608	Mammalia	FALSE	FALSE	TRUE	TRUE
+Dictyocaulus_viviparus	Nematoda	29172	Nematoda	FALSE	TRUE	TRUE	TRUE
+Bubalus_bubalis	Mammalia	89462	Mammalia	FALSE	FALSE	TRUE	TRUE
+Oesophagostomum_dentatum	Nematoda	61180	Nematoda	FALSE	FALSE	TRUE	TRUE
+Melitaea_cinxia	Lepidoptera	113334	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Clonorchis_sinensis	Platyhelminthes	79923	Other Invertebrates	TRUE	TRUE	TRUE	TRUE
+Acropora_millepora	Cnidaria	45264	Other Invertebrates	TRUE	TRUE	TRUE	TRUE
+Drosophila_mauritiana	Diptera	7226	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Drosophila_sechellia	Diptera	7238	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Drosophila_simulans	Diptera	7240	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_erecta	Diptera	7220	Lepido Diptera	FALSE	TRUE	FALSE	TRUE
+Acanthocheilonema_viteae	Nematoda	6277	Nematoda	TRUE	TRUE	FALSE	TRUE
+Varroa_destructor	Arachnida	109461	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Loa_loa	Nematoda	7209	Nematoda	FALSE	TRUE	TRUE	TRUE
+Steinernema_carpocapsae	Nematoda	34508	Nematoda	FALSE	TRUE	TRUE	TRUE
+Penaeus_chinensis	Crustacea	139456	Other Invertebrates	FALSE	TRUE	FALSE	TRUE
+Lepeophtheirus_salmonis	Crustacea	72036	Other Invertebrates	FALSE	TRUE	TRUE	TRUE
+Ailuropoda_melanoleuca	Mammalia	9646	Mammalia	TRUE	FALSE	TRUE	TRUE
+Gadus_morhua	Teleostei	8049	Teleostei	FALSE	FALSE	TRUE	TRUE
+Tachysurus_fulvidraco	Teleostei	1234273	Teleostei	FALSE	FALSE	TRUE	TRUE
+Scophthalmus_maximus	Teleostei	52904	Teleostei	FALSE	FALSE	TRUE	TRUE
+Nothobranchius_furzeri	Teleostei	105023	Teleostei	FALSE	FALSE	TRUE	TRUE
+Diaphorina_citri	Hemiptera	121845	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Bemisia_tabaci	Hemiptera	7038	Other Insecta	TRUE	FALSE	FALSE	TRUE
+Mamestra_configurata	Lepidoptera	174822	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Sebastes_umbrosus	Teleostei	72105	Teleostei	FALSE	FALSE	TRUE	TRUE
+Cebus_imitator	Mammalia	2715852	Mammalia	FALSE	FALSE	FALSE	TRUE
+Aphidius_gifuensis	Hymenoptera	684658	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Bombus_pyrosoma	Hymenoptera	396416	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Sturnira_hondurensis	Mammalia	192404	Mammalia	FALSE	FALSE	FALSE	TRUE
+Oppiella_nova	Arachnida	334625	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Medioppia_subpectinata	Arachnida	1979941	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Lucifuga_dentata	Teleostei	670423	Teleostei	FALSE	FALSE	TRUE	TRUE
+Bradysia_coprophila	Diptera	38358	Lepido Diptera	TRUE	FALSE	FALSE	TRUE
+Bursaphelenchus_okinawaensis	Nematoda	465554	Nematoda	FALSE	FALSE	FALSE	TRUE
+Dimorphilus_gyrociliatus	Annelida	2664684	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Acomys_russatus	Mammalia	60746	Mammalia	TRUE	FALSE	TRUE	TRUE
+Paragonimus_kellicotti	Platyhelminthes	100269	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Trichonephila_clavata	Arachnida	2740835	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Promerops_cafer	Aves	254652	Aves	FALSE	FALSE	TRUE	TRUE
+Steatornis_caripensis	Aves	48435	Aves	FALSE	FALSE	TRUE	TRUE
+Struthidea_cinerea	Aves	181839	Aves	FALSE	FALSE	TRUE	TRUE
+Melanocharis_versteri	Aves	254552	Aves	FALSE	FALSE	TRUE	TRUE
+Cnemophilus_loriae	Aves	254448	Aves	FALSE	FALSE	FALSE	TRUE
+Donacobius_atricapilla	Aves	237420	Aves	FALSE	FALSE	TRUE	TRUE
+Oceanites_oceanicus	Aves	79653	Aves	FALSE	FALSE	TRUE	TRUE
+Anhinga_anhinga	Aves	56067	Aves	FALSE	FALSE	TRUE	TRUE
+Spizella_passerina	Aves	40210	Aves	FALSE	FALSE	TRUE	TRUE
+Balaeniceps_rex	Aves	33584	Aves	FALSE	FALSE	TRUE	TRUE
+Rissa_tridactyla	Aves	75485	Aves	FALSE	FALSE	TRUE	TRUE
+Pardalotus_punctatus	Aves	254575	Aves	FALSE	FALSE	TRUE	TRUE
+Buphagus_erythrorhynchus	Aves	245048	Aves	FALSE	FALSE	FALSE	TRUE
+Peucedramus_taeniatus	Aves	135441	Aves	FALSE	FALSE	TRUE	TRUE
+Scopus_umbretta	Aves	33581	Aves	FALSE	FALSE	FALSE	TRUE
+Nicator_chloris	Aves	237433	Aves	FALSE	FALSE	TRUE	TRUE
+Certhia_brachydactyla	Aves	73330	Aves	FALSE	FALSE	TRUE	TRUE
+Bombycilla_garrulus	Aves	125297	Aves	FALSE	FALSE	TRUE	TRUE
+Sitta_europaea	Aves	50251	Aves	FALSE	FALSE	TRUE	TRUE
+Oriolus_oriolus	Aves	181099	Aves	FALSE	FALSE	TRUE	TRUE
+Aramus_guarauna	Aves	54356	Aves	FALSE	FALSE	FALSE	TRUE
+Phainopepla_nitens	Aves	161653	Aves	FALSE	FALSE	TRUE	TRUE
+Rhinoptilus_africanus	Aves	240209	Aves	FALSE	FALSE	TRUE	TRUE
+Rhinopomastus_cyanomelas	Aves	113115	Aves	FALSE	FALSE	TRUE	TRUE
+Gymnorhina_tibicen	Aves	9132	Aves	FALSE	FALSE	FALSE	TRUE
+Semnornis_frantzii	Aves	91796	Aves	FALSE	FALSE	TRUE	TRUE
+Chauna_torquata	Aves	30388	Aves	FALSE	FALSE	TRUE	TRUE
+Psophia_crepitans	Aves	54359	Aves	FALSE	FALSE	TRUE	TRUE
+Dromas_ardeola	Aves	458190	Aves	FALSE	FALSE	TRUE	TRUE
+Sapayoa_aenigma	Aves	239371	Aves	FALSE	FALSE	TRUE	TRUE
+Pedionomus_torquatus	Aves	227192	Aves	FALSE	FALSE	TRUE	TRUE
+Ifrita_kowaldi	Aves	461245	Aves	FALSE	FALSE	TRUE	TRUE
+Panurus_biarmicus	Aves	181101	Aves	FALSE	FALSE	TRUE	TRUE
+Daphoenositta_chrysoptera	Aves	254528	Aves	FALSE	FALSE	TRUE	TRUE
+Hylia_prasina	Aves	208073	Aves	FALSE	FALSE	TRUE	TRUE
+Platysteira_castanea	Aves	1160851	Aves	FALSE	FALSE	TRUE	TRUE
+Rostratula_benghalensis	Aves	118793	Aves	FALSE	FALSE	TRUE	TRUE
+Tichodroma_muraria	Aves	237442	Aves	FALSE	FALSE	TRUE	TRUE
+Picathartes_gymnocephalus	Aves	175131	Aves	FALSE	FALSE	TRUE	TRUE
+Todus_mexicanus	Aves	135184	Aves	FALSE	FALSE	TRUE	TRUE
+Fregata_magnificens	Aves	37042	Aves	FALSE	FALSE	TRUE	TRUE
+Aegithalos_caudatus	Aves	73327	Aves	FALSE	FALSE	TRUE	TRUE
+Hyalomma_asiaticum	Arachnida	266040	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pomphorhynchus_laevis	Invertebrates	141832	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Batillaria_attramentaria	Mollusca	370345	Other Invertebrates	TRUE	FALSE	FALSE	TRUE
+Trichogramma_brassicae	Hymenoptera	86971	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Teleogryllus_occipitalis	Invertebrates	470939	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Drosophila_gunungcola	Diptera	103775	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Phyllotreta_striolata	Coleoptera	444603	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Polistes_fuscatus	Hymenoptera	30207	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Myxobolus_squamalis	Cnidaria	59785	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Eudyptes_chrysolophus	Aves	79627	Aves	FALSE	FALSE	TRUE	TRUE
+Colias_croceus	Lepidoptera	72248	Lepido Diptera	TRUE	FALSE	FALSE	TRUE
+Henneguya_salminicola	Cnidaria	69463	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Sparganum_proliferum	Platyhelminthes	64606	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Sciurus_carolinensis	Mammalia	30640	Mammalia	FALSE	FALSE	TRUE	TRUE
+Maniola_jurtina	Lepidoptera	191418	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Armadillidium_nasatum	Crustacea	96803	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Thalassophryne_amazonica	Teleostei	390379	Teleostei	FALSE	FALSE	TRUE	TRUE
+Cinara_cedri	Hemiptera	506608	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Phocoena_sinus	Mammalia	42100	Mammalia	FALSE	FALSE	TRUE	TRUE
+Octopus_sinensis	Mollusca	2607531	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Drosophila_bunnanda	Diptera	244254	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Danionella_translucida	Teleostei	623744	Teleostei	TRUE	FALSE	TRUE	TRUE
+Timema_podura	Invertebrates	61482	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Sphaeramia_orbicularis	Teleostei	375764	Teleostei	FALSE	FALSE	TRUE	TRUE
+Myripristis_murdjan	Teleostei	586833	Teleostei	FALSE	FALSE	TRUE	TRUE
+Rhyzopertha_dominica	Coleoptera	92692	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Liparis_tanakae	Teleostei	230148	Teleostei	FALSE	FALSE	TRUE	TRUE
+Etheostoma_spectabile	Teleostei	54343	Teleostei	FALSE	FALSE	TRUE	TRUE
+Rana_temporaria	Amphibia	8407	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Crotalus_adamanteus	Lepidosauria	8729	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Rhagologus_leucostigma	Aves	156170	Aves	FALSE	FALSE	TRUE	TRUE
+Trinorchestia_longiramus	Crustacea	1923959	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Paragonimus_heterotremus	Platyhelminthes	100268	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Neodiprion_pinetum	Hymenoptera	441929	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Tuta_absoluta	Lepidoptera	702717	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Temnothorax_longispinosus	Hymenoptera	300112	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_innubila	Diptera	198719	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Schistosoma_bovis	Platyhelminthes	6184	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Gouania_willdenowi	Teleostei	441366	Teleostei	FALSE	FALSE	TRUE	TRUE
+Parambassis_ranga	Teleostei	210632	Teleostei	FALSE	FALSE	TRUE	TRUE
+Takifugu_bimaculatus	Teleostei	433685	Teleostei	FALSE	FALSE	TRUE	TRUE
+Mirounga_angustirostris	Mammalia	9716	Mammalia	FALSE	FALSE	TRUE	TRUE
+Nomia_melanderi	Hymenoptera	2448451	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Chloebia_gouldiae	Aves	44316	Aves	TRUE	TRUE	TRUE	TRUE
+Rhopalosiphum_maidis	Hemiptera	43146	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Chelonoidis_abingdonii	Testudines	106734	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Pseudonaja_textilis	Lepidosauria	8673	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Hyposmocoma_kahamanoa	Lepidoptera	1477025	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Coccinella_septempunctata	Coleoptera	41139	Other Insecta	TRUE	FALSE	TRUE	TRUE
+Harmonia_axyridis	Coleoptera	115357	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Sipha_flava	Hemiptera	143950	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Pygoscelis_papua	Aves	30457	Aves	FALSE	FALSE	TRUE	TRUE
+Simochromis_diagramma	Teleostei	43689	Teleostei	FALSE	FALSE	TRUE	TRUE
+Temnothorax_curvispinosus	Hymenoptera	300111	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Haemaphysalis_longicornis	Arachnida	44386	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Choristoneura_fumiferana	Lepidoptera	7141	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Styela_clava	Invertebrates	7725	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Vanessa_tameamea	Lepidoptera	334116	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_aquasalis	Diptera	42839	Lepido Diptera	TRUE	FALSE	FALSE	TRUE
+Trichobilharzia_szidati	Platyhelminthes	157070	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Dendrolimus_kikuchii	Lepidoptera	765133	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Apis_laboriosa	Hymenoptera	183418	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_subobscura	Diptera	7241	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Leptidea_sinapis	Lepidoptera	189913	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Varroa_jacobsoni	Arachnida	62625	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Diploscapter_pachys	Nematoda	2018661	Nematoda	FALSE	FALSE	FALSE	TRUE
+Drosophila_obscura	Diptera	7282	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Lagenorhynchus_obliquidens	Mammalia	90247	Mammalia	FALSE	FALSE	TRUE	TRUE
+Vespa_velutina	Hymenoptera	202808	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Ooceraea_biroi	Hymenoptera	2015173	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Paramuricea_clavata	Cnidaria	317549	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Tropilaelaps_mercedesae	Arachnida	418985	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pseudomyrmex_gracilis	Hymenoptera	219809	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Aethina_tumida	Coleoptera	116153	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Clunio_marinus	Diptera	568069	Lepido Diptera	TRUE	FALSE	TRUE	TRUE
+Ischnura_elegans	Invertebrates	197161	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Phodopus_roborovskii	Mammalia	109678	Mammalia	FALSE	FALSE	TRUE	TRUE
+Triplophysa_tibetana	Teleostei	1572043	Teleostei	FALSE	FALSE	TRUE	TRUE
+Carlito_syrichta	Mammalia	1868482	Mammalia	FALSE	FALSE	TRUE	TRUE
+Drosophila_navojoa	Diptera	7232	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_arizonae	Diptera	7263	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Ceratina_calcarata	Hymenoptera	156304	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Intoshia_linei	Invertebrates	1819745	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Trachymyrmex_zeteki	Hymenoptera	64791	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Trachymyrmex_septentrionalis	Hymenoptera	34720	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Trachymyrmex_cornetzi	Hymenoptera	471704	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Cyphomyrmex_costatus	Hymenoptera	456900	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Atta_colombica	Hymenoptera	520822	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Ditylenchus_destructor	Nematoda	166010	Nematoda	FALSE	FALSE	FALSE	TRUE
+Bactrocera_latifrons	Diptera	174628	Lepido Diptera	TRUE	FALSE	FALSE	TRUE
+Falco_rusticolus	Aves	120794	Aves	FALSE	FALSE	TRUE	TRUE
+Stegostoma_fasciatum	Chondrichthyes	378071	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Galleria_mellonella	Lepidoptera	7137	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Trichinella_patagoniensis	Nematoda	990121	Nematoda	FALSE	FALSE	FALSE	TRUE
+Leopardus_geoffroyi	Mammalia	46844	Mammalia	FALSE	FALSE	TRUE	TRUE
+Prionailurus_viverrinus	Mammalia	61388	Mammalia	FALSE	FALSE	TRUE	TRUE
+Turdus_rufiventris	Aves	311356	Aves	FALSE	FALSE	TRUE	TRUE
+Anopheles_coluzzii	Diptera	1518534	Lepido Diptera	TRUE	FALSE	FALSE	TRUE
+Upupa_epops	Aves	57439	Aves	FALSE	FALSE	TRUE	TRUE
+Melanotaenia_boesemani	Teleostei	1250792	Teleostei	FALSE	FALSE	TRUE	TRUE
+Diachasma_alloeum	Hymenoptera	454923	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Polypedilum_vanderplanki	Diptera	319348	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Apodemus_sylvaticus	Mammalia	10129	Mammalia	FALSE	FALSE	TRUE	TRUE
+Lamellibrachia_satsuma	Annelida	104711	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Neodiprion_lecontei	Hymenoptera	441921	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Amyelois_transitella	Lepidoptera	680683	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Kudoa_iwatai	Cnidaria	269814	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Scortum_barcoo	Teleostei	214431	Teleostei	FALSE	FALSE	TRUE	TRUE
+Pristis_pectinata	Chondrichthyes	685728	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Vespa_mandarinia	Hymenoptera	7446	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Drosophila_busckii	Diptera	30019	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Monomorium_pharaonis	Hymenoptera	307658	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Wasmannia_auropunctata	Hymenoptera	64793	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Schistosoma_margrebowiei	Platyhelminthes	48269	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Mesocestoides_corti	Platyhelminthes	53468	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Cylicostephanus_goldi	Nematoda	71465	Nematoda	FALSE	FALSE	FALSE	TRUE
+Vollenhovia_emeryi	Hymenoptera	411798	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Dermacentor_silvarum	Arachnida	543639	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Sarcoptes_scabiei	Arachnida	52283	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Colletes_gigas	Hymenoptera	935657	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Fopius_arisanus	Hymenoptera	64838	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Chelmon_rostratus	Teleostei	109905	Teleostei	FALSE	FALSE	TRUE	TRUE
+Trichinella_papuae	Nematoda	268474	Nematoda	FALSE	FALSE	FALSE	TRUE
+Trichinella_zimbabwensis	Nematoda	268475	Nematoda	FALSE	FALSE	FALSE	TRUE
+Trichinella_britovi	Nematoda	45882	Nematoda	FALSE	FALSE	FALSE	TRUE
+Trichinella_nativa	Nematoda	6335	Nematoda	FALSE	FALSE	FALSE	TRUE
+Trichinella_nelsoni	Nematoda	6336	Nematoda	FALSE	FALSE	FALSE	TRUE
+Araneus_ventricosus	Arachnida	182803	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Heliornis_fulica	Aves	54369	Aves	FALSE	FALSE	TRUE	TRUE
+Loxia_curvirostra	Aves	64802	Aves	FALSE	FALSE	TRUE	TRUE
+Aphelenchoides_besseyi	Nematoda	269767	Nematoda	TRUE	FALSE	FALSE	TRUE
+Mus_caroli	Mammalia	10089	Mammalia	FALSE	FALSE	TRUE	TRUE
+Passer_montanus	Aves	9160	Aves	FALSE	FALSE	TRUE	TRUE
+Anabas_testudineus	Teleostei	64144	Teleostei	FALSE	FALSE	TRUE	TRUE
+Anopheles_cruzii	Diptera	68878	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Papilio_polytes	Lepidoptera	76194	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Aythya_fuligula	Aves	219594	Aves	FALSE	FALSE	TRUE	TRUE
+Hemibagrus_wyckioides	Teleostei	337641	Teleostei	FALSE	FALSE	TRUE	TRUE
+Opisthorchis_viverrini	Platyhelminthes	6198	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Phalacrocorax_carbo	Aves	9209	Aves	FALSE	FALSE	TRUE	TRUE
+Cuculus_canorus	Aves	55661	Aves	FALSE	FALSE	TRUE	TRUE
+Aptenodytes_forsteri	Aves	9233	Aves	FALSE	FALSE	TRUE	TRUE
+Calypte_anna	Aves	9244	Aves	FALSE	FALSE	TRUE	TRUE
+Dryobates_pubescens	Aves	118200	Aves	FALSE	FALSE	FALSE	TRUE
+Leptosomus_discolor	Aves	188344	Aves	FALSE	FALSE	TRUE	TRUE
+Opisthocomus_hoazin	Aves	30419	Aves	FALSE	FALSE	TRUE	TRUE
+Manacus_vitellinus	Aves	328815	Aves	FALSE	FALSE	TRUE	TRUE
+Eurypyga_helias	Aves	54383	Aves	FALSE	FALSE	TRUE	TRUE
+Cariama_cristata	Aves	54380	Aves	FALSE	FALSE	TRUE	TRUE
+Phaethon_lepturus	Aves	97097	Aves	FALSE	FALSE	FALSE	TRUE
+Salmo_trutta	Teleostei	8032	Teleostei	FALSE	FALSE	TRUE	TRUE
+Egretta_garzetta	Aves	188379	Aves	FALSE	FALSE	TRUE	TRUE
+Mastacembelus_armatus	Teleostei	205130	Teleostei	FALSE	FALSE	TRUE	TRUE
+Trachypithecus_francoisi	Mammalia	54180	Mammalia	FALSE	FALSE	TRUE	TRUE
+Aix_galericulata	Aves	8832	Aves	FALSE	FALSE	TRUE	TRUE
+Drosophila_santomea	Diptera	129105	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Onychostoma_macrolepis	Teleostei	369639	Teleostei	FALSE	FALSE	TRUE	TRUE
+Sagittarius_serpentarius	Aves	56258	Aves	FALSE	FALSE	TRUE	TRUE
+Propithecus_coquereli	Mammalia	379532	Mammalia	FALSE	FALSE	TRUE	TRUE
+Microcaecilia_unicolor	Amphibia	1415580	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Rhincodon_typus	Chondrichthyes	259920	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Procambarus_clarkii	Crustacea	6728	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Pungitius_pungitius	Teleostei	134920	Teleostei	FALSE	FALSE	TRUE	TRUE
+Penaeus_japonicus	Crustacea	27405	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Diuraphis_noxia	Hemiptera	143948	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Monopterus_albus	Teleostei	43700	Teleostei	FALSE	FALSE	TRUE	TRUE
+Apolygus_lucorum	Hemiptera	248454	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Poecilia_reticulata	Teleostei	8081	Teleostei	FALSE	FALSE	TRUE	TRUE
+Meles_meles	Mammalia	9662	Mammalia	FALSE	FALSE	TRUE	TRUE
+Ostrinia_furnacalis	Lepidoptera	93504	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Kryptolebias_marmoratus	Teleostei	37003	Teleostei	FALSE	FALSE	TRUE	TRUE
+Pyrgilauda_ruficollis	Aves	221976	Aves	FALSE	FALSE	FALSE	TRUE
+Nesidiocoris_tenuis	Hemiptera	355587	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Lithobates_catesbeianus	Amphibia	null	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Bos_mutus	Mammalia	72004	Mammalia	FALSE	FALSE	FALSE	TRUE
+Carcharodon_carcharias	Chondrichthyes	13397	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Nibea_albiflora	Teleostei	240163	Teleostei	FALSE	FALSE	TRUE	TRUE
+Esox_lucius	Teleostei	8010	Teleostei	FALSE	FALSE	TRUE	TRUE
+Acipenser_ruthenus	Vertebrates	7906	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Echeneis_naucrates	Teleostei	173247	Teleostei	FALSE	FALSE	TRUE	TRUE
+Paragonimus_westermani	Platyhelminthes	34504	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Pocillopora_damicornis	Cnidaria	46731	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Microtus_fortis	Mammalia	100897	Mammalia	FALSE	FALSE	FALSE	TRUE
+Alligator_sinensis	Crocodylia	38654	Other Vertebrates	TRUE	FALSE	TRUE	TRUE
+Scatophagus_argus	Teleostei	75038	Teleostei	FALSE	FALSE	TRUE	TRUE
+Echinococcus_multilocularis	Platyhelminthes	6211	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Lacerta_agilis	Lepidosauria	80427	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Fasciolopsis_buski	Platyhelminthes	27845	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Carassius_gibelio	Teleostei	101364	Teleostei	FALSE	FALSE	TRUE	TRUE
+Trichoplusia_ni	Lepidoptera	7111	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Pygoscelis_antarcticus	Aves	79643	Aves	FALSE	FALSE	TRUE	TRUE
+Protobothrops_mucrosquamatus	Lepidosauria	103944	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Python_bivittatus	Lepidosauria	176946	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Aphis_gossypii	Hemiptera	80765	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Formica_exsecta	Hymenoptera	72781	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Leptopilina_heterotoma	Hymenoptera	63436	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Leptopilina_boulardi	Hymenoptera	63433	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Nephila_pilipes	Arachnida	299642	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Pygoscelis_adeliae	Aves	9238	Aves	FALSE	FALSE	TRUE	TRUE
+Mya_arenaria	Mollusca	6604	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Poecilia_latipinna	Teleostei	48699	Teleostei	FALSE	FALSE	TRUE	TRUE
+Adineta_vaga	Invertebrates	104782	Other Invertebrates	TRUE	FALSE	FALSE	TRUE
+Ladona_fulva	Invertebrates	123851	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Zosterops_borbonicus	Aves	364589	Aves	FALSE	FALSE	TRUE	TRUE
+Thelohanellus_kitauei	Cnidaria	669202	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Scyliorhinus_canicula	Chondrichthyes	7830	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Jaculus_jaculus	Mammalia	51337	Mammalia	FALSE	FALSE	TRUE	TRUE
+Melopsittacus_undulatus	Aves	13146	Aves	FALSE	FALSE	TRUE	TRUE
+Xiphophorus_maculatus	Teleostei	8083	Teleostei	FALSE	FALSE	TRUE	TRUE
+Crassostrea_gigas	Mollusca	29159	Other Invertebrates	TRUE	FALSE	TRUE	TRUE
+Dirofilaria_immitis	Nematoda	6287	Nematoda	FALSE	FALSE	TRUE	TRUE
+Bactrocera_dorsalis	Diptera	27457	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Notothenia_coriiceps	Teleostei	8208	Teleostei	FALSE	FALSE	TRUE	TRUE
+Hymenochirus_boettgeri	Amphibia	247094	Other Vertebrates	FALSE	FALSE	FALSE	TRUE
+Camelus_bactrianus	Mammalia	9837	Mammalia	FALSE	FALSE	TRUE	TRUE
+Camelus_dromedarius	Mammalia	9838	Mammalia	FALSE	FALSE	TRUE	TRUE
+Capra_hircus	Mammalia	9925	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pan_paniscus	Mammalia	9597	Mammalia	FALSE	FALSE	TRUE	TRUE
+Morone_saxatilis	Teleostei	34816	Teleostei	FALSE	FALSE	TRUE	TRUE
+Columba_livia	Aves	8932	Aves	FALSE	FALSE	TRUE	TRUE
+Lepisosteus_oculatus	Vertebrates	7918	Other Vertebrates	FALSE	FALSE	TRUE	TRUE
+Chinchilla_lanigera	Mammalia	34839	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pygocentrus_nattereri	Teleostei	42514	Teleostei	FALSE	FALSE	TRUE	TRUE
+Siniperca_chuatsi	Teleostei	119488	Teleostei	FALSE	FALSE	TRUE	TRUE
+Silurus_asotus	Teleostei	30991	Teleostei	FALSE	FALSE	TRUE	TRUE
+Phasianus_colchicus	Aves	9054	Aves	FALSE	FALSE	TRUE	TRUE
+Rhinopithecus_bieti	Mammalia	61621	Mammalia	FALSE	FALSE	TRUE	TRUE
+Castor_canadensis	Mammalia	51338	Mammalia	FALSE	FALSE	TRUE	TRUE
+Silurus_meridionalis	Teleostei	175797	Teleostei	FALSE	FALSE	TRUE	TRUE
+Alosa_sapidissima	Teleostei	34773	Teleostei	FALSE	FALSE	TRUE	TRUE
+Lynx_rufus	Mammalia	61384	Mammalia	FALSE	FALSE	TRUE	TRUE
+Collichthys_lucidus	Teleostei	240159	Teleostei	FALSE	FALSE	TRUE	TRUE
+Thunnus_maccoyii	Teleostei	8240	Teleostei	FALSE	FALSE	TRUE	TRUE
+Thunnus_albacares	Teleostei	8236	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ciona_intestinalis	Invertebrates	7719	Other Invertebrates	TRUE	FALSE	TRUE	TRUE
+Aedes_albopictus	Diptera	7160	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Brugia_malayi	Nematoda	6279	Nematoda	TRUE	FALSE	TRUE	TRUE
+Caenorhabditis_briggsae	Nematoda	6238	Nematoda	TRUE	FALSE	FALSE	TRUE
+Sphaeroforma_arctica	NA	72019	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Anseranas_semipalmata	Aves	8851	Aves	FALSE	FALSE	TRUE	TRUE
+Pomacea_canaliculata	Mollusca	400727	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Balaenoptera_musculus	Mammalia	9771	Mammalia	FALSE	FALSE	TRUE	TRUE
+Cervus_canadensis	Mammalia	1574408	Mammalia	FALSE	FALSE	TRUE	TRUE
+Globicephala_melas	Mammalia	9731	Mammalia	FALSE	FALSE	TRUE	TRUE
+Orcinus_orca	Mammalia	9733	Mammalia	FALSE	FALSE	TRUE	TRUE
+Delphinapterus_leucas	Mammalia	9749	Mammalia	FALSE	FALSE	TRUE	TRUE
+Monodon_monoceros	Mammalia	40151	Mammalia	FALSE	FALSE	TRUE	TRUE
+Oryzias_javanicus	Teleostei	123683	Teleostei	FALSE	FALSE	TRUE	TRUE
+Periplaneta_americana	Blattodea	6978	Other Insecta	FALSE	FALSE	TRUE	TRUE
+Salarias_fasciatus	Teleostei	181472	Teleostei	FALSE	FALSE	TRUE	TRUE
+Prionailurus_bengalensis	Mammalia	37029	Mammalia	FALSE	FALSE	TRUE	TRUE
+Crocuta_crocuta	Mammalia	9678	Mammalia	FALSE	FALSE	TRUE	TRUE
+Lutra_lutra	Mammalia	9657	Mammalia	FALSE	FALSE	TRUE	TRUE
+Callorhinus_ursinus	Mammalia	34884	Mammalia	FALSE	FALSE	TRUE	TRUE
+Eumetopias_jubatus	Mammalia	34886	Mammalia	FALSE	FALSE	TRUE	TRUE
+Dromaius_novaehollandiae	Aves	8790	Aves	FALSE	FALSE	TRUE	TRUE
+Artibeus_jamaicensis	Mammalia	9417	Mammalia	FALSE	FALSE	TRUE	TRUE
+Desmodus_rotundus	Mammalia	9430	Mammalia	FALSE	FALSE	TRUE	TRUE
+Rousettus_aegyptiacus	Mammalia	9407	Mammalia	FALSE	FALSE	TRUE	TRUE
+Astatotilapia_calliptera	Teleostei	8154	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oreochromis_aureus	Teleostei	47969	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oreochromis_niloticus	Teleostei	8128	Teleostei	FALSE	FALSE	TRUE	TRUE
+Alosa_alosa	Teleostei	278164	Teleostei	FALSE	FALSE	TRUE	TRUE
+Denticeps_clupeoides	Teleostei	299321	Teleostei	FALSE	FALSE	TRUE	TRUE
+Callosobruchus_maculatus	Coleoptera	64391	Other Insecta	TRUE	FALSE	FALSE	TRUE
+Sitophilus_oryzae	Coleoptera	7048	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Myxocyprinus_asiaticus	Teleostei	70543	Teleostei	FALSE	FALSE	TRUE	TRUE
+Gambusia_affinis	Teleostei	33528	Teleostei	FALSE	FALSE	TRUE	TRUE
+Poecilia_formosa	Teleostei	48698	Teleostei	FALSE	FALSE	TRUE	TRUE
+Xiphophorus_couchianus	Teleostei	32473	Teleostei	FALSE	FALSE	TRUE	TRUE
+Xiphophorus_hellerii	Teleostei	8084	Teleostei	FALSE	FALSE	TRUE	TRUE
+Sarcophilus_harrisii	Mammalia	9305	Mammalia	FALSE	FALSE	TRUE	TRUE
+Anopheles_albimanus	Diptera	7167	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_stephensi	Diptera	30069	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Anopheles_funestus	Diptera	62324	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_hydei	Diptera	7224	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_serrata	Diptera	7274	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_albomicans	Diptera	7291	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_novamexicana	Diptera	47314	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_persimilis	Diptera	7234	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_ananassae	Diptera	7217	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_virilis	Diptera	7244	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_biarmipes	Diptera	125945	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_elegans	Diptera	30023	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_ficusphila	Diptera	30025	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_eugracilis	Diptera	29029	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_kikkawai	Diptera	30033	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_bipectinata	Diptera	42026	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Drosophila_takahashii	Diptera	29030	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Ephemera_danica	Ephemeroptera	1049336	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Coturnix_japonica	Aves	93934	Aves	FALSE	FALSE	TRUE	TRUE
+Lagopus_leucura	Aves	30410	Aves	FALSE	FALSE	TRUE	TRUE
+Lagopus_muta	Aves	64668	Aves	FALSE	FALSE	TRUE	TRUE
+Chanos_chanos	Teleostei	29144	Teleostei	FALSE	FALSE	TRUE	TRUE
+Myzus_persicae	Hemiptera	13164	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Aphis_glycines	Hemiptera	307491	Other Insecta	FALSE	FALSE	FALSE	TRUE
+Bombus_impatiens	Hymenoptera	132113	Hymenoptera	FALSE	FALSE	TRUE	TRUE
+Frieseomelitta_varia	Hymenoptera	561572	Hymenoptera	FALSE	FALSE	FALSE	TRUE
+Xiphias_gladius	Teleostei	8245	Teleostei	FALSE	FALSE	TRUE	TRUE
+Cheilinus_undulatus	Teleostei	241271	Teleostei	FALSE	FALSE	TRUE	TRUE
+Haliotis_rubra	Mollusca	36100	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Spodoptera_exigua	Lepidoptera	7107	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Spodoptera_frugiperda	Lepidoptera	7108	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Maniola_hyperantus	Lepidoptera	2795564	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Bicyclus_anynana	Lepidoptera	110368	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Vanessa_cardui	Lepidoptera	171605	Lepido Diptera	FALSE	FALSE	TRUE	TRUE
+Nymphalis_io	Lepidoptera	171585	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Vanessa_atalanta	Lepidoptera	42275	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Manduca_sexta	Lepidoptera	7130	Lepido Diptera	FALSE	FALSE	FALSE	TRUE
+Larimichthys_crocea	Teleostei	215358	Teleostei	FALSE	FALSE	TRUE	TRUE
+Scleropages_formosus	Teleostei	113540	Teleostei	FALSE	FALSE	TRUE	TRUE
+Crassostrea_virginica	Mollusca	6565	Other Invertebrates	TRUE	FALSE	TRUE	TRUE
+Taeniopygia_guttata	Aves	59729	Aves	FALSE	FALSE	TRUE	TRUE
+Menura_novaehollandiae	Aves	47692	Aves	FALSE	FALSE	TRUE	TRUE
+Sinosuthora_webbiana	Aves	337173	Aves	FALSE	FALSE	FALSE	TRUE
+Mizuhopecten_yessoensis	Mollusca	6573	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Trematomus_bernacchii	Teleostei	40690	Teleostei	FALSE	FALSE	TRUE	TRUE
+Perca_flavescens	Teleostei	8167	Teleostei	FALSE	FALSE	TRUE	TRUE
+Epinephelus_lanceolatus	Teleostei	310571	Teleostei	FALSE	FALSE	TRUE	TRUE
+Plectropomus_leopardus	Teleostei	160734	Teleostei	FALSE	FALSE	TRUE	TRUE
+Manis_pentadactyla	Mammalia	143292	Mammalia	FALSE	FALSE	TRUE	TRUE
+Aotus_nancymaae	Mammalia	37293	Mammalia	FALSE	FALSE	TRUE	TRUE
+Sapajus_apella	Mammalia	9515	Mammalia	FALSE	FALSE	TRUE	TRUE
+Macaca_fascicularis	Mammalia	9541	Mammalia	FALSE	FALSE	TRUE	TRUE
+Macaca_nemestrina	Mammalia	9545	Mammalia	FALSE	FALSE	TRUE	TRUE
+Papio_anubis	Mammalia	9555	Mammalia	FALSE	FALSE	TRUE	TRUE
+Rhinopithecus_roxellana	Mammalia	61622	Mammalia	FALSE	FALSE	TRUE	TRUE
+Theropithecus_gelada	Mammalia	9565	Mammalia	FALSE	FALSE	TRUE	TRUE
+Pongo_abelii	Mammalia	9601	Mammalia	FALSE	FALSE	TRUE	TRUE
+Hylobates_moloch	Mammalia	81572	Mammalia	FALSE	FALSE	TRUE	TRUE
+Nomascus_leucogenys	Mammalia	61853	Mammalia	FALSE	FALSE	TRUE	TRUE
+Elephas_maximus	Mammalia	9783	Mammalia	FALSE	FALSE	TRUE	TRUE
+Mesocricetus_auratus	Mammalia	10036	Mammalia	FALSE	FALSE	TRUE	TRUE
+Microtus_oregoni	Mammalia	111838	Mammalia	FALSE	FALSE	TRUE	TRUE
+Myodes_glareolus	Mammalia	447135	Mammalia	FALSE	FALSE	TRUE	TRUE
+Peromyscus_leucopus	Mammalia	10041	Mammalia	FALSE	FALSE	TRUE	TRUE
+Dipodomys_spectabilis	Mammalia	105255	Mammalia	FALSE	FALSE	TRUE	TRUE
+Marmota_monax	Mammalia	9995	Mammalia	FALSE	FALSE	TRUE	TRUE
+Urocitellus_parryii	Mammalia	9999	Mammalia	FALSE	FALSE	TRUE	TRUE
+Oncorhynchus_gorbuscha	Teleostei	8017	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oncorhynchus_keta	Teleostei	8018	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oncorhynchus_nerka	Teleostei	8023	Teleostei	FALSE	FALSE	TRUE	TRUE
+Oncorhynchus_tshawytscha	Teleostei	74940	Teleostei	FALSE	FALSE	TRUE	TRUE
+Salvelinus_namaycush	Teleostei	8040	Teleostei	FALSE	FALSE	TRUE	TRUE
+Sepia_pharaonis	Mollusca	158019	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Ictalurus_punctatus	Teleostei	7998	Teleostei	FALSE	FALSE	TRUE	TRUE
+Pangasianodon_hypophthalmus	Teleostei	310915	Teleostei	FALSE	FALSE	TRUE	TRUE
+Ctenocephalides_felis	Invertebrates	7515	Other Insecta	TRUE	FALSE	TRUE	TRUE
+Sparus_aurata	Teleostei	8175	Teleostei	FALSE	FALSE	TRUE	TRUE
+Aptenodytes_patagonicus	Aves	9234	Aves	FALSE	FALSE	TRUE	TRUE
+Eudyptes_chrysocome	Aves	79626	Aves	FALSE	FALSE	TRUE	TRUE
+Candidula_unifasciata	Mollusca	100452	Other Invertebrates	FALSE	FALSE	FALSE	TRUE
+Takifugu_rubripes	Teleostei	31033	Teleostei	FALSE	FALSE	TRUE	TRUE
+Mercenaria_mercenaria	Mollusca	6596	Other Invertebrates	FALSE	FALSE	TRUE	TRUE
+Oryza_sativa	Embryophyta	4530	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Olea_europaea	Embryophyta	4146	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Brassica_rapa	Embryophyta	3711	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Capsicum_baccatum	Embryophyta	33114	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Cucumis_melo	Embryophyta	3656	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Marchantia_polymorpha	Embryophyta	3197	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Beta_vulgaris	Embryophyta	161934	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Zea_mays	Embryophyta	4577	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Aegilops_tauschii	Embryophyta	37682	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Brassica_oleracea	Embryophyta	3712	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Fragaria_vesca	Embryophyta	57918	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Arabidopsis_lyrata	Embryophyta	59689	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Corymbia_citriodora	Embryophyta	34329	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Cinnamomum_micranthum	Embryophyta	337465	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Musa_balbisiana	Embryophyta	52838	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Panicum_hallii	Embryophyta	206008	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Cucurbita_pepo	Embryophyta	3663	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Rosa_chinensis	Embryophyta	74649	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Cannabis_sativa	Embryophyta	3483	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Vigna_angularis	Embryophyta	3914	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Vigna_unguiculata	Embryophyta	3917	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Apium_graveolens	Embryophyta	4045	Embryophyta	TRUE	FALSE	FALSE	TRUE
+Musa_acuminata	Embryophyta	4641	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Capsicum_annuum	Embryophyta	4072	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Daucus_carota	Embryophyta	4039	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Vigna_radiata	Embryophyta	157791	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Manihot_esculenta	Embryophyta	3983	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Vitis_vinifera	Embryophyta	29760	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Solanum_tuberosum	Embryophyta	4113	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Spirodela_intermedia	Embryophyta	51605	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Salix_dunnii	Embryophyta	1413687	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Miscanthus_lutarioriparius	Embryophyta	422564	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Rhododendron_simsii	Embryophyta	118357	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Nymphaea_thermarum	Embryophyta	419125	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Sinapis_alba	Embryophyta	3728	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Striga_asiatica	Embryophyta	4170	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Rhamnella_rubrinervis	Embryophyta	2594499	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Malus_baccata	Embryophyta	106549	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Lactuca_saligna	Embryophyta	75948	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Carpinus_fangiana	Embryophyta	176857	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Abrus_precatorius	Embryophyta	3816	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Coffea_eugenioides	Embryophyta	49369	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Ipomoea_triloba	Embryophyta	35885	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Brassica_cretica	Embryophyta	69181	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Cuscuta_australis	Embryophyta	267555	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Cuscuta_campestris	Embryophyta	132261	Embryophyta	TRUE	FALSE	FALSE	TRUE
+Nymphaea_colorata	Embryophyta	210225	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Dendrobium_catenatum	Embryophyta	906689	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Trema_orientale	Embryophyta	63057	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Parasponia_andersonii	Embryophyta	3476	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Apostasia_shenzhenica	Embryophyta	1088818	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Quercus_suber	Embryophyta	58331	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Coptis_chinensis	Embryophyta	261450	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Durio_zibethinus	Embryophyta	66656	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Pistacia_vera	Embryophyta	55513	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Herrania_umbratica	Embryophyta	108875	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Gossypium_klotzschianum	Embryophyta	34286	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Gossypium_davidsonii	Embryophyta	34287	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Gossypium_australe	Embryophyta	47621	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Gossypium_trilobum	Embryophyta	34281	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Corchorus_olitorius	Embryophyta	93759	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Corchorus_capsularis	Embryophyta	210143	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Citrus_unshiu	Embryophyta	55188	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Ipomoea_nil	Embryophyta	35883	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Capsicum_chinense	Embryophyta	80379	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Senna_tora	Embryophyta	362788	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Dichanthelium_oligosanthes	Embryophyta	888268	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Solanum_chilense	Embryophyta	4083	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Hibiscus_syriacus	Embryophyta	106335	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Salix_suchowensis	Embryophyta	1278906	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Arachis_ipaensis	Embryophyta	130454	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Digitaria_exilis	Embryophyta	1010633	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Cucurbita_moschata	Embryophyta	3662	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Benincasa_hispida	Embryophyta	102211	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Tetracentron_sinense	Embryophyta	13715	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Vanilla_planifolia	Embryophyta	51239	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Morus_notabilis	Embryophyta	981085	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Juglans_regia	Embryophyta	51240	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Tarenaya_hassleriana	Embryophyta	28532	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Setaria_viridis	Embryophyta	4556	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Ziziphus_jujuba	Embryophyta	326968	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Lupinus_albus	Embryophyta	3870	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Brassica_carinata	Embryophyta	52824	Embryophyta	TRUE	FALSE	FALSE	TRUE
+Nelumbo_nucifera	Embryophyta	4432	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Camelina_sativa	Embryophyta	90675	Embryophyta	TRUE	FALSE	FALSE	TRUE
+Punica_granatum	Embryophyta	22663	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Ananas_comosus	Embryophyta	4615	Embryophyta	TRUE	TRUE	FALSE	TRUE
+Phaseolus_vulgaris	Embryophyta	3885	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Sorghum_bicolor	Embryophyta	4558	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Populus_trichocarpa	Embryophyta	3694	Embryophyta	FALSE	TRUE	FALSE	TRUE
+Coffea_arabica	Embryophyta	13443	Embryophyta	TRUE	FALSE	FALSE	TRUE
+Glycine_max	Embryophyta	3847	Embryophyta	FALSE	FALSE	FALSE	TRUE
+Arabidopsis_thaliana	Embryophyta	3702	Embryophyta	TRUE	TRUE	FALSE	TRUE

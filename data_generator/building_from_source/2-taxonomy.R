@@ -9,7 +9,7 @@ list_species$NCBI.txid = sapply(list_species$sp_txid,function(x) str_split(x,"_N
 rownames(list_species) = list_species$species
 
 taxonomy = data.frame()
-for (species in list_species$species){
+for (species in list_species$species){print(species)
   # taxID =  get_uid_(species)[[1]]["uid"] # Get TaxID
   # table_ncbi = classification(taxID[[1]], db = 'ncbi')[[1]] # Get taxonomy
   table_ncbi = read.delim(paste("/home/fbenitiere/data/Projet-SplicedVariants/Annotations/",species,"/taxonomy_ncbi.tab",sep=""))
