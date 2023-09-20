@@ -3,7 +3,8 @@ source("figure/figure_main generator/library_path.R")
 
 # PANNEL A
 
-pA = ggplot(df[df$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
+data4 = read.delim("data/data4.tab")
+pA = ggplot(data4[data4$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
   # geom_point(aes(fill="N1_sup10"),size=3,pch=21)  + 
   geom_point(aes(y = major,fill="Major"),size=3,pch=21,alpha=.7)+
   geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+

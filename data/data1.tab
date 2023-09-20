@@ -59,7 +59,7 @@ Aphelenchoides_bicaudatus	Nematoda	293665	Nematoda	FALSE	FALSE	FALSE	GCA_0246998
 Hippocampus_zosterae	Teleostei	109293	Teleostei	FALSE	FALSE	TRUE	GCF_025434085.1	365	5	NA	302	287
 Bombus_huntii	Hymenoptera	85661	Hymenoptera	FALSE	FALSE	FALSE	GCF_024542735.1	NA	NA	NA	301	295
 Uloborus_diversus	Arachnida	327109	Other Invertebrates	FALSE	FALSE	FALSE	GCF_026930045.1	NA	NA	NA	283	250
-Bombus_affinis	Hymenoptera	309941	Hymenoptera	FALSE	FALSE	TRUE	GCF_024516045.1	365	2.3	8e-04	303	296
+Bombus_affinis	Hymenoptera	309941	Hymenoptera	FALSE	FALSE	TRUE	GCF_024516045.1	365	2.3	0.0008	303	296
 Syngnathus_scovelli	Teleostei	161590	Teleostei	FALSE	FALSE	TRUE	GCF_024217435.1	1095	18.3	NA	302	293
 Euphydryas_editha	Lepidoptera	104508	Lepido Diptera	FALSE	FALSE	TRUE	GCA_933666425.1	10	NA	NA	301	292
 Suncus_etruscus	Mammalia	109475	Mammalia	FALSE	FALSE	TRUE	GCF_024139225.1	1168	5	0.003	303	266
@@ -110,7 +110,7 @@ Drosophila_ironensis	Diptera	2848634	Lepido Diptera	FALSE	FALSE	FALSE	GCA_021223
 Drosophila_rubida	Diptera	30044	Lepido Diptera	FALSE	FALSE	FALSE	GCA_021223945.1	NA	NA	NA	286	277
 Diprion_similis	Hymenoptera	362088	Hymenoptera	FALSE	FALSE	FALSE	GCF_021155765.1	NA	NA	NA	292	291
 Neodiprion_fabricii	Hymenoptera	2872261	Hymenoptera	FALSE	FALSE	FALSE	GCF_021155785.1	NA	NA	NA	303	302
-Sphaerodactylus_townsendi	Lepidosauria	933632	Other Vertebrates	FALSE	FALSE	TRUE	GCF_021028975.2	NA	NA	5e-04	297	288
+Sphaerodactylus_townsendi	Lepidosauria	933632	Other Vertebrates	FALSE	FALSE	TRUE	GCF_021028975.2	NA	NA	0.0005	297	288
 Seriola_aureovittata	Teleostei	2871759	Teleostei	FALSE	FALSE	TRUE	GCF_021018895.1	4380	250	96.8	303	285
 Eciton_burchellii	Hymenoptera	213866	Hymenoptera	FALSE	FALSE	TRUE	GCA_020341155.1	NA	1.2	NA	302	295
 Heterotrigona_itama	Hymenoptera	395501	Hymenoptera	FALSE	FALSE	FALSE	GCA_903986555.1	NA	NA	NA	233	224
@@ -492,7 +492,7 @@ Austrofundulus_limnaeus	Teleostei	52670	Teleostei	FALSE	FALSE	TRUE	GCF_001266775
 Mytilus_californianus	Mollusca	6549	Other Invertebrates	FALSE	FALSE	TRUE	GCF_021869535.1	1095	53	0.0189	297	293
 Chlorocebus_sabaeus	Mammalia	60711	Mammalia	FALSE	FALSE	TRUE	GCF_015252025.1	4745	140	8	302	267
 Rattus_rattus	Mammalia	10117	Mammalia	FALSE	FALSE	TRUE	GCF_011064425.1	1533	41.4	0.3	301	271
-Dermacentor_andersoni	Arachnida	34620	Other Invertebrates	FALSE	FALSE	TRUE	GCF_023375885.1	1460	1.65	7e-04	301	292
+Dermacentor_andersoni	Arachnida	34620	Other Invertebrates	FALSE	FALSE	TRUE	GCF_023375885.1	1460	1.65	0.0007	301	292
 Chilo_suppressalis	Lepidoptera	168631	Lepido Diptera	FALSE	FALSE	FALSE	GCA_902850365.2	NA	NA	NA	286	282
 Tenebrio_molitor	Coleoptera	7067	Other Insecta	FALSE	FALSE	FALSE	GCA_907166875.3	NA	NA	NA	290	288
 Cyprinodon_variegatus	Teleostei	28743	Teleostei	FALSE	FALSE	TRUE	GCF_000732505.1	NA	9	NA	302	286
@@ -698,325 +698,325 @@ Arenaria_interpres	Aves	54971	Aves	FALSE	FALSE	TRUE	GCA_013399435.1	8139.5	57	0.
 Meleagris_gallopavo	Aves	9103	Aves	FALSE	FALSE	TRUE	GCF_000146605.3	4745	NA	11	288	283
 Strongylocentrotus_purpuratus	Echinodermata	7668	Other Invertebrates	FALSE	FALSE	TRUE	GCF_000002235.5	18250	10	NA	298	225
 Saimiri_boliviensis	Mammalia	27679	Mammalia	FALSE	FALSE	TRUE	GCF_016699345.2	11059.5	73.7	1.135	303	272
-Microtus_ochrogaster	Mammalia	79684	Mammalia	FALSE	TRUE	TRUE	GCF_000317375.1	1934.5	18	0.07	302	290
-Melospiza_melodia	Aves	44397	Aves	FALSE	TRUE	TRUE	GCA_013398205.1	4124.5	17	0.0227	271	263
-Lonchura_striata	Aves	40157	Aves	FALSE	TRUE	TRUE	GCF_005870125.1	3650	11	0.0123	297	290
-Cyprinus_carpio	Teleostei	7962	Teleostei	FALSE	FALSE	TRUE	GCF_018340385.1	17155	120	40.1	302	104
-Callithrix_jacchus	Mammalia	9483	Mammalia	FALSE	TRUE	TRUE	GCF_009663435.1	8322	52.5	0.36	303	265
-Pelodiscus_sinensis	Testudines	13735	Other Vertebrates	FALSE	TRUE	FALSE	GCF_000230535.1	NA	NA	NA	296	294
-Panthera_tigris	Mammalia	9694	Mammalia	FALSE	TRUE	TRUE	GCF_000464555.1	9599.5	370	423	299	292
-Monodelphis_domestica	Mammalia	13616	Mammalia	FALSE	TRUE	TRUE	GCF_000002295.2	3650	20	0.155	300	288
-Heterocephalus_glaber	Mammalia	10181	Mammalia	FALSE	TRUE	TRUE	GCF_000247695.1	11315	16.5	0.08	303	285
-Macaca_mulatta	Mammalia	9544	Mammalia	FALSE	TRUE	TRUE	GCF_003339765.1	14600	82	12	303	290
-Ornithorhynchus_anatinus	Mammalia	9258	Mammalia	FALSE	TRUE	TRUE	GCF_004115215.1	8249	60	2.5	300	293
-Erinaceus_europaeus	Mammalia	9365	Mammalia	FALSE	TRUE	TRUE	GCF_000296755.1	5040	23.717	1.2	302	291
-Felis_catus	Mammalia	9685	Mammalia	FALSE	TRUE	TRUE	GCF_000181335.3	12240	76.2	5.4	303	293
-Oryctolagus_cuniculus	Mammalia	9986	Mammalia	FALSE	FALSE	TRUE	GCF_000003625.3	6480	50	2.5	291	272
-Rattus_norvegicus	Mammalia	10116	Mammalia	FALSE	TRUE	TRUE	GCF_000001895.5	1460	39.9	0.5	303	277
-Mus_musculus	Mammalia	10090	Mammalia	FALSE	TRUE	TRUE	GCF_000001635.26	2160	9.5	0.03	303	290
-Bos_taurus	Mammalia	9913	Mammalia	FALSE	TRUE	TRUE	GCF_002263795.1	7300	245	1363	303	286
-Crocodylus_porosus	Crocodylia	8502	Other Vertebrates	FALSE	TRUE	TRUE	GCF_001723895.1	20805	600	1200	277	274
-Gallus_gallus	Aves	9031	Aves	FALSE	TRUE	TRUE	GCF_000002315.5	10950	70	2.5802	295	291
-Loxodonta_africana	Mammalia	9785	Mammalia	FALSE	TRUE	TRUE	GCF_000001905.1	29200	400	6100	303	296
-Cervus_elaphus	Mammalia	9860	Mammalia	FALSE	TRUE	TRUE	GCA_002197005.1	11497.5	270	497	267	259
-Sus_scrofa	Mammalia	9823	Mammalia	FALSE	TRUE	TRUE	GCF_000003025.6	9855	240	272	302	292
-Canis_lupus	Mammalia	9612	Mammalia	FALSE	TRUE	TRUE	GCF_003254725.1	10620	117	55	302	285
-Danio_rerio	Teleostei	7955	Teleostei	FALSE	FALSE	TRUE	GCF_000002035.6	2007.5	6.4	NA	303	285
-Xenopus_tropicalis	Amphibia	8364	Other Vertebrates	FALSE	TRUE	FALSE	GCF_000004195.3	NA	NA	NA	299	292
-Xenopus_laevis	Amphibia	8355	Other Vertebrates	FALSE	FALSE	TRUE	GCF_001663975.1	11059.5	12	0.2	303	137
-Callorhinchus_milii	Chondrichthyes	7868	Other Vertebrates	FALSE	FALSE	TRUE	GCF_000165045.1	5475	125	4	290	282
-Homo_sapiens	Mammalia	9606	Mammalia	FALSE	TRUE	TRUE	GCF_000001405.38	36500	175	80	303	294
-Equus_caballus	Mammalia	9796	Mammalia	FALSE	TRUE	TRUE	GCF_002863925.1	22630	280	900	301	290
-Blattella_germanica	Blattodea	6973	Other Insecta	FALSE	TRUE	TRUE	GCA_003018175.1	200	1.588	0.00012	291	285
-Cryptotermes_secundus	Blattodea	105785	Other Insecta	FALSE	TRUE	TRUE	GCF_002891405.2	4745	0.6	NA	300	297
-Zootermopsis_nevadensis	Blattodea	136037	Other Insecta	FALSE	TRUE	TRUE	GCF_000696155.1	2299.5	1	NA	296	293
-Acyrthosiphon_pisum	Hemiptera	7029	Other Insecta	FALSE	TRUE	TRUE	GCF_000142985.2	30	0.25	NA	301	272
-Cimex_lectularius	Hemiptera	79782	Other Insecta	FALSE	TRUE	TRUE	GCF_000648675.2	572	0.5	NA	302	292
-Halyomorpha_halys	Hemiptera	286706	Other Insecta	FALSE	TRUE	TRUE	GCF_000696795.2	300	1.7	NA	300	292
-Athalia_rosae	Hymenoptera	37344	Hymenoptera	FALSE	TRUE	TRUE	GCF_000344095.2	11.64	0.73	NA	301	300
-Cephus_cinctus	Hymenoptera	211228	Hymenoptera	FALSE	TRUE	TRUE	GCF_000341935.1	7	0.86	NA	303	298
-Orussus_abietinus	Hymenoptera	222816	Hymenoptera	FALSE	TRUE	TRUE	GCF_000612105.2	7	1	NA	301	299
-Nasonia_vitripennis	Hymenoptera	7425	Hymenoptera	FALSE	TRUE	TRUE	GCF_000002325.3	25	0.3	NA	301	293
-Trichogramma_pretiosum	Hymenoptera	7493	Hymenoptera	FALSE	TRUE	TRUE	GCF_000599845.2	10.5	0.0387	NA	302	282
-Harpegnathos_saltator	Hymenoptera	610380	Hymenoptera	FALSE	TRUE	TRUE	GCF_003227715.1	653.35	1.7	NA	303	295
-Linepithema_humile	Hymenoptera	83485	Hymenoptera	FALSE	TRUE	TRUE	GCF_000217595.1	365	0.5	3.6e-06	302	298
-Camponotus_floridanus	Hymenoptera	104421	Hymenoptera	FALSE	TRUE	TRUE	GCF_003227725.1	3650	1.9	NA	301	295
-Pogonomyrmex_barbatus	Hymenoptera	144034	Hymenoptera	FALSE	TRUE	TRUE	GCF_000187915.1	10220	1.1	NA	302	298
-Polistes_canadensis	Hymenoptera	91411	Hymenoptera	FALSE	TRUE	TRUE	GCF_001313835.1	506	2	NA	302	298
-Polistes_dominula	Hymenoptera	743375	Hymenoptera	FALSE	TRUE	TRUE	GCF_001465965.1	506	2	NA	301	298
-Solenopsis_invicta	Hymenoptera	13686	Hymenoptera	FALSE	TRUE	TRUE	GCF_000188075.2	2482	0.7	NA	303	292
-Acromyrmex_echinatior	Hymenoptera	103372	Hymenoptera	FALSE	TRUE	TRUE	GCF_000204515.1	5475	1.4	NA	302	298
-Atta_cephalotes	Hymenoptera	12957	Hymenoptera	FALSE	TRUE	TRUE	GCF_000143395.1	5475	2.54	2e-05	300	297
-Dufourea_novaeangliae	Hymenoptera	178035	Hymenoptera	FALSE	TRUE	FALSE	GCF_001272555.1	NA	NA	NA	301	297
-Megachile_rotundata	Hymenoptera	143995	Hymenoptera	FALSE	TRUE	TRUE	GCF_000220905.1	56	1.9	NA	300	297
-Habropoda_laboriosa	Hymenoptera	597456	Hymenoptera	FALSE	TRUE	FALSE	GCF_001263275.1	NA	NA	NA	302	298
-Eufriesea_mexicana	Hymenoptera	516756	Hymenoptera	FALSE	TRUE	FALSE	GCF_001483705.1	NA	NA	NA	298	290
-Apis_mellifera	Hymenoptera	7460	Hymenoptera	FALSE	TRUE	TRUE	GCF_003254395.2	2920	2	NA	302	299
-Apis_florea	Hymenoptera	7463	Hymenoptera	FALSE	TRUE	TRUE	GCF_000184785.1	1095	2	NA	302	300
-Apis_cerana	Hymenoptera	7461	Hymenoptera	FALSE	TRUE	TRUE	GCF_001442555.1	1095	2	NA	301	296
-Melipona_quadrifasciata	Hymenoptera	166423	Hymenoptera	FALSE	TRUE	FALSE	GCA_001276565.1	NA	NA	NA	289	282
-Bombus_terrestris	Hymenoptera	30195	Hymenoptera	FALSE	TRUE	TRUE	GCF_000214255.1	150	2.5	NA	302	298
-Onthophagus_taurus	Coleoptera	166361	Other Insecta	FALSE	TRUE	TRUE	GCF_000648695.1	160	1	NA	302	285
-Tribolium_castaneum	Coleoptera	7070	Other Insecta	FALSE	TRUE	TRUE	GCF_000002335.3	170	0.5	NA	302	298
-Dendroctonus_ponderosae	Coleoptera	77166	Other Insecta	FALSE	TRUE	TRUE	GCF_000355655.1	30	0.75	NA	299	282
-Anoplophora_glabripennis	Coleoptera	217634	Other Insecta	FALSE	TRUE	TRUE	GCF_000390285.2	66	3.5	NA	302	290
-Leptinotarsa_decemlineata	Coleoptera	7539	Other Insecta	FALSE	TRUE	TRUE	GCF_000500325.1	365	1	NA	294	283
-Plutella_xylostella	Lepidoptera	51655	Lepido Diptera	FALSE	FALSE	TRUE	GCF_000330985.1	NA	0.8	NA	293	235
-Bombyx_mori	Lepidoptera	7091	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000151625.1	50	1.9	NA	303	295
-Danaus_plexippus	Lepidoptera	13037	Lepido Diptera	FALSE	TRUE	FALSE	GCA_000235995.2	NA	NA	NA	295	288
-Aedes_aegypti	Diptera	7159	Lepido Diptera	FALSE	TRUE	TRUE	GCF_002204515.2	40	1	NA	301	284
-Culex_quinquefasciatus	Diptera	7176	Lepido Diptera	FALSE	TRUE	FALSE	GCF_000209185.1	NA	NA	NA	296	282
-Anopheles_gambiae	Diptera	7165	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000005575.2	NA	0.4	NA	301	294
-Drosophila_grimshawi	Diptera	7222	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000005155.2	50	0.5	NA	300	283
-Drosophila_pseudoobscura	Diptera	7237	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000001765.3	90	0.1955	NA	299	287
-Drosophila_melanogaster	Diptera	7227	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000001215.4	109.5	0.3	NA	303	295
-Drosophila_suzukii	Diptera	28584	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000472105.1	38	0.33	NA	297	268
-Ceratitis_capitata	Diptera	7213	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000347755.3	178.85	0.5	NA	303	301
-Lucilia_cuprina	Diptera	7375	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000699065.1	20.56	0.9	NA	303	296
-Musca_domestica	Diptera	7370	Lepido Diptera	FALSE	TRUE	TRUE	GCF_000371365.1	60	0.8	1.2e-05	301	292
-Enhydra_lutris	Mammalia	34882	Mammalia	FALSE	TRUE	TRUE	GCF_002288905.1	10800	150	45	303	289
-Carassius_auratus	Teleostei	7957	Teleostei	FALSE	FALSE	TRUE	GCF_003368295.1	15695	48	3	303	90
-Motacilla_alba	Aves	45807	Aves	FALSE	TRUE	TRUE	GCF_015832195.1	5000.5	15	0.025	287	281
-Patagioenas_fasciata	Aves	372321	Aves	FALSE	TRUE	TRUE	GCA_002029285.1	6752.5	NA	0.315	291	285
-Terrapene_carolina	Testudines	158814	Other Vertebrates	FALSE	TRUE	TRUE	GCF_002925995.2	50370	18	0.372	299	268
-Osmia_bicornis	Hymenoptera	1437190	Hymenoptera	FALSE	TRUE	FALSE	GCF_004153925.1	NA	NA	NA	303	278
-Neophocaena_asiaeorientalis	Mammalia	189058	Mammalia	FALSE	TRUE	TRUE	GCF_003031525.1	8280	170	70	303	290
-Ovis_aries	Mammalia	9940	Mammalia	FALSE	TRUE	TRUE	GCF_002742125.1	8322	180	200	303	283
-Lamprotornis_superbus	Aves	245042	Aves	FALSE	TRUE	TRUE	GCA_015883425.1	9125	18	0.077	272	270
-Nematolebias_whitei	Teleostei	451745	Teleostei	FALSE	TRUE	TRUE	GCF_014905685.1	NA	8	NA	299	291
-Tetranychus_urticae	Arachnida	32264	Other Invertebrates	FALSE	TRUE	TRUE	GCF_000239435.1	29	0.03	NA	294	274
-Ixodes_scapularis	Arachnida	6945	Other Invertebrates	FALSE	TRUE	TRUE	GCF_002892825.2	730	0.3	NA	293	268
-Centruroides_sculpturatus	Arachnida	218467	Other Invertebrates	FALSE	TRUE	FALSE	GCF_000671375.1	NA	NA	NA	301	286
-Eurytemora_affinis	Crustacea	88015	Other Invertebrates	FALSE	TRUE	TRUE	GCF_000591075.1	150	0.19	NA	296	288
-Tyto_alba	Aves	56313	Aves	FALSE	TRUE	TRUE	GCF_902150015.1	12410	40	0.62	293	287
-Anser_cygnoides	Aves	8845	Aves	FALSE	TRUE	TRUE	GCF_000971095.1	14600	94	3.15	276	271
-Ursus_arctos	Mammalia	9644	Mammalia	FALSE	TRUE	TRUE	GCF_023065955.1	18250	280	600	303	291
-Seriola_lalandi	Teleostei	302047	Teleostei	FALSE	TRUE	TRUE	GCF_002814215.1	4380	250	96.8	303	280
-Balaenoptera_acutorostrata	Mammalia	9767	Mammalia	FALSE	TRUE	TRUE	GCF_000493695.1	18250	1020	9000	300	284
+Microtus_ochrogaster	Mammalia	79684	Mammalia	TRUE	FALSE	TRUE	GCF_000317375.1	1934.5	18	0.07	302	290
+Melospiza_melodia	Aves	44397	Aves	TRUE	FALSE	TRUE	GCA_013398205.1	4124.5	17	0.0227	271	263
+Lonchura_striata	Aves	40157	Aves	TRUE	FALSE	TRUE	GCF_005870125.1	3650	11	0.0123	297	290
+Cyprinus_carpio	Teleostei	7962	Teleostei	TRUE	FALSE	TRUE	GCF_018340385.1	17155	120	40.1	302	104
+Callithrix_jacchus	Mammalia	9483	Mammalia	TRUE	FALSE	TRUE	GCF_009663435.1	8322	52.5	0.36	303	265
+Pelodiscus_sinensis	Testudines	13735	Other Vertebrates	TRUE	FALSE	FALSE	GCF_000230535.1	NA	NA	NA	296	294
+Panthera_tigris	Mammalia	9694	Mammalia	TRUE	FALSE	TRUE	GCF_000464555.1	9599.5	370	423	299	292
+Monodelphis_domestica	Mammalia	13616	Mammalia	TRUE	FALSE	TRUE	GCF_000002295.2	3650	20	0.155	300	288
+Heterocephalus_glaber	Mammalia	10181	Mammalia	TRUE	FALSE	TRUE	GCF_000247695.1	11315	16.5	0.08	303	285
+Macaca_mulatta	Mammalia	9544	Mammalia	TRUE	FALSE	TRUE	GCF_003339765.1	14600	82	12	303	290
+Ornithorhynchus_anatinus	Mammalia	9258	Mammalia	TRUE	FALSE	TRUE	GCF_004115215.1	8249	60	2.5	300	293
+Erinaceus_europaeus	Mammalia	9365	Mammalia	TRUE	FALSE	TRUE	GCF_000296755.1	5040	23.717	1.2	302	291
+Felis_catus	Mammalia	9685	Mammalia	TRUE	FALSE	TRUE	GCF_000181335.3	12240	76.2	5.4	303	293
+Oryctolagus_cuniculus	Mammalia	9986	Mammalia	TRUE	FALSE	TRUE	GCF_000003625.3	6480	50	2.5	291	272
+Rattus_norvegicus	Mammalia	10116	Mammalia	TRUE	FALSE	TRUE	GCF_000001895.5	1460	39.9	0.5	303	277
+Mus_musculus	Mammalia	10090	Mammalia	TRUE	FALSE	TRUE	GCF_000001635.26	2160	9.5	0.03	303	290
+Bos_taurus	Mammalia	9913	Mammalia	FALSE	FALSE	TRUE	GCF_002263795.1	7300	245	1363	303	286
+Crocodylus_porosus	Crocodylia	8502	Other Vertebrates	TRUE	FALSE	TRUE	GCF_001723895.1	20805	600	1200	277	274
+Gallus_gallus	Aves	9031	Aves	TRUE	FALSE	TRUE	GCF_000002315.5	10950	70	2.5802	295	291
+Loxodonta_africana	Mammalia	9785	Mammalia	TRUE	FALSE	TRUE	GCF_000001905.1	29200	400	6100	303	296
+Cervus_elaphus	Mammalia	9860	Mammalia	TRUE	FALSE	TRUE	GCA_002197005.1	11497.5	270	497	267	259
+Sus_scrofa	Mammalia	9823	Mammalia	TRUE	FALSE	TRUE	GCF_000003025.6	9855	240	272	302	292
+Canis_lupus	Mammalia	9612	Mammalia	TRUE	FALSE	TRUE	GCF_003254725.1	10620	117	55	302	285
+Danio_rerio	Teleostei	7955	Teleostei	TRUE	FALSE	TRUE	GCF_000002035.6	2007.5	6.4	NA	303	285
+Xenopus_tropicalis	Amphibia	8364	Other Vertebrates	TRUE	FALSE	FALSE	GCF_000004195.3	NA	NA	NA	299	292
+Xenopus_laevis	Amphibia	8355	Other Vertebrates	TRUE	FALSE	TRUE	GCF_001663975.1	11059.5	12	0.2	303	137
+Callorhinchus_milii	Chondrichthyes	7868	Other Vertebrates	TRUE	FALSE	TRUE	GCF_000165045.1	5475	125	4	290	282
+Homo_sapiens	Mammalia	9606	Mammalia	TRUE	FALSE	TRUE	GCF_000001405.38	36500	175	80	303	294
+Equus_caballus	Mammalia	9796	Mammalia	TRUE	FALSE	TRUE	GCF_002863925.1	22630	280	900	301	290
+Blattella_germanica	Blattodea	6973	Other Insecta	FALSE	FALSE	TRUE	GCA_003018175.1	200	1.588	0.00012	291	285
+Cryptotermes_secundus	Blattodea	105785	Other Insecta	TRUE	FALSE	TRUE	GCF_002891405.2	4745	0.6	NA	300	297
+Zootermopsis_nevadensis	Blattodea	136037	Other Insecta	TRUE	FALSE	TRUE	GCF_000696155.1	2299.5	1	NA	296	293
+Acyrthosiphon_pisum	Hemiptera	7029	Other Insecta	TRUE	FALSE	TRUE	GCF_000142985.2	30	0.25	NA	301	272
+Cimex_lectularius	Hemiptera	79782	Other Insecta	TRUE	FALSE	TRUE	GCF_000648675.2	572	0.5	NA	302	292
+Halyomorpha_halys	Hemiptera	286706	Other Insecta	TRUE	FALSE	TRUE	GCF_000696795.2	300	1.7	NA	300	292
+Athalia_rosae	Hymenoptera	37344	Hymenoptera	TRUE	FALSE	TRUE	GCF_000344095.2	11.64	0.73	NA	301	300
+Cephus_cinctus	Hymenoptera	211228	Hymenoptera	TRUE	FALSE	TRUE	GCF_000341935.1	7	0.86	NA	303	298
+Orussus_abietinus	Hymenoptera	222816	Hymenoptera	TRUE	FALSE	TRUE	GCF_000612105.2	7	1	NA	301	299
+Nasonia_vitripennis	Hymenoptera	7425	Hymenoptera	TRUE	FALSE	TRUE	GCF_000002325.3	25	0.3	NA	301	293
+Trichogramma_pretiosum	Hymenoptera	7493	Hymenoptera	TRUE	FALSE	TRUE	GCF_000599845.2	10.5	0.0387	NA	302	282
+Harpegnathos_saltator	Hymenoptera	610380	Hymenoptera	TRUE	FALSE	TRUE	GCF_003227715.1	653.35	1.7	NA	303	295
+Linepithema_humile	Hymenoptera	83485	Hymenoptera	TRUE	FALSE	TRUE	GCF_000217595.1	365	0.5	0.0000036	302	298
+Camponotus_floridanus	Hymenoptera	104421	Hymenoptera	TRUE	FALSE	TRUE	GCF_003227725.1	3650	1.9	NA	301	295
+Pogonomyrmex_barbatus	Hymenoptera	144034	Hymenoptera	TRUE	FALSE	TRUE	GCF_000187915.1	10220	1.1	NA	302	298
+Polistes_canadensis	Hymenoptera	91411	Hymenoptera	TRUE	FALSE	TRUE	GCF_001313835.1	506	2	NA	302	298
+Polistes_dominula	Hymenoptera	743375	Hymenoptera	TRUE	FALSE	TRUE	GCF_001465965.1	506	2	NA	301	298
+Solenopsis_invicta	Hymenoptera	13686	Hymenoptera	TRUE	FALSE	TRUE	GCF_000188075.2	2482	0.7	NA	303	292
+Acromyrmex_echinatior	Hymenoptera	103372	Hymenoptera	TRUE	FALSE	TRUE	GCF_000204515.1	5475	1.4	NA	302	298
+Atta_cephalotes	Hymenoptera	12957	Hymenoptera	TRUE	FALSE	TRUE	GCF_000143395.1	5475	2.54	0.00002	300	297
+Dufourea_novaeangliae	Hymenoptera	178035	Hymenoptera	TRUE	FALSE	FALSE	GCF_001272555.1	NA	NA	NA	301	297
+Megachile_rotundata	Hymenoptera	143995	Hymenoptera	TRUE	FALSE	TRUE	GCF_000220905.1	56	1.9	NA	300	297
+Habropoda_laboriosa	Hymenoptera	597456	Hymenoptera	TRUE	FALSE	FALSE	GCF_001263275.1	NA	NA	NA	302	298
+Eufriesea_mexicana	Hymenoptera	516756	Hymenoptera	TRUE	FALSE	FALSE	GCF_001483705.1	NA	NA	NA	298	290
+Apis_mellifera	Hymenoptera	7460	Hymenoptera	TRUE	FALSE	TRUE	GCF_003254395.2	2920	2	NA	302	299
+Apis_florea	Hymenoptera	7463	Hymenoptera	TRUE	FALSE	TRUE	GCF_000184785.1	1095	2	NA	302	300
+Apis_cerana	Hymenoptera	7461	Hymenoptera	TRUE	FALSE	TRUE	GCF_001442555.1	1095	2	NA	301	296
+Melipona_quadrifasciata	Hymenoptera	166423	Hymenoptera	TRUE	FALSE	FALSE	GCA_001276565.1	NA	NA	NA	289	282
+Bombus_terrestris	Hymenoptera	30195	Hymenoptera	FALSE	FALSE	TRUE	GCF_000214255.1	150	2.5	NA	302	298
+Onthophagus_taurus	Coleoptera	166361	Other Insecta	TRUE	FALSE	TRUE	GCF_000648695.1	160	1	NA	302	285
+Tribolium_castaneum	Coleoptera	7070	Other Insecta	TRUE	FALSE	TRUE	GCF_000002335.3	170	0.5	NA	302	298
+Dendroctonus_ponderosae	Coleoptera	77166	Other Insecta	TRUE	FALSE	TRUE	GCF_000355655.1	30	0.75	NA	299	282
+Anoplophora_glabripennis	Coleoptera	217634	Other Insecta	TRUE	FALSE	TRUE	GCF_000390285.2	66	3.5	NA	302	290
+Leptinotarsa_decemlineata	Coleoptera	7539	Other Insecta	TRUE	FALSE	TRUE	GCF_000500325.1	365	1	NA	294	283
+Plutella_xylostella	Lepidoptera	51655	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000330985.1	NA	0.8	NA	293	235
+Bombyx_mori	Lepidoptera	7091	Lepido Diptera	FALSE	FALSE	TRUE	GCF_000151625.1	50	1.9	NA	303	295
+Danaus_plexippus	Lepidoptera	13037	Lepido Diptera	TRUE	FALSE	FALSE	GCA_000235995.2	NA	NA	NA	295	288
+Aedes_aegypti	Diptera	7159	Lepido Diptera	TRUE	FALSE	TRUE	GCF_002204515.2	40	1	NA	301	284
+Culex_quinquefasciatus	Diptera	7176	Lepido Diptera	TRUE	FALSE	FALSE	GCF_000209185.1	NA	NA	NA	296	282
+Anopheles_gambiae	Diptera	7165	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000005575.2	NA	0.4	NA	301	294
+Drosophila_grimshawi	Diptera	7222	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000005155.2	50	0.5	NA	300	283
+Drosophila_pseudoobscura	Diptera	7237	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000001765.3	90	0.1955	NA	299	287
+Drosophila_melanogaster	Diptera	7227	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000001215.4	109.5	0.3	NA	303	295
+Drosophila_suzukii	Diptera	28584	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000472105.1	38	0.33	NA	297	268
+Ceratitis_capitata	Diptera	7213	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000347755.3	178.85	0.5	NA	303	301
+Lucilia_cuprina	Diptera	7375	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000699065.1	20.56	0.9	NA	303	296
+Musca_domestica	Diptera	7370	Lepido Diptera	TRUE	FALSE	TRUE	GCF_000371365.1	60	0.8	0.000012	301	292
+Enhydra_lutris	Mammalia	34882	Mammalia	TRUE	FALSE	TRUE	GCF_002288905.1	10800	150	45	303	289
+Carassius_auratus	Teleostei	7957	Teleostei	TRUE	FALSE	TRUE	GCF_003368295.1	15695	48	3	303	90
+Motacilla_alba	Aves	45807	Aves	TRUE	FALSE	TRUE	GCF_015832195.1	5000.5	15	0.025	287	281
+Patagioenas_fasciata	Aves	372321	Aves	TRUE	FALSE	TRUE	GCA_002029285.1	6752.5	NA	0.315	291	285
+Terrapene_carolina	Testudines	158814	Other Vertebrates	TRUE	FALSE	TRUE	GCF_002925995.2	50370	18	0.372	299	268
+Osmia_bicornis	Hymenoptera	1437190	Hymenoptera	TRUE	FALSE	FALSE	GCF_004153925.1	NA	NA	NA	303	278
+Neophocaena_asiaeorientalis	Mammalia	189058	Mammalia	TRUE	FALSE	TRUE	GCF_003031525.1	8280	170	70	303	290
+Ovis_aries	Mammalia	9940	Mammalia	TRUE	FALSE	TRUE	GCF_002742125.1	8322	180	200	303	283
+Lamprotornis_superbus	Aves	245042	Aves	TRUE	FALSE	TRUE	GCA_015883425.1	9125	18	0.077	272	270
+Nematolebias_whitei	Teleostei	451745	Teleostei	TRUE	FALSE	TRUE	GCF_014905685.1	NA	8	NA	299	291
+Tetranychus_urticae	Arachnida	32264	Other Invertebrates	TRUE	FALSE	TRUE	GCF_000239435.1	29	0.03	NA	294	274
+Ixodes_scapularis	Arachnida	6945	Other Invertebrates	TRUE	FALSE	TRUE	GCF_002892825.2	730	0.3	NA	293	268
+Centruroides_sculpturatus	Arachnida	218467	Other Invertebrates	TRUE	FALSE	FALSE	GCF_000671375.1	NA	NA	NA	301	286
+Eurytemora_affinis	Crustacea	88015	Other Invertebrates	TRUE	FALSE	TRUE	GCF_000591075.1	150	0.19	NA	296	288
+Tyto_alba	Aves	56313	Aves	TRUE	FALSE	TRUE	GCF_902150015.1	12410	40	0.62	293	287
+Anser_cygnoides	Aves	8845	Aves	TRUE	FALSE	TRUE	GCF_000971095.1	14600	94	3.15	276	271
+Ursus_arctos	Mammalia	9644	Mammalia	TRUE	FALSE	TRUE	GCF_023065955.1	18250	280	600	303	291
+Seriola_lalandi	Teleostei	302047	Teleostei	TRUE	FALSE	TRUE	GCF_002814215.1	4380	250	96.8	303	280
+Balaenoptera_acutorostrata	Mammalia	9767	Mammalia	TRUE	FALSE	TRUE	GCF_000493695.1	18250	1020	9000	300	284
 Bison_bison	Mammalia	9901	Mammalia	FALSE	FALSE	TRUE	GCF_000754665.1	14600	380	900	301	290
-Podarcis_muralis	Lepidosauria	64176	Other Vertebrates	FALSE	TRUE	TRUE	GCF_004329235.1	3650	NA	0.00541	298	288
-Anas_platyrhynchos	Aves	8839	Aves	FALSE	TRUE	TRUE	GCF_015476345.1	10621.5	98	1.082	282	273
-Odocoileus_virginianus	Mammalia	9874	Mammalia	FALSE	TRUE	TRUE	GCF_002102435.1	8395	220	137	303	286
-Diabrotica_virgifera	Coleoptera	50389	Other Insecta	FALSE	TRUE	TRUE	GCF_003013835.1	NA	0.6	NA	299	291
-Trachemys_scripta	Testudines	34903	Other Vertebrates	FALSE	TRUE	TRUE	GCF_013100865.1	15074.5	29	3.2	294	286
-Glossina_fuscipes	Diptera	7396	Lepido Diptera	FALSE	TRUE	FALSE	GCF_014805625.1	NA	NA	NA	303	287
-Ceratosolen_solmsi	Hymenoptera	142686	Hymenoptera	FALSE	TRUE	FALSE	GCF_000503995.1	NA	NA	NA	300	294
-Bombus_vancouverensis	Hymenoptera	2705177	Hymenoptera	FALSE	TRUE	FALSE	GCF_011952275.1	NA	NA	NA	302	295
-Peromyscus_maniculatus	Mammalia	10042	Mammalia	FALSE	TRUE	TRUE	GCF_000500345.1	3029.5	22.2	0.024	299	280
-Equus_asinus	Mammalia	9793	Mammalia	FALSE	TRUE	TRUE	GCF_001305755.1	18250	140	320	302	293
-Gorilla_gorilla	Mammalia	9593	Mammalia	FALSE	TRUE	TRUE	GCF_008122165.1	21936.5	175	275	301	288
-Vicugna_pacos	Mammalia	30538	Mammalia	FALSE	TRUE	TRUE	GCF_000164845.3	9417	225	65	300	292
-Pan_troglodytes	Mammalia	9598	Mammalia	FALSE	TRUE	TRUE	GCF_002880755.1	24820	92.5	70	303	293
-Struthio_camelus	Aves	8801	Aves	FALSE	TRUE	TRUE	GCF_000698965.1	18250	200	130	284	278
-Vespula_vulgaris	Hymenoptera	7454	Hymenoptera	FALSE	TRUE	FALSE	GCA_014466185.1	NA	NA	NA	289	283
-Vespula_pensylvanica	Hymenoptera	30213	Hymenoptera	FALSE	TRUE	TRUE	GCA_014466175.1	NA	13	NA	299	294
-Arvicola_amphibius	Mammalia	1047088	Mammalia	FALSE	TRUE	TRUE	GCF_903992535.1	1825	22	0.25	303	267
-Clarias_magur	Teleostei	1594786	Teleostei	FALSE	FALSE	TRUE	GCA_013621035.1	5913	47	1.2	261	251
-Oenanthe_oenanthe	Aves	279966	Aves	FALSE	TRUE	TRUE	GCA_013399995.1	3686.5	NA	0.025	268	258
-Chelonus_insularis	Hymenoptera	460826	Hymenoptera	FALSE	TRUE	TRUE	GCF_013357705.1	NA	0.5	NA	303	298
-Exaiptasia_diaphana	Cnidaria	2652724	Other Invertebrates	FALSE	FALSE	FALSE	GCF_001417965.1	NA	NA	NA	299	286
-Branchiostoma_floridae	Cephalochordata	7739	Other Invertebrates	FALSE	TRUE	TRUE	GCF_000003815.2	NA	6	NA	301	296
-Cloeon_dipterum	Ephemeroptera	197152	Other Insecta	FALSE	TRUE	TRUE	GCA_902829235.1	NA	0.8	NA	298	294
-Gymnodraco_acuticeps	Teleostei	8218	Teleostei	FALSE	TRUE	TRUE	GCF_902827175.1	NA	38.5	0.0862	295	281
-Pseudochaenichthys_georgianus	Teleostei	52239	Teleostei	FALSE	TRUE	TRUE	GCF_902827115.1	NA	60	2.1	294	279
-Molothrus_ater	Aves	84834	Aves	FALSE	TRUE	TRUE	GCF_012460135.1	6168.5	22	0.05	292	286
-Zerene_cesonia	Lepidoptera	33412	Lepido Diptera	FALSE	TRUE	FALSE	GCF_012273895.1	NA	NA	NA	299	281
-Osmia_lignaria	Hymenoptera	473952	Hymenoptera	FALSE	TRUE	TRUE	GCF_012274295.1	NA	1	NA	302	299
-Bombus_vosnesenskii	Hymenoptera	207650	Hymenoptera	FALSE	TRUE	TRUE	GCF_011952255.1	NA	2.1	NA	303	297
-Bombus_bifarius	Hymenoptera	103933	Hymenoptera	FALSE	TRUE	TRUE	GCF_011952205.1	NA	1.9	NA	302	294
-Pollicipes_pollicipes	Crustacea	41117	Other Invertebrates	FALSE	FALSE	TRUE	GCF_011947565.2	NA	5	NA	289	182
-Dissostichus_mawsoni	Teleostei	36200	Teleostei	FALSE	FALSE	TRUE	GCA_011823955.1	14235	200	80	279	266
-Arvicanthis_niloticus	Mammalia	61156	Mammalia	FALSE	TRUE	TRUE	GCF_011762505.1	2445.5	20.4	0.183	303	274
-Anneissia_japonica	Echinodermata	1529436	Other Invertebrates	FALSE	TRUE	FALSE	GCF_011630105.1	NA	NA	NA	302	295
-Oxyura_jamaicensis	Aves	8884	Aves	FALSE	TRUE	TRUE	GCF_011077185.1	7300	43	0.795	288	280
-Ignelater_luminosus	Coleoptera	2038154	Other Insecta	FALSE	TRUE	FALSE	GCA_011009095.1	NA	NA	NA	289	271
-Belonocnema_treatae	Hymenoptera	1159321	Hymenoptera	FALSE	TRUE	FALSE	GCF_010883055.1	NA	NA	NA	302	294
-Stegodyphus_dumicola	Arachnida	202533	Other Invertebrates	FALSE	TRUE	FALSE	GCF_010614865.1	NA	NA	NA	293	289
-Odontomachus_brunneus	Hymenoptera	486640	Hymenoptera	FALSE	TRUE	TRUE	GCF_010583005.1	NA	0.9	NA	302	296
-Eudyptes_filholi	Aves	1419345	Aves	FALSE	TRUE	TRUE	GCA_010085365.1	7300	75	6	250	242
-Chiroxiphia_lanceolata	Aves	296741	Aves	FALSE	TRUE	TRUE	GCF_009829145.1	NA	NA	0.0185	296	289
-Cyclopterus_lumpus	Teleostei	8103	Teleostei	FALSE	TRUE	TRUE	GCF_009769545.1	4745	61	9.5	297	281
-Notolabrus_celidotus	Teleostei	1203425	Teleostei	FALSE	TRUE	TRUE	GCF_009762535.1	2555	23.9	NA	293	277
-Pecten_maximus	Mollusca	6579	Other Invertebrates	FALSE	TRUE	TRUE	GCF_902652985.1	8030	15	0.270519	299	284
-Photinus_pyralis	Coleoptera	7054	Other Insecta	FALSE	TRUE	TRUE	GCF_008802855.1	30	1.4	NA	298	250
-Actinia_tenebrosa	Cnidaria	6105	Other Invertebrates	FALSE	FALSE	FALSE	GCF_009602425.1	NA	NA	NA	302	294
-Camarhynchus_parvulus	Aves	87175	Aves	FALSE	TRUE	TRUE	GCF_901933205.1	5475	11	0.016	300	296
-Asterias_rubens	Echinodermata	7604	Other Invertebrates	FALSE	TRUE	TRUE	GCF_902459465.1	3650	28	0.495358	302	302
-Gopherus_evgoodei	Testudines	1825980	Other Vertebrates	FALSE	TRUE	TRUE	GCF_007399415.2	29200	36	23	301	289
-Archocentrus_centrarchus	Teleostei	63155	Teleostei	FALSE	TRUE	TRUE	GCF_007364275.1	2920	11	NA	302	280
-Dermochelys_coriacea	Testudines	27794	Other Vertebrates	FALSE	TRUE	TRUE	GCF_009764565.2	10950	213	900	301	292
-Thrips_palmi	Thysanoptera	161013	Other Insecta	FALSE	TRUE	TRUE	GCF_012932325.1	30	1	NA	299	292
-Eumeta_japonica	Lepidoptera	151549	Lepido Diptera	FALSE	TRUE	FALSE	GCA_005406025.1	NA	NA	NA	272	269
-Nylanderia_fulva	Hymenoptera	613905	Hymenoptera	FALSE	TRUE	FALSE	GCF_005281655.1	NA	NA	NA	302	288
-Varanus_komodoensis	Lepidosauria	61221	Other Vertebrates	FALSE	TRUE	TRUE	GCA_004798865.1	22630	310	165	259	251
-Anarrhichthys_ocellatus	Teleostei	433405	Teleostei	FALSE	TRUE	TRUE	GCF_004355925.1	NA	240	18.4	300	284
-Cottoperca_gobio	Teleostei	56716	Teleostei	FALSE	TRUE	TRUE	GCF_900634415.1	NA	80	NA	291	271
-Phyllostomus_discolor	Mammalia	89673	Mammalia	FALSE	TRUE	TRUE	GCF_004126475.2	3285	13.4	0.1204	301	282
-Onychomys_torridus	Mammalia	38674	Mammalia	FALSE	TRUE	TRUE	GCF_903995425.1	1679	13	0.022	302	282
-Suricata_suricatta	Mammalia	37032	Mammalia	FALSE	TRUE	TRUE	GCF_006229205.1	7519	28.571	0.776	299	287
-Strigops_habroptila	Aves	2489341	Aves	FALSE	TRUE	TRUE	GCF_004027225.2	21900	64	4	299	291
-Drosophila_guanche	Diptera	7266	Lepido Diptera	FALSE	TRUE	FALSE	GCF_900245975.1	NA	NA	NA	302	292
-Anabarilius_grahami	Teleostei	495550	Teleostei	FALSE	FALSE	TRUE	GCA_003731715.1	NA	15.6	NA	221	203
-Marmota_flaviventris	Mammalia	93162	Mammalia	FALSE	TRUE	TRUE	GCF_003676075.2	7738	70	5.22	303	278
-Electrophorus_electricus	Teleostei	8005	Teleostei	FALSE	TRUE	TRUE	GCF_013358815.1	8030	250	20	303	289
+Podarcis_muralis	Lepidosauria	64176	Other Vertebrates	TRUE	FALSE	TRUE	GCF_004329235.1	3650	NA	0.00541	298	288
+Anas_platyrhynchos	Aves	8839	Aves	TRUE	FALSE	TRUE	GCF_015476345.1	10621.5	98	1.082	282	273
+Odocoileus_virginianus	Mammalia	9874	Mammalia	TRUE	FALSE	TRUE	GCF_002102435.1	8395	220	137	303	286
+Diabrotica_virgifera	Coleoptera	50389	Other Insecta	TRUE	FALSE	TRUE	GCF_003013835.1	NA	0.6	NA	299	291
+Trachemys_scripta	Testudines	34903	Other Vertebrates	TRUE	FALSE	TRUE	GCF_013100865.1	15074.5	29	3.2	294	286
+Glossina_fuscipes	Diptera	7396	Lepido Diptera	TRUE	FALSE	FALSE	GCF_014805625.1	NA	NA	NA	303	287
+Ceratosolen_solmsi	Hymenoptera	142686	Hymenoptera	TRUE	FALSE	FALSE	GCF_000503995.1	NA	NA	NA	300	294
+Bombus_vancouverensis	Hymenoptera	2705177	Hymenoptera	FALSE	FALSE	FALSE	GCF_011952275.1	NA	NA	NA	302	295
+Peromyscus_maniculatus	Mammalia	10042	Mammalia	TRUE	FALSE	TRUE	GCF_000500345.1	3029.5	22.2	0.024	299	280
+Equus_asinus	Mammalia	9793	Mammalia	TRUE	FALSE	TRUE	GCF_001305755.1	18250	140	320	302	293
+Gorilla_gorilla	Mammalia	9593	Mammalia	TRUE	FALSE	TRUE	GCF_008122165.1	21936.5	175	275	301	288
+Vicugna_pacos	Mammalia	30538	Mammalia	TRUE	FALSE	TRUE	GCF_000164845.3	9417	225	65	300	292
+Pan_troglodytes	Mammalia	9598	Mammalia	TRUE	FALSE	TRUE	GCF_002880755.1	24820	92.5	70	303	293
+Struthio_camelus	Aves	8801	Aves	TRUE	FALSE	TRUE	GCF_000698965.1	18250	200	130	284	278
+Vespula_vulgaris	Hymenoptera	7454	Hymenoptera	TRUE	FALSE	FALSE	GCA_014466185.1	NA	NA	NA	289	283
+Vespula_pensylvanica	Hymenoptera	30213	Hymenoptera	TRUE	FALSE	TRUE	GCA_014466175.1	NA	13	NA	299	294
+Arvicola_amphibius	Mammalia	1047088	Mammalia	TRUE	FALSE	TRUE	GCF_903992535.1	1825	22	0.25	303	267
+Clarias_magur	Teleostei	1594786	Teleostei	TRUE	FALSE	TRUE	GCA_013621035.1	5913	47	1.2	261	251
+Oenanthe_oenanthe	Aves	279966	Aves	TRUE	FALSE	TRUE	GCA_013399995.1	3686.5	NA	0.025	268	258
+Chelonus_insularis	Hymenoptera	460826	Hymenoptera	TRUE	FALSE	TRUE	GCF_013357705.1	NA	0.5	NA	303	298
+Exaiptasia_diaphana	Cnidaria	2652724	Other Invertebrates	TRUE	FALSE	FALSE	GCF_001417965.1	NA	NA	NA	299	286
+Branchiostoma_floridae	Cephalochordata	7739	Other Invertebrates	FALSE	FALSE	TRUE	GCF_000003815.2	NA	6	NA	301	296
+Cloeon_dipterum	Ephemeroptera	197152	Other Insecta	TRUE	FALSE	TRUE	GCA_902829235.1	NA	0.8	NA	298	294
+Gymnodraco_acuticeps	Teleostei	8218	Teleostei	TRUE	FALSE	TRUE	GCF_902827175.1	NA	38.5	0.0862	295	281
+Pseudochaenichthys_georgianus	Teleostei	52239	Teleostei	TRUE	FALSE	TRUE	GCF_902827115.1	NA	60	2.1	294	279
+Molothrus_ater	Aves	84834	Aves	TRUE	FALSE	TRUE	GCF_012460135.1	6168.5	22	0.05	292	286
+Zerene_cesonia	Lepidoptera	33412	Lepido Diptera	TRUE	FALSE	FALSE	GCF_012273895.1	NA	NA	NA	299	281
+Osmia_lignaria	Hymenoptera	473952	Hymenoptera	TRUE	FALSE	TRUE	GCF_012274295.1	NA	1	NA	302	299
+Bombus_vosnesenskii	Hymenoptera	207650	Hymenoptera	FALSE	FALSE	TRUE	GCF_011952255.1	NA	2.1	NA	303	297
+Bombus_bifarius	Hymenoptera	103933	Hymenoptera	FALSE	FALSE	TRUE	GCF_011952205.1	NA	1.9	NA	302	294
+Pollicipes_pollicipes	Crustacea	41117	Other Invertebrates	TRUE	FALSE	TRUE	GCF_011947565.2	NA	5	NA	289	182
+Dissostichus_mawsoni	Teleostei	36200	Teleostei	TRUE	FALSE	TRUE	GCA_011823955.1	14235	200	80	279	266
+Arvicanthis_niloticus	Mammalia	61156	Mammalia	TRUE	FALSE	TRUE	GCF_011762505.1	2445.5	20.4	0.183	303	274
+Anneissia_japonica	Echinodermata	1529436	Other Invertebrates	TRUE	FALSE	FALSE	GCF_011630105.1	NA	NA	NA	302	295
+Oxyura_jamaicensis	Aves	8884	Aves	TRUE	FALSE	TRUE	GCF_011077185.1	7300	43	0.795	288	280
+Ignelater_luminosus	Coleoptera	2038154	Other Insecta	TRUE	FALSE	FALSE	GCA_011009095.1	NA	NA	NA	289	271
+Belonocnema_treatae	Hymenoptera	1159321	Hymenoptera	TRUE	FALSE	FALSE	GCF_010883055.1	NA	NA	NA	302	294
+Stegodyphus_dumicola	Arachnida	202533	Other Invertebrates	TRUE	FALSE	FALSE	GCF_010614865.1	NA	NA	NA	293	289
+Odontomachus_brunneus	Hymenoptera	486640	Hymenoptera	TRUE	FALSE	TRUE	GCF_010583005.1	NA	0.9	NA	302	296
+Eudyptes_filholi	Aves	1419345	Aves	TRUE	FALSE	TRUE	GCA_010085365.1	7300	75	6	250	242
+Chiroxiphia_lanceolata	Aves	296741	Aves	TRUE	FALSE	TRUE	GCF_009829145.1	NA	NA	0.0185	296	289
+Cyclopterus_lumpus	Teleostei	8103	Teleostei	TRUE	FALSE	TRUE	GCF_009769545.1	4745	61	9.5	297	281
+Notolabrus_celidotus	Teleostei	1203425	Teleostei	TRUE	FALSE	TRUE	GCF_009762535.1	2555	23.9	NA	293	277
+Pecten_maximus	Mollusca	6579	Other Invertebrates	TRUE	FALSE	TRUE	GCF_902652985.1	8030	15	0.270519	299	284
+Photinus_pyralis	Coleoptera	7054	Other Insecta	TRUE	FALSE	TRUE	GCF_008802855.1	30	1.4	NA	298	250
+Actinia_tenebrosa	Cnidaria	6105	Other Invertebrates	TRUE	FALSE	FALSE	GCF_009602425.1	NA	NA	NA	302	294
+Camarhynchus_parvulus	Aves	87175	Aves	TRUE	FALSE	TRUE	GCF_901933205.1	5475	11	0.016	300	296
+Asterias_rubens	Echinodermata	7604	Other Invertebrates	TRUE	FALSE	TRUE	GCF_902459465.1	3650	28	0.495358	302	302
+Gopherus_evgoodei	Testudines	1825980	Other Vertebrates	TRUE	FALSE	TRUE	GCF_007399415.2	29200	36	23	301	289
+Archocentrus_centrarchus	Teleostei	63155	Teleostei	TRUE	FALSE	TRUE	GCF_007364275.1	2920	11	NA	302	280
+Dermochelys_coriacea	Testudines	27794	Other Vertebrates	TRUE	FALSE	TRUE	GCF_009764565.2	10950	213	900	301	292
+Thrips_palmi	Thysanoptera	161013	Other Insecta	TRUE	FALSE	TRUE	GCF_012932325.1	30	1	NA	299	292
+Eumeta_japonica	Lepidoptera	151549	Lepido Diptera	TRUE	FALSE	FALSE	GCA_005406025.1	NA	NA	NA	272	269
+Nylanderia_fulva	Hymenoptera	613905	Hymenoptera	TRUE	FALSE	FALSE	GCF_005281655.1	NA	NA	NA	302	288
+Varanus_komodoensis	Lepidosauria	61221	Other Vertebrates	TRUE	FALSE	TRUE	GCA_004798865.1	22630	310	165	259	251
+Anarrhichthys_ocellatus	Teleostei	433405	Teleostei	TRUE	FALSE	TRUE	GCF_004355925.1	NA	240	18.4	300	284
+Cottoperca_gobio	Teleostei	56716	Teleostei	TRUE	FALSE	TRUE	GCF_900634415.1	NA	80	NA	291	271
+Phyllostomus_discolor	Mammalia	89673	Mammalia	TRUE	FALSE	TRUE	GCF_004126475.2	3285	13.4	0.1204	301	282
+Onychomys_torridus	Mammalia	38674	Mammalia	TRUE	FALSE	TRUE	GCF_903995425.1	1679	13	0.022	302	282
+Suricata_suricatta	Mammalia	37032	Mammalia	TRUE	FALSE	TRUE	GCF_006229205.1	7519	28.571	0.776	299	287
+Strigops_habroptila	Aves	2489341	Aves	TRUE	FALSE	TRUE	GCF_004027225.2	21900	64	4	299	291
+Drosophila_guanche	Diptera	7266	Lepido Diptera	TRUE	FALSE	FALSE	GCF_900245975.1	NA	NA	NA	302	292
+Anabarilius_grahami	Teleostei	495550	Teleostei	TRUE	FALSE	TRUE	GCA_003731715.1	NA	15.6	NA	221	203
+Marmota_flaviventris	Mammalia	93162	Mammalia	TRUE	FALSE	TRUE	GCF_003676075.2	7738	70	5.22	303	278
+Electrophorus_electricus	Teleostei	8005	Teleostei	TRUE	FALSE	TRUE	GCF_013358815.1	8030	250	20	303	289
 Bos_indicus	Mammalia	9915	Mammalia	FALSE	FALSE	TRUE	GCF_000247795.1	7300	NA	750	295	282
-Apteryx_rowi	Aves	308060	Aves	FALSE	TRUE	TRUE	GCF_003343035.1	14600	54	3.5	297	294
+Apteryx_rowi	Aves	308060	Aves	TRUE	FALSE	TRUE	GCF_003343035.1	14600	54	3.5	297	294
 Malaclemys_terrapin	Testudines	8485	Other Vertebrates	FALSE	FALSE	TRUE	GCF_027887155.1	NA	22.86	0.72	303	297
-Ceratotherium_simum	Mammalia	9807	Mammalia	FALSE	TRUE	TRUE	GCF_000283155.1	18250	377	3600	303	297
-Micropterus_salmoides	Teleostei	27706	Teleostei	FALSE	TRUE	TRUE	GCF_014851395.1	8395	97	10.1	303	267
-Drosophila_subpulchrella	Diptera	1486046	Lepido Diptera	FALSE	TRUE	FALSE	GCF_014743375.2	NA	NA	NA	303	293
-Molossus_molossus	Mammalia	27622	Mammalia	FALSE	TRUE	TRUE	GCF_014108415.1	2044	5.982	0.014	303	280
-Pipistrellus_kuhlii	Mammalia	59472	Mammalia	FALSE	TRUE	TRUE	GCF_014108245.1	2920	4.599	0.006	303	284
-Arctia_plantaginis	Lepidoptera	874455	Lepido Diptera	FALSE	TRUE	FALSE	GCA_902825455.1	NA	NA	NA	299	297
-Contarinia_nasturtii	Diptera	265458	Lepido Diptera	FALSE	TRUE	TRUE	GCF_009176525.2	2	0.2	NA	301	288
-Talpa_occidentalis	Mammalia	50954	Mammalia	FALSE	TRUE	TRUE	GCF_014898055.1	2520	13	NA	303	272
-Grammomys_surdaster	Mammalia	491861	Mammalia	FALSE	TRUE	FALSE	GCF_004785775.1	NA	NA	NA	303	285
-Pipra_filicauda	Aves	649802	Aves	FALSE	TRUE	TRUE	GCF_003945595.2	NA	NA	0.019	285	277
-Nothoprocta_perdicaria	Aves	30464	Aves	FALSE	FALSE	FALSE	GCF_003342845.1	NA	NA	NA	292	286
-Cyanistes_caeruleus	Aves	156563	Aves	FALSE	TRUE	TRUE	GCF_002901205.1	5329	12	0.0103	289	282
-Paramormyrops_kingsleyae	Teleostei	1676925	Teleostei	FALSE	TRUE	TRUE	GCF_002872115.1	NA	13.5	NA	303	282
-Melanaphis_sacchari	Hemiptera	742174	Other Insecta	FALSE	TRUE	FALSE	GCF_002803265.2	NA	NA	NA	302	288
-Piliocolobus_tephrosceles	Mammalia	591936	Mammalia	FALSE	TRUE	TRUE	GCF_002776525.3	7738	126.9	5.5	303	275
-Mastomys_coucha	Mammalia	35658	Mammalia	FALSE	TRUE	TRUE	GCF_008632895.1	NA	11.966	NA	303	294
-Acanthochromis_polyacanthus	Teleostei	80966	Teleostei	FALSE	TRUE	TRUE	GCF_002109545.1	NA	14	NA	302	287
-Mus_pahari	Mammalia	10093	Mammalia	FALSE	TRUE	FALSE	GCF_900095145.1	NA	NA	NA	302	294
-Miniopterus_natalensis	Mammalia	291302	Mammalia	FALSE	TRUE	TRUE	GCF_001595765.1	4745	NA	NA	301	293
-Myotis_myotis	Mammalia	51298	Mammalia	FALSE	TRUE	TRUE	GCF_014108235.1	13541.5	8	0.045	303	262
-Sturnus_vulgaris	Aves	9172	Aves	FALSE	TRUE	TRUE	GCF_001447265.1	8358.5	21.5	0.1	296	292
-Octopus_bimaculoides	Mollusca	37653	Other Invertebrates	FALSE	TRUE	TRUE	GCF_001194135.1	730	60	NA	297	293
-Lynx_pardinus	Mammalia	191816	Mammalia	FALSE	TRUE	TRUE	GCA_900661375.1	4745	130	15	297	290
-Lynx_canadensis	Mammalia	61383	Mammalia	FALSE	TRUE	TRUE	GCF_007474595.2	9782	106.7	17.3	302	289
-Calidris_pugnax	Aves	198806	Aves	FALSE	TRUE	TRUE	GCF_001431845.1	4015	25	0.11	289	279
-Nicrophorus_vespilloides	Coleoptera	110193	Other Insecta	FALSE	TRUE	TRUE	GCF_001412225.1	NA	1.6	NA	302	294
-Dinoponera_quadriceps	Hymenoptera	609295	Hymenoptera	FALSE	TRUE	TRUE	GCF_001313825.1	NA	2.5	NA	302	294
-Gekko_japonicus	Lepidosauria	146911	Other Vertebrates	FALSE	TRUE	TRUE	GCF_001447785.1	8577.5	NA	0.05413	299	294
-Pantherophis_guttatus	Lepidosauria	94885	Other Vertebrates	FALSE	TRUE	TRUE	GCF_001185365.1	11789.5	182	0.9	301	294
-Sinocyclocheilus_rhinocerous	Teleostei	307959	Teleostei	FALSE	FALSE	TRUE	GCF_001515625.1	NA	9.7	NA	303	120
-Sinocyclocheilus_anshuiensis	Teleostei	1608454	Teleostei	FALSE	FALSE	TRUE	GCF_001515605.1	NA	10	NA	302	86
-Hermetia_illucens	Diptera	343691	Lepido Diptera	FALSE	TRUE	TRUE	GCF_905115235.1	365	2	0.00022	303	297
-Scaptodrosophila_lebanonensis	Diptera	7225	Lepido Diptera	FALSE	TRUE	FALSE	GCF_003285725.1	NA	NA	NA	303	294
-Zootoca_vivipara	Lepidosauria	8524	Other Vertebrates	FALSE	TRUE	TRUE	GCF_011800845.1	2920	7.7	0.005	300	290
-Manis_javanica	Mammalia	9974	Mammalia	FALSE	TRUE	TRUE	GCF_014570535.1	7300	88	12	303	284
-Sander_lucioperca	Teleostei	283035	Teleostei	FALSE	TRUE	TRUE	GCF_008315115.2	6205	100	20	303	284
-Meloidogyne_enterolobii	Nematoda	390850	Nematoda	FALSE	FALSE	TRUE	GCA_903994135.1	NA	0.0667	NA	296	37
-Colossoma_macropomum	Teleostei	42526	Teleostei	FALSE	TRUE	TRUE	GCF_904425465.1	9125	108	40	303	286
-Perca_fluviatilis	Teleostei	8168	Teleostei	FALSE	TRUE	TRUE	GCF_010015445.1	8030	60	4.8	302	287
-Periophthalmus_magnuspinnatus	Teleostei	409849	Teleostei	FALSE	TRUE	TRUE	GCF_009829125.1	NA	10.3	NA	300	282
-Ophiophagus_hannah	Lepidosauria	8665	Other Vertebrates	FALSE	TRUE	TRUE	GCA_000516915.1	8212.5	NA	8	247	240
-Crotalus_tigris	Lepidosauria	88082	Other Vertebrates	FALSE	TRUE	TRUE	GCF_016545835.1	5584.5	91	0.454	303	295
+Ceratotherium_simum	Mammalia	9807	Mammalia	TRUE	FALSE	TRUE	GCF_000283155.1	18250	377	3600	303	297
+Micropterus_salmoides	Teleostei	27706	Teleostei	TRUE	FALSE	TRUE	GCF_014851395.1	8395	97	10.1	303	267
+Drosophila_subpulchrella	Diptera	1486046	Lepido Diptera	TRUE	FALSE	FALSE	GCF_014743375.2	NA	NA	NA	303	293
+Molossus_molossus	Mammalia	27622	Mammalia	TRUE	FALSE	TRUE	GCF_014108415.1	2044	5.982	0.014	303	280
+Pipistrellus_kuhlii	Mammalia	59472	Mammalia	TRUE	FALSE	TRUE	GCF_014108245.1	2920	4.599	0.006	303	284
+Arctia_plantaginis	Lepidoptera	874455	Lepido Diptera	TRUE	FALSE	FALSE	GCA_902825455.1	NA	NA	NA	299	297
+Contarinia_nasturtii	Diptera	265458	Lepido Diptera	TRUE	FALSE	TRUE	GCF_009176525.2	2	0.2	NA	301	288
+Talpa_occidentalis	Mammalia	50954	Mammalia	TRUE	FALSE	TRUE	GCF_014898055.1	2520	13	NA	303	272
+Grammomys_surdaster	Mammalia	491861	Mammalia	TRUE	FALSE	FALSE	GCF_004785775.1	NA	NA	NA	303	285
+Pipra_filicauda	Aves	649802	Aves	TRUE	FALSE	TRUE	GCF_003945595.2	NA	NA	0.019	285	277
+Nothoprocta_perdicaria	Aves	30464	Aves	TRUE	FALSE	FALSE	GCF_003342845.1	NA	NA	NA	292	286
+Cyanistes_caeruleus	Aves	156563	Aves	TRUE	FALSE	TRUE	GCF_002901205.1	5329	12	0.0103	289	282
+Paramormyrops_kingsleyae	Teleostei	1676925	Teleostei	TRUE	FALSE	TRUE	GCF_002872115.1	NA	13.5	NA	303	282
+Melanaphis_sacchari	Hemiptera	742174	Other Insecta	TRUE	FALSE	FALSE	GCF_002803265.2	NA	NA	NA	302	288
+Piliocolobus_tephrosceles	Mammalia	591936	Mammalia	TRUE	FALSE	TRUE	GCF_002776525.3	7738	126.9	5.5	303	275
+Mastomys_coucha	Mammalia	35658	Mammalia	TRUE	FALSE	TRUE	GCF_008632895.1	NA	11.966	NA	303	294
+Acanthochromis_polyacanthus	Teleostei	80966	Teleostei	TRUE	FALSE	TRUE	GCF_002109545.1	NA	14	NA	302	287
+Mus_pahari	Mammalia	10093	Mammalia	TRUE	FALSE	FALSE	GCF_900095145.1	NA	NA	NA	302	294
+Miniopterus_natalensis	Mammalia	291302	Mammalia	TRUE	FALSE	TRUE	GCF_001595765.1	4745	NA	NA	301	293
+Myotis_myotis	Mammalia	51298	Mammalia	TRUE	FALSE	TRUE	GCF_014108235.1	13541.5	8	0.045	303	262
+Sturnus_vulgaris	Aves	9172	Aves	TRUE	FALSE	TRUE	GCF_001447265.1	8358.5	21.5	0.1	296	292
+Octopus_bimaculoides	Mollusca	37653	Other Invertebrates	TRUE	FALSE	TRUE	GCF_001194135.1	730	60	NA	297	293
+Lynx_pardinus	Mammalia	191816	Mammalia	TRUE	FALSE	TRUE	GCA_900661375.1	4745	130	15	297	290
+Lynx_canadensis	Mammalia	61383	Mammalia	TRUE	FALSE	TRUE	GCF_007474595.2	9782	106.7	17.3	302	289
+Calidris_pugnax	Aves	198806	Aves	TRUE	FALSE	TRUE	GCF_001431845.1	4015	25	0.11	289	279
+Nicrophorus_vespilloides	Coleoptera	110193	Other Insecta	TRUE	FALSE	TRUE	GCF_001412225.1	NA	1.6	NA	302	294
+Dinoponera_quadriceps	Hymenoptera	609295	Hymenoptera	TRUE	FALSE	TRUE	GCF_001313825.1	NA	2.5	NA	302	294
+Gekko_japonicus	Lepidosauria	146911	Other Vertebrates	TRUE	FALSE	TRUE	GCF_001447785.1	8577.5	NA	0.05413	299	294
+Pantherophis_guttatus	Lepidosauria	94885	Other Vertebrates	TRUE	FALSE	TRUE	GCF_001185365.1	11789.5	182	0.9	301	294
+Sinocyclocheilus_rhinocerous	Teleostei	307959	Teleostei	TRUE	FALSE	TRUE	GCF_001515625.1	NA	9.7	NA	303	120
+Sinocyclocheilus_anshuiensis	Teleostei	1608454	Teleostei	TRUE	FALSE	TRUE	GCF_001515605.1	NA	10	NA	302	86
+Hermetia_illucens	Diptera	343691	Lepido Diptera	TRUE	FALSE	TRUE	GCF_905115235.1	365	2	0.00022	303	297
+Scaptodrosophila_lebanonensis	Diptera	7225	Lepido Diptera	TRUE	FALSE	FALSE	GCF_003285725.1	NA	NA	NA	303	294
+Zootoca_vivipara	Lepidosauria	8524	Other Vertebrates	TRUE	FALSE	TRUE	GCF_011800845.1	2920	7.7	0.005	300	290
+Manis_javanica	Mammalia	9974	Mammalia	TRUE	FALSE	TRUE	GCF_014570535.1	7300	88	12	303	284
+Sander_lucioperca	Teleostei	283035	Teleostei	TRUE	FALSE	TRUE	GCF_008315115.2	6205	100	20	303	284
+Meloidogyne_enterolobii	Nematoda	390850	Nematoda	TRUE	FALSE	TRUE	GCA_903994135.1	NA	0.0667	NA	296	37
+Colossoma_macropomum	Teleostei	42526	Teleostei	TRUE	FALSE	TRUE	GCF_904425465.1	9125	108	40	303	286
+Perca_fluviatilis	Teleostei	8168	Teleostei	TRUE	FALSE	TRUE	GCF_010015445.1	8030	60	4.8	302	287
+Periophthalmus_magnuspinnatus	Teleostei	409849	Teleostei	TRUE	FALSE	TRUE	GCF_009829125.1	NA	10.3	NA	300	282
+Ophiophagus_hannah	Lepidosauria	8665	Other Vertebrates	TRUE	FALSE	TRUE	GCA_000516915.1	8212.5	NA	8	247	240
+Crotalus_tigris	Lepidosauria	88082	Other Vertebrates	TRUE	FALSE	TRUE	GCF_016545835.1	5584.5	91	0.454	303	295
 Bothrops_jararaca	Lepidosauria	8724	Other Vertebrates	FALSE	FALSE	TRUE	GCA_018340635.1	7300	160	NA	1	1
-Thamnophis_sirtalis	Lepidosauria	35019	Other Vertebrates	FALSE	FALSE	TRUE	GCF_001077635.1	7300	137	0.15	282	272
-Thamnophis_elegans	Lepidosauria	35005	Other Vertebrates	FALSE	TRUE	TRUE	GCF_009769535.1	6497	107	0.4	302	288
-Naja_naja	Lepidosauria	35670	Other Vertebrates	FALSE	TRUE	TRUE	GCA_009733165.1	11789.5	220	NA	291	285
-Aquila_chrysaetos	Aves	8962	Aves	FALSE	TRUE	TRUE	GCF_900496995.4	17520	84	6.125	297	289
-Catharus_ustulatus	Aves	91951	Aves	FALSE	TRUE	TRUE	GCF_009819885.2	4015	1.93	0.0279	301	284
-Corvus_cornix	Aves	181096	Aves	FALSE	TRUE	TRUE	GCF_000738735.5	6132	46	0.5445	282	274
-Hirundo_rustica	Aves	43150	Aves	FALSE	TRUE	TRUE	GCF_015227805.1	5840	19.9	0.02	291	284
-Panthera_leo	Mammalia	9689	Mammalia	FALSE	TRUE	TRUE	GCF_018350215.1	10950	330	272	302	290
-Pteropus_giganteus	Mammalia	143291	Mammalia	FALSE	TRUE	TRUE	GCF_902729225.1	16060	23	1.6	301	288
-Myotis_brandtii	Mammalia	109478	Mammalia	FALSE	TRUE	TRUE	GCF_000412655.1	14965	5	0.007	301	276
-Phascolarctos_cinereus	Mammalia	38626	Mammalia	FALSE	TRUE	TRUE	GCF_002099425.1	8066.5	78	11.8	303	294
-Trichechus_manatus	Mammalia	9778	Mammalia	FALSE	TRUE	TRUE	GCF_000243295.1	25185	450	1500	303	295
-Caenorhabditis_elegans	Nematoda	6239	Nematoda	FALSE	TRUE	TRUE	GCF_000002985.6	58.4	0.14	NA	303	299
-Meriones_unguiculatus	Mammalia	10047	Mammalia	FALSE	TRUE	TRUE	GCF_002204375.1	2299.5	12	0.133	302	280
-Zonotrichia_albicollis	Aves	44394	Aves	FALSE	FALSE	TRUE	GCF_000385455.1	5438.5	17	0.026	273	269
-Bactrocera_oleae	Diptera	104688	Lepido Diptera	FALSE	TRUE	FALSE	GCF_001188975.1	NA	NA	NA	302	296
-Bagarius_yarrelli	Teleostei	175774	Teleostei	FALSE	FALSE	TRUE	GCA_005784505.1	NA	230	NA	253	242
-Gigantopelta_aegis	Mollusca	1735272	Other Invertebrates	FALSE	TRUE	FALSE	GCF_016097555.1	NA	NA	NA	301	282
-Trichonephila_clavipes	Arachnida	2585209	Other Invertebrates	FALSE	FALSE	FALSE	GCA_002102615.1	NA	NA	NA	236	210
-Oncorhynchus_mykiss	Teleostei	8022	Teleostei	FALSE	FALSE	TRUE	GCF_013265735.2	4015	122	25.4	303	135
-Salmo_salar	Teleostei	8030	Teleostei	FALSE	FALSE	TRUE	GCF_000233375.1	4745	150	46.8	303	134
-Oncorhynchus_kisutch	Teleostei	8019	Teleostei	FALSE	FALSE	TRUE	GCF_002021735.2	1825	108	15.2	303	141
-Acinonyx_jubatus	Mammalia	32536	Mammalia	FALSE	TRUE	TRUE	GCF_003709585.1	7482.5	150	72	303	292
-Neomonachus_schauinslandi	Mammalia	29088	Mammalia	FALSE	TRUE	TRUE	GCF_002201575.1	10800	223.283	NA	303	285
-Vulpes_lagopus	Mammalia	494514	Mammalia	FALSE	TRUE	TRUE	GCF_018345385.1	5949.5	56.481	5.2	303	270
-Halichoerus_grypus	Mammalia	9711	Mammalia	FALSE	TRUE	TRUE	GCF_012393455.1	16802.1	220	268	302	272
-Nyctereutes_procyonoides	Mammalia	34880	Mammalia	FALSE	TRUE	TRUE	GCA_905146905.1	6059	68	10	302	277
-Vulpes_vulpes	Mammalia	9627	Mammalia	FALSE	TRUE	TRUE	GCF_003160815.1	7774.5	90	14	302	288
-Leptonychotes_weddellii	Mammalia	9713	Mammalia	FALSE	TRUE	TRUE	GCF_000349705.1	9000	350	600	300	280
-Mirounga_leonina	Mammalia	9715	Mammalia	FALSE	TRUE	TRUE	GCF_011800145.1	8280	600	3700	302	271
-Puma_concolor	Mammalia	9696	Mammalia	FALSE	TRUE	TRUE	GCF_003327715.1	9855	154	120	293	286
-Aphelenchus_avenae	Nematoda	70226	Nematoda	FALSE	FALSE	TRUE	GCA_020875895.1	NA	0.075	NA	295	261
-Orbicella_faveolata	Cnidaria	48498	Other Invertebrates	FALSE	TRUE	TRUE	GCF_002042975.1	NA	120	NA	297	286
-Hydra_vulgaris	Cnidaria	6087	Other Invertebrates	FALSE	TRUE	FALSE	GCF_022113875.1	NA	NA	NA	300	298
-Stylophora_pistillata	Cnidaria	50429	Other Invertebrates	FALSE	TRUE	FALSE	GCF_002571385.1	NA	NA	NA	302	299
-Teladorsagia_circumcincta	Nematoda	45464	Nematoda	FALSE	FALSE	FALSE	GCA_002352805.1	NA	NA	NA	278	252
-Ancylostoma_ceylanicum	Nematoda	53326	Nematoda	FALSE	TRUE	TRUE	GCA_000402015.1	NA	1.3	NA	288	281
-Alligator_mississippiensis	Crocodylia	8496	Other Vertebrates	FALSE	TRUE	TRUE	GCF_000281125.3	28105	437	360	300	296
-Caligus_rogercresseyi	Crustacea	217165	Other Invertebrates	FALSE	FALSE	TRUE	GCA_013387185.1	NA	0.516	NA	123	119
-Daphnia_galeata	Crustacea	27404	Other Invertebrates	FALSE	TRUE	TRUE	GCA_918697745.1	NA	0.2	NA	284	277
-Armadillidium_vulgare	Crustacea	13347	Other Invertebrates	FALSE	FALSE	TRUE	GCA_004104545.1	730	1.8	0.000116	268	248
-Ramazzottius_varieornatus	Tardigrada	947166	Other Invertebrates	FALSE	TRUE	FALSE	GCA_001949185.1	NA	NA	NA	299	280
-Puntigrus_tetrazona	Teleostei	1606681	Teleostei	FALSE	TRUE	TRUE	GCF_018831695.1	NA	7	NA	303	270
-Caenorhabditis_nigoni	Nematoda	1611254	Nematoda	FALSE	TRUE	FALSE	GCA_002742825.1	NA	NA	NA	301	289
-Lepidothrix_coronata	Aves	321398	Aves	FALSE	TRUE	FALSE	GCF_001604755.1	NA	NA	NA	287	279
-Owenia_fusiformis	Annelida	6347	Other Invertebrates	FALSE	TRUE	TRUE	GCA_903813345.2	NA	10	NA	299	296
-Macrostomum_lignano	Platyhelminthes	282301	Other Invertebrates	FALSE	FALSE	TRUE	GCA_002269645.1	365	NA	NA	299	21
-Lingula_anatina	Brachiopoda	7574	Other Invertebrates	FALSE	FALSE	TRUE	GCF_001039355.2	NA	4.9	0.0164	299	229
-Betta_splendens	Teleostei	158456	Teleostei	FALSE	TRUE	TRUE	GCF_900634795.3	730	7.5	NA	303	284
-Onychostruthus_taczanowskii	Aves	356909	Aves	FALSE	TRUE	FALSE	GCF_017590055.1	NA	NA	NA	297	293
-Numida_meleagris	Aves	8996	Aves	FALSE	TRUE	TRUE	GCF_002078875.1	NA	6.4	1.842	292	289
-Papilio_machaon	Lepidoptera	76193	Lepido Diptera	FALSE	TRUE	FALSE	GCF_912999745.1	NA	NA	NA	301	297
-Mustela_putorius	Mammalia	9668	Mammalia	FALSE	TRUE	TRUE	GCF_011764305.1	5110	35.892	1.71	303	279
-Lates_calcarifer	Teleostei	8187	Teleostei	FALSE	TRUE	TRUE	GCF_001640805.1	12775	200	60	303	277
-Takifugu_flavidus	Teleostei	433684	Teleostei	FALSE	TRUE	TRUE	GCA_003711565.2	NA	35	NA	295	279
-Tursiops_truncatus	Mammalia	9739	Mammalia	FALSE	TRUE	TRUE	GCF_011762595.1	19345	381	500	303	280
-Elysia_chlorotica	Mollusca	188477	Other Invertebrates	FALSE	TRUE	TRUE	GCA_003991915.1	330	6	NA	296	293
-Haliotis_rufescens	Mollusca	6454	Other Invertebrates	FALSE	TRUE	TRUE	GCF_023055435.1	NA	20.7	0.469	302	297
-Angiostrongylus_cantonensis	Nematoda	6313	Nematoda	FALSE	FALSE	TRUE	GCA_009735665.1	NA	3.284	NA	238	232
-Trichuris_suis	Nematoda	68888	Nematoda	FALSE	TRUE	TRUE	GCA_000797535.1	NA	8	NA	278	276
-Homarus_americanus	Crustacea	6706	Other Invertebrates	FALSE	TRUE	TRUE	GCF_018991925.1	36500	110	20	303	291
+Thamnophis_sirtalis	Lepidosauria	35019	Other Vertebrates	TRUE	FALSE	TRUE	GCF_001077635.1	7300	137	0.15	282	272
+Thamnophis_elegans	Lepidosauria	35005	Other Vertebrates	TRUE	FALSE	TRUE	GCF_009769535.1	6497	107	0.4	302	288
+Naja_naja	Lepidosauria	35670	Other Vertebrates	TRUE	FALSE	TRUE	GCA_009733165.1	11789.5	220	NA	291	285
+Aquila_chrysaetos	Aves	8962	Aves	TRUE	FALSE	TRUE	GCF_900496995.4	17520	84	6.125	297	289
+Catharus_ustulatus	Aves	91951	Aves	TRUE	FALSE	TRUE	GCF_009819885.2	4015	1.93	0.0279	301	284
+Corvus_cornix	Aves	181096	Aves	TRUE	FALSE	TRUE	GCF_000738735.5	6132	46	0.5445	282	274
+Hirundo_rustica	Aves	43150	Aves	TRUE	FALSE	TRUE	GCF_015227805.1	5840	19.9	0.02	291	284
+Panthera_leo	Mammalia	9689	Mammalia	TRUE	FALSE	TRUE	GCF_018350215.1	10950	330	272	302	290
+Pteropus_giganteus	Mammalia	143291	Mammalia	TRUE	FALSE	TRUE	GCF_902729225.1	16060	23	1.6	301	288
+Myotis_brandtii	Mammalia	109478	Mammalia	TRUE	FALSE	TRUE	GCF_000412655.1	14965	5	0.007	301	276
+Phascolarctos_cinereus	Mammalia	38626	Mammalia	TRUE	FALSE	TRUE	GCF_002099425.1	8066.5	78	11.8	303	294
+Trichechus_manatus	Mammalia	9778	Mammalia	TRUE	FALSE	TRUE	GCF_000243295.1	25185	450	1500	303	295
+Caenorhabditis_elegans	Nematoda	6239	Nematoda	TRUE	FALSE	TRUE	GCF_000002985.6	58.4	0.14	NA	303	299
+Meriones_unguiculatus	Mammalia	10047	Mammalia	TRUE	FALSE	TRUE	GCF_002204375.1	2299.5	12	0.133	302	280
+Zonotrichia_albicollis	Aves	44394	Aves	TRUE	FALSE	TRUE	GCF_000385455.1	5438.5	17	0.026	273	269
+Bactrocera_oleae	Diptera	104688	Lepido Diptera	TRUE	FALSE	FALSE	GCF_001188975.1	NA	NA	NA	302	296
+Bagarius_yarrelli	Teleostei	175774	Teleostei	TRUE	FALSE	TRUE	GCA_005784505.1	NA	230	NA	253	242
+Gigantopelta_aegis	Mollusca	1735272	Other Invertebrates	TRUE	FALSE	FALSE	GCF_016097555.1	NA	NA	NA	301	282
+Trichonephila_clavipes	Arachnida	2585209	Other Invertebrates	TRUE	FALSE	FALSE	GCA_002102615.1	NA	NA	NA	236	210
+Oncorhynchus_mykiss	Teleostei	8022	Teleostei	TRUE	FALSE	TRUE	GCF_013265735.2	4015	122	25.4	303	135
+Salmo_salar	Teleostei	8030	Teleostei	TRUE	FALSE	TRUE	GCF_000233375.1	4745	150	46.8	303	134
+Oncorhynchus_kisutch	Teleostei	8019	Teleostei	TRUE	FALSE	TRUE	GCF_002021735.2	1825	108	15.2	303	141
+Acinonyx_jubatus	Mammalia	32536	Mammalia	TRUE	FALSE	TRUE	GCF_003709585.1	7482.5	150	72	303	292
+Neomonachus_schauinslandi	Mammalia	29088	Mammalia	TRUE	FALSE	TRUE	GCF_002201575.1	10800	223.283	NA	303	285
+Vulpes_lagopus	Mammalia	494514	Mammalia	TRUE	FALSE	TRUE	GCF_018345385.1	5949.5	56.481	5.2	303	270
+Halichoerus_grypus	Mammalia	9711	Mammalia	TRUE	FALSE	TRUE	GCF_012393455.1	16802.1	220	268	302	272
+Nyctereutes_procyonoides	Mammalia	34880	Mammalia	TRUE	FALSE	TRUE	GCA_905146905.1	6059	68	10	302	277
+Vulpes_vulpes	Mammalia	9627	Mammalia	TRUE	FALSE	TRUE	GCF_003160815.1	7774.5	90	14	302	288
+Leptonychotes_weddellii	Mammalia	9713	Mammalia	TRUE	FALSE	TRUE	GCF_000349705.1	9000	350	600	300	280
+Mirounga_leonina	Mammalia	9715	Mammalia	TRUE	FALSE	TRUE	GCF_011800145.1	8280	600	3700	302	271
+Puma_concolor	Mammalia	9696	Mammalia	TRUE	FALSE	TRUE	GCF_003327715.1	9855	154	120	293	286
+Aphelenchus_avenae	Nematoda	70226	Nematoda	TRUE	FALSE	TRUE	GCA_020875895.1	NA	0.075	NA	295	261
+Orbicella_faveolata	Cnidaria	48498	Other Invertebrates	TRUE	FALSE	TRUE	GCF_002042975.1	NA	120	NA	297	286
+Hydra_vulgaris	Cnidaria	6087	Other Invertebrates	TRUE	FALSE	FALSE	GCF_022113875.1	NA	NA	NA	300	298
+Stylophora_pistillata	Cnidaria	50429	Other Invertebrates	TRUE	FALSE	FALSE	GCF_002571385.1	NA	NA	NA	302	299
+Teladorsagia_circumcincta	Nematoda	45464	Nematoda	TRUE	FALSE	FALSE	GCA_002352805.1	NA	NA	NA	278	252
+Ancylostoma_ceylanicum	Nematoda	53326	Nematoda	TRUE	FALSE	TRUE	GCA_000402015.1	NA	1.3	NA	288	281
+Alligator_mississippiensis	Crocodylia	8496	Other Vertebrates	TRUE	FALSE	TRUE	GCF_000281125.3	28105	437	360	300	296
+Caligus_rogercresseyi	Crustacea	217165	Other Invertebrates	TRUE	FALSE	TRUE	GCA_013387185.1	NA	0.516	NA	123	119
+Daphnia_galeata	Crustacea	27404	Other Invertebrates	TRUE	FALSE	TRUE	GCA_918697745.1	NA	0.2	NA	284	277
+Armadillidium_vulgare	Crustacea	13347	Other Invertebrates	TRUE	FALSE	TRUE	GCA_004104545.1	730	1.8	0.000116	268	248
+Ramazzottius_varieornatus	Tardigrada	947166	Other Invertebrates	TRUE	FALSE	FALSE	GCA_001949185.1	NA	NA	NA	299	280
+Puntigrus_tetrazona	Teleostei	1606681	Teleostei	TRUE	FALSE	TRUE	GCF_018831695.1	NA	7	NA	303	270
+Caenorhabditis_nigoni	Nematoda	1611254	Nematoda	TRUE	FALSE	FALSE	GCA_002742825.1	NA	NA	NA	301	289
+Lepidothrix_coronata	Aves	321398	Aves	TRUE	FALSE	FALSE	GCF_001604755.1	NA	NA	NA	287	279
+Owenia_fusiformis	Annelida	6347	Other Invertebrates	TRUE	FALSE	TRUE	GCA_903813345.2	NA	10	NA	299	296
+Macrostomum_lignano	Platyhelminthes	282301	Other Invertebrates	TRUE	FALSE	TRUE	GCA_002269645.1	365	NA	NA	299	21
+Lingula_anatina	Brachiopoda	7574	Other Invertebrates	TRUE	FALSE	TRUE	GCF_001039355.2	NA	4.9	0.0164	299	229
+Betta_splendens	Teleostei	158456	Teleostei	FALSE	FALSE	TRUE	GCF_900634795.3	730	7.5	NA	303	284
+Onychostruthus_taczanowskii	Aves	356909	Aves	TRUE	FALSE	FALSE	GCF_017590055.1	NA	NA	NA	297	293
+Numida_meleagris	Aves	8996	Aves	TRUE	FALSE	TRUE	GCF_002078875.1	NA	6.4	1.842	292	289
+Papilio_machaon	Lepidoptera	76193	Lepido Diptera	TRUE	FALSE	FALSE	GCF_912999745.1	NA	NA	NA	301	297
+Mustela_putorius	Mammalia	9668	Mammalia	TRUE	FALSE	TRUE	GCF_011764305.1	5110	35.892	1.71	303	279
+Lates_calcarifer	Teleostei	8187	Teleostei	TRUE	FALSE	TRUE	GCF_001640805.1	12775	200	60	303	277
+Takifugu_flavidus	Teleostei	433684	Teleostei	TRUE	FALSE	TRUE	GCA_003711565.2	NA	35	NA	295	279
+Tursiops_truncatus	Mammalia	9739	Mammalia	TRUE	FALSE	TRUE	GCF_011762595.1	19345	381	500	303	280
+Elysia_chlorotica	Mollusca	188477	Other Invertebrates	TRUE	FALSE	TRUE	GCA_003991915.1	330	6	NA	296	293
+Haliotis_rufescens	Mollusca	6454	Other Invertebrates	TRUE	FALSE	TRUE	GCF_023055435.1	NA	20.7	0.469	302	297
+Angiostrongylus_cantonensis	Nematoda	6313	Nematoda	TRUE	FALSE	TRUE	GCA_009735665.1	NA	3.284	NA	238	232
+Trichuris_suis	Nematoda	68888	Nematoda	TRUE	FALSE	TRUE	GCA_000797535.1	NA	8	NA	278	276
+Homarus_americanus	Crustacea	6706	Other Invertebrates	TRUE	FALSE	TRUE	GCF_018991925.1	36500	110	20	303	291
 Penaeus_vannamei	Crustacea	6689	Other Invertebrates	FALSE	FALSE	TRUE	GCF_003789085.1	730	17.4	0.32	293	260
-Echinococcus_granulosus	Platyhelminthes	6210	Other Invertebrates	FALSE	TRUE	TRUE	GCF_000524195.1	NA	0.9	NA	289	283
-Schistosoma_haematobium	Platyhelminthes	6185	Other Invertebrates	FALSE	TRUE	TRUE	GCF_000699445.2	NA	1.5	NA	267	263
-Acropora_digitifera	Cnidaria	70779	Other Invertebrates	FALSE	TRUE	FALSE	GCF_000222465.1	NA	NA	NA	287	269
-Pieris_rapae	Lepidoptera	64459	Lepido Diptera	FALSE	TRUE	TRUE	GCF_905147795.1	42	3.5	NA	302	299
-Coptotermes_formosanus	Blattodea	36987	Other Insecta	FALSE	TRUE	TRUE	GCA_013340265.1	5475	1.5	NA	291	282
-Myotis_lucifugus	Mammalia	59463	Mammalia	FALSE	TRUE	TRUE	GCF_000147115.1	12410	10.2	0.014	298	283
-Anolis_carolinensis	Lepidosauria	28377	Other Vertebrates	FALSE	FALSE	TRUE	GCF_000090745.1	3650	20.32	0.006	285	276
-Gymnogyps_californianus	Aves	33616	Aves	FALSE	TRUE	TRUE	GCF_018139145.2	16425	139.7	11.175	275	268
-Fundulus_heteroclitus	Teleostei	8078	Teleostei	FALSE	TRUE	TRUE	GCF_011125445.2	1460	17.8	NA	300	273
-Pteropus_vampyrus	Mammalia	132908	Mammalia	FALSE	TRUE	TRUE	GCF_000151845.1	10950	NA	1.1	298	289
-Necator_americanus	Nematoda	51031	Nematoda	FALSE	TRUE	TRUE	GCF_000507365.1	1825	1.1	NA	290	285
-Microcebus_murinus	Mammalia	30608	Mammalia	FALSE	FALSE	TRUE	GCF_000165445.2	6643	28.6	0.0648	302	286
-Dictyocaulus_viviparus	Nematoda	29172	Nematoda	FALSE	TRUE	TRUE	GCA_000816705.1	NA	8	NA	288	287
+Echinococcus_granulosus	Platyhelminthes	6210	Other Invertebrates	TRUE	FALSE	TRUE	GCF_000524195.1	NA	0.9	NA	289	283
+Schistosoma_haematobium	Platyhelminthes	6185	Other Invertebrates	TRUE	FALSE	TRUE	GCF_000699445.2	NA	1.5	NA	267	263
+Acropora_digitifera	Cnidaria	70779	Other Invertebrates	TRUE	FALSE	FALSE	GCF_000222465.1	NA	NA	NA	287	269
+Pieris_rapae	Lepidoptera	64459	Lepido Diptera	TRUE	FALSE	TRUE	GCF_905147795.1	42	3.5	NA	302	299
+Coptotermes_formosanus	Blattodea	36987	Other Insecta	TRUE	FALSE	TRUE	GCA_013340265.1	5475	1.5	NA	291	282
+Myotis_lucifugus	Mammalia	59463	Mammalia	TRUE	FALSE	TRUE	GCF_000147115.1	12410	10.2	0.014	298	283
+Anolis_carolinensis	Lepidosauria	28377	Other Vertebrates	TRUE	FALSE	TRUE	GCF_000090745.1	3650	20.32	0.006	285	276
+Gymnogyps_californianus	Aves	33616	Aves	TRUE	FALSE	TRUE	GCF_018139145.2	16425	139.7	11.175	275	268
+Fundulus_heteroclitus	Teleostei	8078	Teleostei	TRUE	FALSE	TRUE	GCF_011125445.2	1460	17.8	NA	300	273
+Pteropus_vampyrus	Mammalia	132908	Mammalia	TRUE	FALSE	TRUE	GCF_000151845.1	10950	NA	1.1	298	289
+Necator_americanus	Nematoda	51031	Nematoda	TRUE	FALSE	TRUE	GCF_000507365.1	1825	1.1	NA	290	285
+Microcebus_murinus	Mammalia	30608	Mammalia	TRUE	FALSE	TRUE	GCF_000165445.2	6643	28.6	0.0648	302	286
+Dictyocaulus_viviparus	Nematoda	29172	Nematoda	TRUE	FALSE	TRUE	GCA_000816705.1	NA	8	NA	288	287
 Bubalus_bubalis	Mammalia	89462	Mammalia	FALSE	FALSE	TRUE	GCF_019923935.1	12738.5	300	1200	303	285
-Oesophagostomum_dentatum	Nematoda	61180	Nematoda	FALSE	FALSE	TRUE	GCA_000797555.1	NA	1.4	NA	270	241
-Melitaea_cinxia	Lepidoptera	113334	Lepido Diptera	FALSE	TRUE	FALSE	GCF_905220565.1	NA	NA	NA	303	300
-Clonorchis_sinensis	Platyhelminthes	79923	Other Invertebrates	FALSE	TRUE	TRUE	GCA_003604175.2	NA	2.5	NA	281	280
-Acropora_millepora	Cnidaria	45264	Other Invertebrates	FALSE	TRUE	TRUE	GCF_013753865.1	NA	1.5	NA	300	274
-Drosophila_mauritiana	Diptera	7226	Lepido Diptera	FALSE	TRUE	FALSE	GCF_004382145.1	NA	NA	NA	303	294
-Drosophila_sechellia	Diptera	7238	Lepido Diptera	FALSE	TRUE	FALSE	GCF_004382195.2	NA	NA	NA	303	294
-Drosophila_simulans	Diptera	7240	Lepido Diptera	FALSE	FALSE	FALSE	GCF_016746395.2	NA	NA	NA	303	294
-Drosophila_erecta	Diptera	7220	Lepido Diptera	FALSE	TRUE	FALSE	GCF_003286155.1	NA	NA	NA	303	295
-Acanthocheilonema_viteae	Nematoda	6277	Nematoda	FALSE	TRUE	FALSE	GCA_900537255.1	NA	NA	NA	292	287
-Varroa_destructor	Arachnida	109461	Other Invertebrates	FALSE	TRUE	FALSE	GCF_002443255.1	NA	NA	NA	299	293
-Loa_loa	Nematoda	7209	Nematoda	FALSE	TRUE	TRUE	GCF_000183805.2	NA	7	NA	300	299
-Steinernema_carpocapsae	Nematoda	34508	Nematoda	FALSE	TRUE	TRUE	GCA_000757645.3	NA	0.51	NA	287	270
-Penaeus_chinensis	Crustacea	139456	Other Invertebrates	FALSE	TRUE	FALSE	GCF_019202785.1	NA	NA	NA	294	291
-Lepeophtheirus_salmonis	Crustacea	72036	Other Invertebrates	FALSE	TRUE	TRUE	GCF_016086655.3	NA	1.8	NA	297	291
-Ailuropoda_melanoleuca	Mammalia	9646	Mammalia	FALSE	FALSE	TRUE	GCF_002007445.2	13432	180	125	302	289
-Gadus_morhua	Teleostei	8049	Teleostei	FALSE	FALSE	TRUE	GCF_902167405.1	9125	200	96	302	289
-Tachysurus_fulvidraco	Teleostei	1234273	Teleostei	FALSE	FALSE	TRUE	GCF_022655615.1	NA	34.5	0.3	302	284
-Scophthalmus_maximus	Teleostei	52904	Teleostei	FALSE	FALSE	TRUE	GCF_022379125.1	9490	110	25	303	286
-Nothobranchius_furzeri	Teleostei	105023	Teleostei	FALSE	FALSE	TRUE	GCF_001465895.1	401.5	6.5	NA	302	291
-Diaphorina_citri	Hemiptera	121845	Other Insecta	FALSE	FALSE	TRUE	GCF_000475195.1	NA	0.3	NA	292	266
-Bemisia_tabaci	Hemiptera	7038	Other Insecta	FALSE	FALSE	FALSE	GCF_001854935.1	NA	NA	NA	302	295
+Oesophagostomum_dentatum	Nematoda	61180	Nematoda	TRUE	FALSE	TRUE	GCA_000797555.1	NA	1.4	NA	270	241
+Melitaea_cinxia	Lepidoptera	113334	Lepido Diptera	TRUE	FALSE	FALSE	GCF_905220565.1	NA	NA	NA	303	300
+Clonorchis_sinensis	Platyhelminthes	79923	Other Invertebrates	TRUE	FALSE	TRUE	GCA_003604175.2	NA	2.5	NA	281	280
+Acropora_millepora	Cnidaria	45264	Other Invertebrates	TRUE	FALSE	TRUE	GCF_013753865.1	NA	1.5	NA	300	274
+Drosophila_mauritiana	Diptera	7226	Lepido Diptera	TRUE	FALSE	FALSE	GCF_004382145.1	NA	NA	NA	303	294
+Drosophila_sechellia	Diptera	7238	Lepido Diptera	TRUE	FALSE	FALSE	GCF_004382195.2	NA	NA	NA	303	294
+Drosophila_simulans	Diptera	7240	Lepido Diptera	TRUE	FALSE	FALSE	GCF_016746395.2	NA	NA	NA	303	294
+Drosophila_erecta	Diptera	7220	Lepido Diptera	TRUE	FALSE	FALSE	GCF_003286155.1	NA	NA	NA	303	295
+Acanthocheilonema_viteae	Nematoda	6277	Nematoda	TRUE	FALSE	FALSE	GCA_900537255.1	NA	NA	NA	292	287
+Varroa_destructor	Arachnida	109461	Other Invertebrates	TRUE	FALSE	FALSE	GCF_002443255.1	NA	NA	NA	299	293
+Loa_loa	Nematoda	7209	Nematoda	TRUE	FALSE	TRUE	GCF_000183805.2	NA	7	NA	300	299
+Steinernema_carpocapsae	Nematoda	34508	Nematoda	TRUE	FALSE	TRUE	GCA_000757645.3	NA	0.51	NA	287	270
+Penaeus_chinensis	Crustacea	139456	Other Invertebrates	TRUE	FALSE	FALSE	GCF_019202785.1	NA	NA	NA	294	291
+Lepeophtheirus_salmonis	Crustacea	72036	Other Invertebrates	TRUE	FALSE	TRUE	GCF_016086655.3	NA	1.8	NA	297	291
+Ailuropoda_melanoleuca	Mammalia	9646	Mammalia	TRUE	FALSE	TRUE	GCF_002007445.2	13432	180	125	302	289
+Gadus_morhua	Teleostei	8049	Teleostei	TRUE	FALSE	TRUE	GCF_902167405.1	9125	200	96	302	289
+Tachysurus_fulvidraco	Teleostei	1234273	Teleostei	TRUE	FALSE	TRUE	GCF_022655615.1	NA	34.5	0.3	302	284
+Scophthalmus_maximus	Teleostei	52904	Teleostei	TRUE	FALSE	TRUE	GCF_022379125.1	9490	110	25	303	286
+Nothobranchius_furzeri	Teleostei	105023	Teleostei	TRUE	FALSE	TRUE	GCF_001465895.1	401.5	6.5	NA	302	291
+Diaphorina_citri	Hemiptera	121845	Other Insecta	TRUE	FALSE	TRUE	GCF_000475195.1	NA	0.3	NA	292	266
+Bemisia_tabaci	Hemiptera	7038	Other Insecta	TRUE	FALSE	FALSE	GCF_001854935.1	NA	NA	NA	302	295
 Mamestra_configurata	Lepidoptera	174822	Lepido Diptera	FALSE	FALSE	FALSE	GCA_002192655.3	NA	NA	NA	0	0
 Sebastes_umbrosus	Teleostei	72105	Teleostei	FALSE	FALSE	TRUE	GCF_015220745.1	NA	29.8	0.57	299	282
 Cebus_imitator	Mammalia	2715852	Mammalia	FALSE	FALSE	FALSE	GCF_001604975.1	NA	NA	NA	302	265
 Aphidius_gifuensis	Hymenoptera	684658	Hymenoptera	FALSE	FALSE	FALSE	GCF_014905175.1	NA	NA	NA	303	278
 Bombus_pyrosoma	Hymenoptera	396416	Hymenoptera	FALSE	FALSE	FALSE	GCF_014825855.1	NA	NA	NA	302	296
 Sturnira_hondurensis	Mammalia	192404	Mammalia	FALSE	FALSE	FALSE	GCF_014824575.2	NA	NA	NA	297	285
-Oppiella_nova	Arachnida	334625	Other Invertebrates	FALSE	FALSE	FALSE	GCA_905397405.1	NA	NA	NA	289	256
-Medioppia_subpectinata	Arachnida	1979941	Other Invertebrates	FALSE	FALSE	FALSE	GCA_905368565.1	NA	NA	NA	281	249
+Oppiella_nova	Arachnida	334625	Other Invertebrates	TRUE	FALSE	FALSE	GCA_905397405.1	NA	NA	NA	289	256
+Medioppia_subpectinata	Arachnida	1979941	Other Invertebrates	TRUE	FALSE	FALSE	GCA_905368565.1	NA	NA	NA	281	249
 Lucifuga_dentata	Teleostei	670423	Teleostei	FALSE	FALSE	TRUE	GCA_014773175.1	NA	15.2	NA	286	276
 Bradysia_coprophila	Diptera	38358	Lepido Diptera	FALSE	FALSE	FALSE	GCF_014529535.1	NA	NA	NA	302	292
 Bursaphelenchus_okinawaensis	Nematoda	465554	Nematoda	FALSE	FALSE	FALSE	GCA_904066225.2	NA	NA	NA	299	296
-Dimorphilus_gyrociliatus	Annelida	2664684	Other Invertebrates	FALSE	FALSE	FALSE	GCA_904063045.1	NA	NA	NA	292	285
-Acomys_russatus	Mammalia	60746	Mammalia	FALSE	FALSE	TRUE	GCF_903995435.1	1095	15	0.08	303	283
-Paragonimus_kellicotti	Platyhelminthes	100269	Other Invertebrates	FALSE	FALSE	TRUE	GCA_014220965.1	7300	1.6	NA	263	259
-Trichonephila_clavata	Arachnida	2740835	Other Invertebrates	FALSE	FALSE	FALSE	GCA_019973975.1	NA	NA	NA	297	264
+Dimorphilus_gyrociliatus	Annelida	2664684	Other Invertebrates	TRUE	FALSE	FALSE	GCA_904063045.1	NA	NA	NA	292	285
+Acomys_russatus	Mammalia	60746	Mammalia	TRUE	FALSE	TRUE	GCF_903995435.1	1095	15	0.08	303	283
+Paragonimus_kellicotti	Platyhelminthes	100269	Other Invertebrates	TRUE	FALSE	TRUE	GCA_014220965.1	7300	1.6	NA	263	259
+Trichonephila_clavata	Arachnida	2740835	Other Invertebrates	TRUE	FALSE	FALSE	GCA_019973975.1	NA	NA	NA	297	264
 Promerops_cafer	Aves	254652	Aves	FALSE	FALSE	TRUE	GCA_013398275.1	NA	NA	0.035	275	265
 Steatornis_caripensis	Aves	48435	Aves	FALSE	FALSE	TRUE	GCA_013398225.1	NA	49	0.4	279	270
 Struthidea_cinerea	Aves	181839	Aves	FALSE	FALSE	TRUE	GCA_013397865.1	9125	47	0.132	281	272
@@ -1060,116 +1060,116 @@ Todus_mexicanus	Aves	135184	Aves	FALSE	FALSE	TRUE	GCA_013389965.1	5110	NA	0.0059
 Fregata_magnificens	Aves	37042	Aves	FALSE	FALSE	TRUE	GCA_013389945.1	12410	230	1.815	256	247
 Aegithalos_caudatus	Aves	73327	Aves	FALSE	FALSE	TRUE	GCA_013389925.1	4051.5	14	0.009	264	254
 Hyalomma_asiaticum	Arachnida	266040	Other Invertebrates	FALSE	FALSE	FALSE	GCA_013339685.2	NA	NA	NA	243	231
-Pomphorhynchus_laevis	Invertebrates	141832	Other Invertebrates	FALSE	FALSE	TRUE	GCA_012934845.2	NA	2.5	NA	271	261
-Batillaria_attramentaria	Mollusca	370345	Other Invertebrates	FALSE	FALSE	FALSE	GCA_018292915.1	NA	NA	NA	234	226
+Pomphorhynchus_laevis	Invertebrates	141832	Other Invertebrates	TRUE	FALSE	TRUE	GCA_012934845.2	NA	2.5	NA	271	261
+Batillaria_attramentaria	Mollusca	370345	Other Invertebrates	TRUE	FALSE	FALSE	GCA_018292915.1	NA	NA	NA	234	226
 Trichogramma_brassicae	Hymenoptera	86971	Hymenoptera	FALSE	FALSE	FALSE	GCA_902806795.1	NA	NA	NA	233	221
 Teleogryllus_occipitalis	Invertebrates	470939	Other Insecta	FALSE	FALSE	FALSE	GCA_011170035.1	NA	NA	NA	0	0
-Drosophila_gunungcola	Diptera	103775	Lepido Diptera	FALSE	FALSE	FALSE	GCF_025200985.1	NA	NA	NA	303	295
-Phyllotreta_striolata	Coleoptera	444603	Other Insecta	FALSE	FALSE	FALSE	GCA_918026865.1	NA	NA	NA	290	286
-Polistes_fuscatus	Hymenoptera	30207	Hymenoptera	FALSE	FALSE	TRUE	GCF_010416935.1	365	2.1	NA	301	296
+Drosophila_gunungcola	Diptera	103775	Lepido Diptera	TRUE	FALSE	FALSE	GCF_025200985.1	NA	NA	NA	303	295
+Phyllotreta_striolata	Coleoptera	444603	Other Insecta	TRUE	FALSE	FALSE	GCA_918026865.1	NA	NA	NA	290	286
+Polistes_fuscatus	Hymenoptera	30207	Hymenoptera	TRUE	FALSE	TRUE	GCF_010416935.1	365	2.1	NA	301	296
 Myxobolus_squamalis	Cnidaria	59785	Other Invertebrates	FALSE	FALSE	FALSE	GCA_010108815.1	NA	NA	NA	186	180
 Eudyptes_chrysolophus	Aves	79627	Aves	FALSE	FALSE	TRUE	GCA_010084205.1	NA	71	6	269	244
-Colias_croceus	Lepidoptera	72248	Lepido Diptera	FALSE	FALSE	FALSE	GCF_905220415.1	NA	NA	NA	303	299
+Colias_croceus	Lepidoptera	72248	Lepido Diptera	TRUE	FALSE	FALSE	GCF_905220415.1	NA	NA	NA	303	299
 Henneguya_salminicola	Cnidaria	69463	Other Invertebrates	FALSE	FALSE	FALSE	GCA_009887335.1	NA	NA	NA	213	207
 Sparganum_proliferum	Platyhelminthes	64606	Other Invertebrates	FALSE	FALSE	FALSE	GCA_902702955.1	NA	NA	NA	275	268
-Sciurus_carolinensis	Mammalia	30640	Mammalia	FALSE	FALSE	TRUE	GCF_902686445.1	8640	52.5	0.75	302	268
-Maniola_jurtina	Lepidoptera	191418	Lepido Diptera	FALSE	FALSE	FALSE	GCF_905333055.1	NA	NA	NA	303	297
+Sciurus_carolinensis	Mammalia	30640	Mammalia	TRUE	FALSE	TRUE	GCF_902686445.1	8640	52.5	0.75	302	268
+Maniola_jurtina	Lepidoptera	191418	Lepido Diptera	TRUE	FALSE	FALSE	GCF_905333055.1	NA	NA	NA	303	297
 Armadillidium_nasatum	Crustacea	96803	Other Invertebrates	FALSE	FALSE	FALSE	GCA_009176605.1	NA	NA	NA	271	248
 Thalassophryne_amazonica	Teleostei	390379	Teleostei	FALSE	FALSE	TRUE	GCF_902500255.1	NA	9.3	NA	302	282
 Cinara_cedri	Hemiptera	506608	Other Insecta	FALSE	FALSE	FALSE	GCA_902439185.1	NA	NA	NA	289	279
 Phocoena_sinus	Mammalia	42100	Mammalia	FALSE	FALSE	TRUE	GCF_008692025.1	NA	152	55	303	275
-Octopus_sinensis	Mollusca	2607531	Other Invertebrates	FALSE	FALSE	FALSE	GCF_006345805.1	NA	NA	NA	299	296
+Octopus_sinensis	Mollusca	2607531	Other Invertebrates	TRUE	FALSE	FALSE	GCF_006345805.1	NA	NA	NA	299	296
 Drosophila_bunnanda	Diptera	244254	Lepido Diptera	FALSE	FALSE	FALSE	GCA_021223745.1	NA	NA	NA	283	277
-Danionella_translucida	Teleostei	623744	Teleostei	FALSE	FALSE	TRUE	GCA_007224835.1	NA	1.2	NA	286	271
-Timema_podura	Invertebrates	61482	Other Insecta	FALSE	FALSE	FALSE	GCA_905359515.1	NA	NA	NA	262	258
+Danionella_translucida	Teleostei	623744	Teleostei	TRUE	FALSE	TRUE	GCA_007224835.1	NA	1.2	NA	286	271
+Timema_podura	Invertebrates	61482	Other Insecta	TRUE	FALSE	FALSE	GCA_905359515.1	NA	NA	NA	262	258
 Sphaeramia_orbicularis	Teleostei	375764	Teleostei	FALSE	FALSE	TRUE	GCF_902148855.1	NA	10	NA	303	280
 Myripristis_murdjan	Teleostei	586833	Teleostei	FALSE	FALSE	TRUE	GCF_902150065.1	NA	60	NA	303	281
-Rhyzopertha_dominica	Coleoptera	92692	Other Insecta	FALSE	FALSE	FALSE	GCA_025024175.1	NA	NA	NA	9	9
+Rhyzopertha_dominica	Coleoptera	92692	Other Insecta	TRUE	FALSE	FALSE	GCA_025024175.1	NA	NA	NA	9	9
 Liparis_tanakae	Teleostei	230148	Teleostei	FALSE	FALSE	TRUE	GCA_006348945.1	NA	56.3	1.7	274	265
 Etheostoma_spectabile	Teleostei	54343	Teleostei	FALSE	FALSE	TRUE	GCF_008692095.1	NA	7.2	NA	287	267
-Rana_temporaria	Amphibia	8407	Other Vertebrates	FALSE	FALSE	TRUE	GCF_905171775.1	9855	10.9	0.127	296	282
-Crotalus_adamanteus	Lepidosauria	8729	Other Vertebrates	FALSE	FALSE	TRUE	GCA_018446365.1	8322	240	7	0	0
+Rana_temporaria	Amphibia	8407	Other Vertebrates	TRUE	FALSE	TRUE	GCF_905171775.1	9855	10.9	0.127	296	282
+Crotalus_adamanteus	Lepidosauria	8729	Other Vertebrates	TRUE	FALSE	TRUE	GCA_018446365.1	8322	240	7	0	0
 Rhagologus_leucostigma	Aves	156170	Aves	FALSE	FALSE	TRUE	GCA_013397725.1	NA	NA	0.0295	277	272
-Trinorchestia_longiramus	Crustacea	1923959	Other Invertebrates	FALSE	FALSE	FALSE	GCA_006783055.1	NA	NA	NA	294	273
-Paragonimus_heterotremus	Platyhelminthes	100268	Other Invertebrates	FALSE	FALSE	FALSE	GCA_013368495.1	NA	NA	NA	283	283
+Trinorchestia_longiramus	Crustacea	1923959	Other Invertebrates	TRUE	FALSE	FALSE	GCA_006783055.1	NA	NA	NA	294	273
+Paragonimus_heterotremus	Platyhelminthes	100268	Other Invertebrates	TRUE	FALSE	FALSE	GCA_013368495.1	NA	NA	NA	283	283
 Neodiprion_pinetum	Hymenoptera	441929	Hymenoptera	FALSE	FALSE	FALSE	GCF_021155775.1	NA	NA	NA	303	301
-Tuta_absoluta	Lepidoptera	702717	Lepido Diptera	FALSE	FALSE	FALSE	GCA_027580185.1	NA	NA	NA	290	265
+Tuta_absoluta	Lepidoptera	702717	Lepido Diptera	TRUE	FALSE	FALSE	GCA_027580185.1	NA	NA	NA	290	265
 Temnothorax_longispinosus	Hymenoptera	300112	Hymenoptera	FALSE	FALSE	FALSE	GCA_004794745.1	NA	NA	NA	295	289
-Drosophila_innubila	Diptera	198719	Lepido Diptera	FALSE	FALSE	FALSE	GCF_004354385.1	NA	NA	NA	303	292
-Schistosoma_bovis	Platyhelminthes	6184	Other Invertebrates	FALSE	FALSE	FALSE	GCA_944470425.1	NA	NA	NA	291	281
+Drosophila_innubila	Diptera	198719	Lepido Diptera	TRUE	FALSE	FALSE	GCF_004354385.1	NA	NA	NA	303	292
+Schistosoma_bovis	Platyhelminthes	6184	Other Invertebrates	TRUE	FALSE	FALSE	GCA_944470425.1	NA	NA	NA	291	281
 Gouania_willdenowi	Teleostei	441366	Teleostei	FALSE	FALSE	TRUE	GCF_900634775.1	NA	6	NA	299	274
 Parambassis_ranga	Teleostei	210632	Teleostei	FALSE	FALSE	TRUE	GCF_900634625.1	NA	9.5	0.01153	303	280
 Takifugu_bimaculatus	Teleostei	433685	Teleostei	FALSE	FALSE	TRUE	GCA_004026145.2	NA	30	NA	280	260
-Mirounga_angustirostris	Mammalia	9716	Mammalia	FALSE	FALSE	TRUE	GCF_021288785.1	7305	500	2300	302	276
+Mirounga_angustirostris	Mammalia	9716	Mammalia	TRUE	FALSE	TRUE	GCF_021288785.1	7305	500	2300	302	276
 Nomia_melanderi	Hymenoptera	2448451	Hymenoptera	FALSE	FALSE	FALSE	GCF_003710045.2	NA	NA	NA	303	300
-Chloebia_gouldiae	Aves	44316	Aves	FALSE	TRUE	TRUE	GCA_003676055.1	2190	NA	0.012	269	254
+Chloebia_gouldiae	Aves	44316	Aves	TRUE	FALSE	TRUE	GCA_003676055.1	2190	NA	0.012	269	254
 Rhopalosiphum_maidis	Hemiptera	43146	Other Insecta	FALSE	FALSE	TRUE	GCF_003676215.2	35	0.256	NA	301	274
 Chelonoidis_abingdonii	Testudines	106734	Other Vertebrates	FALSE	FALSE	TRUE	GCF_003597395.1	64605	NA	88.60592	300	295
 Pseudonaja_textilis	Lepidosauria	8673	Other Vertebrates	FALSE	FALSE	FALSE	GCF_900518735.1	NA	NA	NA	303	292
 Hyposmocoma_kahamanoa	Lepidoptera	1477025	Lepido Diptera	FALSE	FALSE	FALSE	GCF_003589595.1	NA	NA	NA	293	286
-Coccinella_septempunctata	Coleoptera	41139	Other Insecta	FALSE	FALSE	TRUE	GCF_907165205.1	730	0.78	NA	301	291
-Harmonia_axyridis	Coleoptera	115357	Other Insecta	FALSE	FALSE	TRUE	GCF_914767665.1	1095	0.8	NA	298	282
+Coccinella_septempunctata	Coleoptera	41139	Other Insecta	TRUE	FALSE	TRUE	GCF_907165205.1	730	0.78	NA	301	291
+Harmonia_axyridis	Coleoptera	115357	Other Insecta	TRUE	FALSE	TRUE	GCF_914767665.1	1095	0.8	NA	298	282
 Sipha_flava	Hemiptera	143950	Other Insecta	FALSE	FALSE	FALSE	GCF_003268045.1	NA	NA	NA	298	288
 Pygoscelis_papua	Aves	30457	Aves	FALSE	FALSE	TRUE	GCA_010090195.1	14965	95	8.5	270	258
-Simochromis_diagramma	Teleostei	43689	Teleostei	FALSE	FALSE	TRUE	GCF_900408965.1	NA	19.5	NA	302	285
+Simochromis_diagramma	Teleostei	43689	Teleostei	TRUE	FALSE	TRUE	GCF_900408965.1	NA	19.5	NA	302	285
 Temnothorax_curvispinosus	Hymenoptera	300111	Hymenoptera	FALSE	FALSE	FALSE	GCF_003070985.1	NA	NA	NA	296	275
 Haemaphysalis_longicornis	Arachnida	44386	Other Invertebrates	FALSE	FALSE	FALSE	GCA_013339765.2	NA	NA	NA	223	214
 Choristoneura_fumiferana	Lepidoptera	7141	Lepido Diptera	FALSE	FALSE	FALSE	GCA_025370935.1	NA	NA	NA	282	253
-Styela_clava	Invertebrates	7725	Other Invertebrates	FALSE	FALSE	TRUE	GCF_013122585.1	NA	12	NA	288	264
+Styela_clava	Invertebrates	7725	Other Invertebrates	TRUE	FALSE	TRUE	GCF_013122585.1	NA	12	NA	288	264
 Vanessa_tameamea	Lepidoptera	334116	Lepido Diptera	FALSE	FALSE	FALSE	GCF_002938995.1	NA	NA	NA	303	301
-Anopheles_aquasalis	Diptera	42839	Lepido Diptera	FALSE	FALSE	FALSE	GCF_943734665.1	NA	NA	NA	302	296
-Trichobilharzia_szidati	Platyhelminthes	157070	Other Invertebrates	FALSE	FALSE	FALSE	GCA_944472155.1	NA	NA	NA	290	228
+Anopheles_aquasalis	Diptera	42839	Lepido Diptera	TRUE	FALSE	FALSE	GCF_943734665.1	NA	NA	NA	302	296
+Trichobilharzia_szidati	Platyhelminthes	157070	Other Invertebrates	TRUE	FALSE	FALSE	GCA_944472155.1	NA	NA	NA	290	228
 Dendrolimus_kikuchii	Lepidoptera	765133	Lepido Diptera	FALSE	FALSE	FALSE	GCA_019925095.2	NA	NA	NA	296	293
 Apis_laboriosa	Hymenoptera	183418	Hymenoptera	FALSE	FALSE	FALSE	GCF_014066325.1	NA	NA	NA	300	298
 Drosophila_subobscura	Diptera	7241	Lepido Diptera	FALSE	FALSE	FALSE	GCF_008121235.1	NA	NA	NA	302	294
 Leptidea_sinapis	Lepidoptera	189913	Lepido Diptera	FALSE	FALSE	FALSE	GCF_905404315.1	NA	NA	NA	302	295
 Varroa_jacobsoni	Arachnida	62625	Other Invertebrates	FALSE	FALSE	FALSE	GCF_002532875.1	NA	NA	NA	302	298
-Diploscapter_pachys	Nematoda	2018661	Nematoda	FALSE	FALSE	FALSE	GCA_002287525.1	NA	NA	NA	295	113
-Drosophila_obscura	Diptera	7282	Lepido Diptera	FALSE	FALSE	FALSE	GCF_018151105.1	NA	NA	NA	302	291
+Diploscapter_pachys	Nematoda	2018661	Nematoda	TRUE	FALSE	FALSE	GCA_002287525.1	NA	NA	NA	295	113
+Drosophila_obscura	Diptera	7282	Lepido Diptera	TRUE	FALSE	FALSE	GCF_018151105.1	NA	NA	NA	302	291
 Lagenorhynchus_obliquidens	Mammalia	90247	Mammalia	FALSE	FALSE	TRUE	GCF_003676395.1	16790	250	200	303	293
 Vespa_velutina	Hymenoptera	202808	Hymenoptera	FALSE	FALSE	FALSE	GCF_912470025.1	NA	NA	NA	300	295
 Ooceraea_biroi	Hymenoptera	2015173	Hymenoptera	FALSE	FALSE	FALSE	GCF_003672135.1	NA	NA	NA	303	287
-Paramuricea_clavata	Cnidaria	317549	Other Invertebrates	FALSE	FALSE	FALSE	GCA_902702795.2	NA	NA	NA	294	281
+Paramuricea_clavata	Cnidaria	317549	Other Invertebrates	TRUE	FALSE	FALSE	GCA_902702795.2	NA	NA	NA	294	281
 Tropilaelaps_mercedesae	Arachnida	418985	Other Invertebrates	FALSE	FALSE	FALSE	GCA_002081605.1	NA	NA	NA	292	287
 Pseudomyrmex_gracilis	Hymenoptera	219809	Hymenoptera	FALSE	FALSE	FALSE	GCF_002006095.1	NA	NA	NA	303	296
 Aethina_tumida	Coleoptera	116153	Other Insecta	FALSE	FALSE	FALSE	GCF_024364675.1	NA	NA	NA	300	287
-Clunio_marinus	Diptera	568069	Lepido Diptera	FALSE	FALSE	TRUE	GCA_900005825.1	NA	0.15	NA	296	293
-Ischnura_elegans	Invertebrates	197161	Other Insecta	FALSE	FALSE	FALSE	GCF_921293095.1	NA	NA	NA	301	298
+Clunio_marinus	Diptera	568069	Lepido Diptera	TRUE	FALSE	TRUE	GCA_900005825.1	NA	0.15	NA	296	293
+Ischnura_elegans	Invertebrates	197161	Other Insecta	TRUE	FALSE	FALSE	GCF_921293095.1	NA	NA	NA	301	298
 Phodopus_roborovskii	Mammalia	109678	Mammalia	FALSE	FALSE	TRUE	GCF_943737965.1	1752	10.6	0.0272	301	274
 Triplophysa_tibetana	Teleostei	1572043	Teleostei	FALSE	FALSE	TRUE	GCA_008369825.1	NA	13.9	NA	299	280
 Carlito_syrichta	Mammalia	1868482	Mammalia	FALSE	FALSE	TRUE	GCF_000164805.1	5840	11.774	0.1192	300	282
-Drosophila_navojoa	Diptera	7232	Lepido Diptera	FALSE	FALSE	FALSE	GCF_001654015.2	NA	NA	NA	303	290
-Drosophila_arizonae	Diptera	7263	Lepido Diptera	FALSE	FALSE	FALSE	GCF_001654025.1	NA	NA	NA	300	288
+Drosophila_navojoa	Diptera	7232	Lepido Diptera	TRUE	FALSE	FALSE	GCF_001654015.2	NA	NA	NA	303	290
+Drosophila_arizonae	Diptera	7263	Lepido Diptera	TRUE	FALSE	FALSE	GCF_001654025.1	NA	NA	NA	300	288
 Ceratina_calcarata	Hymenoptera	156304	Hymenoptera	FALSE	FALSE	FALSE	GCF_001652005.1	NA	NA	NA	300	293
-Intoshia_linei	Invertebrates	1819745	Other Invertebrates	FALSE	FALSE	FALSE	GCA_001642005.1	NA	NA	NA	272	265
+Intoshia_linei	Invertebrates	1819745	Other Invertebrates	TRUE	FALSE	FALSE	GCA_001642005.1	NA	NA	NA	272	265
 Trachymyrmex_zeteki	Hymenoptera	64791	Hymenoptera	FALSE	FALSE	FALSE	GCF_001594055.1	NA	NA	NA	303	299
 Trachymyrmex_septentrionalis	Hymenoptera	34720	Hymenoptera	FALSE	FALSE	FALSE	GCF_001594115.1	NA	NA	NA	302	298
 Trachymyrmex_cornetzi	Hymenoptera	471704	Hymenoptera	FALSE	FALSE	FALSE	GCF_001594075.2	NA	NA	NA	302	298
 Cyphomyrmex_costatus	Hymenoptera	456900	Hymenoptera	FALSE	FALSE	FALSE	GCF_001594065.1	NA	NA	NA	303	299
 Atta_colombica	Hymenoptera	520822	Hymenoptera	FALSE	FALSE	FALSE	GCF_001594045.1	NA	NA	NA	302	299
 Ditylenchus_destructor	Nematoda	166010	Nematoda	FALSE	FALSE	FALSE	GCA_022814885.1	NA	NA	NA	290	274
-Bactrocera_latifrons	Diptera	174628	Lepido Diptera	FALSE	FALSE	FALSE	GCF_001853355.1	NA	NA	NA	303	299
+Bactrocera_latifrons	Diptera	174628	Lepido Diptera	TRUE	FALSE	FALSE	GCF_001853355.1	NA	NA	NA	303	299
 Falco_rusticolus	Aves	120794	Aves	FALSE	FALSE	TRUE	GCF_015220075.1	4927.5	56	2.1	292	287
 Stegostoma_fasciatum	Chondrichthyes	378071	Other Vertebrates	FALSE	FALSE	TRUE	GCF_022316705.1	12045	354	NA	301	296
 Galleria_mellonella	Lepidoptera	7137	Lepido Diptera	FALSE	FALSE	FALSE	GCF_026898425.1	NA	NA	NA	303	295
-Trichinella_patagoniensis	Nematoda	990121	Nematoda	FALSE	FALSE	FALSE	GCA_001447655.1	NA	NA	NA	279	268
+Trichinella_patagoniensis	Nematoda	990121	Nematoda	TRUE	FALSE	FALSE	GCA_001447655.1	NA	NA	NA	279	268
 Leopardus_geoffroyi	Mammalia	46844	Mammalia	FALSE	FALSE	TRUE	GCF_018350155.1	8395	75	7.4	303	289
 Prionailurus_viverrinus	Mammalia	61388	Mammalia	FALSE	FALSE	TRUE	GCF_022837055.1	6278	85.7	12	303	288
 Turdus_rufiventris	Aves	311356	Aves	FALSE	FALSE	TRUE	GCA_013186435.1	NA	NA	0.0668	270	262
-Anopheles_coluzzii	Diptera	1518534	Lepido Diptera	FALSE	FALSE	FALSE	GCF_943734685.1	NA	NA	NA	302	299
+Anopheles_coluzzii	Diptera	1518534	Lepido Diptera	TRUE	FALSE	FALSE	GCF_943734685.1	NA	NA	NA	302	299
 Upupa_epops	Aves	57439	Aves	FALSE	FALSE	TRUE	GCA_013397515.1	4051.5	NA	0.0671	273	267
 Melanotaenia_boesemani	Teleostei	1250792	Teleostei	FALSE	FALSE	TRUE	GCF_017639745.1	NA	9	NA	303	289
 Diachasma_alloeum	Hymenoptera	454923	Hymenoptera	FALSE	FALSE	TRUE	GCF_001412515.2	NA	0.4	NA	301	296
-Polypedilum_vanderplanki	Diptera	319348	Lepido Diptera	FALSE	FALSE	FALSE	GCA_018290095.1	NA	NA	NA	303	291
+Polypedilum_vanderplanki	Diptera	319348	Lepido Diptera	TRUE	FALSE	FALSE	GCA_018290095.1	NA	NA	NA	303	291
 Apodemus_sylvaticus	Mammalia	10129	Mammalia	FALSE	FALSE	TRUE	GCF_947179515.1	2299.5	15	0.0234	302	284
-Lamellibrachia_satsuma	Annelida	104711	Other Invertebrates	FALSE	FALSE	FALSE	GCA_022478865.1	NA	NA	NA	301	297
+Lamellibrachia_satsuma	Annelida	104711	Other Invertebrates	TRUE	FALSE	FALSE	GCA_022478865.1	NA	NA	NA	301	297
 Neodiprion_lecontei	Hymenoptera	441921	Hymenoptera	FALSE	FALSE	FALSE	GCF_021901455.1	NA	NA	NA	303	301
 Amyelois_transitella	Lepidoptera	680683	Lepido Diptera	FALSE	FALSE	FALSE	GCF_001186105.1	NA	NA	NA	301	291
 Kudoa_iwatai	Cnidaria	269814	Other Invertebrates	FALSE	FALSE	FALSE	GCA_001407235.2	NA	NA	NA	0	0
 Scortum_barcoo	Teleostei	214431	Teleostei	FALSE	FALSE	TRUE	GCA_023238725.1	NA	35	NA	292	281
-Pristis_pectinata	Chondrichthyes	685728	Other Vertebrates	FALSE	FALSE	TRUE	GCF_009764475.1	21900	760	350	293	286
+Pristis_pectinata	Chondrichthyes	685728	Other Vertebrates	TRUE	FALSE	TRUE	GCF_009764475.1	21900	760	350	293	286
 Vespa_mandarinia	Hymenoptera	7446	Hymenoptera	FALSE	FALSE	TRUE	GCF_014083535.2	365	5.5	NA	302	296
-Drosophila_busckii	Diptera	30019	Lepido Diptera	FALSE	FALSE	FALSE	GCF_011750605.1	NA	NA	NA	299	288
+Drosophila_busckii	Diptera	30019	Lepido Diptera	TRUE	FALSE	FALSE	GCF_011750605.1	NA	NA	NA	299	288
 Monomorium_pharaonis	Hymenoptera	307658	Hymenoptera	FALSE	FALSE	TRUE	GCF_013373865.1	NA	0.2	NA	303	289
 Wasmannia_auropunctata	Hymenoptera	64793	Hymenoptera	FALSE	FALSE	FALSE	GCF_000956235.1	NA	NA	NA	302	298
 Schistosoma_margrebowiei	Platyhelminthes	48269	Other Invertebrates	FALSE	FALSE	FALSE	GCA_944470205.1	NA	NA	NA	286	280
@@ -1181,7 +1181,7 @@ Sarcoptes_scabiei	Arachnida	52283	Other Invertebrates	FALSE	FALSE	TRUE	GCA_02084
 Colletes_gigas	Hymenoptera	935657	Hymenoptera	FALSE	FALSE	FALSE	GCF_013123115.1	NA	NA	NA	302	295
 Fopius_arisanus	Hymenoptera	64838	Hymenoptera	FALSE	FALSE	FALSE	GCF_000806365.1	NA	NA	NA	300	298
 Chelmon_rostratus	Teleostei	109905	Teleostei	FALSE	FALSE	TRUE	GCF_017976325.1	3650	20	NA	303	288
-Trichinella_papuae	Nematoda	268474	Nematoda	FALSE	FALSE	FALSE	GCA_001447755.1	NA	NA	NA	261	251
+Trichinella_papuae	Nematoda	268474	Nematoda	TRUE	FALSE	FALSE	GCA_001447755.1	NA	NA	NA	261	251
 Trichinella_zimbabwensis	Nematoda	268475	Nematoda	FALSE	FALSE	FALSE	GCA_001447665.1	NA	NA	NA	265	258
 Trichinella_britovi	Nematoda	45882	Nematoda	FALSE	FALSE	FALSE	GCA_001447585.1	NA	NA	NA	282	272
 Trichinella_nativa	Nematoda	6335	Nematoda	FALSE	FALSE	FALSE	GCA_001447565.2	NA	NA	NA	285	276
@@ -1189,7 +1189,7 @@ Trichinella_nelsoni	Nematoda	6336	Nematoda	FALSE	FALSE	FALSE	GCA_001447455.1	NA	
 Araneus_ventricosus	Arachnida	182803	Other Invertebrates	FALSE	FALSE	FALSE	GCA_013235015.1	NA	NA	NA	301	267
 Heliornis_fulica	Aves	54369	Aves	FALSE	FALSE	TRUE	GCA_013399135.1	NA	NA	0.132	265	258
 Loxia_curvirostra	Aves	64802	Aves	FALSE	FALSE	TRUE	GCA_013398455.1	5876.5	20	0.0454	281	270
-Aphelenchoides_besseyi	Nematoda	269767	Nematoda	FALSE	FALSE	FALSE	GCA_024699855.1	NA	NA	NA	280	270
+Aphelenchoides_besseyi	Nematoda	269767	Nematoda	TRUE	FALSE	FALSE	GCA_024699855.1	NA	NA	NA	280	270
 Mus_caroli	Mammalia	10089	Mammalia	FALSE	FALSE	TRUE	GCF_900094665.1	1204.5	NA	0.0112	303	288
 Passer_montanus	Aves	9160	Aves	FALSE	FALSE	TRUE	GCF_014805655.1	4781.5	NA	0.0205	298	292
 Anabas_testudineus	Teleostei	64144	Teleostei	FALSE	FALSE	TRUE	GCF_900324465.2	2920	25	NA	300	284
@@ -1220,9 +1220,9 @@ Sagittarius_serpentarius	Aves	56258	Aves	FALSE	FALSE	TRUE	GCA_013399415.1	6789	6
 Propithecus_coquereli	Mammalia	379532	Mammalia	FALSE	FALSE	TRUE	GCF_000956105.1	11315	NA	4.3	300	284
 Microcaecilia_unicolor	Amphibia	1415580	Other Vertebrates	FALSE	FALSE	FALSE	GCF_901765095.1	NA	NA	NA	303	284
 Rhincodon_typus	Chondrichthyes	259920	Other Vertebrates	FALSE	FALSE	TRUE	GCF_021869965.1	54750	2000	34000	297	290
-Procambarus_clarkii	Crustacea	6728	Other Invertebrates	FALSE	FALSE	TRUE	GCF_020424385.1	NA	11.938	NA	298	290
+Procambarus_clarkii	Crustacea	6728	Other Invertebrates	TRUE	FALSE	TRUE	GCF_020424385.1	NA	11.938	NA	298	290
 Pungitius_pungitius	Teleostei	134920	Teleostei	FALSE	FALSE	TRUE	GCF_902500615.1	1825	9	NA	303	290
-Penaeus_japonicus	Crustacea	27405	Other Invertebrates	FALSE	FALSE	TRUE	GCF_017312705.1	NA	30	NA	300	289
+Penaeus_japonicus	Crustacea	27405	Other Invertebrates	TRUE	FALSE	TRUE	GCF_017312705.1	NA	30	NA	300	289
 Diuraphis_noxia	Hemiptera	143948	Other Insecta	FALSE	FALSE	TRUE	GCF_001186385.1	90	0.21	NA	297	284
 Monopterus_albus	Teleostei	43700	Teleostei	FALSE	FALSE	TRUE	GCF_001952655.1	NA	100	0.25	302	294
 Apolygus_lucorum	Hemiptera	248454	Other Insecta	FALSE	FALSE	FALSE	GCA_009739505.2	NA	NA	NA	294	282
@@ -1237,49 +1237,49 @@ Bos_mutus	Mammalia	72004	Mammalia	FALSE	FALSE	FALSE	GCF_000298355.1	NA	NA	NA	301
 Carcharodon_carcharias	Chondrichthyes	13397	Other Vertebrates	FALSE	FALSE	TRUE	GCF_017639515.1	18250	720	3000	303	296
 Nibea_albiflora	Teleostei	240163	Teleostei	FALSE	FALSE	TRUE	GCA_014281875.1	1460	43.5	1.5	230	221
 Esox_lucius	Teleostei	8010	Teleostei	FALSE	FALSE	TRUE	GCF_011004845.1	10950	150	28.4	303	279
-Acipenser_ruthenus	Vertebrates	7906	Other Vertebrates	FALSE	FALSE	TRUE	GCF_010645085.1	16826.5	125	16	298	87
+Acipenser_ruthenus	Vertebrates	7906	Other Vertebrates	TRUE	FALSE	TRUE	GCF_010645085.1	16826.5	125	16	298	87
 Echeneis_naucrates	Teleostei	173247	Teleostei	FALSE	FALSE	TRUE	GCF_900963305.1	NA	110	2.363	302	286
 Paragonimus_westermani	Platyhelminthes	34504	Other Invertebrates	FALSE	FALSE	TRUE	GCA_008508345.1	7300	1.2	NA	285	278
-Pocillopora_damicornis	Cnidaria	46731	Other Invertebrates	FALSE	FALSE	TRUE	GCF_003704095.1	NA	0.144	NA	297	296
+Pocillopora_damicornis	Cnidaria	46731	Other Invertebrates	TRUE	FALSE	TRUE	GCF_003704095.1	NA	0.144	NA	297	296
 Microtus_fortis	Mammalia	100897	Mammalia	FALSE	FALSE	FALSE	GCF_014885135.2	NA	NA	NA	301	270
-Alligator_sinensis	Crocodylia	38654	Other Vertebrates	FALSE	FALSE	TRUE	GCF_000455745.1	25550	220	14.6	298	294
+Alligator_sinensis	Crocodylia	38654	Other Vertebrates	TRUE	FALSE	TRUE	GCF_000455745.1	25550	220	14.6	298	294
 Scatophagus_argus	Teleostei	75038	Teleostei	FALSE	FALSE	TRUE	GCF_020382885.2	NA	38	1.336	303	287
 Echinococcus_multilocularis	Platyhelminthes	6211	Other Invertebrates	FALSE	FALSE	TRUE	GCA_000469725.3	NA	0.35	NA	263	260
-Lacerta_agilis	Lepidosauria	80427	Other Vertebrates	FALSE	FALSE	FALSE	GCF_009819535.1	NA	NA	NA	302	286
+Lacerta_agilis	Lepidosauria	80427	Other Vertebrates	TRUE	FALSE	FALSE	GCF_009819535.1	NA	NA	NA	302	286
 Fasciolopsis_buski	Platyhelminthes	27845	Other Invertebrates	FALSE	FALSE	TRUE	GCA_008360955.1	365	7.5	NA	282	279
 Carassius_gibelio	Teleostei	101364	Teleostei	FALSE	FALSE	TRUE	GCF_023724105.1	3650	46.6	3	303	96
 Trichoplusia_ni	Lepidoptera	7111	Lepido Diptera	FALSE	FALSE	FALSE	GCF_003590095.1	NA	NA	NA	303	284
 Pygoscelis_antarcticus	Aves	79643	Aves	FALSE	FALSE	TRUE	GCA_010078415.1	NA	72	5	269	259
-Protobothrops_mucrosquamatus	Lepidosauria	103944	Other Vertebrates	FALSE	FALSE	FALSE	GCF_001527695.2	NA	NA	NA	303	292
-Python_bivittatus	Lepidosauria	176946	Other Vertebrates	FALSE	FALSE	FALSE	GCF_000186305.1	NA	NA	NA	301	297
+Protobothrops_mucrosquamatus	Lepidosauria	103944	Other Vertebrates	TRUE	FALSE	FALSE	GCF_001527695.2	NA	NA	NA	303	292
+Python_bivittatus	Lepidosauria	176946	Other Vertebrates	TRUE	FALSE	FALSE	GCF_000186305.1	NA	NA	NA	301	297
 Aphis_gossypii	Hemiptera	80765	Other Insecta	FALSE	FALSE	FALSE	GCF_020184175.1	NA	NA	NA	302	275
 Formica_exsecta	Hymenoptera	72781	Hymenoptera	FALSE	FALSE	FALSE	GCF_003651465.1	NA	NA	NA	303	284
 Leptopilina_heterotoma	Hymenoptera	63436	Hymenoptera	FALSE	FALSE	FALSE	GCF_015476425.1	NA	NA	NA	303	299
 Leptopilina_boulardi	Hymenoptera	63433	Hymenoptera	FALSE	FALSE	FALSE	GCF_019393585.1	NA	NA	NA	301	294
 Nephila_pilipes	Arachnida	299642	Other Invertebrates	FALSE	FALSE	FALSE	GCA_019974015.1	NA	NA	NA	302	268
 Pygoscelis_adeliae	Aves	9238	Aves	FALSE	FALSE	TRUE	GCF_000699105.1	5840	69.85	4.99	274	268
-Mya_arenaria	Mollusca	6604	Other Invertebrates	FALSE	FALSE	TRUE	GCF_026914265.1	10220	6.7	0.034	301	240
+Mya_arenaria	Mollusca	6604	Other Invertebrates	TRUE	FALSE	TRUE	GCF_026914265.1	10220	6.7	0.034	301	240
 Poecilia_latipinna	Teleostei	48699	Teleostei	FALSE	FALSE	TRUE	GCF_001443285.1	NA	15	NA	303	282
-Adineta_vaga	Invertebrates	104782	Other Invertebrates	FALSE	FALSE	FALSE	GCA_021613535.1	NA	NA	NA	297	226
+Adineta_vaga	Invertebrates	104782	Other Invertebrates	TRUE	FALSE	FALSE	GCA_021613535.1	NA	NA	NA	297	226
 Ladona_fulva	Invertebrates	123851	Other Insecta	FALSE	FALSE	FALSE	GCA_000376725.2	NA	NA	NA	293	288
 Zosterops_borbonicus	Aves	364589	Aves	FALSE	FALSE	TRUE	GCA_007252995.1	NA	NA	0.0092	299	295
-Thelohanellus_kitauei	Cnidaria	669202	Other Invertebrates	FALSE	FALSE	FALSE	GCA_000827895.1	NA	NA	NA	193	184
-Scyliorhinus_canicula	Chondrichthyes	7830	Other Vertebrates	FALSE	FALSE	TRUE	GCF_902713615.1	4380	100	1.3	295	282
+Thelohanellus_kitauei	Cnidaria	669202	Other Invertebrates	TRUE	FALSE	FALSE	GCA_000827895.1	NA	NA	NA	193	184
+Scyliorhinus_canicula	Chondrichthyes	7830	Other Vertebrates	TRUE	FALSE	TRUE	GCF_902713615.1	4380	100	1.3	295	282
 Jaculus_jaculus	Mammalia	51337	Mammalia	FALSE	FALSE	TRUE	GCF_020740685.1	2664.5	11	0.073	303	264
 Melopsittacus_undulatus	Aves	13146	Aves	FALSE	FALSE	TRUE	GCF_012275295.1	7665	20	0.03	301	291
 Xiphophorus_maculatus	Teleostei	8083	Teleostei	FALSE	FALSE	TRUE	GCF_002775205.1	NA	6	NA	303	290
-Crassostrea_gigas	Mollusca	29159	Other Invertebrates	FALSE	FALSE	TRUE	GCF_902806645.1	2555	15.3	0.232	300	286
-Dirofilaria_immitis	Nematoda	6287	Nematoda	FALSE	FALSE	TRUE	GCA_024305405.1	NA	30	NA	297	294
+Crassostrea_gigas	Mollusca	29159	Other Invertebrates	TRUE	FALSE	TRUE	GCF_902806645.1	2555	15.3	0.232	300	286
+Dirofilaria_immitis	Nematoda	6287	Nematoda	TRUE	FALSE	TRUE	GCA_024305405.1	NA	30	NA	297	294
 Bactrocera_dorsalis	Diptera	27457	Lepido Diptera	FALSE	FALSE	FALSE	GCF_023373825.1	NA	NA	NA	303	299
 Notothenia_coriiceps	Teleostei	8208	Teleostei	FALSE	FALSE	TRUE	GCF_000735185.1	NA	62	NA	285	273
-Hymenochirus_boettgeri	Amphibia	247094	Other Vertebrates	FALSE	FALSE	FALSE	GCA_019447015.1	NA	NA	NA	300	287
+Hymenochirus_boettgeri	Amphibia	247094	Other Vertebrates	TRUE	FALSE	FALSE	GCA_019447015.1	NA	NA	NA	300	287
 Camelus_bactrianus	Mammalia	9837	Mammalia	FALSE	FALSE	TRUE	GCF_000767855.1	18250	345	690	302	292
 Camelus_dromedarius	Mammalia	9838	Mammalia	FALSE	FALSE	TRUE	GCF_000803125.2	18250	NA	690	302	295
 Capra_hircus	Mammalia	9925	Mammalia	FALSE	FALSE	TRUE	GCF_001704415.2	8030	170	113	303	286
 Pan_paniscus	Mammalia	9597	Mammalia	FALSE	FALSE	TRUE	GCF_013052645.1	20075	124	61	302	277
 Morone_saxatilis	Teleostei	34816	Teleostei	FALSE	FALSE	TRUE	GCF_004916995.1	10950	200	57	287	274
 Columba_livia	Aves	8932	Aves	FALSE	FALSE	TRUE	GCF_000337935.1	12775	NA	0.3587	287	281
-Lepisosteus_oculatus	Vertebrates	7918	Other Vertebrates	FALSE	FALSE	TRUE	GCF_000242695.1	6570	150	4.4	296	292
+Lepisosteus_oculatus	Vertebrates	7918	Other Vertebrates	TRUE	FALSE	TRUE	GCF_000242695.1	6570	150	4.4	296	292
 Chinchilla_lanigera	Mammalia	34839	Mammalia	FALSE	FALSE	TRUE	GCF_000276665.1	7300	38	0.8	303	294
 Pygocentrus_nattereri	Teleostei	42514	Teleostei	FALSE	FALSE	TRUE	GCF_015220715.1	NA	50	3.9	303	286
 Siniperca_chuatsi	Teleostei	119488	Teleostei	FALSE	FALSE	TRUE	GCF_020085105.1	3285	70	8	301	286
@@ -1293,13 +1293,13 @@ Lynx_rufus	Mammalia	61384	Mammalia	FALSE	FALSE	TRUE	GCF_022079265.1	11789.5	105	
 Collichthys_lucidus	Teleostei	240159	Teleostei	FALSE	FALSE	TRUE	GCA_004119915.2	NA	19.8	0.0771	291	211
 Thunnus_maccoyii	Teleostei	8240	Teleostei	FALSE	FALSE	TRUE	GCF_910596095.1	7300	245	260	303	286
 Thunnus_albacares	Teleostei	8236	Teleostei	FALSE	FALSE	TRUE	GCF_914725855.1	3285	239	200	303	286
-Ciona_intestinalis	Invertebrates	7719	Other Invertebrates	FALSE	FALSE	TRUE	GCF_000224145.3	730	15	0.020434	293	293
+Ciona_intestinalis	Invertebrates	7719	Other Invertebrates	TRUE	FALSE	TRUE	GCF_000224145.3	730	15	0.020434	293	293
 Aedes_albopictus	Diptera	7160	Lepido Diptera	FALSE	FALSE	TRUE	GCF_006496715.1	117	1	NA	301	155
-Brugia_malayi	Nematoda	6279	Nematoda	FALSE	FALSE	TRUE	GCF_000002995.4	NA	8	NA	300	298
-Caenorhabditis_briggsae	Nematoda	6238	Nematoda	FALSE	FALSE	FALSE	GCF_000004555.2	NA	NA	NA	303	292
+Brugia_malayi	Nematoda	6279	Nematoda	TRUE	FALSE	TRUE	GCF_000002995.4	NA	8	NA	300	298
+Caenorhabditis_briggsae	Nematoda	6238	Nematoda	TRUE	FALSE	FALSE	GCF_000004555.2	NA	NA	NA	303	292
 Sphaeroforma_arctica	NA	72019	Other Invertebrates	FALSE	FALSE	FALSE	GCF_001186125.1	NA	NA	NA	282	277
 Anseranas_semipalmata	Aves	8851	Aves	FALSE	FALSE	TRUE	GCA_013399115.1	11680	90	3	273	267
-Pomacea_canaliculata	Mollusca	400727	Other Invertebrates	FALSE	FALSE	TRUE	GCF_003073045.1	1460	6	NA	301	297
+Pomacea_canaliculata	Mollusca	400727	Other Invertebrates	TRUE	FALSE	TRUE	GCF_003073045.1	1460	6	NA	301	297
 Balaenoptera_musculus	Mammalia	9771	Mammalia	FALSE	FALSE	TRUE	GCF_009873245.2	40150	3350	190000	302	258
 Cervus_canadensis	Mammalia	1574408	Mammalia	FALSE	FALSE	TRUE	GCF_019320065.1	NA	NA	275	302	265
 Globicephala_melas	Mammalia	9731	Mammalia	FALSE	FALSE	TRUE	GCF_006547405.1	21900	850	3800	303	286
@@ -1307,7 +1307,7 @@ Orcinus_orca	Mammalia	9733	Mammalia	FALSE	FALSE	TRUE	GCF_937001465.1	36000	975	7
 Delphinapterus_leucas	Mammalia	9749	Mammalia	FALSE	FALSE	TRUE	GCF_002288925.2	21900	700	1600	303	296
 Monodon_monoceros	Mammalia	40151	Mammalia	FALSE	FALSE	TRUE	GCF_005190385.1	18250	509.253	1600	303	292
 Oryzias_javanicus	Teleostei	123683	Teleostei	FALSE	FALSE	TRUE	GCA_003999625.1	NA	4.5	NA	281	270
-Periplaneta_americana	Blattodea	6978	Other Insecta	FALSE	FALSE	TRUE	GCA_025594305.2	NA	5.3	NA	280	277
+Periplaneta_americana	Blattodea	6978	Other Insecta	TRUE	FALSE	TRUE	GCA_025594305.2	NA	5.3	NA	280	277
 Salarias_fasciatus	Teleostei	181472	Teleostei	FALSE	FALSE	TRUE	GCF_902148845.1	NA	14	0.018	302	263
 Prionailurus_bengalensis	Mammalia	37029	Mammalia	FALSE	FALSE	TRUE	GCF_016509475.1	7300	107	7	303	287
 Crocuta_crocuta	Mammalia	9678	Mammalia	FALSE	FALSE	TRUE	GCA_008692635.1	15001.5	150	80	275	270
@@ -1323,8 +1323,8 @@ Oreochromis_aureus	Teleostei	47969	Teleostei	FALSE	FALSE	TRUE	GCF_013358895.1	NA
 Oreochromis_niloticus	Teleostei	8128	Teleostei	FALSE	FALSE	TRUE	GCF_001858045.2	3285	60	4.3	303	288
 Alosa_alosa	Teleostei	278164	Teleostei	FALSE	FALSE	TRUE	GCF_017589495.1	3650	83	4	293	274
 Denticeps_clupeoides	Teleostei	299321	Teleostei	FALSE	FALSE	TRUE	GCF_900700375.1	NA	15	NA	302	259
-Callosobruchus_maculatus	Coleoptera	64391	Other Insecta	FALSE	FALSE	FALSE	GCA_900659725.1	NA	NA	NA	277	261
-Sitophilus_oryzae	Coleoptera	7048	Other Insecta	FALSE	FALSE	FALSE	GCF_002938485.1	NA	NA	NA	296	283
+Callosobruchus_maculatus	Coleoptera	64391	Other Insecta	TRUE	FALSE	FALSE	GCA_900659725.1	NA	NA	NA	277	261
+Sitophilus_oryzae	Coleoptera	7048	Other Insecta	TRUE	FALSE	FALSE	GCF_002938485.1	NA	NA	NA	296	283
 Myxocyprinus_asiaticus	Teleostei	70543	Teleostei	FALSE	FALSE	TRUE	GCF_019703515.2	NA	68	4.001	303	96
 Gambusia_affinis	Teleostei	33528	Teleostei	FALSE	FALSE	TRUE	GCF_019740435.1	1095	7	0.002	302	286
 Poecilia_formosa	Teleostei	48698	Teleostei	FALSE	FALSE	TRUE	GCF_000485575.1	NA	9.6	NA	303	273
@@ -1348,7 +1348,7 @@ Drosophila_eugracilis	Diptera	29029	Lepido Diptera	FALSE	FALSE	FALSE	GCF_0181538
 Drosophila_kikkawai	Diptera	30033	Lepido Diptera	FALSE	FALSE	FALSE	GCF_018152535.1	NA	NA	NA	303	294
 Drosophila_bipectinata	Diptera	42026	Lepido Diptera	FALSE	FALSE	FALSE	GCF_018153845.1	NA	NA	NA	302	288
 Drosophila_takahashii	Diptera	29030	Lepido Diptera	FALSE	FALSE	FALSE	GCF_018152695.1	NA	NA	NA	302	291
-Ephemera_danica	Ephemeroptera	1049336	Other Insecta	FALSE	FALSE	FALSE	GCA_000507165.2	NA	NA	NA	291	282
+Ephemera_danica	Ephemeroptera	1049336	Other Insecta	TRUE	FALSE	FALSE	GCA_000507165.2	NA	NA	NA	291	282
 Coturnix_japonica	Aves	93934	Aves	FALSE	FALSE	TRUE	GCF_001577835.2	2190	NA	0.115	297	295
 Lagopus_leucura	Aves	30410	Aves	FALSE	FALSE	TRUE	GCF_019238085.1	5475	31	0.425	291	284
 Lagopus_muta	Aves	64668	Aves	FALSE	FALSE	TRUE	GCF_023343835.1	4270.5	40.64	0.5355	288	283
@@ -1370,11 +1370,11 @@ Vanessa_atalanta	Lepidoptera	42275	Lepido Diptera	FALSE	FALSE	FALSE	GCF_90514776
 Manduca_sexta	Lepidoptera	7130	Lepido Diptera	FALSE	FALSE	FALSE	GCF_014839805.1	NA	NA	NA	302	271
 Larimichthys_crocea	Teleostei	215358	Teleostei	FALSE	FALSE	TRUE	GCF_000972845.2	2190	80	0.2436	303	288
 Scleropages_formosus	Teleostei	113540	Teleostei	FALSE	FALSE	TRUE	GCF_900964775.1	NA	90	NA	303	276
-Crassostrea_virginica	Mollusca	6565	Other Invertebrates	FALSE	FALSE	TRUE	GCF_002022765.2	1825	28.3	2.88	299	221
+Crassostrea_virginica	Mollusca	6565	Other Invertebrates	TRUE	FALSE	TRUE	GCF_002022765.2	1825	28.3	2.88	299	221
 Taeniopygia_guttata	Aves	59729	Aves	FALSE	FALSE	TRUE	GCF_003957565.2	4380	11	0.0157	298	292
 Menura_novaehollandiae	Aves	47692	Aves	FALSE	FALSE	TRUE	GCA_013396355.1	6533.5	NA	0.97995	281	274
 Sinosuthora_webbiana	Aves	337173	Aves	FALSE	FALSE	FALSE	GCA_013397395.1	NA	NA	NA	271	261
-Mizuhopecten_yessoensis	Mollusca	6573	Other Invertebrates	FALSE	FALSE	TRUE	GCF_002113885.1	2190	18	0.261	299	294
+Mizuhopecten_yessoensis	Mollusca	6573	Other Invertebrates	TRUE	FALSE	TRUE	GCF_002113885.1	2190	18	0.261	299	294
 Trematomus_bernacchii	Teleostei	40690	Teleostei	FALSE	FALSE	TRUE	GCF_902827165.1	3650	35	NA	299	281
 Perca_flavescens	Teleostei	8167	Teleostei	FALSE	FALSE	TRUE	GCF_004354835.1	4380	50	1.9	303	290
 Epinephelus_lanceolatus	Teleostei	310571	Teleostei	FALSE	FALSE	TRUE	GCF_005281545.1	NA	270	400	303	285
@@ -1406,103 +1406,103 @@ Salvelinus_namaycush	Teleostei	8040	Teleostei	FALSE	FALSE	TRUE	GCF_016432855.1	1
 Sepia_pharaonis	Mollusca	158019	Other Invertebrates	FALSE	FALSE	TRUE	GCA_903632075.3	240	80	5	249	246
 Ictalurus_punctatus	Teleostei	7998	Teleostei	FALSE	FALSE	TRUE	GCF_001660625.2	14600	132	26.3	303	277
 Pangasianodon_hypophthalmus	Teleostei	310915	Teleostei	FALSE	FALSE	TRUE	GCF_027358585.1	NA	130	44	302	288
-Ctenocephalides_felis	Invertebrates	7515	Other Insecta	FALSE	FALSE	TRUE	GCF_003426905.1	1095	0.2	NA	297	178
+Ctenocephalides_felis	Invertebrates	7515	Other Insecta	TRUE	FALSE	TRUE	GCF_003426905.1	1095	0.2	NA	297	178
 Sparus_aurata	Teleostei	8175	Teleostei	FALSE	FALSE	TRUE	GCF_900880675.1	4015	70	17.2	302	280
 Aptenodytes_patagonicus	Aves	9234	Aves	FALSE	FALSE	TRUE	GCA_010087175.1	9855	95	17.3	267	259
 Eudyptes_chrysocome	Aves	79626	Aves	FALSE	FALSE	TRUE	GCA_010085355.1	3650	55	3	248	240
 Candidula_unifasciata	Mollusca	100452	Other Invertebrates	FALSE	FALSE	FALSE	GCA_905116865.2	NA	NA	NA	298	273
 Takifugu_rubripes	Teleostei	31033	Teleostei	FALSE	FALSE	TRUE	GCF_901000725.2	NA	80	NA	302	273
-Mercenaria_mercenaria	Mollusca	6596	Other Invertebrates	FALSE	FALSE	TRUE	GCF_014805675.1	38690	17	1.02	297	279
-Oryza_sativa	Embryophyta	4530	Embryophyta	FALSE	TRUE	FALSE	GCF_001433935.1	NA	NA	NA	302	232
-Olea_europaea	Embryophyta	4146	Embryophyta	FALSE	TRUE	FALSE	GCF_002742605.1	NA	NA	NA	300	178
-Brassica_rapa	Embryophyta	3711	Embryophyta	FALSE	TRUE	FALSE	GCF_000309985.2	NA	NA	NA	301	128
-Capsicum_baccatum	Embryophyta	33114	Embryophyta	FALSE	TRUE	FALSE	GCA_002271885.2	NA	NA	NA	291	240
-Cucumis_melo	Embryophyta	3656	Embryophyta	FALSE	TRUE	FALSE	GCF_000313045.1	NA	NA	NA	301	266
-Marchantia_polymorpha	Embryophyta	3197	Embryophyta	FALSE	TRUE	FALSE	GCA_003032435.1	NA	NA	NA	298	280
-Beta_vulgaris	Embryophyta	161934	Embryophyta	FALSE	TRUE	FALSE	GCF_000511025.2	NA	NA	NA	302	256
-Zea_mays	Embryophyta	4577	Embryophyta	FALSE	TRUE	FALSE	GCF_902167145.1	NA	NA	NA	301	163
-Aegilops_tauschii	Embryophyta	37682	Embryophyta	FALSE	TRUE	FALSE	GCF_002575655.1	NA	NA	NA	302	221
-Brassica_oleracea	Embryophyta	3712	Embryophyta	FALSE	TRUE	FALSE	GCF_000695525.1	NA	NA	NA	301	143
-Fragaria_vesca	Embryophyta	57918	Embryophyta	FALSE	TRUE	FALSE	GCF_000184155.1	NA	NA	NA	302	251
-Arabidopsis_lyrata	Embryophyta	59689	Embryophyta	FALSE	TRUE	FALSE	GCF_000004255.1	NA	NA	NA	301	219
-Corymbia_citriodora	Embryophyta	34329	Embryophyta	FALSE	TRUE	FALSE	GCA_014858505.1	NA	NA	NA	302	233
-Cinnamomum_micranthum	Embryophyta	337465	Embryophyta	FALSE	TRUE	FALSE	GCA_003546025.1	NA	NA	NA	287	220
-Musa_balbisiana	Embryophyta	52838	Embryophyta	FALSE	TRUE	FALSE	GCA_004837865.1	NA	NA	NA	291	222
-Panicum_hallii	Embryophyta	206008	Embryophyta	FALSE	TRUE	FALSE	GCF_002211085.1	NA	NA	NA	300	230
-Cucurbita_pepo	Embryophyta	3663	Embryophyta	FALSE	TRUE	FALSE	GCF_002806865.1	NA	NA	NA	301	150
-Rosa_chinensis	Embryophyta	74649	Embryophyta	FALSE	TRUE	FALSE	GCF_002994745.2	NA	NA	NA	301	233
-Cannabis_sativa	Embryophyta	3483	Embryophyta	FALSE	TRUE	FALSE	GCF_900626175.2	NA	NA	NA	299	241
-Vigna_angularis	Embryophyta	3914	Embryophyta	FALSE	TRUE	FALSE	GCF_001190045.1	NA	NA	NA	302	255
-Vigna_unguiculata	Embryophyta	3917	Embryophyta	FALSE	TRUE	FALSE	GCF_004118075.1	NA	NA	NA	302	246
-Apium_graveolens	Embryophyta	4045	Embryophyta	FALSE	FALSE	FALSE	GCA_009905375.1	NA	NA	NA	38	36
-Musa_acuminata	Embryophyta	4641	Embryophyta	FALSE	TRUE	FALSE	GCF_000313855.2	NA	NA	NA	301	201
-Capsicum_annuum	Embryophyta	4072	Embryophyta	FALSE	TRUE	FALSE	GCF_000710875.1	NA	NA	NA	298	239
-Daucus_carota	Embryophyta	4039	Embryophyta	FALSE	TRUE	FALSE	GCF_001625215.1	NA	NA	NA	302	196
-Vigna_radiata	Embryophyta	157791	Embryophyta	FALSE	TRUE	FALSE	GCF_000741045.1	NA	NA	NA	302	242
-Manihot_esculenta	Embryophyta	3983	Embryophyta	FALSE	TRUE	FALSE	GCF_001659605.1	NA	NA	NA	300	206
-Vitis_vinifera	Embryophyta	29760	Embryophyta	FALSE	TRUE	FALSE	GCF_000003745.3	NA	NA	NA	301	258
-Solanum_tuberosum	Embryophyta	4113	Embryophyta	FALSE	TRUE	FALSE	GCF_000226075.1	NA	NA	NA	301	239
-Spirodela_intermedia	Embryophyta	51605	Embryophyta	FALSE	TRUE	FALSE	GCA_902729315.2	NA	NA	NA	300	264
-Salix_dunnii	Embryophyta	1413687	Embryophyta	FALSE	TRUE	FALSE	GCA_015731905.1	NA	NA	NA	298	199
-Miscanthus_lutarioriparius	Embryophyta	422564	Embryophyta	FALSE	FALSE	FALSE	GCA_904845875.1	NA	NA	NA	301	43
-Rhododendron_simsii	Embryophyta	118357	Embryophyta	FALSE	TRUE	FALSE	GCA_014282245.1	NA	NA	NA	291	223
-Nymphaea_thermarum	Embryophyta	419125	Embryophyta	FALSE	TRUE	FALSE	GCA_011799765.1	NA	NA	NA	295	263
-Sinapis_alba	Embryophyta	3728	Embryophyta	FALSE	TRUE	FALSE	GCA_012274485.2	NA	NA	NA	300	115
-Striga_asiatica	Embryophyta	4170	Embryophyta	FALSE	TRUE	FALSE	GCA_008636005.1	NA	NA	NA	298	211
-Rhamnella_rubrinervis	Embryophyta	2594499	Embryophyta	FALSE	TRUE	FALSE	GCA_007844105.2	NA	NA	NA	299	260
-Malus_baccata	Embryophyta	106549	Embryophyta	FALSE	FALSE	FALSE	GCA_006547085.1	NA	NA	NA	296	143
-Lactuca_saligna	Embryophyta	75948	Embryophyta	FALSE	TRUE	FALSE	GCA_902860255.1	NA	NA	NA	288	225
-Carpinus_fangiana	Embryophyta	176857	Embryophyta	FALSE	TRUE	FALSE	GCA_006937295.1	NA	NA	NA	286	154
-Abrus_precatorius	Embryophyta	3816	Embryophyta	FALSE	TRUE	FALSE	GCF_003935025.1	NA	NA	NA	301	248
-Coffea_eugenioides	Embryophyta	49369	Embryophyta	FALSE	TRUE	FALSE	GCF_003713205.1	NA	NA	NA	301	242
-Ipomoea_triloba	Embryophyta	35885	Embryophyta	FALSE	TRUE	FALSE	GCF_003576645.1	NA	NA	NA	301	211
-Brassica_cretica	Embryophyta	69181	Embryophyta	FALSE	TRUE	FALSE	GCA_003260655.2	NA	NA	NA	284	197
-Cuscuta_australis	Embryophyta	267555	Embryophyta	FALSE	TRUE	FALSE	GCA_003260385.1	NA	NA	NA	296	262
-Cuscuta_campestris	Embryophyta	132261	Embryophyta	FALSE	FALSE	FALSE	GCA_900332095.2	NA	NA	NA	301	68
-Nymphaea_colorata	Embryophyta	210225	Embryophyta	FALSE	TRUE	FALSE	GCF_008831285.1	NA	NA	NA	302	263
-Dendrobium_catenatum	Embryophyta	906689	Embryophyta	FALSE	TRUE	FALSE	GCF_001605985.2	NA	NA	NA	301	261
-Trema_orientale	Embryophyta	63057	Embryophyta	FALSE	TRUE	FALSE	GCA_002914845.1	NA	NA	NA	299	269
-Parasponia_andersonii	Embryophyta	3476	Embryophyta	FALSE	TRUE	FALSE	GCA_002914805.1	NA	NA	NA	299	278
-Apostasia_shenzhenica	Embryophyta	1088818	Embryophyta	FALSE	TRUE	FALSE	GCA_002786265.1	NA	NA	NA	291	272
-Quercus_suber	Embryophyta	58331	Embryophyta	FALSE	TRUE	FALSE	GCF_002906115.1	NA	NA	NA	303	49
-Coptis_chinensis	Embryophyta	261450	Embryophyta	FALSE	TRUE	FALSE	GCA_015680905.1	NA	NA	NA	290	220
-Durio_zibethinus	Embryophyta	66656	Embryophyta	FALSE	TRUE	FALSE	GCF_002303985.1	NA	NA	NA	302	129
-Pistacia_vera	Embryophyta	55513	Embryophyta	FALSE	TRUE	FALSE	GCF_008641045.1	NA	NA	NA	298	221
-Herrania_umbratica	Embryophyta	108875	Embryophyta	FALSE	TRUE	FALSE	GCF_002168275.1	NA	NA	NA	297	266
-Gossypium_klotzschianum	Embryophyta	34286	Embryophyta	FALSE	FALSE	FALSE	GCA_013677235.1	NA	NA	NA	235	173
-Gossypium_davidsonii	Embryophyta	34287	Embryophyta	FALSE	FALSE	FALSE	GCA_013677245.1	NA	NA	NA	227	175
-Gossypium_australe	Embryophyta	47621	Embryophyta	FALSE	TRUE	FALSE	GCA_005393395.2	NA	NA	NA	279	209
-Gossypium_trilobum	Embryophyta	34281	Embryophyta	FALSE	FALSE	FALSE	GCA_013467465.1	NA	NA	NA	231	172
-Corchorus_olitorius	Embryophyta	93759	Embryophyta	FALSE	TRUE	FALSE	GCA_001974825.1	NA	NA	NA	293	256
-Corchorus_capsularis	Embryophyta	210143	Embryophyta	FALSE	TRUE	FALSE	GCA_001974805.1	NA	NA	NA	296	252
-Citrus_unshiu	Embryophyta	55188	Embryophyta	FALSE	TRUE	FALSE	GCA_002897195.1	NA	NA	NA	301	256
-Ipomoea_nil	Embryophyta	35883	Embryophyta	FALSE	TRUE	FALSE	GCF_001879475.1	NA	NA	NA	300	216
-Capsicum_chinense	Embryophyta	80379	Embryophyta	FALSE	TRUE	FALSE	GCA_002271895.2	NA	NA	NA	299	251
-Senna_tora	Embryophyta	362788	Embryophyta	FALSE	TRUE	FALSE	GCA_014851425.1	NA	NA	NA	298	227
-Dichanthelium_oligosanthes	Embryophyta	888268	Embryophyta	FALSE	TRUE	FALSE	GCA_001633215.2	NA	NA	NA	252	223
-Solanum_chilense	Embryophyta	4083	Embryophyta	FALSE	TRUE	FALSE	GCA_006013705.1	NA	NA	NA	285	238
-Hibiscus_syriacus	Embryophyta	106335	Embryophyta	FALSE	FALSE	FALSE	GCF_006381635.1	NA	NA	NA	300	56
-Salix_suchowensis	Embryophyta	1278906	Embryophyta	FALSE	TRUE	FALSE	GCA_017552425.1	NA	NA	NA	302	163
-Arachis_ipaensis	Embryophyta	130454	Embryophyta	FALSE	TRUE	FALSE	GCF_000816755.2	NA	NA	NA	302	211
-Digitaria_exilis	Embryophyta	1010633	Embryophyta	FALSE	FALSE	FALSE	GCA_015342445.1	NA	NA	NA	297	37
-Cucurbita_moschata	Embryophyta	3662	Embryophyta	FALSE	TRUE	FALSE	GCF_002738365.1	NA	NA	NA	300	150
-Benincasa_hispida	Embryophyta	102211	Embryophyta	FALSE	TRUE	FALSE	GCF_009727055.1	NA	NA	NA	301	263
-Tetracentron_sinense	Embryophyta	13715	Embryophyta	FALSE	TRUE	FALSE	GCA_015143295.1	NA	NA	NA	283	189
-Vanilla_planifolia	Embryophyta	51239	Embryophyta	FALSE	TRUE	FALSE	GCA_016413895.1	NA	NA	NA	290	227
-Morus_notabilis	Embryophyta	981085	Embryophyta	FALSE	TRUE	FALSE	GCF_000414095.1	NA	NA	NA	300	272
-Juglans_regia	Embryophyta	51240	Embryophyta	FALSE	TRUE	FALSE	GCF_001411555.2	NA	NA	NA	302	198
-Tarenaya_hassleriana	Embryophyta	28532	Embryophyta	FALSE	TRUE	FALSE	GCF_000463585.1	NA	NA	NA	301	186
-Setaria_viridis	Embryophyta	4556	Embryophyta	FALSE	TRUE	FALSE	GCF_005286985.1	NA	NA	NA	301	218
-Ziziphus_jujuba	Embryophyta	326968	Embryophyta	FALSE	TRUE	FALSE	GCF_000826755.1	NA	NA	NA	291	220
-Lupinus_albus	Embryophyta	3870	Embryophyta	FALSE	TRUE	FALSE	GCA_010261695.1	NA	NA	NA	296	153
+Mercenaria_mercenaria	Mollusca	6596	Other Invertebrates	TRUE	FALSE	TRUE	GCF_014805675.1	38690	17	1.02	297	279
+Oryza_sativa	Embryophyta	4530	Embryophyta	TRUE	FALSE	FALSE	GCF_001433935.1	NA	NA	NA	302	232
+Olea_europaea	Embryophyta	4146	Embryophyta	TRUE	FALSE	FALSE	GCF_002742605.1	NA	NA	NA	300	178
+Brassica_rapa	Embryophyta	3711	Embryophyta	TRUE	FALSE	FALSE	GCF_000309985.2	NA	NA	NA	301	128
+Capsicum_baccatum	Embryophyta	33114	Embryophyta	TRUE	FALSE	FALSE	GCA_002271885.2	NA	NA	NA	291	240
+Cucumis_melo	Embryophyta	3656	Embryophyta	TRUE	FALSE	FALSE	GCF_000313045.1	NA	NA	NA	301	266
+Marchantia_polymorpha	Embryophyta	3197	Embryophyta	TRUE	FALSE	FALSE	GCA_003032435.1	NA	NA	NA	298	280
+Beta_vulgaris	Embryophyta	161934	Embryophyta	FALSE	FALSE	FALSE	GCF_000511025.2	NA	NA	NA	302	256
+Zea_mays	Embryophyta	4577	Embryophyta	TRUE	FALSE	FALSE	GCF_902167145.1	NA	NA	NA	301	163
+Aegilops_tauschii	Embryophyta	37682	Embryophyta	TRUE	FALSE	FALSE	GCF_002575655.1	NA	NA	NA	302	221
+Brassica_oleracea	Embryophyta	3712	Embryophyta	FALSE	FALSE	FALSE	GCF_000695525.1	NA	NA	NA	301	143
+Fragaria_vesca	Embryophyta	57918	Embryophyta	TRUE	FALSE	FALSE	GCF_000184155.1	NA	NA	NA	302	251
+Arabidopsis_lyrata	Embryophyta	59689	Embryophyta	TRUE	FALSE	FALSE	GCF_000004255.1	NA	NA	NA	301	219
+Corymbia_citriodora	Embryophyta	34329	Embryophyta	TRUE	FALSE	FALSE	GCA_014858505.1	NA	NA	NA	302	233
+Cinnamomum_micranthum	Embryophyta	337465	Embryophyta	TRUE	FALSE	FALSE	GCA_003546025.1	NA	NA	NA	287	220
+Musa_balbisiana	Embryophyta	52838	Embryophyta	TRUE	FALSE	FALSE	GCA_004837865.1	NA	NA	NA	291	222
+Panicum_hallii	Embryophyta	206008	Embryophyta	TRUE	FALSE	FALSE	GCF_002211085.1	NA	NA	NA	300	230
+Cucurbita_pepo	Embryophyta	3663	Embryophyta	TRUE	FALSE	FALSE	GCF_002806865.1	NA	NA	NA	301	150
+Rosa_chinensis	Embryophyta	74649	Embryophyta	TRUE	FALSE	FALSE	GCF_002994745.2	NA	NA	NA	301	233
+Cannabis_sativa	Embryophyta	3483	Embryophyta	TRUE	FALSE	FALSE	GCF_900626175.2	NA	NA	NA	299	241
+Vigna_angularis	Embryophyta	3914	Embryophyta	TRUE	FALSE	FALSE	GCF_001190045.1	NA	NA	NA	302	255
+Vigna_unguiculata	Embryophyta	3917	Embryophyta	TRUE	FALSE	FALSE	GCF_004118075.1	NA	NA	NA	302	246
+Apium_graveolens	Embryophyta	4045	Embryophyta	TRUE	FALSE	FALSE	GCA_009905375.1	NA	NA	NA	38	36
+Musa_acuminata	Embryophyta	4641	Embryophyta	TRUE	FALSE	FALSE	GCF_000313855.2	NA	NA	NA	301	201
+Capsicum_annuum	Embryophyta	4072	Embryophyta	TRUE	FALSE	FALSE	GCF_000710875.1	NA	NA	NA	298	239
+Daucus_carota	Embryophyta	4039	Embryophyta	TRUE	FALSE	FALSE	GCF_001625215.1	NA	NA	NA	302	196
+Vigna_radiata	Embryophyta	157791	Embryophyta	TRUE	FALSE	FALSE	GCF_000741045.1	NA	NA	NA	302	242
+Manihot_esculenta	Embryophyta	3983	Embryophyta	TRUE	FALSE	FALSE	GCF_001659605.1	NA	NA	NA	300	206
+Vitis_vinifera	Embryophyta	29760	Embryophyta	TRUE	FALSE	FALSE	GCF_000003745.3	NA	NA	NA	301	258
+Solanum_tuberosum	Embryophyta	4113	Embryophyta	TRUE	FALSE	FALSE	GCF_000226075.1	NA	NA	NA	301	239
+Spirodela_intermedia	Embryophyta	51605	Embryophyta	FALSE	FALSE	FALSE	GCA_902729315.2	NA	NA	NA	300	264
+Salix_dunnii	Embryophyta	1413687	Embryophyta	TRUE	FALSE	FALSE	GCA_015731905.1	NA	NA	NA	298	199
+Miscanthus_lutarioriparius	Embryophyta	422564	Embryophyta	TRUE	FALSE	FALSE	GCA_904845875.1	NA	NA	NA	301	43
+Rhododendron_simsii	Embryophyta	118357	Embryophyta	TRUE	FALSE	FALSE	GCA_014282245.1	NA	NA	NA	291	223
+Nymphaea_thermarum	Embryophyta	419125	Embryophyta	TRUE	FALSE	FALSE	GCA_011799765.1	NA	NA	NA	295	263
+Sinapis_alba	Embryophyta	3728	Embryophyta	TRUE	FALSE	FALSE	GCA_012274485.2	NA	NA	NA	300	115
+Striga_asiatica	Embryophyta	4170	Embryophyta	TRUE	FALSE	FALSE	GCA_008636005.1	NA	NA	NA	298	211
+Rhamnella_rubrinervis	Embryophyta	2594499	Embryophyta	TRUE	FALSE	FALSE	GCA_007844105.2	NA	NA	NA	299	260
+Malus_baccata	Embryophyta	106549	Embryophyta	TRUE	FALSE	FALSE	GCA_006547085.1	NA	NA	NA	296	143
+Lactuca_saligna	Embryophyta	75948	Embryophyta	TRUE	FALSE	FALSE	GCA_902860255.1	NA	NA	NA	288	225
+Carpinus_fangiana	Embryophyta	176857	Embryophyta	TRUE	FALSE	FALSE	GCA_006937295.1	NA	NA	NA	286	154
+Abrus_precatorius	Embryophyta	3816	Embryophyta	TRUE	FALSE	FALSE	GCF_003935025.1	NA	NA	NA	301	248
+Coffea_eugenioides	Embryophyta	49369	Embryophyta	TRUE	FALSE	FALSE	GCF_003713205.1	NA	NA	NA	301	242
+Ipomoea_triloba	Embryophyta	35885	Embryophyta	TRUE	FALSE	FALSE	GCF_003576645.1	NA	NA	NA	301	211
+Brassica_cretica	Embryophyta	69181	Embryophyta	FALSE	FALSE	FALSE	GCA_003260655.2	NA	NA	NA	284	197
+Cuscuta_australis	Embryophyta	267555	Embryophyta	TRUE	FALSE	FALSE	GCA_003260385.1	NA	NA	NA	296	262
+Cuscuta_campestris	Embryophyta	132261	Embryophyta	TRUE	FALSE	FALSE	GCA_900332095.2	NA	NA	NA	301	68
+Nymphaea_colorata	Embryophyta	210225	Embryophyta	TRUE	FALSE	FALSE	GCF_008831285.1	NA	NA	NA	302	263
+Dendrobium_catenatum	Embryophyta	906689	Embryophyta	TRUE	FALSE	FALSE	GCF_001605985.2	NA	NA	NA	301	261
+Trema_orientale	Embryophyta	63057	Embryophyta	TRUE	FALSE	FALSE	GCA_002914845.1	NA	NA	NA	299	269
+Parasponia_andersonii	Embryophyta	3476	Embryophyta	TRUE	FALSE	FALSE	GCA_002914805.1	NA	NA	NA	299	278
+Apostasia_shenzhenica	Embryophyta	1088818	Embryophyta	TRUE	FALSE	FALSE	GCA_002786265.1	NA	NA	NA	291	272
+Quercus_suber	Embryophyta	58331	Embryophyta	TRUE	FALSE	FALSE	GCF_002906115.1	NA	NA	NA	303	49
+Coptis_chinensis	Embryophyta	261450	Embryophyta	FALSE	FALSE	FALSE	GCA_015680905.1	NA	NA	NA	290	220
+Durio_zibethinus	Embryophyta	66656	Embryophyta	TRUE	FALSE	FALSE	GCF_002303985.1	NA	NA	NA	302	129
+Pistacia_vera	Embryophyta	55513	Embryophyta	TRUE	FALSE	FALSE	GCF_008641045.1	NA	NA	NA	298	221
+Herrania_umbratica	Embryophyta	108875	Embryophyta	TRUE	FALSE	FALSE	GCF_002168275.1	NA	NA	NA	297	266
+Gossypium_klotzschianum	Embryophyta	34286	Embryophyta	TRUE	FALSE	FALSE	GCA_013677235.1	NA	NA	NA	235	173
+Gossypium_davidsonii	Embryophyta	34287	Embryophyta	TRUE	FALSE	FALSE	GCA_013677245.1	NA	NA	NA	227	175
+Gossypium_australe	Embryophyta	47621	Embryophyta	TRUE	FALSE	FALSE	GCA_005393395.2	NA	NA	NA	279	209
+Gossypium_trilobum	Embryophyta	34281	Embryophyta	TRUE	FALSE	FALSE	GCA_013467465.1	NA	NA	NA	231	172
+Corchorus_olitorius	Embryophyta	93759	Embryophyta	TRUE	FALSE	FALSE	GCA_001974825.1	NA	NA	NA	293	256
+Corchorus_capsularis	Embryophyta	210143	Embryophyta	TRUE	FALSE	FALSE	GCA_001974805.1	NA	NA	NA	296	252
+Citrus_unshiu	Embryophyta	55188	Embryophyta	TRUE	FALSE	FALSE	GCA_002897195.1	NA	NA	NA	301	256
+Ipomoea_nil	Embryophyta	35883	Embryophyta	TRUE	FALSE	FALSE	GCF_001879475.1	NA	NA	NA	300	216
+Capsicum_chinense	Embryophyta	80379	Embryophyta	TRUE	FALSE	FALSE	GCA_002271895.2	NA	NA	NA	299	251
+Senna_tora	Embryophyta	362788	Embryophyta	TRUE	FALSE	FALSE	GCA_014851425.1	NA	NA	NA	298	227
+Dichanthelium_oligosanthes	Embryophyta	888268	Embryophyta	TRUE	FALSE	FALSE	GCA_001633215.2	NA	NA	NA	252	223
+Solanum_chilense	Embryophyta	4083	Embryophyta	TRUE	FALSE	FALSE	GCA_006013705.1	NA	NA	NA	285	238
+Hibiscus_syriacus	Embryophyta	106335	Embryophyta	TRUE	FALSE	FALSE	GCF_006381635.1	NA	NA	NA	300	56
+Salix_suchowensis	Embryophyta	1278906	Embryophyta	TRUE	FALSE	FALSE	GCA_017552425.1	NA	NA	NA	302	163
+Arachis_ipaensis	Embryophyta	130454	Embryophyta	TRUE	FALSE	FALSE	GCF_000816755.2	NA	NA	NA	302	211
+Digitaria_exilis	Embryophyta	1010633	Embryophyta	TRUE	FALSE	FALSE	GCA_015342445.1	NA	NA	NA	297	37
+Cucurbita_moschata	Embryophyta	3662	Embryophyta	TRUE	FALSE	FALSE	GCF_002738365.1	NA	NA	NA	300	150
+Benincasa_hispida	Embryophyta	102211	Embryophyta	TRUE	FALSE	FALSE	GCF_009727055.1	NA	NA	NA	301	263
+Tetracentron_sinense	Embryophyta	13715	Embryophyta	TRUE	FALSE	FALSE	GCA_015143295.1	NA	NA	NA	283	189
+Vanilla_planifolia	Embryophyta	51239	Embryophyta	TRUE	FALSE	FALSE	GCA_016413895.1	NA	NA	NA	290	227
+Morus_notabilis	Embryophyta	981085	Embryophyta	TRUE	FALSE	FALSE	GCF_000414095.1	NA	NA	NA	300	272
+Juglans_regia	Embryophyta	51240	Embryophyta	TRUE	FALSE	FALSE	GCF_001411555.2	NA	NA	NA	302	198
+Tarenaya_hassleriana	Embryophyta	28532	Embryophyta	TRUE	FALSE	FALSE	GCF_000463585.1	NA	NA	NA	301	186
+Setaria_viridis	Embryophyta	4556	Embryophyta	TRUE	FALSE	FALSE	GCF_005286985.1	NA	NA	NA	301	218
+Ziziphus_jujuba	Embryophyta	326968	Embryophyta	TRUE	FALSE	FALSE	GCF_000826755.1	NA	NA	NA	291	220
+Lupinus_albus	Embryophyta	3870	Embryophyta	TRUE	FALSE	FALSE	GCA_010261695.1	NA	NA	NA	296	153
 Brassica_carinata	Embryophyta	52824	Embryophyta	FALSE	FALSE	FALSE	GCA_016771965.1	NA	NA	NA	298	57
-Nelumbo_nucifera	Embryophyta	4432	Embryophyta	FALSE	TRUE	FALSE	GCF_000365185.1	NA	NA	NA	300	212
-Camelina_sativa	Embryophyta	90675	Embryophyta	FALSE	FALSE	FALSE	GCF_000633955.1	NA	NA	NA	300	5
-Punica_granatum	Embryophyta	22663	Embryophyta	FALSE	TRUE	FALSE	GCF_007655135.1	NA	NA	NA	301	255
-Ananas_comosus	Embryophyta	4615	Embryophyta	FALSE	TRUE	FALSE	GCF_001540865.1	NA	NA	NA	302	245
-Phaseolus_vulgaris	Embryophyta	3885	Embryophyta	FALSE	TRUE	FALSE	GCF_000499845.1	NA	NA	NA	300	242
-Sorghum_bicolor	Embryophyta	4558	Embryophyta	FALSE	TRUE	FALSE	GCF_000003195.3	NA	NA	NA	302	230
-Populus_trichocarpa	Embryophyta	3694	Embryophyta	FALSE	TRUE	FALSE	GCF_000002775.4	NA	NA	NA	302	146
-Coffea_arabica	Embryophyta	13443	Embryophyta	FALSE	FALSE	FALSE	GCF_003713225.1	NA	NA	NA	301	77
-Glycine_max	Embryophyta	3847	Embryophyta	FALSE	FALSE	FALSE	GCF_000004515.6	NA	NA	NA	302	52
-Arabidopsis_thaliana	Embryophyta	3702	Embryophyta	FALSE	TRUE	FALSE	GCF_000001735.4	NA	NA	NA	302	236
+Nelumbo_nucifera	Embryophyta	4432	Embryophyta	TRUE	FALSE	FALSE	GCF_000365185.1	NA	NA	NA	300	212
+Camelina_sativa	Embryophyta	90675	Embryophyta	TRUE	FALSE	FALSE	GCF_000633955.1	NA	NA	NA	300	5
+Punica_granatum	Embryophyta	22663	Embryophyta	TRUE	FALSE	FALSE	GCF_007655135.1	NA	NA	NA	301	255
+Ananas_comosus	Embryophyta	4615	Embryophyta	TRUE	FALSE	FALSE	GCF_001540865.1	NA	NA	NA	302	245
+Phaseolus_vulgaris	Embryophyta	3885	Embryophyta	TRUE	FALSE	FALSE	GCF_000499845.1	NA	NA	NA	300	242
+Sorghum_bicolor	Embryophyta	4558	Embryophyta	TRUE	FALSE	FALSE	GCF_000003195.3	NA	NA	NA	302	230
+Populus_trichocarpa	Embryophyta	3694	Embryophyta	FALSE	FALSE	FALSE	GCF_000002775.4	NA	NA	NA	302	146
+Coffea_arabica	Embryophyta	13443	Embryophyta	TRUE	FALSE	FALSE	GCF_003713225.1	NA	NA	NA	301	77
+Glycine_max	Embryophyta	3847	Embryophyta	TRUE	FALSE	FALSE	GCF_000004515.6	NA	NA	NA	302	52
+Arabidopsis_thaliana	Embryophyta	3702	Embryophyta	TRUE	FALSE	FALSE	GCF_000001735.4	NA	NA	NA	302	236

@@ -77,7 +77,7 @@ for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_d
     colnames(by_intron) = str_replace_all(colnames(by_intron),"n3","nu")
     
     
-    bash_command <- paste("head -n 15 ",pathData,"Analyses/",species,"/by_intron_cds.tab | sed 's/n1/ns/g; s/n2/na/g; s/n3/nu/g' > ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/by_intron_analysis.tab",sep="")
+    bash_command <- paste("grep '^#' ",pathData,"Analyses/",species,"/by_intron_cds.tab | sed 's/n1/ns/g; s/n2/na/g; s/n3/nu/g' > ",pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/by_intron_analysis.tab",sep="")
     system(bash_command)
     
     write.table(by_intron,paste(pathData,"per_species/",species,"_NCBI.txid",txid,"/",genome_assembly,"/by_intron_analysis.tab",sep=""), row.names=F, col.names=T, sep="\t", quote=F, append=TRUE)
@@ -110,7 +110,6 @@ print(bash_command)
 print(bash_command)
       system(bash_command)
     }
-  
 }
 
 

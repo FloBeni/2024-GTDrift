@@ -55,8 +55,7 @@ species_clade$dnds_data = species_clade$species %in% dnds_data$species
 lht_tab = read.delim("database/lht.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab$species
 
-list_annot = list.dirs(paste("database/BUSCO_annotations/",sep=""),recursive = F,full.names = F)
-species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x) x %in% list_annot )
+species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) )
 # species_clade$nb_rnaseq = NA
 # species_clade[species_clade$expression_data,]$nb_rnaseq = sapply(species_clade[species_clade$expression_data,]$species,
 #                                                  function(x) length(read.delim(paste("/home/fbenitiere/data/Projet-SplicedVariants/RNAseq_table/",x,"/list_Acc.tab",sep=""))$SRA_accession_ID)

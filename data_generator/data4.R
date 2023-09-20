@@ -1,20 +1,31 @@
 
 library(stringr)
+species = "Loxodonta_africana_NCBI.txid9785"
+contig =  list.dirs(paste("database/BUSCO_annotations/",species,sep=""), full.names = F,recursive = F)
 
-busco_to_gene = read.delim("/home/fbenitiere/data/Projet-SplicedVariants/Annotations/Loxodonta_africana/busco_analysis/busco_to_gene_id_eukaryota")
+busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",contig,"/busco_to_gene_id_eukaryota",sep=""))
 
 busco_to_gene = busco_to_gene[!(duplicated(busco_to_gene$busco_id,fromLast = FALSE) | duplicated(busco_to_gene$busco_id,fromLast = TRUE)) &
-                        !(duplicated(busco_to_gene$gene_id,fromLast = FALSE) | duplicated(busco_to_gene$gene_id,fromLast = TRUE)) ,]
+                                !(duplicated(busco_to_gene$gene_id,fromLast = FALSE) | duplicated(busco_to_gene$gene_id,fromLast = TRUE)) ,]
 
 
-intron_db = read.table("/home/fbenitiere/data/Projet-SplicedVariants/Analyses/Loxodonta_africana/by_intron_db.tab.gz", header=T , sep="\t",comment.char = "#")
-gene_db = read.table("/home/fbenitiere/data/Projet-SplicedVariants/Analyses/Loxodonta_africana/by_gene_db.tab.gz", header=T , sep="\t",quote="")
+intron_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_intron_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+gene_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+
+for (file in list.dirs(paste("database/Transcriptomic/",species,"/",contig,"/Run/",sep=""),recursive = F,full.names = F)){
+  intron_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/Run/",file,"/by_intron_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+  intron_db = cbind(intron_db , intron_db_to_add)
+  
+  gene_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/Run/",file,"/by_gene_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+  gene_db = cbind(gene_db , gene_db_to_add)
+}
+
 gene_db = gene_db[gene_db$type == "gene",]
 intron_db = intron_db[intron_db$gene_id %in% gene_db$gene_id,]
 gene_db = gene_db[gene_db$gene_id %in% busco_to_gene$gene_id,]
 
 rna_seq = colnames(intron_db)
-list_rna = str_replace_all(rna_seq[grepl("n1_",rna_seq)],"n1_","")
+list_rna = str_replace_all(rna_seq[grepl("ns_",rna_seq)],"ns_","")
 
 
 if (length( list_rna ) >= 20 ){ nb = 20 } else { nb = length( list_rna )}
@@ -30,16 +41,16 @@ for ( i in 1:nb ){ # nombre de RNA-seqs compilés
       intervalle = list_rna[j]
       
       print(intervalle)
-      n1_value = intron_db[,paste("n1_",intervalle,sep="")]
-      n2_value = intron_db[,paste("n2_",intervalle,sep="")]
-      n3_value = intron_db[,paste("n3_",intervalle,sep="")]
+      n1_value = intron_db[,paste("ns_",intervalle,sep="")]
+      n2_value = intron_db[,paste("nu_",intervalle,sep="")]
+      n3_value = intron_db[,paste("na_",intervalle,sep="")]
       cov = gene_db[,paste("exon_coverage_",intervalle,sep="")]
     } else {
       intervalle = sample( list_rna ,i )
       print(intervalle)
-      n1_value = apply(intron_db[,paste("n1_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
-      n2_value = apply(intron_db[,paste("n2_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
-      n3_value = apply(intron_db[,paste("n3_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
+      n1_value = apply(intron_db[,paste("ns_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
+      n2_value = apply(intron_db[,paste("nu_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
+      n3_value = apply(intron_db[,paste("na_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
       cov = apply(gene_db[,paste("exon_coverage_",intervalle,sep="")],1,function(x) sum(x,na.rm=T))
     }
     
@@ -70,4 +81,7 @@ for ( i in 1:nb ){ # nombre de RNA-seqs compilés
     df = rbind(df,da)
   }
 }
+df$samples = unlist(lapply(df$samples,function(x) paste(x,collapse=",")))
 
+
+write.table(df , "data/data4.tab",quote=F,row.names = F,sep="\t")
