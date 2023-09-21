@@ -56,9 +56,9 @@ lht_tab = read.delim("database/lht.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab$species
 
 species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) )
-# species_clade$nb_rnaseq = NA
-# species_clade[species_clade$expression_data,]$nb_rnaseq = sapply(species_clade[species_clade$expression_data,]$species,
-#                                                  function(x) length(read.delim(paste("/home/fbenitiere/data/Projet-SplicedVariants/RNAseq_table/",x,"/list_Acc.tab",sep=""))$SRA_accession_ID)
-# )
+species_clade$nb_rnaseq = NA
+species_clade$nb_rnaseq = apply(species_clade,1,
+                                function(x) length( list.dirs(paste("database/Transcriptomic/",x["species"],"_NCBI.txid",x["NCBI.txid"],"/",x["assembly_accession"],"/Run",sep=""),recursive = F,full.names = F))
+)
 
-write.table(species_clade , paste("database/list_species.tab",sep=""),quote=F,row.names = F,sep="\t")
+write.table( species_clade , paste("database/list_species.tab",sep=""),quote=F,row.names = F,sep="\t")

@@ -3,8 +3,8 @@ source("figure/figure_main generator/library_path.R")
 
 # PANNEL A
 
-data4 = read.delim("data/data4.tab")
-pA = ggplot(data4[data4$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
+data3 = read.delim("data/data3.tab")
+pA = ggplot(data3[data3$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
   # geom_point(aes(fill="N1_sup10"),size=3,pch=21)  + 
   geom_point(aes(y = major,fill="Major"),size=3,pch=21,alpha=.7)+
   geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+
@@ -13,17 +13,16 @@ pA = ggplot(data4[data4$echantillon == "all introns",],aes(x=sequencing_depth,y 
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=25, family="economica"),
     axis.text.y =  element_text(color="black", size=26, family="economica"),
-    axis.text.x =  element_text(color="black", size=0, family="economica"),
+    axis.text.x =  element_text(color="black", size=25, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
-  ) + scale_fill_manual("Intron classes",values = set_color[c(4,6,2,8)] ) + ylab("Number of introns") + xlab("Sequencing depth")
-# +
-#   labs(
-#     caption = "(median per-base read coverage BUSCO eukaryota genes)"
-#   )
+  ) + scale_fill_manual("Intron classes",values = set_color[c(4,6,2,8)] ) + ylab("Number of introns") + xlab("Sequencing depth")+
+  labs(
+    caption = "(median per-base read coverage BUSCO eukaryota genes)"
+  )
 pA
 
 resolution=2

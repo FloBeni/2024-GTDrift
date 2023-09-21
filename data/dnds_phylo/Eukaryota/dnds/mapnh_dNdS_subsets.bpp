@@ -1,20 +1,17 @@
 alphabet=Codon(letter=DNA)
 genetic_code=Standard
 
-TREE=concatenatAAS.aln.raxml.support
-SEQ=concatenatCDS.aln
-
 
 ### Alignment
-input.data1=alignment(format=Fasta, file=./$(REP)/$(SEQ), sites_to_use = all)
+input.data1=alignment(format=Fasta, file= $(CDSIN), sites_to_use = all)
 
 
 ### Used tree
-input.tree1=user(file=./$(REP)/$(TREE).dnd_1, format = Newick)
+input.tree1=user(file= $(TREEIN), format = Newick)
 
 
 ### File of the modeling
-params = ./$(REP)/model_ml.params
+params = $(PARAMSIN)
 
 
 ### normalization with the same model in which omega=1
@@ -25,4 +22,4 @@ nullProcessParams = YN98.omega*=1
 map.type = DnDs
 
 
-output.counts = PerBranch(prefix=./$(REP)/dNdS/counts_, splitNorm=true)
+output.counts = PerBranch(prefix=$(PREFIX)counts_, splitNorm=true)

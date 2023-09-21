@@ -16,7 +16,7 @@ pathData="/beegfs/data/fbenitiere/Projet-SplicedVariants/"
 list_species = list.dirs(paste(pathData,"Annotations/",sep=""),recursive = F,full.names = F)
 list_done = list.dirs(paste(pathData,"per_species/",sep=""),recursive=F,full.names=F)
 print(list_done)
-species = "Acanthocheilonema_viteae"
+
 for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_done)))] ){
   print(species)
   if (file.exists(paste(pathData,"Analyses/",species,"/by_gene_analysis.tab",sep=""))){

@@ -43,9 +43,9 @@ compute_files <- function(name,busco_set,path,dnds){
   
   gene_info_tab = read.delim(paste("data/dnds_phylo/",name,"/phylogeny/gene.info",sep=""))
   file = list.files(paste("data/dnds_phylo/",name,"/phylogeny/",sep=""),pattern=".aln")
-  if (length(file) == 0){
+  if (length(str_split_1(file,"_cons")) == 1){
     nb_species_tokeepsites = 1
-  }else {
+  } else {
     nb_species_tokeepsites = as.numeric(str_split_1(str_split_1(file,"_cons")[2],".aln")[1])
   }
   
@@ -90,4 +90,4 @@ compute_files <- function(name,busco_set,path,dnds){
 
 compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",dnds="subset_200_ksites_GC3")
-compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/",dnds="subset_200_ksites_GC3")
+compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/",dnds="subset_200_ksites_GC3_root")

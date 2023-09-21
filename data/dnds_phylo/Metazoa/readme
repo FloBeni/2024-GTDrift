@@ -3,3 +3,6 @@ nb_genes	976
 nb_genes_at_least_85percent_species	731
 nb_species_initially	293
 nb_species_analyzed	257
+nb_genes_raxml	146
+nb_species_tokeepsites	150
+length_raxml_concat	3135111

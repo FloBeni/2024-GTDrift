@@ -20,7 +20,6 @@ for (species in list_species){
   by_intron = by_intron[ by_intron$ns != 0 ,]
   
   by_gene_path = paste("database/Transcriptomic",species,"/by_gene_analysis.tab",sep="")
-  # gene_db = read.table(by_gene_path, header=T , sep="\t",comment.char = "#")
   gene_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
   
   busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",contig,"/busco_to_gene_id_eukaryota",sep=""))
@@ -59,4 +58,4 @@ for (species in list_species){
 }
 
 # write.table(data2 , "data/data2.tab",quote=F,row.names = F,sep="\t")
-write.table(data2 , "data2bis.tab",quote=F,row.names = F,sep="\t")
+write.table(data2 , "data/data2bis.tab",quote=F,row.names = F,sep="\t")

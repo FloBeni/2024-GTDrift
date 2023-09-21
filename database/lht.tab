@@ -322,7 +322,7 @@ Ostrea_edulis	37623	5840	AnAge	lifespan_days
 Mugil_cephalus	48193	5840	AnAge;fishbase	lifespan_days
 Hirundo_rustica	43150	5840	AnAge	lifespan_days
 Carlito_syrichta	1868482	5840	AnAge	lifespan_days
-Lithobates_catesbeianus	null	5840	AnAge;ADW	lifespan_days
+Lithobates_catesbeianus	8400	5840	AnAge;ADW	lifespan_days
 Pygoscelis_adeliae	9238	5840	ADW	lifespan_days
 Trichosurus_vulpecula	9337	5803.5	AnAge	lifespan_days
 Aphelocoma_coerulescens	39617	5767	ADW	lifespan_days
@@ -1141,7 +1141,7 @@ Peromyscus_leucopus	10041	20.5	ADW	length_cm
 Arvicanthis_niloticus	61156	20.4	ADW	length_cm
 Anolis_carolinensis	28377	20.32	ADW	length_cm
 Bombycilla_garrulus	125297	20.3	ADW	length_cm
-Lithobates_catesbeianus	null	20.3	EOL	length_cm
+Lithobates_catesbeianus	8400	20.3	EOL	length_cm
 Indicator_indicator	1002788	20	ADW	length_cm
 Brienomyrus_brachyistius	42636	20	EOL;fishbase	length_cm
 Pheucticus_melanocephalus	371919	20	ADW format	length_cm
@@ -1656,7 +1656,7 @@ Drosophila_grimshawi	7222	0.5	web	length_cm
 Ceratitis_capitata	7213	0.5	ADW	length_cm
 Chelonus_insularis	460826	0.5	EOL image	length_cm
 Mastacembelus_armatus	205130	0.5	EOL;fishbase	weight_kg
-Lithobates_catesbeianus	null	0.5	ADW	weight_kg
+Lithobates_catesbeianus	8400	0.5	ADW	weight_kg
 Asterias_rubens	7604	0.495358	EOL	weight_kg
 Haliotis_rufescens	6454	0.469	EOL	weight_kg
 Crotalus_tigris	88082	0.454	ADW	weight_kg

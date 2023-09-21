@@ -27,7 +27,7 @@ for (file in c(
   "/home/fbenitiere/Documents/metazoa_species.xls",
   "/home/fbenitiere/Documents/metazoa_species2.xls")){
   mysheets <- read_excel_allsheets(file)
-  for (species in names(mysheets)){
+  for (species in names(mysheets)[368:500]){
     if (species %in% list_species$species){print(species)
       dt_sample = mysheets[[species]]
       dt_sample$NCBI.txid = NA

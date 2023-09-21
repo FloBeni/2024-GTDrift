@@ -688,8 +688,8 @@ Sander_lucioperca	283035	5840	AnAge	lifespan_days
 Hirundo_rustica	43150	5840	AnAge	lifespan_days
 Carlito_syrichta	1868482	5840	AnAge	lifespan_days
 Leopardus_geoffroyi	46844	5840	ADW	lifespan_days
-Lithobates_catesbeianus	null	5840	AnAge	lifespan_days
-Lithobates_catesbeianus	null	5840	ADW	lifespan_days
+Lithobates_catesbeianus	8400	5840	AnAge	lifespan_days
+Lithobates_catesbeianus	8400	5840	ADW	lifespan_days
 Pygoscelis_adeliae	9238	5840	ADW	lifespan_days
 Ictalurus_punctatus	7998	5840	AnAge	lifespan_days
 Meles_meles	9662	5832	EOL id	lifespan_days
@@ -2210,7 +2210,7 @@ Peromyscus_leucopus	10041	20.5	ADW	length_cm
 Arvicanthis_niloticus	61156	20.4	ADW	length_cm
 Anolis_carolinensis	28377	20.32	ADW	length_cm
 Bombycilla_garrulus	125297	20.3	ADW	length_cm
-Lithobates_catesbeianus	null	20.3	EOL	length_cm
+Lithobates_catesbeianus	8400	20.3	EOL	length_cm
 Castor_canadensis	51338	20.25	AnAge	weight_kg
 Indicator_indicator	1002788	20	ADW	length_cm
 Brienomyrus_brachyistius	42636	20	EOL	length_cm
@@ -2263,7 +2263,7 @@ Mesocricetus_auratus	10036	18	EOL	length_cm
 Salvelinus_namaycush	8040	17.985	AnAge	weight_kg
 Salvelinus_namaycush	8040	17.985	EOL	weight_kg
 Fundulus_heteroclitus	8078	17.8	ADW text	length_cm
-Lithobates_catesbeianus	null	17.5	ADW error max 46	length_cm
+Lithobates_catesbeianus	8400	17.5	ADW error max 46	length_cm
 Epinephelus_fuscoguttatus	293821	17.422	EOL	weight_kg
 Penaeus_vannamei	6689	17.4	ADW Penaeus monodon	length_cm
 Lynx_canadensis	61383	17.3	ADW	weight_kg
@@ -2359,7 +2359,7 @@ Ictalurus_punctatus	7998	13.733	AnAge	weight_kg
 Ictalurus_punctatus	7998	13.7325	ADW	weight_kg
 Paramormyrops_kingsleyae	1676925	13.5	EOL	length_cm
 Paramormyrops_kingsleyae	1676925	13.5	fishbase	length_cm
-Lithobates_catesbeianus	null	13.5	BDJ biodiversity data journal	length_cm
+Lithobates_catesbeianus	8400	13.5	BDJ biodiversity data journal	length_cm
 Mesocricetus_auratus	10036	13.5	ADW	length_cm
 Phyllostomus_discolor	89673	13.4	ADW P.hastatus	length_cm
 Haliotis_rubra	36100	13.1	EOL	length_cm
@@ -3092,10 +3092,10 @@ Ceratitis_capitata	7213	0.5	ADW	length_cm
 Chelonus_insularis	460826	0.5	EOL image	length_cm
 Mastacembelus_armatus	205130	0.5	EOL	weight_kg
 Mastacembelus_armatus	205130	0.5	fishbase	weight_kg
-Lithobates_catesbeianus	null	0.5	ADW	weight_kg
+Lithobates_catesbeianus	8400	0.5	ADW	weight_kg
 Asterias_rubens	7604	0.495358	EOL	weight_kg
 Haliotis_rufescens	6454	0.469	EOL	weight_kg
-Lithobates_catesbeianus	null	0.467	BDJ biodiversity data journal	weight_kg
+Lithobates_catesbeianus	8400	0.467	BDJ biodiversity data journal	weight_kg
 Crotalus_tigris	88082	0.454	ADW	weight_kg
 Stercorarius_parasiticus	54059	0.45	ADW	weight_kg
 Corvus_brachyrhynchos	85066	0.45	ADW	weight_kg
@@ -3335,7 +3335,7 @@ Jaculus_jaculus	51337	0.055	AnAge	weight_kg
 Bombycilla_garrulus	125297	0.0545	AnAge	weight_kg
 Peromyscus_californicus	42520	0.0544	ADW	weight_kg
 Acomys_russatus	60746	0.0544	AnAge	weight_kg
-Lithobates_catesbeianus	null	0.0544	AnAge	weight_kg
+Lithobates_catesbeianus	8400	0.0544	AnAge	weight_kg
 Gekko_japonicus	146911	0.05413	AnAge Gekko gecko	weight_kg
 Pheucticus_melanocephalus	371919	0.054	ADW	weight_kg
 Bucco_capensis	135168	0.054	EOL	weight_kg

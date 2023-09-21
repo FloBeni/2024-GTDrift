@@ -1,16 +1,13 @@
 alphabet=Codon(letter=DNA)
 genetic_code=Standard
 
-TREE=concatenatAAS.aln.raxml.support
-SEQ=concatenatCDS.aln
-
 
 ### Alignment
-input.data1=alignment(format=Fasta, file = ./$(REP)/$(SEQ), sites_to_use = all)
+input.data1=alignment(format=Fasta, file = $(CDSIN), sites_to_use = all)
 
 
 ### Initial tree as a starting point for optimization
-input.tree1=user(file=$(TREE))
+input.tree1=user(file= $(TREEIN))
 
 
 ### Description of the modeling 
@@ -28,8 +25,8 @@ phylo1 = Single(process=1, data=1)
 
 
 ### tree output file
-output.tree.file = ./$(REP)/$(TREE).dnd
+output.tree.file = $(TREEOUT)
 
 
 ### model ouput file
-output.estimates= ./$(REP)/model_ml.params
+output.estimates= $(PARAMSOUT)

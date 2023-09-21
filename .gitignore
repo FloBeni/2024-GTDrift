@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 database/Transcriptomic/
+app/www/database/
+app/www/data/
