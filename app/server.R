@@ -212,15 +212,15 @@ server <- function(input, output,session) {
       species = input$species_selected_intra
       
       species = str_replace_all(species," ","_")
-      species_genes = read.delim(paste("www/per_species_data/",species,"/by_gene_analysis.tab.gz",sep="") , header=T , sep="\t",comment.char = "#")
+      species_genes = read.delim(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_gene_analysis.tab.gz",sep="") , header=T , sep="\t",comment.char = "#")
       rownames(species_genes) = species_genes$gene_id
-      species_intron = read.delim(paste("www/per_species_data/",species,"/by_intron_major_overlap.tab.gz",sep=""))
+      species_intron = read.delim(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep="") , header=T , sep="\t",comment.char = "#")
       species_intron$median_fpkm = species_genes[species_intron$gene_id,]$median_fpkm
       species_intron$svr = species_intron$splice_variant_rate
       species_intron$nsvr = species_intron$nonsplice_variant_rate
-      species_intron$sum_n1 = species_intron$n1
-      species_intron$sum_n2 = species_intron$n2_spl3 + species_intron$n2_spl5
-      species_intron$sum_n3 = species_intron$n3_spl3 + species_intron$n3_spl5
+      species_intron$sum_ns = species_intron$ns
+      species_intron$sum_na = species_intron$na_spl3 + species_intron$na_spl5
+      species_intron$sum_nu = species_intron$nu_spl3 + species_intron$nu_spl5
       species_intron$geneprop_tabid = species_intron$gene_id
       species_intron$length = abs(species_intron$splice5 - species_intron$splice3)
       species_intron <<- species_intron
@@ -236,14 +236,15 @@ server <- function(input, output,session) {
   
   
   output$plot_intra <- renderPlotly({
+    print(input$species_selected_intra)
     species = str_replace(input$species_selected_intra," ","_")
-    color_species = Clade_color[dt_species[species,]$clades]
+    color_species = Clade_color[dt_species[species,]$clade_group]
     
     species_intron = species_intron[ species_intron$into_cds == "True",]
     
     
     if ("None" != input$busco_intra){
-      busco_gene = read.delim(paste("www/per_species_data/",species,"/busco_to_gene_id_",input$busco_intra,".gz",sep=""))
+      busco_gene = read.delim(paste("www/database/BUSCO_annotations/",dt_species[species,]$path_db,"/busco_to_gene_id_",input$busco_intra,sep=""))
       
       species_intron = species_intron[species_intron$gene_id %in% busco_gene$gene_id, ]
     }
@@ -253,9 +254,9 @@ server <- function(input, output,session) {
                                       species_intron$svr >= input$svr_range_intra[1] & 
                                       species_intron$svr < input$svr_range_intra[2],]
     
-    NSVRgene = tapply(species_intron$sum_n3,species_intron$geneprop_tabid,sum) #calcul NSVR par gene
-    SVRgene = tapply(species_intron$sum_n2,species_intron$geneprop_tabid,sum) #calcul SVR par gene
-    intronGene = tapply(species_intron$sum_n1,species_intron$geneprop_tabid,sum) # calcul N1 par gene
+    NSVRgene = tapply(species_intron$sum_nu,species_intron$geneprop_tabid,sum) #calcul NSVR par gene
+    SVRgene = tapply(species_intron$sum_na,species_intron$geneprop_tabid,sum) #calcul SVR par gene
+    intronGene = tapply(species_intron$sum_ns,species_intron$geneprop_tabid,sum) # calcul NS par gene
     average = tapply(species_intron$length,species_intron$geneprop_tabid,mean)
     FPKMgene = tapply(species_intron$median_fpkm,species_intron$geneprop_tabid,mean)
     
@@ -264,7 +265,7 @@ server <- function(input, output,session) {
     NSVRgene = (NSVRgene/(NSVRgene + 2*intronGene)) #calcul du taux de NSVR par gène
     
     listeAxis = list("FPKMgene"=FPKMgene,"SVRgene"=SVRgene,"NSVRgene"=NSVRgene,"IntronPerGene"=table(species_intron$geneprop_tabid),"averageLength"=average,
-                     "N1"=species_intron$sum_n1,"N1+N2"=species_intron$sum_n1+species_intron$sum_n2,
+                     "NS"=species_intron$sum_ns,"NS+NA"=species_intron$sum_ns+species_intron$sum_na,
                      "SVRintron"=species_intron$svr,"FPKMintron"=species_intron$median_fpkm,"NSVRintron"=species_intron$nsvr,"IntronLength"=species_intron$length)
     
     if ( !input$histogram_intra ){
@@ -281,13 +282,13 @@ server <- function(input, output,session) {
       
       data_sp = data.frame(X=X ,Y=Y ,XerrorBar=XerrorBar ,YerrorBar=YerrorBar)
       table(intervalle)
-      
+      print(data_sp)
       
       p9 = ggplot(data_sp,aes(x=X,y=Y,text=paste("Nb of samples by group",table(intervalle))))  + theme_bw() +
         ylab(names(which(axisIntra==input$y_intra))) + xlab(names(which(axisIntra==input$x_intra))) +
         geom_errorbar(aes(ymin=Y-YerrorBar, ymax=Y+YerrorBar),size=0.1) +
         geom_errorbarh(aes(xmin=X-XerrorBar, xmax=X+XerrorBar),size=0.1)+
-        ggtitle(paste("No introns studied=",nrow(species_intron))) + 
+        ggtitle(paste("No genes or introns studied=",sum(table(intervalle)))) + 
         geom_point(pch=21,size=5,fill=color_species) + theme(
           axis.title.x = element_text(color="black", size=25,family="economica"),
           axis.title.y = element_text(color="black", size=25, family="economica"),
@@ -327,12 +328,12 @@ server <- function(input, output,session) {
     if (input$tabs == "Gene structure"){
       species = input$species_gene_struct
       species = str_replace_all(species," ","_")
-      species_genes = read.delim(paste("www/per_species_data/",species,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+      species_genes = read.delim(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
       
       if ( grepl("busco_id_",input$gene_list) ){
         domain = str_replace(input$gene_list,"busco_id_","")
         
-        busco_gene = read.delim(paste("www/per_species_data/",species,"/busco_to_gene_id_",domain,".gz",sep=""))
+        busco_gene = read.delim(paste("www/database/BUSCO_annotations/",dt_species[species,]$path_db,"/busco_to_gene_id_",domain,sep=""))
         rownames(busco_gene) = busco_gene$gene_id
         
         species_genes = species_genes[species_genes$gene_id %in% busco_gene$gene_id, ]
@@ -353,7 +354,7 @@ server <- function(input, output,session) {
     secies_name <- str_replace(input$species_gene_struct," ","_")
     list(src=paste("www/species_images/",
                    secies_name,".png",sep=""))
-  },deleteFile=FALSE)
+  } , deleteFile=FALSE)
   
   output$structureGene <- renderPlotly({
     species = input$species_gene_struct
@@ -361,12 +362,16 @@ server <- function(input, output,session) {
     id_selected = input$studied_gene
     if (id_selected != ""){
       if (id_selected != ""){
+        print(id_selected)
+        id_selected="gene17437"
+        print(species)
+        species="Drosophila_melanogaster"
         start.time <- Sys.time()
-        header = readLines(paste("www/per_species_data/",species,"/by_intron_cds.tab.gz",sep=""),n=16)
+        header = readLines(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep=""),n=16)
         header = read.table(text=header)
-        intron = system(paste("zgrep '",id_selected,"\t' ","www/per_species_data/",species,"/by_intron_cds.tab.gz",sep=""),intern=T)
+        intron = system(paste("zgrep '",id_selected,"\t' ","www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep=""),intern=T)
         print(intron)
-        intron = read.table(text=intron)
+        intron = read.table(text=intron,sep="\t")
         colnames(intron) = header
         intron$length = abs(intron$splice5 - intron$splice3)
         end.time <- Sys.time()
@@ -377,18 +382,21 @@ server <- function(input, output,session) {
         intron$category_intron = paste("Class:",intron$intron_class," in CDS:",intron$into_cds,sep="" )
         
         intron$position = paste("Sp3:",intron$splice3,"Sp5:",intron$splice5)
-        intron$sum_n1 = as.numeric(intron$n1)
+        intron$sum_ns = as.numeric(intron$ns)
+        print(intron)
+        intron = intron[,colnames(intron)[colnames(intron)!= "id"]]
+        
         p2 = ggplot(intron,aes(group=category_intron)) +
-          geom_rect( aes(label=position , xmin=splice3,ymin=sum_n1*1.1,xmax=splice5,ymax=sum_n1,fill=category_intron),
+          geom_rect( aes(label=position , xmin=splice3,ymin=sum_ns*1.1,xmax=splice5,ymax=sum_ns,fill=category_intron),
                      size=0.5,alpha=1,col="black" ) +
-          geom_segment(aes(x=splice3,y=sum_n1*1.1,xend=splice5+length/2*(splice3-splice5)/abs(splice5-splice3),
-                           yend=sum_n1*1.4,fill=category_intron),
+          geom_segment(aes(x=splice3,y=sum_ns*1.1,xend=splice5+length/2*(splice3-splice5)/abs(splice5-splice3),
+                           yend=sum_ns*1.4,fill=category_intron),
                        size=0.5,alpha=1,col="black")+
-          geom_segment(aes(x=splice5,y=sum_n1*1.1,xend=splice3-length/2*(splice3-splice5)/abs(splice5-splice3),
-                           yend=sum_n1*1.4,fill=category_intron),
+          geom_segment(aes(x=splice5,y=sum_ns*1.1,xend=splice3-length/2*(splice3-splice5)/abs(splice5-splice3),
+                           yend=sum_ns*1.4,fill=category_intron),
                        size=0.5,alpha=1,col="black") +
           theme_bw()  +
-          ylab("Sum of n1") +
+          ylab("Sum of ns") +
           scale_fill_manual(name="Intron\ngroup",values=set_color) +
           xlab("Position on chromosome (bp)") +
           ggtitle(paste("Chromosome:",intron[1,"seqname"],"and Strand:",intron[1,"strand"])) +  theme(
@@ -409,6 +417,7 @@ server <- function(input, output,session) {
         if (length(seq(min(intron$splice3,intron$splice5),
                        max(intron$splice3,intron$splice5),
                        input$sliderscale)) < 10){
+          print(input$sliderscale)
           p2 = p2 + scale_x_continuous(breaks = seq(min(intron$splice3,intron$splice5),
                                                     max(intron$splice3,intron$splice5),
                                                     input$sliderscale) )
@@ -442,22 +451,30 @@ server <- function(input, output,session) {
     edge_group <- str_replace_all(tree$tip.label,"_"," ")
     edge_clade <- rep("branch",length(tree$edge[,2]))
     for (group in unique(edge_group)){
-      if (group %in% unlist(listNomSpecies)){
+      if (group %in% unlist(all_listNomSpecies)){
         edge_clade[tree$edge[,2] %in% grep(group,edge_group)] =
-          names(listNomSpecies[unlist(lapply(listNomSpecies,function(x) group %in% x))])
+          names(all_listNomSpecies[unlist(lapply(all_listNomSpecies,function(x) group %in% x))])
       }
     }
     
-    for (clade in names(listNomSpecies)){
+    for (clade in names(all_listNomSpecies)){
       edge_clade[ which.edge(tree,  tree$edge[,2][edge_clade == clade] ) ] = clade
     }
     node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
+    print(table(node_metadata$color))
+    
+    node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Lepido Diptera","Hymenoptera",
+                                                                 "Other Insecta","Nematoda","Other Invertebrates",
+                                                                 "Mammalia","Aves","Teleostei","Other Vertebrates"))
     
     p = ggtree(tree, layout=input$layout_tree,size=1)  
     p <- p %<+% node_metadata  + aes(color=color) + 
       scale_color_manual("Clade",values=Clade_color[unique(edge_clade)]) +    theme(
         panel.background = element_rect(fill = "#f5f5f5", linetype = "dashed")
-      ) 
+      ) + theme(
+        title =  element_text(color="black", size=25, family="economica"),
+        legend.text =  element_text(color="black", size=20, family="economica")
+      )+ guides(color = guide_legend(override.aes = list(lwd = 3)))
     tree_plot <<- p
   })
   
@@ -471,7 +488,7 @@ server <- function(input, output,session) {
     input$layout_tree
     input$select_tree
     tree_plot + geom_tiplab(size=input$tip_size_zoom,nudge_x = input$spacing_zoom,colour="black") +
-      coord_cartesian(xlim = ranges2$x, ylim = ranges2$y, expand = FALSE)
+      coord_cartesian(xlim = ranges2$x, ylim = ranges2$y, expand = FALSE) +  theme(legend.position="none")
   })
   
   
@@ -481,7 +498,7 @@ server <- function(input, output,session) {
     },
     content = function(file) {
       species = str_replace(input$species_selected_intra," ","_")
-      data = read.delim(paste('www/per_species_data/',species,"/by_gene_analysis.tab.gz",sep=""))
+      data = read.delim(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_gene_analysis.tab.gz",sep=""))
       write.table(data, file=file,row.names=F, col.names=T, sep="\t", quote=F)
     }
   )
@@ -491,8 +508,8 @@ server <- function(input, output,session) {
     },
     content = function(file) {
       species = str_replace(input$species_selected_intra," ","_")
-      domain =input$busco_intra
-      data = read.delim(paste("www/per_species_data/",species,"/busco_to_gene_id_",domain,".gz",sep="",sep=""))
+      domain = input$busco_intra
+      data = read.delim(paste("www/database/BUSCO_annotations/",dt_species[species,]$path_db,"/busco_to_gene_id_",domain,sep=""))
       write.table(data, file=file,row.names=F, col.names=T, sep="\t", quote=F)
     }
   )
@@ -503,7 +520,7 @@ server <- function(input, output,session) {
     },
     content = function(file) {
       species = str_replace(input$species_selected_intra," ","_")
-      data = read.delim(paste('www/per_species_data/',species,"/by_intron_major_overlap.tab.gz",sep=""))
+      data = read.delim(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep=""))
       write.table(data, file=file,row.names=F, col.names=T, sep="\t", quote=F)
     }
   )

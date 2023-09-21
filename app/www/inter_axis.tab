@@ -1,0 +1,71 @@
+group	display_label	name_label	description	quantitative
+Life-history traits	Clades	clade.qual	Clade of the species	FALSE
+Life-history traits	Eusocialty	socialite.qual	Eusocialty of the species	FALSE
+Life-history traits	Life-span (days)	longevity.quant	For longevity when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	Body length (cm)	length.quant	For body length, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	Weight (kg)	weight.quant	For body weight, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	RGBIF Observation	RGBIF_observation.quant	Observation on GBIF	TRUE
+				
+Genome characteristics	Genome size	genome_size.quant	We take the number of A T C and G in the genome fasta	TRUE
+Genome characteristics	GC content	GC_content_proportion.quant	We calculate the fraction of GC content within the genome	TRUE
+Genome characteristics	No of protein annotated	No_prot_annot.quant	No of protein annotated	TRUE
+				
+Genome characteristics	Nb of genes	No_genes.buscodataset_	Number of genes	TRUE
+Genome characteristics	Nb of introns	No_introns.buscodataset_	Number of major introns	TRUE
+Genome characteristics	Median intron length	median_length_introns.buscodataset_	Major intron median Length	TRUE
+Genome characteristics	Nb of multiexonic genes	No_multi_exonic_genes.buscodataset_	Number of genes with at least one major intron	TRUE
+Genome characteristics	Nb of introns per gene	No_intron_per_gene.buscodataset_	Number of major introns per gene	TRUE
+Genome characteristics	Fraq of introns annotated	prop_intron_annotated.buscodataset_	Fraction of major introns annotated	TRUE
+				
+				
+AS dataset	Exon coverage (Buscodataset only)	median_coverage_exon.buscodataset_	Exon coverage (Buscodataset only)	TRUE
+AS dataset	Average SVR per intron	average_svr.svr_class_all.buscodataset_	Average SVR per intron	TRUE
+AS dataset	Average NSVR per intron	average_nsvr.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+AS dataset	Rsquared relation SVR FPKM	rsquared_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+AS dataset	Slope relation SVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+AS dataset	Rsquared relation NSVR FPKM	rsquared_nsvr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+AS dataset	Slope relation NSVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+				
+Molecular evolutionary rate	dN/dS Eukaryota_v6	Eukaryota_v6_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Eukaryota_v6	Eukaryota_v6_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Eukaryota_v6	Eukaryota_v6_ds.quant	none	TRUE
+Molecular evolutionary rate	dN/dS Eukaryota_v7	Eukaryota_v7_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Eukaryota_v7	Eukaryota_v7_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Eukaryota_v7	Eukaryota_v7_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Embryophyta_v1	Embryophyta_v1_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Embryophyta_v1	Embryophyta_v1_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Embryophyta_v1	Embryophyta_v1_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v11	Metazoa_v11_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v11	Metazoa_v11_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v11	Metazoa_v11_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v9	Metazoa_v9_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v9	Metazoa_v9_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v9	Metazoa_v9_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v4	Metazoa_v4_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v4	Metazoa_v4_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v4	Metazoa_v4_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v5	Metazoa_v5_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v5	Metazoa_v5_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v5	Metazoa_v5_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v6	Metazoa_v6_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v6	Metazoa_v6_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v6	Metazoa_v6_ds.quant	none	TRUE
+
+Molecular evolutionary rate	dN/dS Metazoa_v53	Metazoa_species_filtered_v53.2_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa_v53	Metazoa_species_filtered_v53.2_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa_v53	Metazoa_species_filtered_v53.2_ds.quant	none	TRUE
+
+Molecular evolutionary rate	diversity buffalo	diversity	none	TRUE
+Molecular evolutionary rate	log10_diversity	log10_diversity	none	TRUE
+Molecular evolutionary rate	log10_popsize	log10_popsize	none	TRUE
+Molecular evolutionary rate	piNpiS	piNpiS	none	TRUE
+Molecular evolutionary rate	piN	piN	none	TRUE
+Molecular evolutionary rate	weightcoeff	weightcoeff	none	TRUE
+Molecular evolutionary rate	piS	piS	none	TRUE
+Molecular evolutionary rate	dN/dS 53sp	Means_v1	none	TRUE

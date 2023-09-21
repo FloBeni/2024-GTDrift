@@ -67,8 +67,8 @@ Clade_color = c("Other Invertebrates"="#f5b48a","Lepido Diptera"="red","Other Ve
                 Nematoda="#B2DF8A",Teleostei="#1F78B4",Hymenoptera="#ba8e18",Aves="#5b5b5b",Mammalia="#66281A",Embryophyta="#33A02C"
 )
 
-table_phylo = read.delim("www/phylogenetic_tree/tree_description.tab")
-phylogenetic_trees = paste("www/phylogenetic_tree/",table_phylo$name,sep="")
+table_phylo = read.delim("www/phylogenetic_trees_description.tab")
+phylogenetic_trees = paste("www/",table_phylo$name,sep="")
 names(phylogenetic_trees) = table_phylo$description
 
 data_by_species = data.frame(species="")
@@ -78,15 +78,19 @@ for (file in list.files("www/species_informations_tables",full.names = T,pattern
 }
 
 
-dt_species = read.delim("www/name_species.tab",row.names = "full_names",header=T)
-listNomSpecies = tapply(dt_species$row.names,dt_species$clades,function(x)  str_replace_all(x,"_"," "))
+dt_species = read.delim("www/database/list_species.tab",header=T)
+rownames(dt_species) = dt_species$species
+all_listNomSpecies = tapply(dt_species$species,dt_species$clade_group,function(x)  str_replace_all(x,"_"," "))
+dt_species = dt_species[dt_species$expression_data,]
+dt_species$path_db = paste(dt_species$species,"_NCBI.txid",dt_species$NCBI.txid,"/",dt_species$assembly_accession,sep="")
+listNomSpecies = tapply(dt_species$species,dt_species$clade_group,function(x)  str_replace_all(x,"_"," "))
 
-data_by_species$clade.qual = factor(dt_species[data_by_species$species,]$clades, levels = c("Embryophyta","Lepido Diptera","Hymenoptera",
+data_by_species$clade.qual = factor(dt_species[data_by_species$species,]$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera",
                                                                                             "Other Insecta","Nematoda","Other Invertebrates",
                                                                                             "Mammalia","Aves","Teleostei","Other Vertebrates"))
 
 
-axisInter = read.delim("www/variables_information_tables/inter_axis.tab",sep="\t")
+axisInter = read.delim("www/inter_axis.tab",sep="\t")
 axisInter_quantitative = axisInter[axisInter$quantitative,]
 axisInter_qualitative = axisInter[!axisInter$quantitative,]
 
@@ -103,6 +107,6 @@ axisIntra=list("Gene expression (FPKM)"="FPKMgene", # list des axes X et Y possi
                "No introns per gene"="IntronPerGene",
                "Intron length on average per gene (bp)"="averageLength",
                "Intron length (bp)"="IntronLength",
-               "N1 per intron"="N1",
-               "N1+N2 per intron"="N1+N2"
+               "NS per intron"="NS",
+               "NS+NA per intron"="NS+NA"
 )
