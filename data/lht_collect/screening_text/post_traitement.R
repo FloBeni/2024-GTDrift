@@ -2,6 +2,7 @@
 library(stringr)
 
 
+real = data.frame()
 all_dt_lhtmod = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
@@ -111,9 +112,9 @@ for (lht in c("weight","lifespan","length")){print(lht)
   rownames(lht_auto_df) = lht_auto_df$species
   
   
-  real[,paste("value_auto",lht,sep="_")] = lht_auto_df[real$species ,]$value_used
-  real[,paste("check",lht,sep="_")] = as.character(real[,paste("value_auto",lht,sep="_")]) == as.character(real[,lht])
-  print(table(real[,paste("check",lht,sep="_")]))
+  # real[,paste("value_auto",lht,sep="_")] = lht_auto_df[real$species ,]$value_used
+  # real[,paste("check",lht,sep="_")] = as.character(real[,paste("value_auto",lht,sep="_")]) == as.character(real[,lht])
+  # print(table(real[,paste("check",lht,sep="_")]))
   
 }
 
