@@ -118,5 +118,32 @@ for (lht in c("weight","lifespan","length")){print(lht)
   
 }
 
+data1 = read.delim("database/list_species.tab")
+rownames(data1) = data1$species
+data1= data1[data1$clade != "Embryophyta",]
+
+all_dt_lhtmod = all_dt_lhtmod[all_dt_lhtmod$species %in% data1$species,]
+all_dt_lhtmod$id = paste(all_dt_lhtmod$species,all_dt_lhtmod$db,all_dt_lhtmod$categorie,sep=";")
+rownames(all_dt_lhtmod) = all_dt_lhtmod$id
+
+species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
+manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
+manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
+rownames(manual_truth) = manual_truth$id
+
+manual_truth$ml_value = all_dt_lhtmod[manual_truth$id,]$value_used
+all_dt_lhtmod$manual_value = manual_truth[all_dt_lhtmod$id,]$max_value
+
+all_dt_lhtmod$true_ornot =  as.character(all_dt_lhtmod$value_used) == as.character(all_dt_lhtmod$manual_value) 
+manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
+
+## success
+sum(as.character(all_dt_lhtmod$value_used) == as.character(all_dt_lhtmod$manual_value),na.rm = T ) / nrow(all_dt_lhtmod)
+sum(as.character(manual_truth$max_value) == as.character(manual_truth$ml_value),na.rm = T ) / nrow(manual_truth)
+
+
 all_dt_lht = all_dt_lht[order(all_dt_lht$value_used,decreasing = T),]
 all_dt_lht = all_dt_lht[!duplicated(paste(all_dt_lht$species,all_dt_lht$db,all_dt_lht$categorie)),]
+
+
+table(manual_truth$db,manual_truth$true_ornot & !is.na(manual_truth$true_ornot))
