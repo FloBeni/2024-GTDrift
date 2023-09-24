@@ -3,9 +3,11 @@ library(stringr)
 
 
 real = data.frame()
-all_dt_lhtmod = data.frame()
+screen_data = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
-  lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
+  # lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
+  lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
+  
   
   lht_auto_df$V1 = sapply(lht_auto_df$V1,function(x) {
     if (substr(x,nchar(x),nchar(x)) == " "){
@@ -28,9 +30,21 @@ for (lht in c("weight","lifespan","length")){print(lht)
   ###
   # lht_auto_df = lht_auto_df[lht_auto_df$nchar < 500,]
   
+  lht_auto_df = lht_auto_df[-1,]
+  
   lht_auto_df$species = sapply(lht_auto_df$V1,function(x) str_split(x,"\t")[[1]][1])
   lht_auto_df$db = sapply(lht_auto_df$V1,function(x) str_split(str_split(x," ")[[1]][1],"\t")[[1]][2])
   
+  lht_auto_df[lht_auto_df$db=="EOL","speciesEOL"] = sapply(lht_auto_df[lht_auto_df$db=="EOL",]$V1,function(x) str_split(x,"\t")[[1]][length(str_split(x,"\t")[[1]])])
+  lht_auto_df$V1= apply(lht_auto_df,1,function(x) {
+    result_string <- gsub("\\(", "\\\\\\(", x["speciesEOL"])
+    result_string = gsub("\\)", "\\\\\\)", result_string)
+    str_replace(x["V1"],paste("\t",result_string,sep=""),"")
+  }
+  )
+  lht_auto_df[lht_auto_df$db!="EOL","speciesEOL"] = lht_auto_df[lht_auto_df$db!="EOL","species"] 
+  lht_auto_df$speciesEOL = str_replace_all(lht_auto_df$speciesEOL,"\\(|\\)|</i>|<i>","")
+  lht_auto_df = lht_auto_df[apply(lht_auto_df,1,function(x) grepl(str_replace_all(x["species"],"_"," "),x["speciesEOL"],ignore.case=T)),]
   
   lht_auto_df$value = sapply(lht_auto_df$V1,function(x) {
     numeric_positions <- gregexpr("[0-9]", x)[[1]]
@@ -106,7 +120,7 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species,lht_auto_df$db)),]
   
   lht_auto_df$categorie = lht
-  all_dt_lhtmod = rbind(all_dt_lhtmod,lht_auto_df)
+  screen_data = rbind(screen_data,lht_auto_df)
   
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species)),]
   rownames(lht_auto_df) = lht_auto_df$species
@@ -117,33 +131,37 @@ for (lht in c("weight","lifespan","length")){print(lht)
   # print(table(real[,paste("check",lht,sep="_")]))
   
 }
-
 data1 = read.delim("database/list_species.tab")
 rownames(data1) = data1$species
 data1= data1[data1$clade != "Embryophyta",]
+screen_data = screen_data[screen_data$species %in% data1$species,]
+screen_data$id = paste(screen_data$species,screen_data$db,screen_data$categorie,sep=";")
+rownames(screen_data) = screen_data$id
 
-all_dt_lhtmod = all_dt_lhtmod[all_dt_lhtmod$species %in% data1$species,]
-all_dt_lhtmod$id = paste(all_dt_lhtmod$species,all_dt_lhtmod$db,all_dt_lhtmod$categorie,sep=";")
-rownames(all_dt_lhtmod) = all_dt_lhtmod$id
+####
+screen_data = screen_data[grepl("EOL",screen_data$db),]
+####
+
+
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
 manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
+manual_truth = species_clade[grepl("EOL",species_clade$db),]
+
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id
 
-manual_truth$ml_value = all_dt_lhtmod[manual_truth$id,]$value_used
-all_dt_lhtmod$manual_value = manual_truth[all_dt_lhtmod$id,]$max_value
+manual_truth$ml_value = screen_data[manual_truth$id,]$value_used
+screen_data$manual_value = manual_truth[screen_data$id,]$max_value
 
-all_dt_lhtmod$true_ornot =  as.character(all_dt_lhtmod$value_used) == as.character(all_dt_lhtmod$manual_value) 
+screen_data$true_ornot =  as.character(screen_data$value_used) == as.character(screen_data$manual_value) 
 manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
 
 ## success
-sum(as.character(all_dt_lhtmod$value_used) == as.character(all_dt_lhtmod$manual_value),na.rm = T ) / nrow(all_dt_lhtmod)
-sum(as.character(manual_truth$max_value) == as.character(manual_truth$ml_value),na.rm = T ) / nrow(manual_truth)
+print("Prop data retrieved:")
+sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth)
+print("Prop screen error:")
+sum(screen_data$true_ornot,na.rm = T ) / nrow(screen_data)
 
+table(manual_truth$true_ornot & !is.na(manual_truth$true_ornot),manual_truth$db)
 
-all_dt_lht = all_dt_lht[order(all_dt_lht$value_used,decreasing = T),]
-all_dt_lht = all_dt_lht[!duplicated(paste(all_dt_lht$species,all_dt_lht$db,all_dt_lht$categorie)),]
-
-
-table(manual_truth$db,manual_truth$true_ornot & !is.na(manual_truth$true_ornot))

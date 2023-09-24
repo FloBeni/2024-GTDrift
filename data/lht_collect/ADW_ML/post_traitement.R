@@ -27,6 +27,7 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = read.csv(paste("data/lht_collect/ADW_ML/",model_name,"/",lht,".tab",sep="") ,quote = "",header = F,sep="\t")
   lht_auto_df$clade = list_species[lht_auto_df$V1,]$clade_group
   
+  lht_auto_df$occurences  <- sapply(seq_along(lht_auto_df$V1), function(i) sum(lht_auto_df$V1[1:i] == lht_auto_df$V1[i]))
   # library(ggplot2)
   # ggplot(lht_auto_df,aes(x=V3)) + geom_histogram() + scale_x_log10()
   
@@ -105,7 +106,6 @@ for (lht in c("weight","lifespan","length")){print(lht)
     lht_auto_df = lht_auto_df[lht_auto_df$unity %in% c("kg","g","tons","t","mg","grams") , ]
   } 
   
-  lht_auto_df$occurences  <- sapply(seq_along(lht_auto_df$V1), function(i) sum(lht_auto_df$V1[1:i] == lht_auto_df$V1[i]))
   if ( lht == "length"){
     lht_auto_df = lht_auto_df[ lht_auto_df$occurences <= 1 | !lht_auto_df$clade %in% c("Aves","Coleoptera"),] # oiseau coleoptere la wingspan va etre catch si on prend tout tail aussi parfois
   }
@@ -126,7 +126,7 @@ ml_data = data.frame(ml_data)
 rownames(ml_data) = ml_data$id
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
-manual_truth = species_clade[grepl("ADW",species_clade$db),]
+# manual_truth = species_clade[grepl("ADW",species_clade$db),]
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id
 
@@ -134,10 +134,14 @@ manual_truth$ml_value = ml_data[manual_truth$id,]$value_used
 ml_data$manual_value = manual_truth[ml_data$id,]$max_value
 
 ml_data$true_ornot =  as.character(ml_data$value_used) == as.character(ml_data$manual_value) 
+ml_data$manual_db =  manual_truth[ml_data$id,]$db
 manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
 
 ## success
-sum(as.character(ml_data$value_used) == as.character(ml_data$manual_value),na.rm = T ) / nrow(ml_data)
-sum(as.character(manual_truth$max_value) == as.character(manual_truth$ml_value),na.rm = T ) / nrow(manual_truth)
+print("Prop data retrieved:")
+sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth)
+print("Prop ML error:")
+sum(ml_data$true_ornot,na.rm = T ) / nrow(ml_data)
 
+table(manual_truth$db,manual_truth$true_ornot & !is.na(manual_truth$true_ornot))
 
