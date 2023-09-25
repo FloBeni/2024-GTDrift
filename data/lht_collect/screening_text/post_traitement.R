@@ -4,13 +4,17 @@ library(stringr)
 
 real = data.frame()
 screen_data = data.frame()
+# for (lht in c("weight","lifespan","length")){print(lht)
 for (lht in c("weight","lifespan","length")){print(lht)
+  lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n")
   # lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
-  lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
+  # lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
   
   lht_auto_df$V1 = str_replace_all(lht_auto_df$V1,",","")
   
   
+  
+  lht_auto_df$nchar = sapply(lht_auto_df$V1,nchar)
   
   ## EOL remove condition
   lht_auto_df = lht_auto_df[!grepl("middle toe",lht_auto_df$V1) ,]
@@ -27,7 +31,7 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df$species = sapply(lht_auto_df$V1,function(x) str_split(x,"\t")[[1]][1])
   lht_auto_df$db = sapply(lht_auto_df$V1,function(x) str_split(str_split(x," ")[[1]][1],"\t")[[1]][2])
   
-  lht_auto_df[lht_auto_df$db=="EOL","speciesEOL"] = sapply(lht_auto_df[lht_auto_df$db=="EOL",]$V1,function(x) str_split(x,"\t")[[1]][length(str_split(x,"\t")[[1]])])
+  lht_auto_df[,"speciesEOL"] = sapply(lht_auto_df$V1,function(x) str_split(x,"\t")[[1]][length(str_split(x,"\t")[[1]])])
   lht_auto_df$V1= apply(lht_auto_df,1,function(x) {
     result_string <- gsub("\\(", "\\\\\\(", x["speciesEOL"])
     result_string = gsub("\\)", "\\\\\\)", result_string)
@@ -36,14 +40,13 @@ for (lht in c("weight","lifespan","length")){print(lht)
   )
   
   
-  lht_auto_df$nchar = sapply(lht_auto_df$V1,nchar)
   lht_auto_df$V1 = sapply(lht_auto_df$V1,function(x) {
     if (substr(x,nchar(x),nchar(x)) == " "){
       substr(x,1,nchar(x)-1)
     } else {x}
   } )
   
-  lht_auto_df[lht_auto_df$db != "EOL","speciesEOL"] = lht_auto_df[lht_auto_df$db != "EOL","species"]
+  # lht_auto_df[lht_auto_df$db != "EOL","speciesEOL"] = lht_auto_df[lht_auto_df$db != "EOL","species"]
   # lht_auto_df[,"speciesEOL"]  = lht_auto_df[,"species"] 
   lht_auto_df$speciesEOL = str_replace_all(lht_auto_df$speciesEOL,"\\(|\\)|</i>|<i>","")
   lht_auto_df = lht_auto_df[apply(lht_auto_df,1,function(x) grepl(x["species"],str_replace_all(x["speciesEOL"]," ","_"),ignore.case=T)),]
@@ -141,14 +144,14 @@ screen_data$id = paste(screen_data$species,screen_data$db,screen_data$categorie,
 rownames(screen_data) = screen_data$id
 
 ####
-screen_data = screen_data[grepl("EOL",screen_data$db),]
+# screen_data = screen_data[grepl("EOL",screen_data$db),]
 ####
 
 
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
 manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
-manual_truth = species_clade[grepl("EOL",species_clade$db),]
+# manual_truth = species_clade[grepl("EOL",species_clade$db),]
 
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id

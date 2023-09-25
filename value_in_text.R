@@ -65,9 +65,9 @@ paste(" with a final alignment of (eukaryota Nsp=",dt["eukaryota_odb9",]$nb_spec
       ", embryophyta Nsp=",dt["embryophyta_odb9",]$nb_species_analyzed
       ,", metazoa Nsp=",dt["metazoa_odb9",]$nb_species_analyzed,")",sep="")
 
-paste("and (eukaryota Nsite=",dt["eukaryota_odb9",]$length_raxml_concat/1000,
-      ", embryophyta Nsite=",dt["embryophyta_odb9",]$length_raxml_concat/1000
-      ,", metazoa Nsite=",dt["metazoa_odb9",]$length_raxml_concat/1000,") sites (amino acids)",sep="")
+paste("and (eukaryota Nsite=",as.numeric(dt["eukaryota_odb9",]$length_raxml_concat)/1000,
+      ", embryophyta Nsite=",as.numeric(dt["embryophyta_odb9",]$length_raxml_concat)/1000
+      ,", metazoa Nsite=",as.numeric(dt["metazoa_odb9",]$length_raxml_concat)/1000,") sites (amino acids)",sep="")
 
 
 
