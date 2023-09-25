@@ -8,17 +8,9 @@ for (lht in c("weight","lifespan","length")){print(lht)
   # lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
   lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
   
-  
-  lht_auto_df$V1 = sapply(lht_auto_df$V1,function(x) {
-    if (substr(x,nchar(x),nchar(x)) == " "){
-      substr(x,1,nchar(x)-1)
-    } else {x}
-  } )
-  
   lht_auto_df$V1 = str_replace_all(lht_auto_df$V1,",","")
   
   
-  lht_auto_df$nchar = sapply(lht_auto_df$V1,nchar)
   
   ## EOL remove condition
   lht_auto_df = lht_auto_df[!grepl("middle toe",lht_auto_df$V1) ,]
@@ -42,9 +34,19 @@ for (lht in c("weight","lifespan","length")){print(lht)
     str_replace(x["V1"],paste("\t",result_string,sep=""),"")
   }
   )
-  lht_auto_df[lht_auto_df$db!="EOL","speciesEOL"] = lht_auto_df[lht_auto_df$db!="EOL","species"] 
+  
+  
+  lht_auto_df$nchar = sapply(lht_auto_df$V1,nchar)
+  lht_auto_df$V1 = sapply(lht_auto_df$V1,function(x) {
+    if (substr(x,nchar(x),nchar(x)) == " "){
+      substr(x,1,nchar(x)-1)
+    } else {x}
+  } )
+  
+  lht_auto_df[lht_auto_df$db != "EOL","speciesEOL"] = lht_auto_df[lht_auto_df$db != "EOL","species"]
+  # lht_auto_df[,"speciesEOL"]  = lht_auto_df[,"species"] 
   lht_auto_df$speciesEOL = str_replace_all(lht_auto_df$speciesEOL,"\\(|\\)|</i>|<i>","")
-  lht_auto_df = lht_auto_df[apply(lht_auto_df,1,function(x) grepl(str_replace_all(x["species"],"_"," "),x["speciesEOL"],ignore.case=T)),]
+  lht_auto_df = lht_auto_df[apply(lht_auto_df,1,function(x) grepl(x["species"],str_replace_all(x["speciesEOL"]," ","_"),ignore.case=T)),]
   
   lht_auto_df$value = sapply(lht_auto_df$V1,function(x) {
     numeric_positions <- gregexpr("[0-9]", x)[[1]]
