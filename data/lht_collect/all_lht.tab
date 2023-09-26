@@ -94,6 +94,7 @@ Pleuronectes_platessa	8262	18250	AnAge	lifespan_days
 Pleuronectes_platessa	8262	18250	EOL	lifespan_days
 Pleuronectes_platessa	8262	18250	fishbase	lifespan_days
 Fulmarus_glacialis	30455	18250	ADW	lifespan_days
+Dissostichus_eleginoides	100907	18250	AnAge	lifespan_days
 Coregonus_clupeaformis	59861	18250	AnAge	lifespan_days
 Coregonus_clupeaformis	59861	18250	ADW	lifespan_days
 Coregonus_clupeaformis	59861	18250	fishbase	lifespan_days
@@ -3379,6 +3380,7 @@ Meloidogyne_enterolobii	390850	0.0667	Philbrick et al. 2020	length_cm
 Urocolius_indicus	458196	0.065	EOL	weight_kg
 Fregetta_grallaria	79628	0.065	EOL	weight_kg
 Copsychus_sechellarum	797021	0.065	EOL	weight_kg
+Lamprotornis_superbus	245042	0.0649	AnAge	weight_kg
 Microcebus_murinus	30608	0.0648	ADW	weight_kg
 Microcebus_murinus	30608	0.0648	AnAge	weight_kg
 Turnix_velox	2529409	0.064	EOL	weight_kg

@@ -1,7 +1,7 @@
 
-printf 'length\n' > length.tab
-printf 'lifespan\n' > lifespan.tab
-printf 'mass\n' > weight.tab
+#printf 'length\n' > length.tab
+#printf 'lifespan\n' > lifespan.tab
+#printf 'mass\n' > weight.tab
 
 list=$(cat $1)
 for species in $list; do

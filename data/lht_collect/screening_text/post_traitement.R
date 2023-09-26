@@ -6,7 +6,7 @@ real = data.frame()
 screen_data = data.frame()
 # for (lht in c("weight","lifespan","length")){print(lht)
 for (lht in c("weight","lifespan","length")){print(lht)
-  lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n")
+  lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
   # lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
   # lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
   
