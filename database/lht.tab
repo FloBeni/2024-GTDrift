@@ -1034,6 +1034,7 @@ Oceanites_oceanicus	79653	42	EOL	length_cm
 Rattus_rattus	10117	41.4	EOL	length_cm
 Marmota_marmota	9993	41.276	EOL Marmota monax	length_cm
 Tympanuchus_pallidicinctus	109042	41	ADW	length_cm
+Tyrannus_savana	137541	41	ADW	length_cm
 Neotoma_lepida	56216	40.7	ADW	length_cm
 Lagopus_muta	64668	40.64	ADW text	length_cm
 Pontoporia_blainvillei	48723	40.5	AnAge;ADW	weight_kg
