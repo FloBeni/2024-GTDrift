@@ -16,7 +16,7 @@ def convert_to_w2n(text_to_conv):
     return(text)
 
 
-# model_name = "deepset/roberta-base-squad2"
+model_name = "deepset/roberta-base-squad2"
 model_name = "deepset/tinyroberta-squad2"
 # model_name = "deepset/roberta-large-squad2-hp"
 
@@ -32,15 +32,15 @@ with myfile as file:
 
 os.makedirs(""+model_name, exist_ok=True)
 
-# path_length_file = ''+model_name+'/length.tab'
-# path_weight_file = ''+model_name+'/weight.tab'
-# path_lifespan_file = ''+model_name+'/lifespan.tab'
+path_length_file = ''+model_name+'/length.tab'
+path_weight_file = ''+model_name+'/weight.tab'
+path_lifespan_file = ''+model_name+'/lifespan.tab'
 
-length_file = open(path_length_file, 'w')
-weight_file = open(path_weight_file, 'w')
-lifespan_file = open(path_lifespan_file, 'w')
+#length_file = open(path_length_file, 'w')
+#weight_file = open(path_weight_file, 'w')
+#lifespan_file = open(path_lifespan_file, 'w')
 
-species = "Vanessa_cardui"
+species = "Tyrannus_savana"
 
 pattern = r'(?<=[^a-z])(kg|g|mg|tons|t|hours|inches|month|centimeters|grams|year|meters|meter|day|months|years|days|m|cm|mm|µm|μm)(?=[^a-z])'
 patternnumeric = r'([0-9])'
