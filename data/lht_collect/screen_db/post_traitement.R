@@ -4,13 +4,9 @@ library(stringr)
 
 real = data.frame()
 screen_data = data.frame()
-# for (lht in c("weight","lifespan","length")){print(lht)
-for (lht in c("length")){print(lht)
-  # lht_auto_df = read.csv(paste("/home/fbenitiere/data/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
-  lht_auto_df = read.csv(paste("/home/fbenitiere/data/screen_db/",lht,"2.tab",sep=""),header = F,sep="\n",quote="")
-  # lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
-  # lht_auto_df = read.csv(paste("data/lht_collect/screening_text/",lht,".tab",sep=""),header = F,sep="\n")
-  # lht_auto_df = read.csv(paste("/home/fbenitiere/LBBE-Projects/Projet SplicedVariants/analyses/auto_add_species_to_db/life_history_traits_EOL_performed/",lht,".tab",sep=""),header = F,sep="\n")
+for (lht in c("weight","lifespan","length")){print(lht)
+# for (lht in c("length")){print(lht)
+  lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
   
   lht_auto_df$V1 = str_replace_all(lht_auto_df$V1,",","")
   
@@ -146,14 +142,14 @@ screen_data$id = paste(screen_data$species,screen_data$db,screen_data$categorie,
 rownames(screen_data) = screen_data$id
 
 ####
-# screen_data = screen_data[grepl("EOL",screen_data$db),]
+screen_data = screen_data[grepl("ADW",screen_data$db),]
 ####
 
 
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
 manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
-# manual_truth = species_clade[grepl("EOL",species_clade$db),]
+manual_truth = species_clade[grepl("ADW",species_clade$db),]
 
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id

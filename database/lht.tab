@@ -992,6 +992,7 @@ Mytilus_californianus	6549	53	EOL	length_cm
 Callithrix_jacchus	9483	52.5	EOL	length_cm
 Sciurus_carolinensis	30640	52.5	ADW	length_cm
 Ramphastos_sulfuratus	322582	52	ADW text	length_cm
+Prochilodus_magdalenae	148989	51	fishbase	length_cm
 Falco_biarmicus	345155	50	ADW	length_cm
 Rynchops_niger	227184	50	ADW	length_cm
 Syngnathus_acus	161584	50	fishbase;EOL	length_cm
@@ -1023,6 +1024,7 @@ Chelydra_serpentina	8475	45	ADW	length_cm
 Ctenopharyngodon_idella	7959	45	fishbase	weight_kg
 Enhydra_lutris	34882	45	ADW	weight_kg
 Aptenodytes_forsteri	9233	45	ADW	weight_kg
+Scatophagus_argus	75038	45	fishbase	length_cm
 Octodon_degus	10160	44	ADW	length_cm
 Pangasianodon_hypophthalmus	310915	44	fishbase	weight_kg
 Caranx_melampygus	181461	43.5	fishbase	weight_kg
@@ -1053,13 +1055,11 @@ Gymnodraco_acuticeps	8218	38.5	EOL;fishbase	length_cm
 Podilymbus_podiceps	9252	38.1	ADW	length_cm
 Nycticebus_coucang	9470	38	ADW	length_cm
 Drosophila_suzukii	28584	38	Lin 2014	lifespan_days
-Scatophagus_argus	75038	38	EOL;fishbase	length_cm
 Chinchilla_lanigera	34839	38	ADW	length_cm
 Galeopterus_variegatus	482537	37.943	EOL	length_cm
 Gopherus_flavomarginatus	286002	37.1	ADW format	length_cm
 Erpetoichthys_calabaricus	27687	37	EOL;fishbase	length_cm
 Dipodomys_ordii	10020	36.5	ADW	length_cm
-Prochilodus_magdalenae	148989	36	EOL;fishbase	length_cm
 Falco_naumanni	148594	36	ADW	length_cm
 Gopherus_evgoodei	1825980	36	ADW Gopherus agassizii	length_cm
 Mustela_putorius	9668	35.892	EOL	length_cm
@@ -1454,6 +1454,7 @@ Thalassarche_chlororhynchos	54017	3.89	AnAge;EOL	weight_kg
 Pogonophryne_albipinna	1090488	3.8	EOL;fishbase	length_cm
 Chaenocephalus_aceratus	36190	3.7	fishbase	weight_kg
 Phalacrocorax_carbo	9209	3.7	ADW	weight_kg
+Scyliorhinus_canicula	7830	3.7	fishbase	weight_kg
 Ameiurus_melas	219545	3.63	ADW	weight_kg
 Soboliphyme_baturini	241478	3.53	EOL	length_cm
 Anoplophora_glabripennis	217634	3.5	ADW	length_cm
@@ -1563,7 +1564,6 @@ Enterobius_vermicularis	51028	1.3	ADW	length_cm
 Otolemur_garnettii	30611	1.3	AnAge	weight_kg
 Ancylostoma_duodenale	51022	1.3	ADW	length_cm
 Ancylostoma_ceylanicum	53326	1.3	Blaine et al. 2022	length_cm
-Scyliorhinus_canicula	7830	1.3	fishbase	weight_kg
 Phasianus_colchicus	9054	1.263	ADW	weight_kg
 Corythaeola_cristata	103954	1.231	EOL	weight_kg
 Teladorsagia_circumcincta	45464	1.22	EOL	length_cm

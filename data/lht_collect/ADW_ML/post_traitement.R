@@ -126,7 +126,7 @@ ml_data = data.frame(ml_data)
 rownames(ml_data) = ml_data$id
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
-# manual_truth = species_clade[grepl("ADW",species_clade$db),]
+manual_truth = species_clade[grepl("ADW",species_clade$db),]
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id
 

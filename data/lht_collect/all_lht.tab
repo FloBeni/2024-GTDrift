@@ -1974,6 +1974,7 @@ Sciurus_carolinensis	30640	52.5	ADW	length_cm
 Latimeria_chalumnae	7897	52.25	AnAge	weight_kg
 Latimeria_chalumnae	7897	52.25	EOL	weight_kg
 Ramphastos_sulfuratus	322582	52	ADW text	length_cm
+Prochilodus_magdalenae	148989	51	fishbase	length_cm
 Esox_lucius	8010	51	ADW	length_cm
 Salvelinus_fontinalis	8038	50.8	ADW	length_cm
 Falco_biarmicus	345155	50	ADW	length_cm
@@ -2025,6 +2026,7 @@ Ctenopharyngodon_idella	7959	45	fishbase	weight_kg
 Enhydra_lutris	34882	45	ADW	weight_kg
 Carassius_auratus	7957	45	ADW	length_cm
 Aptenodytes_forsteri	9233	45	ADW	weight_kg
+Scatophagus_argus	75038	45	fishbase	length_cm
 Pan_troglodytes	9598	44.984	AnAge	weight_kg
 Nyctereutes_procyonoides	34880	44.738	EOL	length_cm
 Dasypus_novemcinctus	9361	44.279	EOL	length_cm
@@ -2076,7 +2078,6 @@ Podilymbus_podiceps	9252	38.1	ADW	length_cm
 Nycticebus_coucang	9470	38	ADW	length_cm
 Drosophila_suzukii	28584	38	Lin 2014	lifespan_days
 Scatophagus_argus	75038	38	EOL	length_cm
-Scatophagus_argus	75038	38	fishbase	length_cm
 Chinchilla_lanigera	34839	38	ADW	length_cm
 Galeopterus_variegatus	482537	37.943	EOL	length_cm
 Manis_pentadactyla	143292	37.896	EOL	length_cm
@@ -2089,7 +2090,6 @@ Erpetoichthys_calabaricus	27687	37	fishbase	length_cm
 Saimiri_boliviensis	27679	37	ADW format	length_cm
 Dipodomys_ordii	10020	36.5	ADW	length_cm
 Prochilodus_magdalenae	148989	36	EOL	length_cm
-Prochilodus_magdalenae	148989	36	fishbase	length_cm
 Falco_naumanni	148594	36	ADW	length_cm
 Drosophila_melanogaster	7227	36	Lin 2014	lifespan_days
 Gopherus_evgoodei	1825980	36	ADW Gopherus agassizii	length_cm
@@ -2777,6 +2777,7 @@ Oncorhynchus_gorbuscha	8017	3.74	AnAge	weight_kg
 Oncorhynchus_gorbuscha	8017	3.74	EOL	weight_kg
 Chaenocephalus_aceratus	36190	3.7	fishbase	weight_kg
 Phalacrocorax_carbo	9209	3.7	ADW	weight_kg
+Scyliorhinus_canicula	7830	3.7	fishbase	weight_kg
 Ameiurus_melas	219545	3.63	ADW	weight_kg
 Anguilla_anguilla	7936	3.629	AnAge	weight_kg
 Phalacrocorax_carbo	9209	3.629	AnAge	weight_kg
@@ -2961,7 +2962,6 @@ Enterobius_vermicularis	51028	1.3	ADW	length_cm
 Otolemur_garnettii	30611	1.3	AnAge	weight_kg
 Ancylostoma_duodenale	51022	1.3	ADW	length_cm
 Ancylostoma_ceylanicum	53326	1.3	Blaine et al. 2022	length_cm
-Scyliorhinus_canicula	7830	1.3	fishbase	weight_kg
 Numida_meleagris	8996	1.299	EOL	weight_kg
 Numida_meleagris	8996	1.299	AnAge	weight_kg
 Phasianus_colchicus	9054	1.263	ADW	weight_kg
@@ -3481,6 +3481,7 @@ Falcunculus_frontatus	254539	0.0332	EOL	weight_kg
 Desmodus_rotundus	9430	0.0332	AnAge	weight_kg
 Motacilla_alba	45807	0.0329	EOL	weight_kg
 Mohoua_ochrocephala	874463	0.0325	EOL	weight_kg
+Tyrannus_savana	137541	0.032	ADW	weight_kg
 Geospiza_fortis	48883	0.032	EOL	weight_kg
 Hypocryptadius_cinnamomeus	589841	0.0315	EOL	weight_kg
 Galbula_dea	1109041	0.0315	EOL	weight_kg
