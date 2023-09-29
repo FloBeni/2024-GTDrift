@@ -142,14 +142,14 @@ screen_data$id = paste(screen_data$species,screen_data$db,screen_data$categorie,
 rownames(screen_data) = screen_data$id
 
 ####
-screen_data = screen_data[grepl("ADW",screen_data$db),]
+# screen_data = screen_data[grepl("ADW",screen_data$db),]
 ####
 
 
 
 species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
 manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
-manual_truth = species_clade[grepl("ADW",species_clade$db),]
+# manual_truth = species_clade[grepl("ADW",species_clade$db),]
 
 manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id
