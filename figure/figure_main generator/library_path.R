@@ -3,6 +3,7 @@ library("gridExtra")
 library(ape)
 library(stringr)
 library(imager)
+library(caper)
 library(ggtree)
 library(ggplot2)
 library(RColorBrewer)
@@ -22,3 +23,10 @@ Clade_color = c("Other Invertebrates"="#f5b48a","Lepido Diptera"="red","Other Ve
 
 list_species = read.delim("database/list_species.tab")
 rownames(list_species) = list_species$species
+
+
+
+lm_eqn <- function(m=lm(Y ~ X,data)){
+  paste("R2 =", round(summary(m)$r.squared, 2) , ", p-value = ",formatC(summary(m)$coefficients[2,4], format = "e", digits = 0),sep="")
+}
+

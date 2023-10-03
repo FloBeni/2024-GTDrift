@@ -5,29 +5,49 @@ data1 = read.delim("data/data1.tab")
 label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
 
-sum(table(data1$clade_group))
+sum( table( data1$clade_group ) )
 
 data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
-# PANNEL A
 
-pA=ggplot(data1 , aes(x=max_lifespan_days,y=max_length_cm,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
+dnds = read.delim(paste("data/dnds_0.1_1_dS.tab",sep=""))
+rownames(dnds) = dnds$species
+dnds["Cervus_elaphus",]$dNdS = NA
+data1$dnds = dnds[data1$species,]$dNdS
+# PANNEL A
+dt_graph = data1
+ylabel = "max_length_cm"
+xlabel = "max_lifespan_days"
+arbrePhylotips = read.tree( "data/dnds_phylo/Metazoa/phylogeny/raxml.root.nwk")
+dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
+lm_y = log10(dt_graph[,ylabel])
+lm_x = log10(dt_graph[,xlabel])
+shorebird <- comparative.data(arbrePhylotips, 
+                              data.frame(species=dt_graph$species,
+                                         pgls_x=lm_x,
+                                         pgls_y=lm_y), species, vcv=TRUE)
+
+pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_point(pch=21,size=4,alpha=.8)  + 
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
-    axis.title.y = element_text(color="black", size=25, family="economica"),
+    axis.title.y = element_text(color="black", size=31, family="economica"),
     axis.text.y =  element_text(color="black", size=26, family="economica"),
     axis.text.x =  element_text(color="black", size=26, family="economica"),
-    title =  element_text(color="black", size=31, family="economica"),
+    title =  element_text(color="black", size=17, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) + ggtitle(paste("Nspecies=",nrow(data1[!is.na(data1$max_length_cm) & !is.na(data1$max_lifespan_days),]),sep=""))+
   scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500),labels=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500)) + xlab("Longevity (days log scale)")+
-  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)") 
+  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)")+
+  ggtitle(paste(
+    "LM: ",lm_eqn(lm(lm_y ~ lm_x)),
+    " / PGLS: ",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),sep=""
+  ))+ annotation_logticks()
 pA
 
-jpeg(paste(path_pannel,"F5pA.jpg",sep=""),width = 8500/resolution, height = 4000/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F5pA.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=700/resolution)
 print(pA)
 dev.off()
 

@@ -2,7 +2,7 @@ source("figure/figure_main generator/library_path.R")
 
 
 euk_dnds = read.delim("database/dNdS/Eukaryota.tab")
-met_dnds = read.delim("database/dNdS/Metazoa.tab")
+met_dnds = read.delim("database/dNdS/Mammalia.tab")
 
 dt_graph = merge.data.frame(x=euk_dnds,y=met_dnds,by= "species",all=T,suffixes = c("_euk","_met"))
 
@@ -13,8 +13,13 @@ dt_graph$clade_group = list_species[dt_graph$species,]$clade_group
 dt_graph$clade_group = factor(dt_graph$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 # PANNEL A
-
-pA=ggplot(dt_graph , aes(x=dNdS_met,y=dNdS_euk,fill=clade_group)) + geom_point(pch=21,size=3,alpha=.8)  + 
+pA=ggplot(dt_graph[dt_graph$dS_met>0.1 & dt_graph$dS_euk>0.1,], aes(x=dNdS_met,y=dNdS_euk,fill=clade_group,label=species)) + geom_point(pch=21,size=3,alpha=.8)  + 
+  geom_vline(xintercept=0.5,linetype="dashed",col="#FB9A99",lwd=1.2) +
+  geom_vline(xintercept=1,linetype="dashed",col="#E31A1C",lwd=1.2) +
+  geom_vline(xintercept=0.1,linetype="dashed",col="#E31A1C",lwd=1.2) +
+  geom_hline(yintercept=0.5,linetype="dashed",col="#FB9A99",lwd=1.2) +
+  geom_hline(yintercept=1,linetype="dashed",col="#E31A1C",lwd=1.2) +
+  geom_hline(yintercept=0.1,linetype="dashed",col="#E31A1C",lwd=1.2) +
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=25, family="economica"),
@@ -26,8 +31,9 @@ pA=ggplot(dt_graph , aes(x=dNdS_met,y=dNdS_euk,fill=clade_group)) + geom_point(p
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) +  ggtitle(paste("Nspecies=",nrow(dt_graph[!is.na(dt_graph$dNdS_euk) & !is.na(dt_graph$dNdS_met),]),sep="")) +
-  ylab("Terminal branches dN/dS Eukaryota set") + xlab("Terminal branches dN/dS Metazoa set")
+  ylab("Terminal branches dN/dS Eukaryota set") + xlab("Terminal branches dN/dS Metazoa set") + geom_abline()
 pA
+ggplotly(pA)
 
 jpeg(paste(path_pannel,"F6pA.jpg",sep=""),width = 8500/resolution, height = 4000/resolution,res=700/resolution)
 print(pA)

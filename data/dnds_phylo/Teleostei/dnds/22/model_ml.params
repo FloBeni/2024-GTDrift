@@ -1,0 +1,15 @@
+# Log likelihood = -1413771.28260102495551109314
+
+result=phylo1
+
+phylo1=Single(process=1,data=1)
+
+
+model1=YN98(frequencies=F3X4(1_Full.theta=0.501972954268,1_Full.theta1=0.574970143466,1_Full.theta2=0.530804238462,2_Full.theta=0.541120089697,2_Full.theta1=0.532525153176,2_Full.theta2=0.446849704838,3_Full.theta=0.538117384442,3_Full.theta1=0.469341399218,3_Full.theta2=0.461641111225),kappa=1.916553469461,omega=0.119037510323)
+
+root_freq1=F3X4(1_Full.theta=0.571601887699,1_Full.theta1=0.572238945457,1_Full.theta2=0.583136141689,2_Full.theta=0.425216832813,2_Full.theta1=0.586521766157,2_Full.theta2=0.425497906245,3_Full.theta=0.925375833230,3_Full.theta1=0.010000000001,3_Full.theta2=0.580344436235)
+
+rate_distribution1=Constant()
+
+process1=Homogeneous(model=1, tree=1, rate=1, root_freq=1)
+

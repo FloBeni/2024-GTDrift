@@ -7,22 +7,26 @@ list_species$NCBI.txid = sapply(list_species$sp_txid,function(x) str_split(x,"NC
 rownames(list_species) = list_species$species
 
 
-compute_files <- function(name,busco_set,path,dnds){
+compute_files <- function(name,busco_set,path,raxml,dnds){
   ## reproducibility phylo
   
   dir.create( paste("data/dnds_phylo/",name,"/",sep=""),recursive = T)
   list_species_sample = read.delim(paste(path,"gene_No_aas_cds",sep=""))
   list_species_sample$NCBI.txid = list_species[list_species_sample$species,]$NCBI.txid
-  list_species_sample = list_species_sample[,c("species","NCBI.txid","No_AAS_total","No_CDS_total","No_AAS_Busco","No_CDS_Busco","No_AAS_CDS_corresponding","nb_gene_85" )]
+  if ("nb_gene_85" %in% colnames(list_species_sample)){
+    list_species_sample = list_species_sample[,c("species","NCBI.txid","No_AAS_total","No_CDS_total","No_AAS_Busco","No_CDS_Busco","No_AAS_CDS_corresponding","nb_gene_85" )]
+  } else {
+    list_species_sample = list_species_sample[,c("species","NCBI.txid","No_AAS_total","No_CDS_total","No_AAS_Busco","No_CDS_Busco","No_AAS_CDS_corresponding" )]
+  }
   
   write.table(list_species_sample , paste("data/dnds_phylo/",name,"/species_list.tab",sep=""),quote=F,row.names = F,sep="\t")
   
   
   dir.create( paste("data/dnds_phylo/",name,"/phylogeny",sep=""),recursive = T)
-  file.copy(list.files(paste(path,"RAxML/",sep=""),pattern=".support",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.support.nwk",sep=""), overwrite = TRUE )
-  file.copy(list.files(paste(path,"RAxML/",sep=""),pattern=".root",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""), overwrite = TRUE )
-  file.copy(list.files(paste(path,"RAxML/",sep=""),pattern=".log",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.log",sep=""), overwrite = TRUE )
-  file.copy(list.files(paste(path,"RAxML/",sep=""),pattern="info",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/gene.info",sep=""), overwrite = TRUE )
+  file.copy(list.files(paste(path,raxml,sep=""),pattern=".support",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.support.nwk",sep=""), overwrite = TRUE )
+  file.copy(list.files(paste(path,raxml,sep=""),pattern=".root",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""), overwrite = TRUE )
+  file.copy(list.files(paste(path,raxml,sep=""),pattern=".log",full.names = T), paste("data/dnds_phylo/",name,"/phylogeny/raxml.log",sep=""), overwrite = TRUE )
+  file.copy(list.files(paste(path,raxml,sep=""),pattern="info",full.names = T)[1], paste("data/dnds_phylo/",name,"/phylogeny/gene.info",sep=""), overwrite = TRUE )
   
   con <- file(paste("data/dnds_phylo/",name,"/phylogeny/raxml.log",sep=""),"r")
   first_line <- readLines(con,n=20)
@@ -88,6 +92,9 @@ compute_files <- function(name,busco_set,path,dnds){
 }
 
 
-compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",dnds="subset_200_ksites_GC3_root")
-compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",dnds="subset_200_ksites_GC3")
-compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/",dnds="subset_200_ksites_GC3_root")
+compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
+compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
+compute_files(name = "Mammalia",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Mammalia/",dnds="dNdS_clade/Mammalia/subset_200_ksites_GC3_root")
+compute_files(name = "Aves",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Aves/",dnds="dNdS_clade/Aves/subset_200_ksites_GC3_root")
+compute_files(name = "Teleostei",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Teleostei/",dnds="dNdS_clade/Teleostei/subset_200_ksites_GC3_root")
+compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",raxml="RAxML/",dnds="subset_200_ksites_GC3")
