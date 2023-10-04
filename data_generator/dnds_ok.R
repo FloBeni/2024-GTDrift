@@ -86,11 +86,7 @@ for (type in c("dN","dS")){
         branch = sapply(noeud,function(x,y) which(y==x),y=tree$edge[,2])
         if ( length( branch[[1]] ) != 0 ){
           
-          if (gccons == "GC_cons"){
-            value = value + (dt_per_edge[branch,paste(type,"_S->S",sep="")] + dt_per_edge[branch,paste(type,"_W->W",sep="")] ) /  (dt_per_edge[branch,paste(type,"_S->S","_norm",sep="")] + dt_per_edge[branch,paste(type,"_W->W","_norm",sep="")] )
-          } else if (gccons == "GC_notcons"){
-            value = value + (dt_per_edge[branch,paste(type,"_W->S",sep="")] + dt_per_edge[branch,paste(type,"_S->W",sep="")] ) /  (dt_per_edge[branch,paste(type,"_W->S","_norm",sep="")] + dt_per_edge[branch,paste(type,"_S->W","_norm",sep="")] )
-          } else { value = value + dt_per_edge[branch,paste(type,gccons,sep="")] / dt_per_edge[branch,paste(type,gccons,"_norm",sep="")]}
+          value = value + dt_per_edge[branch,paste(type,gccons,sep="")] / dt_per_edge[branch,paste(type,gccons,"_norm",sep="")]
           
           dt_temp = rbind(dt_temp,data.frame(
             type,
@@ -118,10 +114,10 @@ big_data$id = paste(big_data$species,big_data$branch_concat,sep="_")
 
 
 data_flo = data.frame(
-                      id=names(tapply(big_data$dN,big_data$id,sum)),
-                      species = tapply(big_data$species,big_data$id,unique),
-                      dS = tapply(big_data$dS,big_data$id,sum),
-                      dN = tapply(big_data$dN,big_data$id,sum)
+  id=names(tapply(big_data$dN,big_data$id,sum)),
+  species = tapply(big_data$species,big_data$id,unique),
+  dS = tapply(big_data$dS,big_data$id,sum),
+  dN = tapply(big_data$dN,big_data$id,sum)
 )
 if (any(data_flo$species == "Chloebia_gouldiae")){    data_flo[data_flo$species == "Chloebia_gouldiae",]$species = "Erythrura_gouldiae"}
 

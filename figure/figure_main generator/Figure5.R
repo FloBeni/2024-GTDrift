@@ -8,19 +8,19 @@ names(label_color) = names(Clade_color)
 sum( table( data1$clade_group ) )
 
 data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
-
+colnames(dt_graph)
 
 dnds = read.delim(paste("data/dnds_0.1_1_dS.tab",sep=""))
 rownames(dnds) = dnds$species
-dnds["Cervus_elaphus",]$dNdS = NA
+dnds[dnds$species %in% c("Cervus_elaphus","Vulpes_lagopus"),]$dNdS = NA
 data1$dnds = dnds[data1$species,]$dNdS
 # PANNEL A
 dt_graph = data1
-ylabel = "max_length_cm"
+ylabel = "dnds"
 xlabel = "max_lifespan_days"
 arbrePhylotips = read.tree( "data/dnds_phylo/Metazoa/phylogeny/raxml.root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = log10(dt_graph[,ylabel])
+lm_y = (dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
 shorebird <- comparative.data(arbrePhylotips, 
                               data.frame(species=dt_graph$species,
@@ -40,11 +40,11 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) + ggtitle(paste("Nspecies=",nrow(data1[!is.na(data1$max_length_cm) & !is.na(data1$max_lifespan_days),]),sep=""))+
   scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500),labels=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500)) + xlab("Longevity (days log scale)")+
-  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)")+
+  # scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm log scale)")+
   ggtitle(paste(
     "LM: ",lm_eqn(lm(lm_y ~ lm_x)),
     " / PGLS: ",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),sep=""
-  ))+ annotation_logticks()
+  ))+ annotation_logticks(sides = "b")
 pA
 
 jpeg(paste(path_pannel,"F5pA.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=700/resolution)
