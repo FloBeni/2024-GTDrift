@@ -21,12 +21,8 @@ server <- function(input, output,session) {
   
   observeEvent(input$upload_data,ignoreNULL = T, {
     inFile <- input$upload_data
-    print(inFile)
-    print(inFile$datapath)
     dt = read.delim(inFile$datapath,header = T)
-    print(dt)
     data_by_species <<- merge(dt,data_by_species, by.x = "species", by.y = "species", all.x = TRUE, all.y = TRUE)
-    print(colnames(data_by_species))
     
     axisInter <<- rbind(axisInter,data.frame(group = "Uploaded","display_label"=colnames(dt),name_label=colnames(dt),description=NA,quantitative=T))
     axisInter_quantitative <<- axisInter[axisInter$quantitative,]
@@ -37,7 +33,6 @@ server <- function(input, output,session) {
   
   observeEvent(hover_event(), {
     dt = unlist(str_split(hover_event()$customdata,"_;_"))
-    
     if ("Y log10" %in% input$scale_inter  & "X log10" %in% input$scale_inter){
       hoverplotlyProxy %>%
         plotlyProxyInvoke("relayout", list(images = list(
@@ -107,8 +102,6 @@ server <- function(input, output,session) {
     
     if ( grepl("svr_class_",xlabel)){ xlabel = str_replace(xlabel,"all",input$svr_class)}
     if ( grepl("svr_class_",ylabel)){ ylabel = str_replace(ylabel,"all",input$svr_class)}
-    print(ylabel)
-    print(xlabel)
     if ( input$busco_inter != "None"){ 
       minimum_coverage = paste("median_coverage_exon.buscodataset_",input$busco_inter,".quant",sep="")
       data_by_species = data_by_species[data_by_species[minimum_coverage] > input$coverage_inter , ]
@@ -136,11 +129,10 @@ server <- function(input, output,session) {
     } else {
       data_by_species$custom_data = "custom_data"
     }
-    
-    print(min(data_by_species[,ylabel]))
+    data_by_species$speciesname = str_replace(data_by_species$species,"_"," ")
     p = ggplot(
-      data_by_species,aes_string(x=xlabel,y=ylabel, text="species",
-                                 customdata="custom_data") )+ 
+      data_by_species,aes_string(x=xlabel,y=ylabel , text="speciesname",
+                                 customdata="custom_data"))+ 
       scale_fill_manual(values=Clade_color) +
       xlab(input$x_inter) + 
       ylab(input$y_inter) + theme_bw() + theme(
@@ -185,8 +177,6 @@ server <- function(input, output,session) {
                                                  pgls_y=lm_y), species, vcv=TRUE)
         
         gls = GLS(shorebird)
-        print( gls[[1]] )
-        print(gls[[2]])
         p = p + geom_abline(slope=1,intercept=0,alpha = .6) +
           ggtitle(paste("N=",nrow(data_by_species)," / LM:",lm_eqn(lm(lm_y ~ lm_x)),
                         " / PGLS:",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),
@@ -236,7 +226,6 @@ server <- function(input, output,session) {
   
   
   output$plot_intra <- renderPlotly({
-    print(input$species_selected_intra)
     species = str_replace(input$species_selected_intra," ","_")
     color_species = Clade_color[dt_species[species,]$clade_group]
     
@@ -282,7 +271,6 @@ server <- function(input, output,session) {
       
       data_sp = data.frame(X=X ,Y=Y ,XerrorBar=XerrorBar ,YerrorBar=YerrorBar)
       table(intervalle)
-      print(data_sp)
       
       p9 = ggplot(data_sp,aes(x=X,y=Y,text=paste("Nb of samples by group",table(intervalle))))  + theme_bw() +
         ylab(names(which(axisIntra==input$y_intra))) + xlab(names(which(axisIntra==input$x_intra))) +
@@ -362,28 +350,21 @@ server <- function(input, output,session) {
     id_selected = input$studied_gene
     if (id_selected != ""){
       if (id_selected != ""){
-        print(id_selected)
-        id_selected="gene17437"
-        print(species)
-        species="Drosophila_melanogaster"
         start.time <- Sys.time()
         header = readLines(paste("www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep=""),n=16)
         header = read.table(text=header)
         intron = system(paste("zgrep '",id_selected,"\t' ","www/database/Transcriptomic/",dt_species[species,]$path_db,"/by_intron_analysis.tab.gz",sep=""),intern=T)
-        print(intron)
         intron = read.table(text=intron,sep="\t")
         colnames(intron) = header
         intron$length = abs(intron$splice5 - intron$splice3)
         end.time <- Sys.time()
         time.taken <- end.time - start.time
-        print(time.taken)
         as.data.frame(intron,sep="\t")
         
         intron$category_intron = paste("Class:",intron$intron_class," in CDS:",intron$into_cds,sep="" )
         
         intron$position = paste("Sp3:",intron$splice3,"Sp5:",intron$splice5)
         intron$sum_ns = as.numeric(intron$ns)
-        print(intron)
         intron = intron[,colnames(intron)[colnames(intron)!= "id"]]
         
         p2 = ggplot(intron,aes(group=category_intron)) +
@@ -417,7 +398,6 @@ server <- function(input, output,session) {
         if (length(seq(min(intron$splice3,intron$splice5),
                        max(intron$splice3,intron$splice5),
                        input$sliderscale)) < 10){
-          print(input$sliderscale)
           p2 = p2 + scale_x_continuous(breaks = seq(min(intron$splice3,intron$splice5),
                                                     max(intron$splice3,intron$splice5),
                                                     input$sliderscale) )
@@ -461,7 +441,6 @@ server <- function(input, output,session) {
       edge_clade[ which.edge(tree,  tree$edge[,2][edge_clade == clade] ) ] = clade
     }
     node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
-    print(table(node_metadata$color))
     
     node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Lepido Diptera","Hymenoptera",
                                                                  "Other Insecta","Nematoda","Other Invertebrates",

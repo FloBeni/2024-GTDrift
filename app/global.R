@@ -110,3 +110,4 @@ axisIntra=list("Gene expression (FPKM)"="FPKMgene", # list des axes X et Y possi
                "NS per intron"="NS",
                "NS+NA per intron"="NS+NA"
 )
+

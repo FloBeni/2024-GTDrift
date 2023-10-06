@@ -17,8 +17,8 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
 species_clade = data.frame()
 list_sp = c()
 for (file in c(
-  "data/lht_collect/metazoa.xls",
-  "data/lht_collect/embryophyta.xls"
+  "data/life_history_traits/metazoa.xls",
+  "data/life_history_traits/embryophyta.xls"
 )){
   mysheets <- read_excel_allsheets(file)
   for (species in names(mysheets)) {
@@ -62,5 +62,5 @@ species_clade = species_clade[order(species_clade$max_value , decreasing = T) , 
 
 
 
-write.table(species_clade , paste("data/lht_collect/all_lht.tab",sep=""),quote=F,row.names = F,sep="\t")
+write.table(species_clade , paste("data/life_history_traits/all_life_history_traits.tab",sep=""),quote=F,row.names = F,sep="\t")
 

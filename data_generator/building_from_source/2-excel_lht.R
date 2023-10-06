@@ -20,7 +20,7 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
   x
 }
 
-excel_file = "data/lht_collect/metazoa.xls"
+excel_file = "data/life_history_traits/metazoa.xls"
 
 for (file in c(
   "/home/fbenitiere/Documents/metazoa_requisit_for_dnds.xls",
@@ -28,7 +28,7 @@ for (file in c(
   "/home/fbenitiere/Documents/metazoa_species2.xls")){
   mysheets <- read_excel_allsheets(file)
   print(file)
-  # excel_file = "data/lht_collect/metazoav2.xls"
+  # excel_file = "data/life_history_traits/metazoav2.xls"
   # for (species in names(mysheets)[368:1000]){
   for (species in names(mysheets)){
     if (species %in% list_species$species){print(species)
@@ -44,7 +44,7 @@ for (file in c(
   }
 }
 
-excel_file = "data/lht_collect/embryophyta.xls"
+excel_file = "data/life_history_traits/embryophyta.xls"
 for (file in c(
   "/home/fbenitiere/Documents/embryophyta_species.xls")){
   mysheets <- read_excel_allsheets(file)
