@@ -56,9 +56,6 @@ compute_files <- function(name){
   write.table(data , paste("database/dNdS/",name,".tab",sep=""),quote=F,row.names = F,sep="\t")
 }
 
-for (name in list.dirs(path,recursive=F,full.names=F)){
-  compute_files(name)
-}
 
 compute_files(name = "Metazoa")
 compute_files(name = "Eukaryota")

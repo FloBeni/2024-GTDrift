@@ -40,6 +40,7 @@ paste("This approach was applied successfully to a cohort of ",sum(list_species$
 
 # Phylogenetic tree reconstruction
 list_readme = list.files("data/dnds_phylo",pattern = "readme",recursive = T,full.names = T)
+list_readme = list_readme[!grepl("per_clade",list_readme)]
 dt=data.frame()
 for (i in list_readme){
   di = read.delim(i,header=F)
@@ -62,6 +63,7 @@ paste("selecting alignments with the highest number of species (eukaryota Ngenes
 paste(" with a final alignment of (eukaryota Nsp=",dt["eukaryota_odb9",]$nb_species_analyzed,
       ", embryophyta Nsp=",dt["embryophyta_odb9",]$nb_species_analyzed
       ,", metazoa Nsp=",dt["metazoa_odb9",]$nb_species_analyzed,")",sep="")
+
 
 paste("and (eukaryota Nsite=",as.numeric(dt["eukaryota_odb9",]$length_raxml_concat)/1000,
       ", embryophyta Nsite=",as.numeric(dt["embryophyta_odb9",]$length_raxml_concat)/1000
