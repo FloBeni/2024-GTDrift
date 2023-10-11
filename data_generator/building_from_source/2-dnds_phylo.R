@@ -49,6 +49,9 @@ compute_files <- function(name,busco_set,path,raxml,dnds){
   old_text = paste(str_split_1(file,"/")[c(1:length(str_split_1(file,"/"))-1)],collapse = "/")
   old_text = str_replace_all(old_text,"/home/fbenitiere/data/","/beegfs/data/fbenitiere/")
   
+  bash_command <- paste("gzip ","data/dnds_phylo/",name,"/phylogeny/*.aln", sep="")
+  system(bash_command)
+  
   bash_command <- paste("sed -i 's#",old_text,"/##g' ","data/dnds_phylo/",name,"/phylogeny/raxml.log",sep="")
   system(bash_command)
   
@@ -105,6 +108,8 @@ compute_files <- function(name,busco_set,path,raxml,dnds){
     system(bash_command)
     
     bash_command <- paste("cp ",path, dnds,"/",i,"/concatenatCDS.aln"," data/dnds_phylo/",name,"/dnds/",i,"/concatenatCDS.aln", sep="")
+    system(bash_command)
+    bash_command <- paste("gzip ","data/dnds_phylo/",name,"/dnds/",i,"/concatenatCDS.aln", sep="")
     system(bash_command)
     bash_command <- paste("cp ",path, dnds,"/",i,"/info"," data/dnds_phylo/",name,"/dnds/",i,"/info", sep="")
     system(bash_command)
