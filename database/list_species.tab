@@ -1150,7 +1150,7 @@ Atta_colombica	Hymenoptera	520822	Hymenoptera	FALSE	TRUE	FALSE	GCF_001594045.1	0
 Ditylenchus_destructor	Nematoda	166010	Nematoda	FALSE	TRUE	FALSE	GCA_022814885.1	0
 Bactrocera_latifrons	Diptera	174628	Lepido Diptera	TRUE	TRUE	FALSE	GCF_001853355.1	9
 Falco_rusticolus	Aves	120794	Aves	FALSE	TRUE	TRUE	GCF_015220075.1	0
-Stegostoma_fasciatum	Chondrichthyes	378071	Other Vertebrates	FALSE	TRUE	TRUE	GCF_022316705.1	0
+Stegostoma_fasciatum	Chondrichthyes	378071	Other Vertebrates	TRUE	TRUE	TRUE	GCF_022316705.1	24
 Galleria_mellonella	Lepidoptera	7137	Lepido Diptera	FALSE	TRUE	FALSE	GCF_026898425.1	0
 Trichinella_patagoniensis	Nematoda	990121	Nematoda	TRUE	TRUE	FALSE	GCA_001447655.1	5
 Leopardus_geoffroyi	Mammalia	46844	Mammalia	FALSE	TRUE	TRUE	GCF_018350155.1	0

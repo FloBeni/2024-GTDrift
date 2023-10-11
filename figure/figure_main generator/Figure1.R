@@ -18,8 +18,8 @@ for (group in unique(edge_group)){
 }
 edge_clade_prev = edge_clade
 list_inclusion =  list("Other Invertebrates"=c("Lepido Diptera","Other Insecta","Nematoda","Hymenoptera","Other Invertebrates"),
-                    "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insecta"=c("Lepido Diptera","Other Insecta","Hymenoptera"),
-                    Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Lepido Diptera"="Lepido Diptera",Embryophyta="Embryophyta"
+                       "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insecta"=c("Lepido Diptera","Other Insecta","Hymenoptera"),
+                       Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Lepido Diptera"="Lepido Diptera",Embryophyta="Embryophyta"
 )
 
 
@@ -40,23 +40,24 @@ label_color["branch"] =  ""
 pA = ggtree(tree, layout="ellipse",size=0.2)  
 pA <- pA %<+% node_metadata  + aes(color=color) + 
   scale_color_manual("Clades",values=Clade_color[unique(edge_clade)]
-                    ,label_color ) +    theme(
-    panel.background = element_rect(fill = "#f5f5f5", linetype = "dashed")
-  )  + theme(
-    title =  element_text(color="black", size=31, family="economica"),
-    panel.background = element_rect(fill = "white",
-                                    colour = "white",
-                                    size = 0.5, linetype = "solid"),
-    panel.grid.major = element_line(size = 0.5, linetype = 'solid',
-                                    colour = "white"), 
-    panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
-                                    colour = "white"),
-    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
-  ) + guides(color = guide_legend(override.aes = list(lwd = 3)))
+                     ,label_color ) +    theme(
+                       panel.background = element_rect(fill = "#f5f5f5", linetype = "dashed")
+                     )  + theme(
+                       title =  element_text(color="black", size=31, family="economica"),
+                       panel.background = element_rect(fill = "white",
+                                                       colour = "white",
+                                                       size = 0.5, linetype = "solid"),
+                       panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                                       colour = "white"), 
+                       panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                                       colour = "white"),
+                       legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
+                     ) + guides(color = guide_legend(override.aes = list(lwd = 3))) + theme(legend.position="none")
 pA
 
 resolution=2
-jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 6000/resolution, height = 6000/resolution,res=700/resolution)
+# jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 6000/resolution, height = 6000/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 3000/resolution, height = 6000/resolution,res=700/resolution)
 print(pA)
 dev.off()
 
@@ -64,18 +65,60 @@ dev.off()
 
 # FIGURE 1
 
-imgA = load.image(paste(path_pannel,"F1pA.jpg",sep=""))
+imgA <- image_read(paste(path_pannel,"F1pA.jpg",sep=""))
+imgA <- image_flip(imgA)
+legend<-image_read(paste(path_require,"legend_F1pA.jpg",sep=""))
+
+
+aves<-readPNG(paste(path_require,"aves.png",sep=""))
+teleostei<-readPNG(paste(path_require,"teleostei.png",sep=""))
+monkey<-readPNG(paste(path_require,"monkey.png",sep=""))
+tree<-readPNG(paste(path_require,"tree.png",sep=""))
+fly<-readPNG(paste(path_require,"fly.png",sep=""))
+bee<-readPNG(paste(path_require,"bee.png",sep=""))
+cnidaria<-readPNG(paste(path_require,"cnidaria.png",sep=""))
 
 {
   pdf(file= paste(path_figure,"Figure1.pdf",sep=""), width=3*5/2, height=2.75*3)
-  m=matrix(rep(NA,1*1), nrow=1)
-  m[,1]=c(rep(1,1))
+  m=matrix(rep(NA,2*1), nrow=1)
+  m[1,]=c(1,2)
   
   m
   layout(m)
   
   par(mar=c(0, 0, 0, 0))
   plot(imgA, axes=F)
+  
+  xaxis=1000
+  yaxis=2765
+  rasterImage(tree,xleft=0+xaxis, ybottom=0+yaxis, xright=900/5+xaxis, ytop=900/5+yaxis)
+  
+  xaxis=550
+  yaxis=2500
+  rasterImage(cnidaria,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=700/4+yaxis)
+  
+  xaxis=600
+  yaxis=2270
+  rasterImage(bee,xleft=0+xaxis, ybottom=0+yaxis, xright=900/5+xaxis, ytop=700/5+yaxis)
+  
+  xaxis=630
+  yaxis=2000
+  rasterImage(fly,xleft=0+xaxis, ybottom=0+yaxis, xright=900/7+xaxis, ytop=900/7+yaxis)
+  
+  xaxis=800
+  yaxis=1000
+  rasterImage(monkey,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=900/4+yaxis)
+  
+  xaxis=700
+  yaxis=1550
+  rasterImage(teleostei,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=500/4+yaxis)
+  
+  xaxis=1000
+  yaxis=300
+  rasterImage(aves,xleft=0+xaxis, ybottom=0+yaxis, xright=600/3+xaxis, ytop=750/3+yaxis)
+  
+  par(mar=c(0, 0, 0, 0))
+  plot(legend, axes=F)
   
   dev.off()
 }

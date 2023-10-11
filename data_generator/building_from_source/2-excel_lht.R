@@ -20,6 +20,21 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
   x
 }
 
+excel_file = "data/life_history_traits/embryophyta.xls"
+for (file in c(
+  "/home/fbenitiere/Documents/embryophyta_species.xls")){
+  mysheets <- read_excel_allsheets(file)
+  for (species in names(mysheets)){
+    if (species %in% list_species$species){print(species)
+      dt_sample = mysheets[[species]]
+      dt_sample$NCBI.taxid = NA
+      dt_sample$NCBI.taxid[1] = list_species[species,]$NCBI.taxid
+      dt_sample = dt_sample[,c("Species","NCBI.taxid","Socialite","Clade", "Length (cm)","Ref length","Longevity (days)", "Ref longevity","Weight (kg)","Ref weight")]
+      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F)
+    }
+  }
+}
+
 excel_file = "data/life_history_traits/metazoa.xls"
 
 for (file in c(
@@ -39,21 +54,6 @@ for (file in c(
       
       dt_sample = dt_sample[rowSums(is.na(dt_sample))!= ncol(dt_sample),]
       
-      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F)
-    }
-  }
-}
-
-excel_file = "data/life_history_traits/embryophyta.xls"
-for (file in c(
-  "/home/fbenitiere/Documents/embryophyta_species.xls")){
-  mysheets <- read_excel_allsheets(file)
-  for (species in names(mysheets)){
-    if (species %in% list_species$species){print(species)
-      dt_sample = mysheets[[species]]
-      dt_sample$NCBI.taxid = NA
-      dt_sample$NCBI.taxid[1] = list_species[species,]$NCBI.taxid
-      dt_sample = dt_sample[,c("Species","NCBI.taxid","Socialite","Clade", "Length (cm)","Ref length","Longevity (days)", "Ref longevity","Weight (kg)","Ref weight")]
       write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F)
     }
   }
