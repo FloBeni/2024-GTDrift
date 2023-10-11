@@ -5,6 +5,7 @@ source("figure/figure_main generator/library_path.R")
 listNomSpecies = tapply(str_replace_all(list_species$species,"_" ," "),list_species$clade_group,list)
 
 tree_name <- "data/dnds_phylo/timetree_all.nwk"
+tree_name <- "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/RAxML_clade/Construct_phylogenetic_tree/concatenatAAS_cons25.aln.raxml.root_Other_Invertebrates;Other_Vertebrates;Mammalia;Aves;Teleostei;Other_Insecta;Nematoda;Hymenoptera;Lepido_Diptera.nwk"
 tree <- read.tree(tree_name)
 
 tree$tip.label <- str_replace_all(tree$tip.label,"_"," ")
