@@ -62,6 +62,4 @@ for (name in list.dirs(path,recursive=F,full.names=F)){
 
 compute_files(name = "Metazoa")
 compute_files(name = "Eukaryota")
-compute_files(name = "Mammalia")
-compute_files(name = "Aves")
-compute_files(name = "Teleostei")
+compute_files(name = "Embryophyta")

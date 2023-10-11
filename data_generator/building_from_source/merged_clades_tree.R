@@ -20,7 +20,7 @@ ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates
 order_clade = c("Other_Invertebrates","Other_Vertebrates","Mammalia","Aves","Teleostei","Other_Insecta", "Nematoda","Hymenoptera","Lepido_Diptera"    )
 clade_ref = order_clade[1]
 clade_ref_group = order_clade[1]
-original_tree <- read.tree(paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/",clade_ref,"/phylogeny/raxml.root.nwk",sep=""))
+original_tree <- read.tree(paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/",clade_ref,"/phylogeny/raxml.root.nwk",sep=""))
 
 for (clade in order_clade[2:9]){print(clade)
   clade_togreff = clade
@@ -28,7 +28,7 @@ for (clade in order_clade[2:9]){print(clade)
   
   out_name = paste(clade_ref,clade_togreff,sep=";")
   
-  subtree_to_add <- read.tree(paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/",clade_togreff,"/phylogeny/raxml.root.nwk",sep=""))
+  subtree_to_add <- read.tree(paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/",clade_togreff,"/phylogeny/raxml.root.nwk",sep=""))
   
   species_1 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_group == clade_ref_group  ,]$species
   species_2 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_group == clade  ,]$species
@@ -69,5 +69,5 @@ for (clade in order_clade[2:9]){print(clade)
   
 }
 
-write.tree(original_tree, file = paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/merged_clades_tree",sep=""))
+write.tree(original_tree, file = paste("/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree",sep=""))
 

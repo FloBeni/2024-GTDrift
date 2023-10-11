@@ -127,7 +127,7 @@ compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere
 for (clade in c("Aves","Hymenoptera","Lepido_Diptera","Mammalia","Nematoda","Other_Insecta","Other_Invertebrates","Other_Vertebrates","Teleostei")){
   print(clade)
   compute_files(
-    name = clade,
+    name = paste("per_clade/",clade,sep=""),
     busco_set="metazoa_odb9",
     path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",
     raxml=paste("RAxML_clade/",clade,"/",sep=""),
