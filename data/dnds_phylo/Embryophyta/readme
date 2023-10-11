@@ -1,0 +1,8 @@
+busco_set	embryophyta_odb9
+nb_genes	1439
+nb_genes_at_least_85percent_species	387
+nb_species_initially	93
+nb_species_analyzed	80
+nb_genes_raxml	77
+nb_species_tokeepsites	50
+length_raxml_concat	670083
