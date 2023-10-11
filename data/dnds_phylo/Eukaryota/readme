@@ -1,8 +1,0 @@
-busco_set	eukaryota_odb9
-nb_genes	303
-nb_genes_at_least_85percent_species	194
-nb_species_initially	207
-nb_species_analyzed	175
-nb_genes_raxml	38
-nb_species_tokeepsites	1
-length_raxml_concat	545637
