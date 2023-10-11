@@ -24,11 +24,11 @@ for (file in c(
   for (species in names(mysheets)) {
     print(species)
     study = mysheets[[species]]$Group_study[1]
-    NCBI.txid = mysheets[[species]]$NCBI.txid[1]
+    NCBI.taxid = mysheets[[species]]$NCBI.taxid[1]
     if (length(mysheets[[species]]$`Longevity (days)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
-        NCBI.txid ,
+        NCBI.taxid ,
         max_value = as.numeric(mysheets[[species]]$`Longevity (days)`),
         db = mysheets[[species]]$`Ref longevity`,
         lht="lifespan_days"
@@ -38,7 +38,7 @@ for (file in c(
     if (length(mysheets[[species]]$`Length (cm)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
-        NCBI.txid ,
+        NCBI.taxid ,
         max_value = as.numeric(mysheets[[species]]$`Length (cm)`),
         db = mysheets[[species]]$`Ref length`,
         lht="length_cm"
@@ -48,7 +48,7 @@ for (file in c(
     if (length(mysheets[[species]]$`Weight (kg)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
-        NCBI.txid ,
+        NCBI.taxid ,
         max_value = as.numeric(mysheets[[species]]$`Weight (kg)`),
         db = mysheets[[species]]$`Ref weight`,
         lht="weight_kg"

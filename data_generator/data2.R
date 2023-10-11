@@ -2,9 +2,6 @@
 library(dplyr)
 library(tidyr)
 
-# path = "/home/fbenitiere/data/"
-# path = "/beegfs/data/fbenitiere/"
-
 data1 = read.delim("database/list_species.tab")
 data1 = data1[data1$expression_data,]
 
@@ -54,8 +51,6 @@ for (species in list_species){
                   prop_annot_minor = annotated_minor / minor,
                   prop_annot_major = annotated_major /major
                 ))
-  print(data2)
 }
 
-# write.table(data2 , "data/data2.tab",quote=F,row.names = F,sep="\t")
-write.table(data2 , "data/data2bis.tab",quote=F,row.names = F,sep="\t")
+write.table(data2 , "data/data2.tab",quote=F,row.names = F,sep="\t")

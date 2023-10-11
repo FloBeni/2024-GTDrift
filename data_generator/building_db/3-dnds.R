@@ -7,15 +7,16 @@ get_newick_value = function(arbre_phylo){
   return(edge.length)
 }
 
-list_species = data.frame(sp_txid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F))
-list_species$species = sapply(list_species$sp_txid,function(x) str_split(x,"_NCBI.txid")[[1]][1])
-list_species$NCBI.txid = sapply(list_species$sp_txid,function(x) str_split(x,"_NCBI.txid")[[1]][2])
+list_species = data.frame(sp_taxid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F))
+list_species$species = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][1])
+list_species$NCBI.taxid = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][2])
 rownames(list_species) = list_species$species
 
 path = "data/dnds_phylo/"
 
 compute_files <- function(name){
-  concatenate_list = list.dirs(paste(path,name,"/dnds",sep=""),recursive = F,full.names = F)
+  concatenate_list = list.files(paste(path,name,"/dnds",sep=""),recursive = T,full.names = F,pattern="raxml.dnd_1")
+  concatenate_list = str_replace_all(concatenate_list,"/raxml.dnd_1","")
   
   big_data = data.frame()
   
@@ -46,17 +47,19 @@ compute_files <- function(name){
   
   
   data = data.frame(species = tree$tip.label,
-                    NCBI.txid = list_species[tree$tip.label,]$NCBI.txid,
+                    NCBI.taxid = list_species[tree$tip.label,]$NCBI.taxid,
                     dN = get_newick_value(read.tree(paste("database/dNdS/newick/",name,"_dN.nwk",sep="")))[tree$tip.label],
                     dS = get_newick_value(read.tree(paste("database/dNdS/newick/",name,"_dS.nwk",sep="")))[tree$tip.label]
   )
   data$dNdS = data$dN / data$dS
   
   write.table(data , paste("database/dNdS/",name,".tab",sep=""),quote=F,row.names = F,sep="\t")
-  
 }
 
-compute_files(name = "Embryophyta")
+for (name in list.dirs(path,recursive=F,full.names=F)){
+  compute_files(name)
+}
+
 compute_files(name = "Metazoa")
 compute_files(name = "Eukaryota")
 compute_files(name = "Mammalia")

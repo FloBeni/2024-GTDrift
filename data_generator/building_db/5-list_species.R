@@ -16,15 +16,15 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
 
 species_clade = data.frame()
 for (file in c(
-  "data/lht_collect/metazoa.xls",
-  "data/lht_collect/embryophyta.xls"
+  "data/life_history_traits/metazoa.xls",
+  "data/life_history_traits/embryophyta.xls"
 )){
   mysheets <- read_excel_allsheets(file)
   for (species in names(mysheets)) {
     species_clade = rbind(species_clade,data.frame(
       species,
       clade = mysheets[[species]]$Clade[1],
-      NCBI.txid = mysheets[[species]]$NCBI.txid[1]
+      NCBI.taxid = mysheets[[species]]$NCBI.taxid[1]
     ))
   }
 }
@@ -42,7 +42,7 @@ species_clade[ table_ncbi[table_ncbi$name %in% c("Nematoda","Hymenoptera","Mamma
 
 species_clade$expression_data = species_clade$species %in% list.dirs("database/Transcriptomic",recursive = F,full.names = F)
 list_trnascriptomic = list.dirs(paste("database/Transcriptomic/",sep=""),recursive = F,full.names = F)
-species_clade$expression_data = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x) x %in% list_trnascriptomic )
+species_clade$expression_data = sapply(paste(species_clade$species,"_NCBI.taxid",species_clade$NCBI.taxid,sep=""),function(x) x %in% list_trnascriptomic )
 
 
 dnds_data = data.frame()
@@ -52,13 +52,13 @@ for (file in list.files(paste("database/dNdS",sep=""),recursive = F,full.names =
 
 species_clade$dnds_data = species_clade$species %in% dnds_data$species
 
-lht_tab = read.delim("database/lht.tab")
+lht_tab = read.delim("database/life_history_traits.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab$species
 
-species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.txid",species_clade$NCBI.txid,sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) )
+species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.taxid",species_clade$NCBI.taxid,sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) )
 species_clade$nb_rnaseq = NA
 species_clade$nb_rnaseq = apply(species_clade,1,
-                                function(x) length( list.dirs(paste("database/Transcriptomic/",x["species"],"_NCBI.txid",x["NCBI.txid"],"/",x["assembly_accession"],"/Run",sep=""),recursive = F,full.names = F))
+                                function(x) length( list.dirs(paste("database/Transcriptomic/",x["species"],"_NCBI.taxid",x["NCBI.taxid"],"/",x["assembly_accession"],"/Run",sep=""),recursive = F,full.names = F))
 )
 
 write.table( species_clade , paste("database/list_species.tab",sep=""),quote=F,row.names = F,sep="\t")

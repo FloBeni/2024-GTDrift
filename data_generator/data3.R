@@ -1,22 +1,22 @@
 
 library(stringr)
-species = "Apis_mellifera_NCBI.txid7460"
-contig =  list.dirs(paste("database/BUSCO_annotations/",species,sep=""), full.names = F,recursive = F)
+species = "Apis_mellifera_NCBI.taxid7460"
+assembly =  list.dirs(paste("database/BUSCO_annotations/",species,sep=""), full.names = F,recursive = F)
 
-busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",contig,"/busco_to_gene_id_eukaryota",sep=""))
+busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",assembly,"/busco_to_gene_id_eukaryota",sep=""))
 
 busco_to_gene = busco_to_gene[!(duplicated(busco_to_gene$busco_id,fromLast = FALSE) | duplicated(busco_to_gene$busco_id,fromLast = TRUE)) &
                                 !(duplicated(busco_to_gene$gene_id,fromLast = FALSE) | duplicated(busco_to_gene$gene_id,fromLast = TRUE)) ,]
 
 
-intron_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_intron_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
-gene_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+intron_db = read.delim(paste("database/Transcriptomic/",species,"/",assembly,"/by_intron_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+gene_db = read.delim(paste("database/Transcriptomic/",species,"/",assembly,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
 
-for (file in list.dirs(paste("database/Transcriptomic/",species,"/",contig,"/Run/",sep=""),recursive = F,full.names = F)){
-  intron_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/Run/",file,"/by_intron_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+for (file in list.dirs(paste("database/Transcriptomic/",species,"/",assembly,"/Run/",sep=""),recursive = F,full.names = F)){
+  intron_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",assembly,"/Run/",file,"/by_intron_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
   intron_db = cbind(intron_db , intron_db_to_add)
   
-  gene_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/Run/",file,"/by_gene_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
+  gene_db_to_add = read.delim(paste("database/Transcriptomic/",species,"/",assembly,"/Run/",file,"/by_gene_db.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
   gene_db = cbind(gene_db , gene_db_to_add)
 }
 
