@@ -5,13 +5,11 @@ list_species = read.delim("database/list_species.tab")
 
 paste("of ",nrow(list_species)," distinct species, including ",sum(list_species$clade_group != "Embryophyta")," animal and ",sum(list_species$clade_group == "Embryophyta")," green plant species",sep="")
 
-paste("mass from a sample of ",sum(list_species$lht_data)," species",sep="")
+paste("mass for a subset of ",sum(list_species$lht_data)," species",sep="")
 
 paste("performed on ",sum(list_species$dnds_data)," species using",sep="")
 
-paste("for more than ",sum(list_species$nb_rnaseq)," RNA-seq samples",sep="")
-
-paste("This resource encompasses data for ",sum(list_species$expression_data)," multicellular eukaryotes",sep="")
+paste("for more than ",sum(list_species$nb_rnaseq)," RNA-seq samples across ",sum(list_species$expression_data)," species",sep="")
 
 
 

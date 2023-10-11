@@ -134,7 +134,3 @@ for (clade in c("Aves","Hymenoptera","Lepido_Diptera","Mammalia","Nematoda","Oth
     dnds=paste("dNdS_clade/",clade,"/subset_200_ksites_GC3_root",sep="")
   )
 }
-
-compute_files(name = "Mammalia",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Mammalia/",dnds="dNdS_clade/Mammalia/subset_200_ksites_GC3_root")
-compute_files(name = "Aves",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Aves/",dnds="dNdS_clade/Aves/subset_200_ksites_GC3_root")
-compute_files(name = "Teleostei",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/",raxml="RAxML_clade/Teleostei/",dnds="dNdS_clade/Teleostei/subset_200_ksites_GC3_root")

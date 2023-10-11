@@ -1,0 +1,532 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Gold 6226 CPU @ 2.70GHz, 24 cores, 754 GB RAM
+
+RAxML-NG was called at 08-Aug-2023 13:01:33 as follows:
+
+raxml-ng --all --msa concatenatAAS_cons25.aln --model aas_cons.part --threads auto{16} --bs-trees 10 --tree pars{5},rand{5}
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (5) + parsimony (5)
+  bootstrap replicates: parsimony (10)
+  random seed: 1691492493
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: concatenatAAS_cons25.aln
+[00:00:02] Loaded alignment with 41 taxa and 28109 sites
+
+Alignment comprises 73 partitions and 26679 patterns
+
+Partition 0: EOG091G02B4
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 645 / 637
+Gaps: 12.86 %
+Invariant sites: 7.75 %
+
+Partition 1: EOG091G06OP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 271 / 260
+Gaps: 8.62 %
+Invariant sites: 12.92 %
+
+Partition 2: EOG091G0FYY
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 246 / 236
+Gaps: 9.16 %
+Invariant sites: 13.41 %
+
+Partition 3: EOG091G0CFP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 301 / 297
+Gaps: 11.13 %
+Invariant sites: 10.63 %
+
+Partition 4: EOG091G0E8J
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 350 / 349
+Gaps: 6.61 %
+Invariant sites: 4.00 %
+
+Partition 5: EOG091G065D
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 449 / 431
+Gaps: 15.12 %
+Invariant sites: 15.59 %
+
+Partition 6: EOG091G0BHV
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 261 / 250
+Gaps: 4.58 %
+Invariant sites: 13.03 %
+
+Partition 7: EOG091G0291
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 706 / 535
+Gaps: 7.34 %
+Invariant sites: 40.93 %
+
+Partition 8: EOG091G0MBG
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 315 / 314
+Gaps: 17.84 %
+Invariant sites: 4.76 %
+
+Partition 9: EOG091G0627
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 408 / 403
+Gaps: 10.56 %
+Invariant sites: 6.37 %
+
+Partition 10: EOG091G09L6
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 194 / 194
+Gaps: 8.08 %
+Invariant sites: 4.12 %
+
+Partition 11: EOG091G0AZ7
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 277 / 276
+Gaps: 12.06 %
+Invariant sites: 4.33 %
+
+Partition 12: EOG091G01EW
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 790 / 740
+Gaps: 9.27 %
+Invariant sites: 17.47 %
+
+Partition 13: EOG091G03QC
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 619 / 597
+Gaps: 10.78 %
+Invariant sites: 10.34 %
+
+Partition 14: EOG091G07KL
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 511 / 502
+Gaps: 18.22 %
+Invariant sites: 8.61 %
+
+Partition 15: EOG091G08NN
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 349 / 324
+Gaps: 3.65 %
+Invariant sites: 20.63 %
+
+Partition 16: EOG091G0CW2
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 282 / 279
+Gaps: 17.45 %
+Invariant sites: 10.28 %
+
+Partition 17: EOG091G0814
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 406 / 398
+Gaps: 13.22 %
+Invariant sites: 9.85 %
+
+Partition 18: EOG091G0B9T
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 348 / 302
+Gaps: 3.97 %
+Invariant sites: 30.46 %
+
+Partition 19: EOG091G0DTP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 284 / 279
+Gaps: 9.28 %
+Invariant sites: 7.39 %
+
+Partition 20: EOG091G0G71
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 282 / 271
+Gaps: 4.84 %
+Invariant sites: 10.64 %
+
+Partition 21: EOG091G0GZ4
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 110 / 110
+Gaps: 15.21 %
+Invariant sites: 3.64 %
+
+Partition 22: EOG091G01TH
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 841 / 838
+Gaps: 13.43 %
+Invariant sites: 4.28 %
+
+Partition 23: EOG091G01XI
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 427 / 422
+Gaps: 19.47 %
+Invariant sites: 3.51 %
+
+Partition 24: EOG091G03B9
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 597 / 548
+Gaps: 4.78 %
+Invariant sites: 18.59 %
+
+Partition 25: EOG091G053D
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 390 / 376
+Gaps: 11.16 %
+Invariant sites: 11.54 %
+
+Partition 26: EOG091G06MR
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 405 / 385
+Gaps: 9.21 %
+Invariant sites: 18.52 %
+
+Partition 27: EOG091G0DXP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 258 / 244
+Gaps: 6.28 %
+Invariant sites: 22.09 %
+
+Partition 28: EOG091G0IS6
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 246 / 237
+Gaps: 19.78 %
+Invariant sites: 13.01 %
+
+Partition 29: EOG091G0JU7
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 249 / 249
+Gaps: 8.41 %
+Invariant sites: 3.61 %
+
+Partition 30: EOG091G07OD
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 394 / 383
+Gaps: 4.58 %
+Invariant sites: 12.94 %
+
+Partition 31: EOG091G085U
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 216 / 212
+Gaps: 12.12 %
+Invariant sites: 7.41 %
+
+Partition 32: EOG091G03XO
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 312 / 282
+Gaps: 9.64 %
+Invariant sites: 27.56 %
+
+Partition 33: EOG091G06M8
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 517 / 481
+Gaps: 7.87 %
+Invariant sites: 16.83 %
+
+Partition 34: EOG091G07Z5
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 415 / 394
+Gaps: 7.49 %
+Invariant sites: 15.42 %
+
+Partition 35: EOG091G0DQ3
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 249 / 230
+Gaps: 9.77 %
+Invariant sites: 24.50 %
+
+Partition 36: EOG091G04GW
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 550 / 529
+Gaps: 8.47 %
+Invariant sites: 14.18 %
+
+Partition 37: EOG091G07S9
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 474 / 465
+Gaps: 7.85 %
+Invariant sites: 9.28 %
+
+Partition 38: EOG091G09V2
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 251 / 249
+Gaps: 14.35 %
+Invariant sites: 9.96 %
+
+Partition 39: EOG091G0BHP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 341 / 277
+Gaps: 5.09 %
+Invariant sites: 33.43 %
+
+Partition 40: EOG091G0C2M
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 320 / 317
+Gaps: 11.10 %
+Invariant sites: 8.12 %
+
+Partition 41: EOG091G0EMF
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 146 / 143
+Gaps: 8.34 %
+Invariant sites: 10.27 %
+
+Partition 42: EOG091G0O6E
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 248 / 228
+Gaps: 8.50 %
+Invariant sites: 16.94 %
+
+Partition 43: EOG091G00MI
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 191 / 187
+Gaps: 22.85 %
+Invariant sites: 12.57 %
+
+Partition 44: EOG091G0ELS
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 257 / 248
+Gaps: 12.41 %
+Invariant sites: 17.12 %
+
+Partition 45: EOG091G0ERU
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 386 / 374
+Gaps: 8.99 %
+Invariant sites: 10.62 %
+
+Partition 46: EOG091G0GQO
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 237 / 236
+Gaps: 14.91 %
+Invariant sites: 10.55 %
+
+Partition 47: EOG091G0HS8
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 255 / 255
+Gaps: 9.80 %
+Invariant sites: 0.39 %
+
+Partition 48: EOG091G0I2X
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 223 / 221
+Gaps: 15.21 %
+Invariant sites: 7.17 %
+
+Partition 49: EOG091G0IWR
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 222 / 221
+Gaps: 14.69 %
+Invariant sites: 10.36 %
+
+Partition 50: EOG091G0KS8
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 192 / 191
+Gaps: 9.07 %
+Invariant sites: 5.21 %
+
+Partition 51: EOG091G0P9B
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 168 / 164
+Gaps: 8.74 %
+Invariant sites: 13.69 %
+
+Partition 52: EOG091G01VH
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 1049 / 954
+Gaps: 8.79 %
+Invariant sites: 22.12 %
+
+Partition 53: EOG091G026I
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 735 / 730
+Gaps: 15.40 %
+Invariant sites: 5.85 %
+
+Partition 54: EOG091G03TZ
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 509 / 509
+Gaps: 10.79 %
+Invariant sites: 3.14 %
+
+Partition 55: EOG091G0FZN
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 199 / 194
+Gaps: 25.66 %
+Invariant sites: 11.06 %
+
+Partition 56: EOG091G0H14
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 255 / 255
+Gaps: 10.99 %
+Invariant sites: 9.41 %
+
+Partition 57: EOG091G0IDS
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 153 / 146
+Gaps: 36.47 %
+Invariant sites: 11.76 %
+
+Partition 58: EOG091G0IYB
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 629 / 522
+Gaps: 9.31 %
+Invariant sites: 27.50 %
+
+Partition 59: EOG091G0MJA
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 170 / 168
+Gaps: 10.11 %
+Invariant sites: 11.18 %
+
+Partition 60: EOG091G0ULR
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 212 / 211
+Gaps: 13.61 %
+Invariant sites: 2.83 %
+
+Partition 61: EOG091G017G
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 944 / 818
+Gaps: 5.43 %
+Invariant sites: 26.17 %
+
+Partition 62: EOG091G09BP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 368 / 358
+Gaps: 18.49 %
+Invariant sites: 14.67 %
+
+Partition 63: EOG091G0J56
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 215 / 212
+Gaps: 13.83 %
+Invariant sites: 8.84 %
+
+Partition 64: EOG091G03M4
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 525 / 504
+Gaps: 11.79 %
+Invariant sites: 14.10 %
+
+Partition 65: EOG091G0BG4
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 221 / 219
+Gaps: 11.08 %
+Invariant sites: 6.33 %
+
+Partition 66: EOG091G0ID9
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 283 / 271
+Gaps: 12.20 %
+Invariant sites: 15.55 %
+
+Partition 67: EOG091G0K95
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 320 / 319
+Gaps: 12.49 %
+Invariant sites: 4.06 %
+
+Partition 68: EOG091G017T
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 926 / 846
+Gaps: 7.94 %
+Invariant sites: 17.71 %
+
+Partition 69: EOG091G03BV
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 577 / 486
+Gaps: 4.05 %
+Invariant sites: 31.02 %
+
+Partition 70: EOG091G03RW
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 689 / 677
+Gaps: 7.55 %
+Invariant sites: 7.26 %
+
+Partition 71: EOG091G06HP
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 407 / 370
+Gaps: 23.22 %
+Invariant sites: 19.66 %
+
+Partition 72: EOG091G09D8
+Model: LG+FC+G8m+B
+Alignment sites / patterns: 342 / 340
+Gaps: 15.57 %
+Invariant sites: 7.60 %
+
+
+NOTE: Binary MSA file created: concatenatAAS_cons25.aln.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 16 thread(s)
+
+[00:00:05] Generating 5 random starting tree(s) with 41 taxa
+[00:00:05] Generating 5 parsimony starting tree(s) with 41 taxa
+Parallel parsimony with 16 threads
+Parallel reduction/worker buffer size: 18 KB  / 0 KB
+
+[00:00:06] Data distribution: max. partitions/sites/weight per thread: 6 / 1668 / 266880
+[00:00:06] Data distribution: max. searches per worker: 20
+
+Starting ML tree search with 10 distinct starting trees
+
+[00:08:30] ML tree search #1, logLikelihood: -942203.209980
+[00:17:50] ML tree search #2, logLikelihood: -942203.210148
+[00:26:01] ML tree search #3, logLikelihood: -942203.210314
+[00:33:49] ML tree search #4, logLikelihood: -942203.210406
+[00:43:04] ML tree search #5, logLikelihood: -942203.210171
+[00:48:33] ML tree search #6, logLikelihood: -942203.210364
+[00:54:27] ML tree search #7, logLikelihood: -942203.210176
+[00:58:47] ML tree search #8, logLikelihood: -942203.210080
+[01:04:12] ML tree search #9, logLikelihood: -942203.210214
+[01:09:37] ML tree search #10, logLikelihood: -942203.210080
+
+[01:09:37] ML tree search completed, best tree logLH: -942203.209980
+
+[01:09:37] Starting bootstrapping analysis with 10 replicates.
+
+[01:12:22] Bootstrap tree #1, logLikelihood: -943924.646407
+[01:16:08] Bootstrap tree #2, logLikelihood: -942334.778199
+[01:19:18] Bootstrap tree #3, logLikelihood: -938734.809205
+[01:22:30] Bootstrap tree #4, logLikelihood: -941422.354139
+[01:25:41] Bootstrap tree #5, logLikelihood: -948567.660291
+[01:28:51] Bootstrap tree #6, logLikelihood: -935557.108897
+[01:31:59] Bootstrap tree #7, logLikelihood: -941428.456143
+[01:35:45] Bootstrap tree #8, logLikelihood: -942955.954127
+[01:38:53] Bootstrap tree #9, logLikelihood: -939145.946965
+[01:42:03] Bootstrap tree #10, logLikelihood: -939429.810930
+
+
+Final LogLikelihood: -942203.209980
+
+AIC score: 1887628.419960 / AICc score: 1887824.437018 / BIC score: 1900909.254397
+Free parameters (model + branch lengths): 1611
+
+Best ML tree saved to: concatenatAAS_cons25.aln.raxml.bestTree
+All ML trees saved to: concatenatAAS_cons25.aln.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: concatenatAAS_cons25.aln.raxml.support
+Optimized model saved to: concatenatAAS_cons25.aln.raxml.bestModel
+Bootstrap trees saved to: concatenatAAS_cons25.aln.raxml.bootstraps
+
+Execution log saved to: concatenatAAS_cons25.aln.raxml.log
+
+Analysis started: 08-Aug-2023 13:01:33 / finished: 08-Aug-2023 14:43:38
+
+Elapsed time: 6125.565 seconds
+
