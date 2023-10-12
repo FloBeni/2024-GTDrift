@@ -17,8 +17,7 @@ set_color = append(set_color,c("#fdfd99","#e2cc1a"))
 std <- function(x) sd(x)/sqrt(length(x))
 
 lm_eqn <- function(m=lm(Y ~ X,data)){
-  # paste( "R2 =", format( summary(m)$r.squared , digits = 2) , "; p-value = " , formatC(summary(m)$coefficients[2,4], format = "e", digits = 2 ))
-  paste( "R2 =" , round( summary(m)$r.squared , 2) , "; p-value = " , formatC(summary(m)$coefficients[2,4], format = "e" , digits = 0 ))
+  paste( "R2 = " , round( summary(m)$r.squared , 2) , "; p-value = " , formatC(summary(m)$coefficients[2,4], format = "e" , digits = 0 ))
 }
 
 
@@ -82,7 +81,7 @@ dt_species = read.delim("www/database/list_species.tab",header=T)
 rownames(dt_species) = dt_species$species
 all_listNomSpecies = tapply(dt_species$species,dt_species$clade_group,function(x)  str_replace_all(x,"_"," "))
 dt_species = dt_species[dt_species$expression_data,]
-dt_species$path_db = paste(dt_species$species,"_NCBI.txid",dt_species$NCBI.txid,"/",dt_species$assembly_accession,sep="")
+dt_species$path_db = paste(dt_species$species,"_NCBI.taxid",dt_species$NCBI.taxid,"/",dt_species$assembly_accession,sep="")
 listNomSpecies = tapply(dt_species$species,dt_species$clade_group,function(x)  str_replace_all(x,"_"," "))
 
 data_by_species$clade.qual = factor(dt_species[data_by_species$species,]$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera",

@@ -1,7 +1,7 @@
 
 server <- function(input, output,session) {
   
-  # Tout le bloc permet de montrer des images lors du passage de souris sur interSpecies
+  # Block mount image
   addResourcePath(prefix = "imgResources", directoryPath = "www/species_images/")
   
   hover_event <- reactive({
@@ -64,7 +64,32 @@ server <- function(input, output,session) {
     }
   })
   
-  ###### Fin du bloc
+  ###### End block
+  observeEvent(input$species_gene_struct,ignoreNULL = FALSE,{
+    species = input$species_gene_struct
+    species = str_replace_all(species," ","_")
+    print(species)
+    if (dt_species[species,]$clade_group == "Embryophyta" ){
+      updatePrettyRadioButtons(session,
+                               prettyOptions = list(shape = "round",animation="pulse",
+                                                    status = "primary",bigger=T,
+                                                    fill = TRUE), "gene_list",
+                               choices = c("gene id"="gene_id",
+                                           "eukaryota busco id" = "busco_id_eukaryota",
+                                           "embryophyta busco id" = "busco_id_embryophyta"),selected = "gene_id",inline = T)
+    } else {
+      print("adas")
+      updatePrettyRadioButtons(session,
+                               prettyOptions = list(shape = "round",animation="pulse",
+                                                    status = "primary",bigger=T,
+                                                    fill = TRUE), "gene_list",
+                               choices = c("gene id"="gene_id","metazoa busco id" = "busco_id_metazoa",
+                                           "eukaryota busco id" = "busco_id_eukaryota"
+                               ),selected = "gene_id")
+      print("adas")
+    }
+  })
+  
   observeEvent(input$boxplot_inter,ignoreNULL = FALSE,{
     if (input$boxplot_inter){
       updateSelectizeInput(session, "x_inter", choices = axisInter_list_qualitative,options=list(maxOptions=3000))
@@ -322,6 +347,9 @@ server <- function(input, output,session) {
         domain = str_replace(input$gene_list,"busco_id_","")
         
         busco_gene = read.delim(paste("www/database/BUSCO_annotations/",dt_species[species,]$path_db,"/busco_to_gene_id_",domain,sep=""))
+        busco_gene = busco_gene[!(duplicated(busco_gene$busco_id,fromLast = FALSE) | duplicated(busco_gene$busco_id,fromLast = TRUE)) &
+                                        !(duplicated(busco_gene$gene_id,fromLast = FALSE) | duplicated(busco_gene$gene_id,fromLast = TRUE)) ,]
+        
         rownames(busco_gene) = busco_gene$gene_id
         
         species_genes = species_genes[species_genes$gene_id %in% busco_gene$gene_id, ]

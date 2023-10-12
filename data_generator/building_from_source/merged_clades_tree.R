@@ -68,5 +68,5 @@ for (clade in order_clade[2:9]){print(clade)
   clade_ref = out_name
 }
 
-write.tree(original_tree, file = paste("data/dnds_phylo/per_clade/merged_clades_tree.nwk",sep=""))
+write.tree(original_tree, file = paste("data/dnds_phylo/per_clade/merged_clades_tree_root.nwk",sep=""))
 

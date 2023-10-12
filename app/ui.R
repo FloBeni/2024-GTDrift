@@ -108,7 +108,7 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                                                    fill = TRUE,h4("ID choice"),
                                                    choices = c("gene id"="gene_id","metazoa busco id" = "busco_id_metazoa",
                                                                "eukaryota busco id" = "busco_id_eukaryota",
-                                                               "embryophyta busco id" = "busco_id_embryophyta"),selected = "gene_id",inline = T,)),
+                                                               "embryophyta busco id" = "busco_id_embryophyta"),selected = "gene_id",inline = T)),
                          
                          column(2, selectInput("studied_gene", h4("Gene studied"),choices="")),
                          column(2,  dropdown(   
