@@ -86,10 +86,10 @@ data1$path_db = paste(data1$species,"_NCBI.taxid",data1$NCBI.taxid,"/",data1$ass
 
 
 all_dt = data.frame()
-for (species in data1[data1$expression_data,]$species ){print(species)
-# for (species in c("Drosophila_melanogaster") ){print(species)
+for (species in rev(data1$species) ){print(species)
+  # for (species in c("Drosophila_melanogaster") ){print(species)
   pathData = "/home/fbenitiere/data/Projet-SplicedVariants/"
-  # pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
+  pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
   
   gff_path = paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep="")
   gc_table_path = paste(pathData, "Annotations/",species,"/GC_content.tab",sep="")
@@ -130,7 +130,8 @@ for (species in data1[data1$expression_data,]$species ){print(species)
   data_summary = add_charac(data_summary,'No_prot_annot;quant',"",length(read.fasta(prot_path)))
   
   #### Data_set
-  if (file.exists(by_gene_analysis_path)){
+  print(file.exists(by_gene_analysis_path))
+  if ( file.exists(by_gene_analysis_path) ){
     by_gene =  read.delim(by_gene_analysis_path , header=T , sep="\t",comment.char = "#")
     by_gene = by_gene[by_gene$type == "gene" & grepl("gene_biotype=protein_coding" , by_gene$attributes),]
     rownames(by_gene) = by_gene$gene_id
@@ -140,7 +141,7 @@ for (species in data1[data1$expression_data,]$species ){print(species)
     by_intron = by_intron[by_intron$gene_id %in% by_gene$gene_id,] # FILTRE PSEUDOGENE
     by_intron$median_fpkm = by_gene[by_intron$gene_id,]$median_fpkm
     
-    for (busco_group in c("metazoa","embryophyta","eukaryota","None")){ print(busco_group)
+    for (busco_group in c("metazoa","embryophyta","eukaryota","None")){ 
       can_analyse = T
       if ( busco_group != "None" ){
         if (file.exists(paste("www/database/BUSCO_annotations/",data1[species,]$path_db,"/busco_to_gene_id_",busco_group,sep=""))){
@@ -160,7 +161,6 @@ for (species in data1[data1$expression_data,]$species ){print(species)
           
           by_gene_selected = by_gene[by_gene$busco_id,]
           by_intron_selected = by_intron[by_intron$busco_id & by_intron$intron_class == "major" & by_intron$into_cds == "True",]
-          print(nrow(by_intron_selected))
           
         } else { can_analyse = F }
       } else {
@@ -182,14 +182,10 @@ for (species in data1[data1$expression_data,]$species ){print(species)
         
         for (svr_class in c("all" , "high_SV" , "low_SV")){
           by_intron_selected_svr = by_intron_selected
-          if (svr_class == "all"){print("all")} else if ( svr_class == "high_SV" ){
-            print("high_SV")
+          if (svr_class == "all"){} else if ( svr_class == "high_SV" ){
             by_intron_selected_svr = by_intron_selected[  by_intron_selected$splice_variant_rate >= 0.05 ,]
-            print(nrow(by_intron_selected_svr))
           } else if (svr_class == "low_SV") {
-            print("low_SV")
             by_intron_selected_svr = by_intron_selected[  by_intron_selected$splice_variant_rate < 0.05 ,]
-            print(nrow(by_intron_selected_svr))
           }
           
           data_summary = add_charac(data_summary,paste("average_svr;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",mean(by_intron_selected_svr$splice_variant_rate))
@@ -222,11 +218,6 @@ species_table = data.frame()
 for (species in unique(all_dt$species)){print(species)
   dt = all_dt[all_dt$species==species,]
   rownames(dt) = dt$label
-  if (data1[species,]$clade == "Embryophyta"){
-    dt = dt[!grepl("_metazoa",(rownames(dt))),]
-  } else {
-    dt = dt[!grepl("_embryophyt",(rownames(dt))),]
-  }
   species_table = rbind(species_table,dt[columns,]$value)
 }
 
