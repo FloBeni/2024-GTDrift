@@ -29,6 +29,6 @@ rownames(list_species) = list_species$species
 
 
 lm_eqn <- function(m=lm(Y ~ X,data)){
-  paste("R2 =", round(summary(m)$r.squared, 2) , ", p-value = ",formatC(summary(m)$coefficients[2,4], format = "e", digits = 0),sep="")
+  paste("R2 = ", round(summary(m)$r.squared, 2) , ", p-value = ",formatC(summary(m)$coefficients[2,4], format = "e", digits = 0),sep="")
 }
 

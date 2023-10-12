@@ -10,23 +10,24 @@ pA = ggplot(data3[data3$echantillon == "all introns",],aes(x=sequencing_depth,y 
   geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+
   geom_point(aes(y = unclassified ,fill="Unclassified"),size=3,pch=21,alpha=.7)+
   theme_bw() + theme(
-    axis.title.x = element_text(color="black", size=31,family="economica"),
+    axis.title.x = element_text(color="black", size=26,family="economica"),
     axis.title.y = element_text(color="black", size=25, family="economica"),
     axis.text.y =  element_text(color="black", size=26, family="economica"),
     axis.text.x =  element_text(color="black", size=25, family="economica"),
-    title =  element_text(color="black", size=31, family="economica"),
-    text =  element_text(color="black", size=31, family="economica"),
+    title =  element_text(color="black", size=26, family="economica"),
+    text =  element_text(color="black", size=26, family="economica"),
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
   ) + scale_fill_manual("Intron classes",values = set_color[c(4,6,2,8)] ) + ylab("Number of introns") + xlab("Sequencing depth")+
   labs(
     caption = "(median per-base read coverage BUSCO eukaryota genes)"
-  )
+  ) + 
+  labs(title=expression(paste(italic("Apis mellifera"))))
 pA
 
 resolution=2
-jpeg(paste(path_pannel,"F9pA.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F9pA.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=600/resolution)
 print(pA)
 dev.off()
 
@@ -139,7 +140,7 @@ imgB = load.image(paste(path_pannel,"F9pB.jpg",sep=""))
 
 
 {
-  pdf(file= paste(path_figure,"Figure9.pdf",sep=""), width=4*5/2, height=2.75*3)
+  pdf(file= paste(path_figure,"Figure9.pdf",sep=""), width=3*5/2, height=2.75*3)
   
   m=matrix(rep(NA,2*1), nrow=2)
   
@@ -151,7 +152,7 @@ imgB = load.image(paste(path_pannel,"F9pB.jpg",sep=""))
   par(mar=c(0, 0, 2, 2))
   plot(imgA, axes=F)
   mtext("A",at=20,adj=-2, side=2, line=1, font=2, cex=2,las=2)
-  par(mar=c(0, 0, 2, 10))
+  par(mar=c(1, 0, 1, 1))
   plot(imgB, axes=F)
   mtext("B",at=20,adj=-2, side=2, line=1, font=2, cex=2,las=2)
   

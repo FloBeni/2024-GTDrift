@@ -29,9 +29,9 @@ for (file in c(
       species_clade = rbind(species_clade,data.frame(
         species,
         NCBI.taxid ,
-        max_value = as.numeric(mysheets[[species]]$`Longevity (days)`),
+        value = as.numeric(mysheets[[species]]$`Longevity (days)`),
         db = mysheets[[species]]$`Ref longevity`,
-        lht="lifespan_days"
+        life_history_traits="lifespan_days"
       ))
     }
     
@@ -39,9 +39,9 @@ for (file in c(
       species_clade = rbind(species_clade,data.frame(
         species,
         NCBI.taxid ,
-        max_value = as.numeric(mysheets[[species]]$`Length (cm)`),
+        value = as.numeric(mysheets[[species]]$`Length (cm)`),
         db = mysheets[[species]]$`Ref length`,
-        lht="length_cm"
+        life_history_traits="length_cm"
       ))
     }
     
@@ -49,16 +49,16 @@ for (file in c(
       species_clade = rbind(species_clade,data.frame(
         species,
         NCBI.taxid ,
-        max_value = as.numeric(mysheets[[species]]$`Weight (kg)`),
+        value = as.numeric(mysheets[[species]]$`Weight (kg)`),
         db = mysheets[[species]]$`Ref weight`,
-        lht="weight_kg"
+        life_history_traits="weight_kg"
       ))
     }
   }
 }
-species_clade = species_clade[!is.na(species_clade$max_value),]
+species_clade = species_clade[!is.na(species_clade$value),]
 
-species_clade = species_clade[order(species_clade$max_value , decreasing = T) , ]
+species_clade = species_clade[order(species_clade$value , decreasing = T) , ]
 
 
 

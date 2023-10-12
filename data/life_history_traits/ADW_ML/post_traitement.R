@@ -24,14 +24,11 @@ model_name = "deepset/tinyroberta-squad2"
 
 ml_data = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
-  lht_auto_df = read.csv(paste("data/lht_collect/ADW_ML/",model_name,"/",lht,".tab",sep="") ,quote = "",header = F,sep="\t")
+  lht_auto_df = read.csv(paste("data/life_history_traits/ADW_ML/",model_name,"/",lht,".tab",sep="") ,quote = "",header = F,sep="\t")
   lht_auto_df$clade = list_species[lht_auto_df$V1,]$clade_group
   
   lht_auto_df$occurences  <- sapply(seq_along(lht_auto_df$V1), function(i) sum(lht_auto_df$V1[1:i] == lht_auto_df$V1[i]))
-  # library(ggplot2)
-  # ggplot(lht_auto_df,aes(x=V3)) + geom_histogram() + scale_x_log10()
   
-  # lht_auto_df = lht_auto_df[ lht_auto_df$V1 %in% list_sp, ]
   lht_auto_df$V4 = paste(lht_auto_df$V4," ",sep="")
   lht_auto_df$V4 = str_replace_all(lht_auto_df$V4,",","")
   lht_auto_df$V4 = str_replace_all(lht_auto_df$V4,"\\)","")
@@ -121,27 +118,37 @@ for (lht in c("weight","lifespan","length")){print(lht)
   ml_data = rbind(ml_data,lht_auto_df)
   
 }
-ml_data$id = paste(ml_data$V1,ml_data$category,sep=";")
+ml_data$id = paste(ml_data$V1,"ADW",ml_data$category,sep=";")
 ml_data = data.frame(ml_data)
 rownames(ml_data) = ml_data$id
 
-species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
+ml_data$db="ADW_ML"
+ml_data$species=ml_data$V1
+ml_data = ml_data[,c( "species","db","value","unity","value_used","category","id")]
+
+write.table(ml_data , "data/life_history_traits/ADW_ML/ml_life_history_traits.tab",quote=F,row.names = F,sep="\t")
+
+
+
+
+
+species_clade = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
 manual_truth = species_clade[grepl("ADW",species_clade$db),]
-manual_truth$id = paste(manual_truth$species,sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
+manual_truth$id = paste(manual_truth$species,sapply(manual_truth$life_history_traits,function(x) str_split_1(x,"_")[1]),sep=";")
 rownames(manual_truth) = manual_truth$id
 
 manual_truth$ml_value = ml_data[manual_truth$id,]$value_used
-ml_data$manual_value = manual_truth[ml_data$id,]$max_value
+ml_data$manual_value = manual_truth[ml_data$id,]$value
 
 ml_data$true_ornot =  as.character(ml_data$value_used) == as.character(ml_data$manual_value) 
 ml_data$manual_db =  manual_truth[ml_data$id,]$db
-manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
+manual_truth$true_ornot =  as.character(manual_truth$value) == as.character(manual_truth$ml_value) 
 
 ## success
 print("Prop data retrieved:")
 sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth)
 print("Prop ML error:")
-sum(ml_data$true_ornot,na.rm = T ) / nrow(ml_data)
+1-sum(ml_data$true_ornot,na.rm = T ) / nrow(ml_data)
 
 table(manual_truth$db,manual_truth$true_ornot & !is.na(manual_truth$true_ornot))
 

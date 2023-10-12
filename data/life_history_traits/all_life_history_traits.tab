@@ -1,4 +1,4 @@
-species	NCBI.taxid	max_value	db	lht
+species	NCBI.taxid	value	db	life_history_traits
 Balaenoptera_musculus	9771	190000	ADW	weight_kg
 Balaenoptera_musculus	9771	136000	AnAge	weight_kg
 Chelonoidis_abingdonii	106734	64605	EOL Chelonoidis abingdonii	lifespan_days

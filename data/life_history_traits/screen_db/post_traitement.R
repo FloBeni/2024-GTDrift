@@ -5,8 +5,8 @@ library(stringr)
 real = data.frame()
 screen_data = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
-# for (lht in c("length")){print(lht)
-  lht_auto_df = read.csv(paste("data/lht_collect/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
+  # for (lht in c("length")){print(lht)
+  lht_auto_df = read.csv(paste("data/life_history_traits/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
   
   lht_auto_df$V1 = str_replace_all(lht_auto_df$V1,",","")
   
@@ -122,50 +122,47 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = lht_auto_df[order(lht_auto_df$value_used,decreasing = T),]
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species,lht_auto_df$db)),]
   
-  lht_auto_df$categorie = lht
+  lht_auto_df$category = lht
   screen_data = rbind(screen_data,lht_auto_df)
   
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species)),]
   rownames(lht_auto_df) = lht_auto_df$species
   
   
-  # real[,paste("value_auto",lht,sep="_")] = lht_auto_df[real$species ,]$value_used
-  # real[,paste("check",lht,sep="_")] = as.character(real[,paste("value_auto",lht,sep="_")]) == as.character(real[,lht])
-  # print(table(real[,paste("check",lht,sep="_")]))
-  
 }
 data1 = read.delim("database/list_species.tab")
 rownames(data1) = data1$species
 data1= data1[data1$clade != "Embryophyta",]
 screen_data = screen_data[screen_data$species %in% data1$species,]
-screen_data$id = paste(screen_data$species,screen_data$db,screen_data$categorie,sep=";")
+screen_data$id = paste(screen_data$species,screen_data$db,screen_data$category,sep=";")
 rownames(screen_data) = screen_data$id
 
-####
-# screen_data = screen_data[grepl("ADW",screen_data$db),]
-####
+screen_data = screen_data[,c( "species","db","value","unity","value_used","category","id")]
+
+write.table(screen_data , "data/life_history_traits/screen_db/screened_life_history_traits.tab",quote=F,row.names = F,sep="\t")
 
 
-
-species_clade = read.delim(paste("data/lht_collect/all_lht.tab",sep=""))
-manual_truth = species_clade[grepl("ADW|fishbase|EOL|AnAge",species_clade$db),]
-# manual_truth = species_clade[grepl("ADW",species_clade$db),]
-
-manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$lht,function(x) str_split_1(x,"_")[1]),sep=";")
-rownames(manual_truth) = manual_truth$id
-
-manual_truth$ml_value = screen_data[manual_truth$id,]$value_used
-screen_data$manual_value = manual_truth[screen_data$id,]$max_value
-
-screen_data$true_ornot =  as.character(screen_data$value_used) == as.character(screen_data$manual_value) 
-manual_truth$true_ornot =  as.character(manual_truth$max_value) == as.character(manual_truth$ml_value) 
-
-## success
-print("Prop data retrieved:")
-sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth)
-print("Prop screen error:")
-sum(screen_data$true_ornot,na.rm = T ) / nrow(screen_data)
-
-table(manual_truth$true_ornot & !is.na(manual_truth$true_ornot),manual_truth$db)
-
-# write.table(unique(manual_truth[is.na(manual_truth$true_ornot),]$species),"/home/fbenitiere/2024-EukGTDrift/data/lht_collect/screen_db/list_species2.tab",col.names = F,row.names = F,quote=F)
+species_clade = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
+for (i in c("AnAge","fishbase","EOL","ADW")){
+  print(i)
+  manual_truth = species_clade[grepl(i,species_clade$db),]
+  screen_data = screen_data_all[grepl(i,screen_data_all$db),]
+  
+  manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$life_history_traits,function(x) str_split_1(x,"_")[1]),sep=";")
+  rownames(manual_truth) = manual_truth$id
+  
+  manual_truth$ml_value = screen_data[manual_truth$id,]$value_used
+  screen_data$manual_value = manual_truth[screen_data$id,]$value
+  
+  screen_data$true_ornot =  as.character(screen_data$value_used) == as.character(screen_data$manual_value) 
+  manual_truth$true_ornot =  as.character(manual_truth$value) == as.character(manual_truth$ml_value) 
+  
+  ## success
+  print("Prop data retrieved:")
+  print(sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth))
+  print("Prop screen error:")
+  print(1-sum(screen_data$true_ornot,na.rm = T ) / nrow(screen_data))
+  
+  table(manual_truth$true_ornot & !is.na(manual_truth$true_ornot),manual_truth$db)
+}
+# write.table(unique(manual_truth[is.na(manual_truth$true_ornot),]$species),"/home/fbenitiere/2024-EukGTDrift/data/life_history_traits/screen_db/list_species2.tab",col.names = F,row.names = F,quote=F)
