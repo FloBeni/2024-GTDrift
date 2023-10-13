@@ -1,6 +1,11 @@
 
 server <- function(input, output,session) {
   
+  # output$tableIntra <- renderDataTable(ExplicationsIntra) #tableau des explications des axes du 2eme onglet
+  
+  output$tableInter <- renderDataTable(ExplicationsInter) #tableau des explications des axes du 5eme onglet
+  
+  
   # Block mount image
   addResourcePath(prefix = "imgResources", directoryPath = "www/species_images/")
   
@@ -24,7 +29,7 @@ server <- function(input, output,session) {
     dt = read.delim(inFile$datapath,header = T)
     data_by_species <<- merge(dt,data_by_species, by.x = "species", by.y = "species", all.x = TRUE, all.y = TRUE)
     
-    axisInter <<- rbind(axisInter,data.frame(group = "Uploaded","display_label"=colnames(dt),name_label=colnames(dt),description=NA,quantitative=T))
+    axisInter <<- rbind(axisInter,data.frame(group = "Uploaded" , "display_label" = colnames(dt),name_label=colnames(dt),description=NA,quantitative=T))
     axisInter_quantitative <<- axisInter[axisInter$quantitative,]
     axisInter_list_quantitative <<- tapply(axisInter_quantitative$display_label,axisInter_quantitative$group,list)
     updateSelectizeInput(session, "y_inter", choices = axisInter_list_quantitative,options = list(maxOptions = 3000))
@@ -129,7 +134,9 @@ server <- function(input, output,session) {
       data_by_species = data_by_species[data_by_species[minimum_coverage] > input$coverage_inter , ]
     }
     
-    data_by_species = data_by_species[data_by_species$clade.qual %in% input$clades_inter,]
+    if ( !all(input$clades_inter == levels(data_by_species$clade.qual))){
+      data_by_species = data_by_species[data_by_species$clade.qual %in% input$clades_inter,]
+    }
     data_by_species = data_by_species[!is.na(data_by_species[,xlabel]) & !is.na(data_by_species[,ylabel]),]
     if ( input$pgls_inter ){
       arbrePhylo = read.tree(input$tree_inter)
@@ -200,7 +207,7 @@ server <- function(input, output,session) {
           ggtitle(paste("N=",nrow(data_by_species)," / LM:",lm_eqn(lm(lm_y ~ lm_x)),
                         " / PGLS:",lm_eqn(pgls(pgls_y~pgls_x,shorebird))
                         # "/ Best",gls[[3]],":",lm_eqn(gls[[2]])
-                        ))
+          ))
       } else { 
         p = p + geom_abline(slope=1,intercept=0,alpha = .6)+ ggtitle(paste("N=",nrow(data_by_species)," / LM:",lm_eqn(lm(lm_y~lm_x))))
       }
@@ -343,7 +350,7 @@ server <- function(input, output,session) {
         
         busco_gene = read.delim(paste("www/database/BUSCO_annotations/",dt_species[species,]$path_db,"/busco_to_gene_id_",domain,sep=""))
         busco_gene = busco_gene[!(duplicated(busco_gene$busco_id,fromLast = FALSE) | duplicated(busco_gene$busco_id,fromLast = TRUE)) &
-                                        !(duplicated(busco_gene$gene_id,fromLast = FALSE) | duplicated(busco_gene$gene_id,fromLast = TRUE)) ,]
+                                  !(duplicated(busco_gene$gene_id,fromLast = FALSE) | duplicated(busco_gene$gene_id,fromLast = TRUE)) ,]
         
         rownames(busco_gene) = busco_gene$gene_id
         

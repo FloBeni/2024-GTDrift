@@ -1,13 +1,13 @@
 group	display_label	name_label	description	quantitative
-Life-history traits	Clades	clade.qual	Clade of the species	FALSE
+Life-history traits	Clades	clade.qual	Clade corresponding to the species, it can be the class for vertebrates or the order for insects.	FALSE
 Life-history traits	Life-span (days)	lifespan_days.quant	For longevity when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
 Life-history traits	Body length (cm)	length_cm.quant	For body length, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
 Life-history traits	Weight (kg)	weight_kg.quant	For body weight, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
 Life-history traits	RGBIF Observation	RGBIF_observation.quant	Observation on GBIF	TRUE
 				
-Genome characteristics	Genome size	genome_size.quant	We take the number of A T C and G in the genome fasta	TRUE
-Genome characteristics	GC content	GC_content_proportion.quant	We calculate the fraction of GC content within the genome	TRUE
-Genome characteristics	No of protein annotated	No_prot_annot.quant	No of protein annotated	TRUE
+Genome characteristics	Genome size	genome_size.quant	The number of A T C and G in the genome fasta	TRUE
+Genome characteristics	GC content	GC_content_proportion.quant	The fraction of GC content within the genome	TRUE
+Genome characteristics	No of protein annotated	No_prot_annot.quant	Number of protein annotated	TRUE
 				
 Genome characteristics	Nb of genes	No_genes.buscodataset_	Number of genes	TRUE
 Genome characteristics	Nb of introns	No_introns.buscodataset_	Number of major introns	TRUE
@@ -18,12 +18,9 @@ Genome characteristics	Fraq of introns annotated	prop_intron_annotated.buscodata
 				
 				
 AS dataset	Exon coverage (Buscodataset only)	median_coverage_exon.buscodataset_	Exon coverage (Buscodataset only)	TRUE
-AS dataset	Average SVR per intron	average_svr.svr_class_all.buscodataset_	Average SVR per intron	TRUE
-AS dataset	Average NSVR per intron	average_nsvr.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
-AS dataset	Rsquared relation SVR FPKM	rsquared_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
-AS dataset	Slope relation SVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
-AS dataset	Rsquared relation NSVR FPKM	rsquared_nsvr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
-AS dataset	Slope relation NSVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
+AS dataset	Average SVR per intron	average_svr.svr_class_all.buscodataset_	Average per-intron alternative splicing rate among BUSCO major introns (%).	TRUE
+AS dataset	Rsquared relation SVR FPKM	rsquared_svr_fpkm.svr_class_all.buscodataset_	 Pearson coefficient correlation of the relashionship gene expression level and alternative splicing rate (5% bins according to gene expression level).	TRUE
+AS dataset	Slope relation SVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Pearson coefficient correlation slope of the relashionship gene expression level and alternative splicing rate (5% bins according to gene expression level).	TRUE
 				
 Molecular evolutionary rate	dN/dS Embryophyta	Embryophyta_dnds.quant	none	TRUE
 Molecular evolutionary rate	dN Embryophyta	Embryophyta_dn.quant	none	TRUE

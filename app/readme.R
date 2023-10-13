@@ -56,27 +56,22 @@ add_charac <- function(data_summary,label,description,value){
   return(data_summary)
 }
 
-get_rsquared_slope = function(prop.quantile = 0.2,Xaxis,Yaxis){
-  # print(Xaxis)
-  # print(Yaxis)
-  if (length(Xaxis) != 0){ # Pas de vecteur vide
-    quantile = unique(quantile(Xaxis, probs = seq(0, 1,prop.quantile),na.rm=T))
-    if (length(quantile) > 2){ # au moins un intervalle
-      intervalle = cut(Xaxis, quantile,include.lowest = T,include.higher=T)
-      X = tapply(Xaxis, intervalle,  function(x) mean(x, na.rm=T))
-      Y = tapply(Yaxis, intervalle, function(x) mean(x, na.rm=T))
-      # print(Y)
-      # print(X)
-      formule = lm( formula = Y ~ X)
-      R.signed = summary(formule)$coefficients["X","Estimate"] / abs(summary(formule)$coefficients["X","Estimate"])*round(summary(formule)$adj.r.squared, 3)
-      slope = summary(formule)$coefficients["X","Estimate"]
-      
-      return(c(R.signed,slope))
-    } else {
-      return(c(NA,NA))
-    }} else {
-      return(c(NA,NA))
-    }
+get_rsquared_slope = function(prop.quantile = 0.1,Xaxis,Yaxis){
+  quantile = unique(quantile(Xaxis, probs = seq(0, 1,prop.quantile),na.rm=T))
+  intervalle = cut(Xaxis, quantile,include.lowest = T,include.higher=T)
+  X = tapply(Xaxis, intervalle, median)
+  if ( !any(is.na(X)) ){
+    Y = tapply(Yaxis, intervalle, mean)
+    X = log10(X)
+    pearson_method = cor.test(X, Y,method="pearson")
+    cor = pearson_method$estimate
+    pval_cor = pearson_method$p.value
+    return( c(cor,pval_cor) )
+  } else {
+    return(
+      c(NA,NA)
+    )
+  }
 }
 
 
@@ -87,10 +82,10 @@ table(is.na(data1$max_lifespan_days))
 
 
 all_dt = data.frame()
-for (species in rev(data1$species) ){print(species)
-  # for (species in c("Drosophila_melanogaster") ){print(species)
+# for (species in rev(data1$species) ){print(species)
+for (species in c("Drosophila_melanogaster") ){print(species)
   pathData = "/home/fbenitiere/data/Projet-SplicedVariants/"
-  pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
+  # pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
   
   gff_path = paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep="")
   gc_table_path = paste(pathData, "Annotations/",species,"/GC_content.tab",sep="")
@@ -175,7 +170,7 @@ for (species in rev(data1$species) ){print(species)
         data_summary = add_charac(data_summary,paste("median_length_introns;buscodataset_",busco_group,";quant",sep=""),"",median(abs(by_intron_selected$splice3-by_intron_selected$splice5)))
         data_summary = add_charac(data_summary,paste("No_multi_exonic_genes;buscodataset_",busco_group,";quant",sep=""),"",length(unique(by_intron_selected$gene_id)))
         data_summary = add_charac(data_summary,paste("No_intron_per_gene;buscodataset_",busco_group,";quant",sep=""),"",nrow(by_intron_selected) / length(unique(by_intron_selected$gene_id)))
-        data_summary = add_charac(data_summary,paste("prop_intron_annotated;buscodataset_",busco_group,";quant",sep=""),"",sum(by_intron_selected$isAnnotated) / nrow(by_intron_selected))
+        data_summary = add_charac(data_summary,paste("prop_intron_annotated;buscodataset_",busco_group,";quant",sep=""),"",sum(by_intron_selected$Annotation) / nrow(by_intron_selected))
         
         
         data_summary = add_charac(data_summary,paste("median_gene_fpkm;buscodataset_",busco_group,";quant",sep=""),"",median(by_gene_selected$median_fpkm,na.rm = T))
@@ -189,18 +184,6 @@ for (species in rev(data1$species) ){print(species)
           }
           
           data_summary = add_charac(data_summary,paste("average_svr;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",mean(by_intron_selected_svr$splice_variant_rate))
-          data_summary = add_charac(data_summary,paste("average_nsvr;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",mean(by_intron_selected_svr$nonsplice_variant_rate))
-          
-          Rsvrfpkm = get_rsquared_slope(prop.quantile=0.2,Xaxis=log10(by_intron_selected_svr[ by_intron_selected_svr$median_fpkm != 0 & !is.na(by_intron_selected_svr$median_fpkm),]$median_fpkm),
-                                        Yaxis=by_intron_selected_svr[ by_intron_selected_svr$median_fpkm != 0 & !is.na(by_intron_selected_svr$median_fpkm),]$splice_variant_rate)
-          
-          Rnsvrfpkm = get_rsquared_slope(prop.quantile=0.2,Xaxis=log10(by_intron_selected_svr[ by_intron_selected_svr$median_fpkm != 0 & !is.na(by_intron_selected_svr$median_fpkm),]$median_fpkm),
-                                         Yaxis=by_intron_selected_svr[ by_intron_selected_svr$median_fpkm != 0 & !is.na(by_intron_selected_svr$median_fpkm),]$nonsplice_variant_rate)
-          
-          data_summary = add_charac(data_summary,paste("rsquared_svr_fpkm;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",Rsvrfpkm[1]  )
-          data_summary = add_charac(data_summary,paste("slope_svr_fpkm;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",Rsvrfpkm[2]  )
-          data_summary = add_charac(data_summary,paste("rsquared_nsvr_fpkm;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",Rnsvrfpkm[1]  )
-          data_summary = add_charac(data_summary,paste("slope_nsvr_fpkm;svr_class_",svr_class,";buscodataset_",busco_group,";quant",sep=""),"",Rnsvrfpkm[2]  )
         }
       }
     }

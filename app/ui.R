@@ -23,7 +23,7 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                                                         status = "primary",bigger=T,
                                                         fill = TRUE,h3("Busco dataset"),
                                                         choices = list("Eukaryota"="eukaryota","Metazoa"="metazoa","Embryophyta"="embryophyta",
-                                                                       "None"="None"),selected = "eukaryota",inline = T,),
+                                                                       "None"="None"),selected = "None",inline = T,),
                                      selectInput("shape_inter", h3("Shape"), choices = c("none",axisInter_list_qualitative) , selected = "none"),
                                      pickerInput(inputId = "clades_inter",label = h3("Select/deselect clades"), 
                                                  choices = levels(data_by_species$clade.qual),selected = levels(data_by_species$clade.qual), 
@@ -58,7 +58,7 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                        )
                        
               ),
-              
+              tabPanel("Inter-species Axis",dataTableOutput('tableInter')),
               ## INTRA SPECIES GRAPHIC
               tabPanel("Intra-species graphics",
                        column(12,
