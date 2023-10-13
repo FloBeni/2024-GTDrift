@@ -68,7 +68,6 @@ server <- function(input, output,session) {
   observeEvent(input$species_gene_struct,ignoreNULL = FALSE,{
     species = input$species_gene_struct
     species = str_replace_all(species," ","_")
-    print(species)
     if (dt_species[species,]$clade_group == "Embryophyta" ){
       updatePrettyRadioButtons(session,
                                prettyOptions = list(shape = "round",animation="pulse",
@@ -78,7 +77,6 @@ server <- function(input, output,session) {
                                            "eukaryota busco id" = "busco_id_eukaryota",
                                            "embryophyta busco id" = "busco_id_embryophyta"),selected = "gene_id",inline = T)
     } else {
-      print("adas")
       updatePrettyRadioButtons(session,
                                prettyOptions = list(shape = "round",animation="pulse",
                                                     status = "primary",bigger=T,
@@ -86,7 +84,6 @@ server <- function(input, output,session) {
                                choices = c("gene id"="gene_id","metazoa busco id" = "busco_id_metazoa",
                                            "eukaryota busco id" = "busco_id_eukaryota"
                                ),selected = "gene_id")
-      print("adas")
     }
   })
   
@@ -133,20 +130,17 @@ server <- function(input, output,session) {
     }
     
     data_by_species = data_by_species[data_by_species$clade.qual %in% input$clades_inter,]
-    
     data_by_species = data_by_species[!is.na(data_by_species[,xlabel]) & !is.na(data_by_species[,ylabel]),]
     if ( input$pgls_inter ){
       arbrePhylo = read.tree(input$tree_inter)
       data_by_species = data_by_species[data_by_species$species %in% arbrePhylo$tip.label,]
     }
-    
     data_by_species$img_local <- paste("imgResources/",data_by_species$species,".png",sep="")
     if (input$shape_inter != "none"){
       data_by_species$shape = unlist(data_by_species[axisInter[axisInter$display_label == input$shape_inter,]$name_label ])
     } else {
       data_by_species$shape = ""
     }
-    
     
     if ( !input$boxplot_inter  ){
       data_by_species$custom_data = paste(min(data_by_species[,xlabel]),max(data_by_species[,xlabel]),
@@ -204,8 +198,9 @@ server <- function(input, output,session) {
         gls = GLS(shorebird)
         p = p + geom_abline(slope=1,intercept=0,alpha = .6) +
           ggtitle(paste("N=",nrow(data_by_species)," / LM:",lm_eqn(lm(lm_y ~ lm_x)),
-                        " / PGLS:",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),
-                        "/ Best",gls[[3]],":",lm_eqn(gls[[2]])))
+                        " / PGLS:",lm_eqn(pgls(pgls_y~pgls_x,shorebird))
+                        # "/ Best",gls[[3]],":",lm_eqn(gls[[2]])
+                        ))
       } else { 
         p = p + geom_abline(slope=1,intercept=0,alpha = .6)+ ggtitle(paste("N=",nrow(data_by_species)," / LM:",lm_eqn(lm(lm_y~lm_x))))
       }

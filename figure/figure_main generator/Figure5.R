@@ -14,7 +14,7 @@ colnames(dt_graph)
 dt_graph = data1
 ylabel = "max_length_cm"
 xlabel = "max_lifespan_days"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree.nwk")
+arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = log10(dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])

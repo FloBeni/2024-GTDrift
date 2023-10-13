@@ -1,9 +1,8 @@
 group	display_label	name_label	description	quantitative
 Life-history traits	Clades	clade.qual	Clade of the species	FALSE
-Life-history traits	Eusocialty	socialite.qual	Eusocialty of the species	FALSE
-Life-history traits	Life-span (days)	longevity.quant	For longevity when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
-Life-history traits	Body length (cm)	length.quant	For body length, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
-Life-history traits	Weight (kg)	weight.quant	For body weight, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	Life-span (days)	lifespan_days.quant	For longevity when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	Body length (cm)	length_cm.quant	For body length, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
+Life-history traits	Weight (kg)	weight_kg.quant	For body weight, when sex-specific parameters were available, we retained values measured in females. For insects, longevity and body length were taken at the adult stage (imago).	TRUE
 Life-history traits	RGBIF Observation	RGBIF_observation.quant	Observation on GBIF	TRUE
 				
 Genome characteristics	Genome size	genome_size.quant	We take the number of A T C and G in the genome fasta	TRUE
@@ -26,46 +25,19 @@ AS dataset	Slope relation SVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Av
 AS dataset	Rsquared relation NSVR FPKM	rsquared_nsvr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
 AS dataset	Slope relation NSVR FPKM	slope_svr_fpkm.svr_class_all.buscodataset_	Average NSVR per intron	TRUE
 				
-Molecular evolutionary rate	dN/dS Eukaryota_v6	Eukaryota_v6_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Eukaryota_v6	Eukaryota_v6_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Eukaryota_v6	Eukaryota_v6_ds.quant	none	TRUE
-Molecular evolutionary rate	dN/dS Eukaryota_v7	Eukaryota_v7_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Eukaryota_v7	Eukaryota_v7_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Eukaryota_v7	Eukaryota_v7_ds.quant	none	TRUE
+Molecular evolutionary rate	dN/dS Embryophyta	Embryophyta_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Embryophyta	Embryophyta_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Embryophyta	Embryophyta_ds.quant	none	TRUE
+				
+Molecular evolutionary rate	dN/dS Eukaryota	Eukaryota_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Eukaryota	Eukaryota_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Eukaryota	Eukaryota_ds.quant	none	TRUE
+				
+Molecular evolutionary rate	dN/dS Metazoa	Metazoa_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN Metazoa	Metazoa_dn.quant	none	TRUE
+Molecular evolutionary rate	dS Metazoa	Metazoa_ds.quant	none	TRUE
+				
+Molecular evolutionary rate	dN/dS per_clade	per_clade_dnds.quant	none	TRUE
+Molecular evolutionary rate	dN per_clade	per_clade_dn.quant	none	TRUE
+Molecular evolutionary rate	dS per_clade	per_clade_ds.quant	none	TRUE
 
-Molecular evolutionary rate	dN/dS Embryophyta_v1	Embryophyta_v1_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Embryophyta_v1	Embryophyta_v1_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Embryophyta_v1	Embryophyta_v1_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v11	Metazoa_v11_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v11	Metazoa_v11_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v11	Metazoa_v11_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v9	Metazoa_v9_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v9	Metazoa_v9_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v9	Metazoa_v9_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v4	Metazoa_v4_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v4	Metazoa_v4_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v4	Metazoa_v4_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v5	Metazoa_v5_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v5	Metazoa_v5_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v5	Metazoa_v5_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v6	Metazoa_v6_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v6	Metazoa_v6_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v6	Metazoa_v6_ds.quant	none	TRUE
-
-Molecular evolutionary rate	dN/dS Metazoa_v53	Metazoa_species_filtered_v53.2_dnds.quant	none	TRUE
-Molecular evolutionary rate	dN Metazoa_v53	Metazoa_species_filtered_v53.2_dn.quant	none	TRUE
-Molecular evolutionary rate	dS Metazoa_v53	Metazoa_species_filtered_v53.2_ds.quant	none	TRUE
-
-Molecular evolutionary rate	diversity buffalo	diversity	none	TRUE
-Molecular evolutionary rate	log10_diversity	log10_diversity	none	TRUE
-Molecular evolutionary rate	log10_popsize	log10_popsize	none	TRUE
-Molecular evolutionary rate	piNpiS	piNpiS	none	TRUE
-Molecular evolutionary rate	piN	piN	none	TRUE
-Molecular evolutionary rate	weightcoeff	weightcoeff	none	TRUE
-Molecular evolutionary rate	piS	piS	none	TRUE
-Molecular evolutionary rate	dN/dS 53sp	Means_v1	none	TRUE

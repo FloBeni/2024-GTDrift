@@ -83,6 +83,7 @@ get_rsquared_slope = function(prop.quantile = 0.2,Xaxis,Yaxis){
 data1 = read.delim("www/data/data1.tab")
 rownames(data1) = data1$species
 data1$path_db = paste(data1$species,"_NCBI.taxid",data1$NCBI.taxid,"/",data1$assembly_accession,sep="")
+table(is.na(data1$max_lifespan_days))
 
 
 all_dt = data.frame()
@@ -108,11 +109,10 @@ for (species in rev(data1$species) ){print(species)
   genome_assembly = str_replace(genome_assembly,"#!genome-build-accession NCBI_Assembly:","")
   data_summary = add_charac(data_summary,'genome_assembly',"",genome_assembly)
   
-  
-  data_summary = add_charac(data_summary,'clade;qual',"", data1[species,]$clade)
+  data_summary = add_charac(data_summary,'clade;qual',"", data1[species,]$clade_group)
   data_summary = add_charac(data_summary,'lifespan_days;quant',"", data1[species,]$max_lifespan_days)
   data_summary = add_charac(data_summary,'length_cm;quant',"", data1[species,]$max_length_cm)
-  data_summary = add_charac(data_summary,'weight_cm;quant',"", data1[species,]$max_weight_kg)
+  data_summary = add_charac(data_summary,'weight_kg;quant',"", data1[species,]$max_weight_kg)
   
   key = name_backbone(name=str_replace(species,"_"," "),rank="species")$usageKey
   RGBIF_count = occ_search(key,limit=0)$meta$count
