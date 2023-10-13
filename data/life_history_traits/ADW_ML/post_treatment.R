@@ -127,28 +127,3 @@ ml_data$species=ml_data$V1
 ml_data = ml_data[,c( "species","db","value","unity","value_used","category","id")]
 
 write.table(ml_data , "data/life_history_traits/ADW_ML/ml_life_history_traits.tab",quote=F,row.names = F,sep="\t")
-
-
-
-
-
-species_clade = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
-manual_truth = species_clade[grepl("ADW",species_clade$db),]
-manual_truth$id = paste(manual_truth$species,sapply(manual_truth$life_history_traits,function(x) str_split_1(x,"_")[1]),sep=";")
-rownames(manual_truth) = manual_truth$id
-
-manual_truth$ml_value = ml_data[manual_truth$id,]$value_used
-ml_data$manual_value = manual_truth[ml_data$id,]$value
-
-ml_data$true_ornot =  as.character(ml_data$value_used) == as.character(ml_data$manual_value) 
-ml_data$manual_db =  manual_truth[ml_data$id,]$db
-manual_truth$true_ornot =  as.character(manual_truth$value) == as.character(manual_truth$ml_value) 
-
-## success
-print("Prop data retrieved:")
-sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth)
-print("Prop ML error:")
-1-sum(ml_data$true_ornot,na.rm = T ) / nrow(ml_data)
-
-table(manual_truth$db,manual_truth$true_ornot & !is.na(manual_truth$true_ornot))
-

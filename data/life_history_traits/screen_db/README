@@ -1,5 +1,4 @@
-XX format: signifie que la valeur a ete overwritten par un probleme de formattage et donc mauvaise chose lu
-XX text: signifie que je ne la detecte pas automatiquement, inches par exemple
-XX image: recuperé dans image avec l'echelle donnée
-XX id: Plusieurs id EOL pour une espèces
-XX name: valeurs d'une espèce qui n'a pas le même nom dans EOL alors que la recherche correspondait
+XX format: The value has been replaced due to a formatting issue, resulting in incorrect data interpretation.
+XX text: Automatic detection is not in effect, particularly for units of measurement such as inches.
+XX image: The data is acquired from an image source with the specified scale.
+XX name: It pertains to values attributed to a species that does not share the same name as indicated in the EOL database, even though the search criteria align.

@@ -12,7 +12,6 @@ ml_data =  read.table("data/life_history_traits/ADW_ML/ml_life_history_traits.ta
 rownames(ml_data) = ml_data$id
 
 
-
 manual_truth$screen_value = screen_data[manual_truth$id,]$value_used
 screen_data$manual_value = manual_truth[screen_data$id,]$value
 

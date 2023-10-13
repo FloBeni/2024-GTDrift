@@ -16,9 +16,7 @@ def convert_to_w2n(text_to_conv):
     return(text)
 
 
-model_name = "deepset/roberta-base-squad2"
 model_name = "deepset/tinyroberta-squad2"
-# model_name = "deepset/roberta-large-squad2-hp"
 
 # a) Get predictions
 nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
@@ -36,11 +34,6 @@ path_length_file = ''+model_name+'/length.tab'
 path_weight_file = ''+model_name+'/weight.tab'
 path_lifespan_file = ''+model_name+'/lifespan.tab'
 
-#length_file = open(path_length_file, 'w')
-#weight_file = open(path_weight_file, 'w')
-#lifespan_file = open(path_lifespan_file, 'w')
-
-species = "Tyrannus_savana"
 
 pattern = r'(?<=[^a-z])(kg|g|mg|tons|t|hours|inches|month|centimeters|grams|year|meters|meter|day|months|years|days|m|cm|mm|µm|μm)(?=[^a-z])'
 patternnumeric = r'([0-9])'
@@ -69,7 +62,7 @@ for species in list_species:
 
         text = re.sub(r'Range wingspan.*? in', '', text)
         text = re.sub(r'Range wingspan.*? ft', '', text)
-        # print(text.strip())
+        
         context = text
         print("Mass")
         for i in range(0,10):
@@ -79,9 +72,9 @@ for species in list_species:
                     'context': context
                 }
                 res = nlp(QA_input, top_k=100)
-                # res = [i for i in res if any(c.isalpha() for c in i["answer"])]
+                
                 res = [i for i in res if re.findall(pattern, i["answer"]+';') and re.findall(patternnumeric, convert_to_w2n(i["answer"])+';')]
-                # res = [i for i in res if len(i["answer"]) > 3]
+                
                 if res != []:
                     res=res[0]
                     start_pos = res['start']
@@ -89,7 +82,7 @@ for species in list_species:
 
                     context = context[:start_pos] + context[end_pos:]
                     print(res)
-                    # weight_file.write(species + "\t" + str(res["score"]) + "\t" +  res["answer"] + '\n')
+                    
                     with open(path_weight_file, "a") as file:
                         file.write(species + "\tweight\t" + str(res["score"]) + "\t" + convert_to_w2n(res["answer"]) + '\n')
 
@@ -103,7 +96,7 @@ for species in list_species:
                     'context': context
                 }
                 res = nlp(QA_input, top_k=100)
-                # res = [i for i in res if any(c.isalpha() for c in i["answer"])]
+                
                 res = [i for i in res if re.findall(pattern, i["answer"]+';') and re.findall(patternnumeric, convert_to_w2n(i["answer"])+';')]
                 if res != []:
                     res=res[0]
@@ -112,7 +105,7 @@ for species in list_species:
 
                     context = context[:start_pos] + context[end_pos:]
                     print(res)
-                    # length_file.write(species + "\t" + str(res["score"]) + "\t" +  res["answer"] + '\n')
+                    
 
                     with open(path_length_file, "a") as file:
                         file.write(species + "\tlength\t" + str(res["score"]) + "\t" + convert_to_w2n(res["answer"]) + '\n')
@@ -141,7 +134,7 @@ for species in list_species:
                 }
                 res = nlp(QA_input, top_k=100)
                 res = [i for i in res if re.findall(pattern, i["answer"]+';') and re.findall(patternnumeric, convert_to_w2n(i["answer"])+';')]
-                # res = [i for i in res if any(c.isalpha() for c in i["answer"]) and ]
+                
                 if res != []:
                     res = res[0]
                     start_pos = res['start']
@@ -176,7 +169,7 @@ for species in list_species:
                 }
                 res = nlp(QA_input, top_k=100)
                 res = [i for i in res if re.findall(pattern, i["answer"]+';') and re.findall(patternnumeric, convert_to_w2n(i["answer"])+';')]
-                # res = [i for i in res if any(c.isalpha() for c in i["answer"]) and ]
+                
                 if res != []:
                     res = res[0]
                     start_pos = res['start']

@@ -24,7 +24,6 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                                                         fill = TRUE,h3("Busco dataset"),
                                                         choices = list("Eukaryota"="eukaryota","Metazoa"="metazoa","Embryophyta"="embryophyta",
                                                                        "None"="None"),selected = "None",inline = T,),
-                                     selectInput("shape_inter", h3("Shape"), choices = c("none",axisInter_list_qualitative) , selected = "none"),
                                      pickerInput(inputId = "clades_inter",label = h3("Select/deselect clades"), 
                                                  choices = levels(data_by_species$clade.qual),selected = levels(data_by_species$clade.qual), 
                                                  choicesOpt = list(
@@ -37,9 +36,9 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                                      selectInput("tree_inter", h3("Tree for PGLS"), choices = phylogenetic_trees, selected = "1"),
                                      dropdown(
                                        tags$h2("Parameters"),
-                                       pickerInput("svr_class",h3("Introns SVR classes"), choices = c( "All major introns" = "all",
-                                                                                                       "SVR > 5%" = "high_SV",
-                                                                                                       "SVR <= 5%" = "low_SV"
+                                       pickerInput("svr_class",h3("Introns AS classes"), choices = c( "All major introns" = "all",
+                                                                                                       "AS rate >= 5%" = "high_SV",
+                                                                                                       "AS rate < 5%" = "low_SV"
                                        )),
                                        
                                        sliderInput("coverage_inter",h3("Minimal coverage (reads/bp)"),min = 0, max = 1000, value = 200),
@@ -64,8 +63,8 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                        column(12,
                               column(2,offset = 1,selectInput("species_selected_intra", h2("Species studied"),choices =  listNomSpecies , selected = "Drosophila melanogaster")),
                               column(2, style='padding:10px;',imageOutput('species_image_intra',height=5 , width=5), div(style = "height:120px;")),
-                              column(3,selectInput("y_intra", h2("Y axis"),choices = axisIntra , selected = 1)),
-                              column(3,selectInput("x_intra", h2("X axis or Histogram"),choices = axisIntra , selected = 1)),
+                              column(3,selectInput("y_intra", h2("Y axis"),choices = axisIntra_list , selected = 1)),
+                              column(3,selectInput("x_intra", h2("X axis or Histogram"),choices = axisIntra_list , selected = 1)),
                               column(9,class = "well",offset = 1,withSpinner(type = 4,color ="#136dc0", plotlyOutput("plot_intra",height = "100%",width="100%"))),
                               column(width =2,class="well",  
                                      
@@ -82,7 +81,7 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                                                         choices = list("Eukaryota"="eukaryota","Metazoa"="metazoa","Embryophyta"="embryophyta",
                                                                        "None"="None"),selected = "None",inline = T,),
                                      dropdown( 
-                                       sliderInput("svr_range_intra",h3("SVR range of the introns studied"),min = 0, max = 0.5, value =  c(0,0.5)),
+                                       sliderInput("svr_range_intra",h3("AS range of the introns studied"),min = 0, max = 0.5, value =  c(0,0.5)),
                                        sliderInput("bin_intra",h3("Proportion of N by points (%)"),min = 0, max = 100, value =  10),style = "unite", icon = icon("gears"),
                                        status = "primary", 
                                      ),
@@ -92,6 +91,7 @@ ui <- shinyUI(fluidPage(style = "background-color:#a7c2da;height: 100%;font-fami
                               )
                        )
               ),
+              tabPanel("Intra-species Axis",dataTableOutput('tableIntra')),
               
               ### GENE STRUCTURE
               tabPanel("Gene structure",

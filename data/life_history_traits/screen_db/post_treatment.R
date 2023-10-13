@@ -140,29 +140,3 @@ rownames(screen_data) = screen_data$id
 screen_data = screen_data[,c( "species","db","value","unity","value_used","category","id")]
 
 write.table(screen_data , "data/life_history_traits/screen_db/screened_life_history_traits.tab",quote=F,row.names = F,sep="\t")
-
-
-species_clade = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
-for (i in c("AnAge","fishbase","EOL","ADW")){
-  print(i)
-  manual_truth = species_clade[grepl(i,species_clade$db),]
-  screen_data = screen_data_all[grepl(i,screen_data_all$db),]
-  
-  manual_truth$id = paste(manual_truth$species,sapply(manual_truth$db,function(x) str_split_1(x," ")[1]),sapply(manual_truth$life_history_traits,function(x) str_split_1(x,"_")[1]),sep=";")
-  rownames(manual_truth) = manual_truth$id
-  
-  manual_truth$ml_value = screen_data[manual_truth$id,]$value_used
-  screen_data$manual_value = manual_truth[screen_data$id,]$value
-  
-  screen_data$true_ornot =  as.character(screen_data$value_used) == as.character(screen_data$manual_value) 
-  manual_truth$true_ornot =  as.character(manual_truth$value) == as.character(manual_truth$ml_value) 
-  
-  ## success
-  print("Prop data retrieved:")
-  print(sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth))
-  print("Prop screen error:")
-  print(1-sum(screen_data$true_ornot,na.rm = T ) / nrow(screen_data))
-  
-  table(manual_truth$true_ornot & !is.na(manual_truth$true_ornot),manual_truth$db)
-}
-# write.table(unique(manual_truth[is.na(manual_truth$true_ornot),]$species),"/home/fbenitiere/2024-EukGTDrift/data/life_history_traits/screen_db/list_species2.tab",col.names = F,row.names = F,quote=F)

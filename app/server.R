@@ -1,7 +1,7 @@
 
 server <- function(input, output,session) {
   
-  # output$tableIntra <- renderDataTable(ExplicationsIntra) #tableau des explications des axes du 2eme onglet
+  output$tableIntra <- renderDataTable(ExplicationsIntra) #tableau des explications des axes du 2eme onglet
   
   output$tableInter <- renderDataTable(ExplicationsInter) #tableau des explications des axes du 5eme onglet
   
@@ -143,11 +143,6 @@ server <- function(input, output,session) {
       data_by_species = data_by_species[data_by_species$species %in% arbrePhylo$tip.label,]
     }
     data_by_species$img_local <- paste("imgResources/",data_by_species$species,".png",sep="")
-    if (input$shape_inter != "none"){
-      data_by_species$shape = unlist(data_by_species[axisInter[axisInter$display_label == input$shape_inter,]$name_label ])
-    } else {
-      data_by_species$shape = ""
-    }
     
     if ( !input$boxplot_inter  ){
       data_by_species$custom_data = paste(min(data_by_species[,xlabel]),max(data_by_species[,xlabel]),
@@ -168,7 +163,7 @@ server <- function(input, output,session) {
         axis.text.x =  element_text(color="black", size=20, family="economica"),
         title =  element_text(color="black", size=15, family="economica"),
         legend.text =  element_text(color="black", size=20, family="economica")
-      ) + geom_point(aes(fill=clade.qual,shape=shape),size=4,alpha=0.7)
+      ) + geom_point(aes(fill=clade.qual),size=4,alpha=0.7)
     p
     
     if ( "Y log10" %in% input$scale_inter  ){
@@ -187,7 +182,7 @@ server <- function(input, output,session) {
     
     if ( input$boxplot_inter  ){
       p = p + geom_boxplot(alpha=.1,fill="grey") + 
-        geom_point(aes(fill=clade.qual,shape=shape),size=3,alpha=0.7)+ theme_bw() + theme(
+        geom_point(aes(fill=clade.qual),size=3,alpha=0.7)+ theme_bw() + theme(
           axis.title.x = element_text(color="black",angle = 50, size=25,family="economica"),
           axis.title.y = element_text(color="black", size=25, family="economica"),
           axis.text.y =  element_text(color="black", size=20, family="economica"),
@@ -270,29 +265,28 @@ server <- function(input, output,session) {
                                       species_intron$svr >= input$svr_range_intra[1] & 
                                       species_intron$svr < input$svr_range_intra[2],]
     
-    NSVRgene = tapply(species_intron$sum_nu,species_intron$geneprop_tabid,sum) #calcul NSVR par gene
-    SVRgene = tapply(species_intron$sum_na,species_intron$geneprop_tabid,sum) #calcul SVR par gene
-    intronGene = tapply(species_intron$sum_ns,species_intron$geneprop_tabid,sum) # calcul NS par gene
-    average = tapply(species_intron$length,species_intron$geneprop_tabid,mean)
-    FPKMgene = tapply(species_intron$median_fpkm,species_intron$geneprop_tabid,mean)
     
-    SVRgene = (SVRgene/(SVRgene+intronGene)) #calcul du taux de SVR par gène
+    gene_n1 =  tapply(species_intron$sum_ns,species_intron$geneprop_tabid,sum)
+    gene_n2 =   tapply(species_intron$sum_na,species_intron$geneprop_tabid,sum) 
+    SVRgene = 1 - (1 - (gene_n2 / (gene_n1 + gene_n2)))^(tapply(species_intron$sum_ns,species_intron$geneprop_tabid,length))
+    averageLength = tapply(species_intron$length,species_intron$geneprop_tabid,mean) # average length intron
+    FPKMgene = tapply(species_intron$median_fpkm,species_intron$geneprop_tabid,mean) # FPKM per gene
     
-    NSVRgene = (NSVRgene/(NSVRgene + 2*intronGene)) #calcul du taux de NSVR par gène
+    listeAxis = list("FPKMgene"=FPKMgene,"SVRgene"=SVRgene,"IntronPerGene"=table(species_intron$geneprop_tabid),"averageLength"=averageLength,
+                     "Ns"=species_intron$sum_ns,"Ns+Na"=species_intron$sum_ns+species_intron$sum_na,
+                     "SVRintron"=species_intron$svr,"FPKMintron"=species_intron$median_fpkm,"IntronLength"=species_intron$length)
     
-    listeAxis = list("FPKMgene"=FPKMgene,"SVRgene"=SVRgene,"NSVRgene"=NSVRgene,"IntronPerGene"=table(species_intron$geneprop_tabid),"averageLength"=average,
-                     "NS"=species_intron$sum_ns,"NS+NA"=species_intron$sum_ns+species_intron$sum_na,
-                     "SVRintron"=species_intron$svr,"FPKMintron"=species_intron$median_fpkm,"NSVRintron"=species_intron$nsvr,"IntronLength"=species_intron$length)
-    
+    yintra = axisIntra[axisIntra$display_label == input$y_intra,]$name_label 
+    xintra = axisIntra[axisIntra$display_label == input$x_intra,]$name_label
     if ( !input$histogram_intra ){
-      xaxis = unlist(listeAxis[input$x_intra])
+      xaxis = unlist(listeAxis[xintra])
       proportion = input$bin_intra / 100
       quantile = unique(quantile(xaxis, probs = seq(0, 1,proportion),na.rm=T))
       intervalle = cut(xaxis, quantile,include.lowest = T,include.higher=T)
       
       X = tapply(xaxis, intervalle, mean)
       XerrorBar = tapply(xaxis, intervalle, std)
-      yaxis = unlist(listeAxis[input$y_intra])
+      yaxis = unlist(listeAxis[yintra])
       Y = tapply(yaxis, intervalle, mean)
       YerrorBar = tapply(yaxis, intervalle, std)
       
@@ -300,7 +294,7 @@ server <- function(input, output,session) {
       table(intervalle)
       
       p9 = ggplot(data_sp,aes(x=X,y=Y,text=paste("Nb of samples by group",table(intervalle))))  + theme_bw() +
-        ylab(names(which(axisIntra==input$y_intra))) + xlab(names(which(axisIntra==input$x_intra))) +
+        ylab(input$y_intra) + xlab(axisIntra==input$x_intra) +
         geom_errorbar(aes(ymin=Y-YerrorBar, ymax=Y+YerrorBar),size=0.1) +
         geom_errorbarh(aes(xmin=X-XerrorBar, xmax=X+XerrorBar),size=0.1)+
         ggtitle(paste("No genes or introns studied=",sum(table(intervalle)))) + 
@@ -314,10 +308,10 @@ server <- function(input, output,session) {
         )
     } else {
       
-      data_sp = data.frame(X=unlist(listeAxis[input$x_intra]))
+      data_sp = data.frame(X=unlist(listeAxis[xintra]))
       
       p9 = ggplot(data_sp,aes(x=X)) + geom_histogram( position="dodge",bins=200,alpha=0.8,fill=color_species,col="black")+ theme_bw() +
-        xlab(names(which(axisIntra==input$x_intra))) + ggtitle(paste("N=",nrow(data_sp))) + ylab("Density") + theme(
+        xlab(input$x_intra) + ggtitle(paste("N=",nrow(data_sp))) + ylab("Density") + theme(
           axis.title.x = element_text(color="black", size=25,family="economica"),
           axis.title.y = element_text(color="black", size=25, family="economica"),
           axis.text.y =  element_text(color="black", size=20, family="economica"),
@@ -407,7 +401,7 @@ server <- function(input, output,session) {
                            yend=sum_ns*1.4,fill=category_intron),
                        size=0.5,alpha=1,col="black") +
           theme_bw()  +
-          ylab("Sum of ns") +
+          ylab("Sum of Ns") +
           scale_fill_manual(name="Intron\ngroup",values=set_color) +
           xlab("Position on chromosome (bp)") +
           ggtitle(paste("Chromosome:",intron[1,"seqname"],"and Strand:",intron[1,"strand"])) +  theme(

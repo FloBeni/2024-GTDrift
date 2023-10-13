@@ -88,7 +88,7 @@ dt_species$path_db = paste(dt_species$species,"_NCBI.taxid",dt_species$NCBI.taxi
 listNomSpecies = tapply(dt_species$species,dt_species$clade_group,function(x)  str_replace_all(x,"_"," "))
 
 axisInter = read.delim("www/inter_axis.tab",sep="\t")
-ExplicationsInter = axisInter[axisInter$group!="",c("display_label","description")]
+ExplicationsInter = axisInter[axisInter$group != "",c("display_label","description")]
 
 axisInter_quantitative = axisInter[axisInter$quantitative,]
 axisInter_qualitative = axisInter[!axisInter$quantitative,]
@@ -97,16 +97,9 @@ axisInter_qualitative = axisInter[!axisInter$quantitative,]
 axisInter_list_qualitative = tapply(axisInter_qualitative$display_label,axisInter_qualitative$group,list)
 axisInter_list_quantitative = tapply(axisInter_quantitative$display_label,axisInter_quantitative$group,list)
 
-axisIntra=list("Gene expression (FPKM)"="FPKMgene", # list des axes X et Y possible
-               "Intron expression (FPKM of the gene)"="FPKMintron",
-               "SVR per gene"="SVRgene",
-               "NSVR per gene"="NSVRgene",
-               "SVR per intron"="SVRintron",
-               "NSVR per intron"="NSVRintron",
-               "No introns per gene"="IntronPerGene",
-               "Intron length on average per gene (bp)"="averageLength",
-               "Intron length (bp)"="IntronLength",
-               "NS per intron"="NS",
-               "NS+NA per intron"="NS+NA"
-)
+
+
+axisIntra = read.delim("www/intra_axis.tab",sep="\t")
+axisIntra_list = tapply(axisIntra$display_label,axisIntra$group,list)
+ExplicationsIntra = axisIntra[axisIntra$group != "",c("display_label","description")]
 

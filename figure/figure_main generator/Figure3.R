@@ -34,19 +34,19 @@ imgB = load.image(paste(path_require,"ns_na_nu.png",sep=""))
 imgC = load.image(paste(path_require,"acronyms.png",sep=""))
 
 {
-  pdf(file=paste(path_figure,"Figure3.pdf",sep=""), width=6.75, height=9/1.1)
-  m=matrix(rep(c(rep(1,5),rep(2,3),rep(3,2)),10*1), nrow=10)
+  pdf(file=paste(path_figure,"Figure3.pdf",sep=""), width=6.75, height=7.5/1.1)
+  m=matrix(rep(c(rep(1,4),rep(2,3),rep(3,2)),9*1), nrow=9)
   
   m
   layout(m)
   
-  par(mar=c(0, 0, 1, 0))
+  par(mar=c(0, 0, 0, 0))
   plot(imgA, axes = F)
-  mtext("A", side=2,at=30,adj=-2, line=1, font=2, cex=1.7,las=2)
+  mtext("A", side=2,at=150,adj=-2, line=1, font=2, cex=1.7,las=2)
   par(mar=c(0, 0, 1, 0))
   plot(imgB, axes = F)
   mtext("B",side=2,at=-40,adj=-2,  line=1, font=2, cex=1.7,las=2)
-  par(mar=c(1, 0, 1, 0))
+  par(mar=c(0, 0, 1, 0))
   plot(imgC, axes = F)
   mtext("C", side=2,at=-40,adj=-1.5, line=1, font=2, cex=1.7,las=2)
   dev.off()

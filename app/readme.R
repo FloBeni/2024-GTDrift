@@ -31,14 +31,13 @@ for (file in list_files){
 
 phylo = phylo[sapply(phylo$name,function(x) str_count(x, "/") <= 4),]
 
-write.table(phylo , paste("app/www/phylogenetic_trees_description.tab",sep=""),quote=F,row.names = F,col.names = T,sep="\t")
+write.table(phylo[c(nrow(phylo):1),] , paste("app/www/phylogenetic_trees_description.tab",sep=""),quote=F,row.names = F,col.names = T,sep="\t")
 
 
 
 ## Informations table
 options(stringsAsFactors = F, scipen = 999)
 library(rgbif)
-library(ape)
 library(ggpubr)
 library(ggrepel)
 library(readxl)
@@ -82,10 +81,9 @@ table(is.na(data1$max_lifespan_days))
 
 
 all_dt = data.frame()
-# for (species in rev(data1$species) ){print(species)
-for (species in c("Drosophila_melanogaster") ){print(species)
+for (species in rev(data1$species) ){print(species)
   pathData = "/home/fbenitiere/data/Projet-SplicedVariants/"
-  # pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
+  pathData = "/beegfs/data/fbenitiere/Projet-SplicedVariants/"
   
   gff_path = paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep="")
   gc_table_path = paste(pathData, "Annotations/",species,"/GC_content.tab",sep="")
@@ -177,7 +175,7 @@ for (species in c("Drosophila_melanogaster") ){print(species)
         
         for (svr_class in c("all" , "high_SV" , "low_SV")){
           by_intron_selected_svr = by_intron_selected
-          if (svr_class == "all"){} else if ( svr_class == "high_SV" ){
+          if ( svr_class == "high_SV" ){
             by_intron_selected_svr = by_intron_selected[  by_intron_selected$splice_variant_rate >= 0.05 ,]
           } else if (svr_class == "low_SV") {
             by_intron_selected_svr = by_intron_selected[  by_intron_selected$splice_variant_rate < 0.05 ,]
@@ -192,7 +190,6 @@ for (species in c("Drosophila_melanogaster") ){print(species)
   
   all_dt = rbind(all_dt,data_summary)
 }
-
 
 columns = unique(all_dt$label)
 
