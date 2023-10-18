@@ -54,6 +54,7 @@ compute_files <- function(name){
   data$dNdS = data$dN / data$dS
   
   write.table(data , paste("database/dNdS/",name,".tab",sep=""),quote=F,row.names = F,sep="\t")
+  file.copy(paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""),paste("database/dNdS/phylogeny/",name,"_root.nwk",sep=""))
 }
 
 

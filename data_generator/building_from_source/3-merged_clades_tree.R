@@ -69,4 +69,5 @@ for (clade in order_clade[2:9]){print(clade)
 }
 
 write.tree(original_tree, file = paste("data/dnds_phylo/per_clade/merged_clades_tree_root.nwk",sep=""))
+write.tree(original_tree, file = paste("database/dNdS/phylogeny/merged_clades_tree_root.nwk",sep=""))
 
