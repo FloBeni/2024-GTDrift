@@ -2,7 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-database/Transcriptomic/
-app/www/database/
-app/www/data/
-/home/fbenitiere/2024-EukGTDrift/app/www/species_images/*.png
+database/
