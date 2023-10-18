@@ -106,7 +106,6 @@ compute_files <- function(name,busco_set,path,raxml,dnds){
     
     bash_command <- paste("cp ",path, dnds,"/",i,"/dNdS/*"," data/dnds_phylo/",name,"/dnds/",i, sep="")
     system(bash_command)
-    
     bash_command <- paste("cp ",path, dnds,"/",i,"/concatenatCDS.aln"," data/dnds_phylo/",name,"/dnds/",i,"/concatenatCDS.aln", sep="")
     system(bash_command)
     bash_command <- paste("gzip ","data/dnds_phylo/",name,"/dnds/",i,"/concatenatCDS.aln", sep="")
@@ -120,7 +119,7 @@ compute_files <- function(name,busco_set,path,raxml,dnds){
   }
 }
 
-compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v7/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
+compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v8/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 

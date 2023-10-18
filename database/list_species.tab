@@ -921,7 +921,7 @@ Caenorhabditis_elegans	Nematoda	6239	Nematoda	TRUE	TRUE	TRUE	GCF_000002985.6	50
 Meriones_unguiculatus	Mammalia	10047	Mammalia	TRUE	TRUE	TRUE	GCF_002204375.1	34
 Zonotrichia_albicollis	Aves	44394	Aves	TRUE	FALSE	TRUE	GCF_000385455.1	50
 Bactrocera_oleae	Diptera	104688	Lepido Diptera	TRUE	TRUE	FALSE	GCF_001188975.1	48
-Bagarius_yarrelli	Teleostei	175774	Teleostei	TRUE	FALSE	TRUE	GCA_005784505.1	11
+Bagarius_yarrelli	Teleostei	175774	Teleostei	TRUE	TRUE	TRUE	GCA_005784505.1	11
 Gigantopelta_aegis	Mollusca	1735272	Other Invertebrates	TRUE	TRUE	FALSE	GCF_016097555.1	37
 Trichonephila_clavipes	Arachnida	2585209	Other Invertebrates	TRUE	FALSE	FALSE	GCA_002102615.1	22
 Oncorhynchus_mykiss	Teleostei	8022	Teleostei	TRUE	FALSE	TRUE	GCF_013265735.2	47
@@ -936,16 +936,16 @@ Vulpes_vulpes	Mammalia	9627	Mammalia	TRUE	TRUE	TRUE	GCF_003160815.1	50
 Leptonychotes_weddellii	Mammalia	9713	Mammalia	TRUE	TRUE	TRUE	GCF_000349705.1	7
 Mirounga_leonina	Mammalia	9715	Mammalia	TRUE	TRUE	TRUE	GCF_011800145.1	1
 Puma_concolor	Mammalia	9696	Mammalia	TRUE	TRUE	TRUE	GCF_003327715.1	2
-Aphelenchus_avenae	Nematoda	70226	Nematoda	TRUE	FALSE	TRUE	GCA_020875895.1	15
+Aphelenchus_avenae	Nematoda	70226	Nematoda	TRUE	TRUE	TRUE	GCA_020875895.1	15
 Orbicella_faveolata	Cnidaria	48498	Other Invertebrates	TRUE	TRUE	TRUE	GCF_002042975.1	50
 Hydra_vulgaris	Cnidaria	6087	Other Invertebrates	TRUE	TRUE	FALSE	GCF_022113875.1	50
 Stylophora_pistillata	Cnidaria	50429	Other Invertebrates	TRUE	TRUE	FALSE	GCF_002571385.1	50
-Teladorsagia_circumcincta	Nematoda	45464	Nematoda	TRUE	FALSE	TRUE	GCA_002352805.1	32
+Teladorsagia_circumcincta	Nematoda	45464	Nematoda	TRUE	TRUE	TRUE	GCA_002352805.1	32
 Ancylostoma_ceylanicum	Nematoda	53326	Nematoda	TRUE	TRUE	TRUE	GCA_000402015.1	37
 Alligator_mississippiensis	Crocodylia	8496	Other Vertebrates	TRUE	TRUE	TRUE	GCF_000281125.3	39
 Caligus_rogercresseyi	Crustacea	217165	Other Invertebrates	TRUE	FALSE	TRUE	GCA_013387185.1	7
 Daphnia_galeata	Crustacea	27404	Other Invertebrates	TRUE	TRUE	TRUE	GCA_918697745.1	50
-Armadillidium_vulgare	Crustacea	13347	Other Invertebrates	TRUE	FALSE	TRUE	GCA_004104545.1	15
+Armadillidium_vulgare	Crustacea	13347	Other Invertebrates	TRUE	TRUE	TRUE	GCA_004104545.1	15
 Ramazzottius_varieornatus	Tardigrada	947166	Other Invertebrates	TRUE	TRUE	FALSE	GCA_001949185.1	23
 Puntigrus_tetrazona	Teleostei	1606681	Teleostei	TRUE	TRUE	TRUE	GCF_018831695.1	50
 Caenorhabditis_nigoni	Nematoda	1611254	Nematoda	TRUE	TRUE	FALSE	GCA_002742825.1	40

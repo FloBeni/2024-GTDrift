@@ -23,5 +23,7 @@ cp /home/fbenitiere/data/Projet-SplicedVariants/Annotations/${species}/busco_ana
 cp /home/fbenitiere/data/Projet-SplicedVariants/Annotations/${species}/busco_analysis/busco_to_gene_id_metazoa database/BUSCO_annotations/${species}_NCBI.taxid${taxid_species}/${AssemblyAccession}/busco_to_gene_id_metazoa
 cp /home/fbenitiere/data/Projet-SplicedVariants/Annotations/${species}/busco_analysis/busco_to_gene_id_eukaryota database/BUSCO_annotations/${species}_NCBI.taxid${taxid_species}/${AssemblyAccession}/busco_to_gene_id_eukaryota
 
+find database/BUSCO_annotations/${species}_NCBI.taxid${taxid_species}/${AssemblyAccession}/ -type f -exec gzip {} \;
+
 done
 

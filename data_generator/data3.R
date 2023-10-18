@@ -1,6 +1,6 @@
 
 library(stringr)
-species = "Apis_mellifera_NCBI.taxid7460"
+species = "Drosophila_melanogaster_NCBI.taxid7227"
 assembly =  list.dirs(paste("database/BUSCO_annotations/",species,sep=""), full.names = F,recursive = F)
 
 busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",assembly,"/busco_to_gene_id_eukaryota",sep=""))
@@ -28,12 +28,12 @@ rna_seq = colnames(intron_db)
 list_rna = str_replace_all(rna_seq[grepl("ns_",rna_seq)],"ns_","")
 
 
-if (length( list_rna ) >= 20 ){ nb = 20 } else { nb = length( list_rna )}
+if ( length( list_rna ) >= 20 ){ nb = 20 } else { nb = length( list_rna )}
 data3 = data.frame()
 list_major_intron = list()
 
 for ( i in 1:nb ){ # nombre de RNA-seqs compilés
-  no_replicate = 2
+  no_replicate = 10
   if ( i == 1 ){ no_replicate = length( list_rna )    }
   
   for ( j in 1:no_replicate ){ # nombre de rééchantillonnages

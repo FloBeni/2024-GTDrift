@@ -11,8 +11,8 @@ pA = ggplot(data3[data3$echantillon == "all introns",],aes(x=sequencing_depth,y 
   geom_point(aes(y = unclassified ,fill="Unclassified"),size=3,pch=21,alpha=.7)+
   theme_bw() + theme(
     axis.title.x = element_text(color="black", size=26,family="economica"),
-    axis.title.y = element_text(color="black", size=25, family="economica"),
-    axis.text.y =  element_text(color="black", size=26, family="economica"),
+    axis.title.y = element_text(color="black", size=26, family="economica"),
+    axis.text.y =  element_text(color="black", size=25, family="economica"),
     axis.text.x =  element_text(color="black", size=25, family="economica"),
     title =  element_text(color="black", size=26, family="economica"),
     text =  element_text(color="black", size=26, family="economica"),
@@ -23,7 +23,8 @@ pA = ggplot(data3[data3$echantillon == "all introns",],aes(x=sequencing_depth,y 
   labs(
     caption = "(median per-base read coverage BUSCO eukaryota genes)"
   ) + 
-  labs(title=expression(paste(italic("Apis mellifera"))))
+  labs(title=expression(paste(italic("Drosophila melanogaster"))))+
+  guides(fill = guide_legend(override.aes = list(size = 5)))
 pA
 
 resolution=2
@@ -58,7 +59,7 @@ dt$proportion = 100 * dt$proportion
 scatterPlot <- ggplot(dt,aes(x=sequencing_depth, y=proportion, fill=group)) + 
   geom_point(pch=21,size=3,alpha=.7) + scale_fill_manual("",values=set_color[c(4,6,2)]) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
-    axis.title.y = element_text(color="black", size=25, family="economica"),
+    axis.title.y = element_text(color="black", size=31, family="economica"),
     axis.text.y =  element_text(color="black", size=26, family="economica"),
     axis.text.x =  element_text(color="black", size=25, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
@@ -71,9 +72,9 @@ scatterPlot <- ggplot(dt,aes(x=sequencing_depth, y=proportion, fill=group)) +
   theme(legend.position = "none") +
   ylab("Percentage of annotated introns\n among each category") + xlab("Sequencing depth")+ scale_y_continuous(labels = paste(seq(0,100,25),"%")) +
   guides(fill = guide_legend(override.aes = list(size = 5)))
-# labs(
-#   caption = "(median per-base read coverage BUSCO eukaryota genes)"
-# )
+labs(
+  caption = "(median per-base read coverage BUSCO eukaryota genes)"
+)
 scatterPlot
 
 

@@ -57,6 +57,6 @@ compute_files <- function(name){
 }
 
 
-compute_files(name = "Metazoa")
 compute_files(name = "Eukaryota")
 compute_files(name = "Embryophyta")
+compute_files(name = "Metazoa")
