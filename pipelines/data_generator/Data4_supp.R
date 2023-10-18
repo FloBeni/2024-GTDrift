@@ -50,14 +50,5 @@ for (db in c("AnAge","fishbase","EOL","ADW")){print(db)
   }
 }
 
-## success
-print("Prop data retrieved:")
-print(sum(manual_truth$true_ornot,na.rm = T ) / nrow(manual_truth))
-print("Prop screen error:")
-print(1-sum(screen_data$true_ornot,na.rm = T ) / nrow(screen_data))
-
-table(manual_truth$true_ornot & !is.na(manual_truth$true_ornot),manual_truth$db)
-
-# write.table(unique(manual_truth[is.na(manual_truth$true_ornot),]$species),"/home/fbenitiere/2024-EukGTDrift/data/life_history_traits/screen_db/list_species2.tab",col.names = F,row.names = F,quote=F)
 
 
