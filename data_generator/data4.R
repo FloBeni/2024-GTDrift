@@ -1,4 +1,4 @@
-
+library(stringr)
 
 manual_truth = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
 manual_truth[is.na(manual_truth$db),]$db = "none"
