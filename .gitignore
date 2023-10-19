@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 database/
+database_done/
+database_GTDrift.tar.gz
+database_ShyniApp.tar.gz
+README_database.md

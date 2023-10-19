@@ -1,0 +1,440 @@
+import numpy
+import pandas as pd
+import os,zipfile
+from os import listdir
+from os.path import isfile, join
+
+# snakemake --cluster "sbatch -J {params.name} -p {params.partition} -N 1 --ntasks={params.ntasks} --mem={params.mem} -t {params.time} -o {params.out} -e {params.err}" --use-singularity --singularity-args "--bind /beegfs/home/XXXXXXXX:/beegfs/home/XXXXXXXX,/beegfs/data/XXXXXXXX:/beegfs/data/XXXXXXXX" --rerun-triggers mtime --config ech="subset_200_ksites_GC3" -n
+
+pathData = "/beegfs/data/XXXXXXXX/Projet-SplicedVariants/"
+pathHome = "/beegfs/home/XXXXXXXX/"
+#pathHome = "/home/XXXXXXXX/home/"
+#pathData = "/home/XXXXXXXX/data/Projet-SplicedVariants/"
+
+sif_directory = pathHome + "singularity_sif/sif/"
+sif_directory3_11 = pathHome + "singularity_sif/sif_3.11/"
+pathScriptsR = pathHome + "Scripts/Projet-SplicedVariants/auto_add_species_dnds/pre_analysis/"
+pathdNdS = pathData + "DnDs/"
+pathParam = pathData + "DnDs/param_mapnh_bppml/"
+
+pathRef = pathdNdS + "Metazoa_v11/"
+pathEch = pathdNdS + "Metazoa_clades_v2/"
+
+
+species_list_table = pd.read_table(pathEch + "candidate_species")
+species_list = species_list_table.species.values
+
+dico = {}
+for valeur, facteur in zip(species_list_table.species.values, species_list_table.clade_group.values ):
+    if facteur in dico:
+        dico[facteur].append(valeur)
+    else:
+        dico[facteur] = [valeur]
+print(dico)
+clade_list = list(dico.keys())
+
+list_genes = [f for f in listdir(pathRef + "PRANK_CDS_at_least_85percent") if isfile(join(pathRef + "PRANK_CDS_at_least_85percent", f))]
+list_genes = [ genes.replace('.fa-prank.aln', '') for genes in list_genes]
+# list_genes = list_genes[0:10]
+
+#clade_list = [ i for i in clade_list if i != "Other_Invertebrates"]
+localrules: part_files_per_clade
+
+clade_list=["Other_Vertebrates","Other_Insecta","Other_Invertebrates"]
+# clade_list=["Aves"]
+
+# clade_list = [i for i in clade_list if i != "Other_Invertebrates"]
+
+rule all:
+    input:
+         expand(pathEch + "RAxML_clade/{clade}/summary",clade=clade_list),
+         expand(pathEch + "RAxML_clade/{clade}/aas_cons.part",clade=clade_list),
+         expand(pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln.raxml.support",clade=clade_list),
+        # expand( pathEch + "GC_content.tab")
+        # expand(pathEch + "PRANK_CDS_clade/{gene}/{clade}.fa-prank.aln",gene=list_genes,clade=clade_list),
+        # expand(pathEch+ "dNdS_clade/{clade}/" + config["ech"] + "/1/concatenatCDS.aln",clade=clade_list),
+        # expand(pathEch + "dNdS_clade/{clade}/" + config["ech"] + "/data_calculation.tab",clade=clade_list)
+
+
+
+
+
+rule per_species_nb_gene_aas_tab:
+    params: time = "00-02:00:00", mem = 5000, partition = "normal", ntasks = 1, name = "{species}_nb_gene",
+        out = pathData + "Output/dNdSOutput/{species}_nb_gene_out",
+        err = pathData + "Output/dNdSOutput/{species}_nb_gene_err",
+        list_busco_to_study_path = pathRef + "PRANK_CDS_at_least_85percent/"
+    output:
+        out_tab = pathEch + "per_species_table/{species}.tab"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        Rscript --vanilla {pathScriptsR}generate_tab_nb_gene_per_species.R {wildcards.species} {pathData} busco_to_gene_id_metazoa metazoa_odb9 {params.list_busco_to_study_path} {output.out_tab}
+        """
+
+
+rule pooled_nb_gene_aas_tab:
+    params: time = "00-01:00:00", mem = 5000, partition = "normal", ntasks = 1, name = "pool_nb_gene",
+        out = pathData + "Output/dNdSOutput/pool_nb_gene_out",
+        err = pathData + "Output/dNdSOutput/pool_nb_gene_err",
+        directory = pathEch + "per_species_table/"
+    input:
+         expand( pathEch + "per_species_table/{species}.tab" , species=species_list)
+    output:
+        out_tab = pathEch + "gene_No_aas_cds"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        Rscript --vanilla {pathScriptsR}generate_tab_nb_gene_pooled.R {params.directory} {output.out_tab}
+        """
+
+
+rule per_busco_gene_collect_cds:
+    params: time = "00-48:00:00", mem = 10000, partition = "normal", ntasks = 1, name = "{gene}_collect_cds",
+        out = pathData + "Output/dNdSOutput/{gene}_collect_cds_out",
+        err = pathData + "Output/dNdSOutput/{gene}_collect_cds_err",
+        candidate_species = pathEch + "candidate_species"
+    output:
+        gene_fasta = pathEch + "CDS/{gene}.fa"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        Rscript --vanilla {pathScriptsR}generate_cds_per_gene.R {params.candidate_species} {wildcards.gene} {pathData} busco_to_gene_id_metazoa {output.gene_fasta}
+        """
+
+
+rule count_species_per_gene:
+    params: time = "00-48:00:00", mem = 10000, partition = "normal", ntasks = 1, name = "nb_sp_per_gene",
+        out = pathData + "Output/dNdSOutput/nb_sp_per_gene_out",
+        err = pathData + "Output/dNdSOutput/nb_sp_per_gene_err"
+    input:
+        all_prank = expand(pathEch + "CDS/{gene}.fa" , gene=list_genes),
+        table_species_path = pathEch + "candidate_species",
+        gene_No_aas_cds = pathEch + "gene_No_aas_cds"
+    output:
+        infoPath = pathEch + "RAxML_clade/info_total",
+        summary_output = pathEch + "RAxML_clade/summary"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        Rscript --vanilla {pathScriptsR}nb_species_per_gene.R {input.table_species_path} {pathEch}CDS/ {output.infoPath} {input.gene_No_aas_cds} {output.summary_output}
+        """
+
+
+rule collect_cds_per_clade:
+    params: time = "00-00:30:00", mem = 10000, partition = "normal", ntasks = 1, name = "{clade}_collect_cds_{gene}",
+            out = pathData + "Output/dNdSOutput/{clade}_collect_cds_{gene}_out",
+            err = pathData + "Output/dNdSOutput/{clade}_collect_cds_{gene}_err"
+    input:
+        gene_fasta_cds = pathEch + "CDS/{gene}.fa",
+        table_species_path = pathEch + "candidate_species",
+        gene_No_aas_cds_path =  pathEch + "gene_No_aas_cds"
+    output:
+        gene_fasta = pathEch + "CDS_clade/{gene}/{clade}.fa"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        mkdir -p {pathEch}CDS_clade/{wildcards.gene}
+        Rscript --vanilla {pathScriptsR}generate_cds_per_clade.R {wildcards.clade} {input.gene_fasta_cds} {input.gene_No_aas_cds_path} {input.table_species_path} {output.gene_fasta}
+        """
+
+
+rule alignment_prank_cds_per_clade:
+    params: time="20-00:00:00", mem=5000 , partition="long", ntasks=1, name="{clade}_cds_prank_{gene}",
+            out=pathData + "Output/dNdSOutput/{clade}_cds_prank_{gene}_out",
+            err=pathData + "Output/dNdSOutput/{clade}_cds_prank_{gene}_err"
+    input:
+            CDS = pathEch + "CDS_clade/{gene}/{clade}.fa"
+    output:
+            align_CDS = pathEch + "PRANK_CDS_clade/{gene}/{clade}.fa-prank.aln"
+    retries: 5
+    shell:
+        """
+        mkdir -p {pathEch}PRANK_CDS_clade/{wildcards.gene}
+        if [ -s {input.CDS} ]; then
+             count=$(grep -o '>' {input.CDS} | wc -l)
+             if [ "$count" -eq 1 ]; then 
+                echo "exactly one"
+                cp {input.CDS} {output.align_CDS}
+            else
+                set +e
+                cd {pathEch}PRANK_CDS_clade/{wildcards.gene}
+                prank -d='{input.CDS}' -o='{output.align_CDS}' -DNA -codon
+                mv {output.align_CDS}.best.fas {output.align_CDS}
+            fi
+        else
+            echo "empty"
+            cp {input.CDS} {output.align_CDS}
+        fi
+        """
+
+
+rule prepare_constrain_tree_per_clade:
+    params: time="00-01:00:00", mem=5000, partition="normal", ntasks=1, name="constrain_tree_{clade}",
+            out=pathData + "Output/dNdSOutput/constrain_tree_{clade}_out",
+            err=pathData + "Output/dNdSOutput/constrain_tree_{clade}_err"
+    input:
+        table_species_path = pathEch + "candidate_species",
+        reference_tree_path =  pathRef + "RAxML/concatenatAAS_cons150.aln.raxml",
+        gene_No_aas_cds = pathEch + "gene_No_aas_cds"
+    output:
+        tree_output =  pathEch + "RAxML_clade/{clade}/constrain_tree.aln"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        hostname
+        mkdir -p {pathEch}RAxML_clade/{wildcards.clade}
+        Rscript --vanilla {pathScriptsR}constrain_tree_clade.R {wildcards.clade} {input.table_species_path} {pathEch}CDS/ {input.reference_tree_path} {input.gene_No_aas_cds} {output.tree_output}
+        """
+
+
+# Concatenat des CDS filtrés
+rule concatenate_cds_per_clade_to_phylo:
+    params: time="00-05:00:00", mem=5000, partition="normal", ntasks=1, name="concatenate_cds_{clade}",
+            out=pathData + "Output/dNdSOutput/concatenate_cds_{clade}_out",
+            err=pathData + "Output/dNdSOutput/concatenate_cds_{clade}_err",
+            nb_species_consensus = "25"
+    input:
+        all_prank = expand(pathEch + "PRANK_CDS_clade/{gene}/{{clade}}.fa-prank.aln" , gene=list_genes),
+        table_species_path = pathEch + "candidate_species",
+        gene_No_aas_cds = pathEch + "gene_No_aas_cds",
+        infoPath_total = pathEch + "RAxML_clade/info_total"
+    output:
+        concatenatePath_raxml = pathEch + "RAxML_clade/{clade}/concatenatCDS.aln",
+        concatenatePath_raxmlcons = pathEch + "RAxML_clade/{clade}/concatenatCDS_cons25.aln",
+        concatenatePathAAS_raxml = pathEch + "RAxML_clade/{clade}/concatenatAAS.aln",
+        concatenatePathAAS_raxmlcons = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln",
+        infoPath_raxml = pathEch + "RAxML_clade/{clade}/info",
+        infoPath = pathEch + "RAxML_clade/{clade}/info_total",
+        summary_output = pathEch + "RAxML_clade/{clade}/summary"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        hostname
+        mkdir -p {pathEch}RAxML_clade/{wildcards.clade}
+        Rscript --vanilla {pathScriptsR}concatenation_clade.R {wildcards.clade} {input.table_species_path} {pathEch}PRANK_CDS_clade/ {output.infoPath} {input.gene_No_aas_cds} {output.summary_output} {output.concatenatePath_raxml} {output.concatenatePathAAS_raxml} {output.infoPath_raxml} {output.concatenatePathAAS_raxmlcons} {output.concatenatePath_raxmlcons} {params.nb_species_consensus} {input.infoPath_total}
+        """
+
+
+# Creation des partitioned files
+rule part_files_per_clade:
+    input:
+        infoPath = pathEch + "RAxML_clade/{clade}/info"
+    output:
+        partAAS = pathEch + "RAxML_clade/{clade}/aas.part",
+        partAAS_cons = pathEch + "RAxML_clade/{clade}/aas_cons.part",
+        partCDS = pathEch + "RAxML_clade/{clade}/cds.part"
+    shell:
+        """
+        Rscript --vanilla {pathScriptsR}partitioned_file.R {input.infoPath} {output.partAAS} {output.partCDS} {output.partAAS_cons}
+        """
+
+
+rule constrain_raxml_per_clade:
+    params: time="05-00:00:00", mem=20000,partition="normal", ntasks=16, name="raxml_{clade}",
+            out=pathData + "Output/dNdSOutput/raxml_{clade}_out",
+            err=pathData + "Output/dNdSOutput/raxml_{clade}_err"
+    input:
+        concatenatePathAAS_raxmlcons = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln",
+        tree_filter =  pathEch + "RAxML_clade/{clade}/constrain_tree.aln",
+        partAAS_cons = pathEch + "RAxML_clade/{clade}/aas_cons.part"
+    output:
+        partAAS = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln.raxml.support"
+    retries: 5
+    shell:
+        """
+        raxml-ng --all --msa {input.concatenatePathAAS_raxmlcons} --model {input.partAAS_cons} --threads auto{{{params.ntasks}}} --bs-trees 10 --tree pars{{5}},rand{{5}} --tree-constraint {input.tree_filter}
+        """
+# --redo
+
+rule GC_content_per_clade:
+    params: time="00-10:00:00", mem=5000,partition="normal", ntasks=1, name="{clade}_GC_content",
+            out=pathData + "Output/dNdSOutput/{clade}_GC_content_out",
+            err=pathData + "Output/dNdSOutput/{clade}_GC_content_err"
+    input:
+        all_prank = expand(pathEch + "PRANK_CDS_clade/{gene}/{{clade}}.fa-prank.aln" , gene=list_genes),
+        concatenatePathAAS_raxmlcons = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln"
+    output:
+        data_sequence = pathEch + "dNdS_clade/GC_contents/{clade}_GC_content.tab"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        mkdir -p {pathEch}dNdS_clade/GC_contents/
+        Rscript --vanilla {pathScriptsR}GC_content_clade.R {pathEch}CDS/ {pathEch}CDS_clade/ {wildcards.clade} {pathEch}PRANK_CDS_clade/ {input.concatenatePathAAS_raxmlcons} {output.data_sequence}
+        """
+
+
+rule pooled_GC_content:
+    params: time = "00-01:00:00", mem = 10000, partition = "normal", ntasks = 1, name = "GC_content_pool",
+        out = pathData + "Output/dNdSOutput/GC_content_pool_out",
+        err = pathData + "Output/dNdSOutput/GC_content_pool_err",
+        directory = pathEch + "dNdS_clade/GC_contents/"
+    input:
+         expand(  pathEch + "dNdS_clade/GC_contents/{clade}_GC_content.tab" , clade = clade_list)
+    output:
+        out_tab = pathEch + "GC_content.tab"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        hostname
+        Rscript --vanilla {pathScriptsR}generate_tab_nb_gene_pooled.R {params.directory} {output.out_tab}
+        """
+
+rule GC3_subset_per_clades:
+    params: time = "00-05:00:00", mem = 10000, partition = "normal", ntasks = 1, name = "GC3_subset_{clade}",
+        out = pathData + "Output/dNdSOutput/GC3_subset_{clade}_out",
+        err = pathData + "Output/dNdSOutput/GC3_subset_{clade}_err",
+        nb_sites = 200000, directory = pathEch + "dNdS_clade/{clade}/" + config["ech"] + "/"
+    input:
+        all_prank = expand(pathEch + "PRANK_CDS_clade/{gene}/{{clade}}.fa-prank.aln" , gene=list_genes),
+        dt_seq = pathEch + "GC_content.tab",
+        table_species_path= pathEch + "candidate_species",
+        concatenatePathAAS_raxmlcons = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln"
+    output:
+        pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/1/concatenatCDS.aln"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        hostname
+        Rscript --vanilla {pathScriptsR}partitioned_to_subset_along_GC3.R {pathEch}PRANK_CDS_clade/ {wildcards.clade} {params.directory} {input.dt_seq} {input.table_species_path} {input.concatenatePathAAS_raxmlcons} {params.nb_sites}
+        """
+
+########## PAUSE
+
+rule preparing_to_dnds_analyses:
+    params: time="00:20:00", mem=10000, ntasks=1, name="preparation_analyses_dnds_{clade}",partition="normal",
+        out=pathData + "Output/dNdSOutput/preparation_analyses_dnds_{clade}_out",
+        err=pathData + "Output/dNdSOutput/preparation_analyses_dnds_{clade}_err"
+    input:
+        tree_support = pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln.raxml.root",
+        mapnh_dNdS_SW = pathParam + "mapnh_dNdS_SW_subsets.bpp",
+        mapnh_dNdS = pathParam + "mapnh_dNdS_subsets.bpp",
+        bppml = pathParam + "bppml_subsets.bpp"
+    output:
+        tree_support = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/concatenatAAS.aln.raxml.support",
+        mapnh_dNdS_SW = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/mapnh_dNdS_SW_subsets.bpp",
+        mapnh_dNdS = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/mapnh_dNdS_subsets.bpp",
+        bppml = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/bppml_subsets.bpp"
+    shell:
+        """
+        cp {input.tree_support} {output.tree_support}
+        cp {input.mapnh_dNdS_SW} {output.mapnh_dNdS_SW}
+        cp {input.mapnh_dNdS} {output.mapnh_dNdS}
+        cp {input.bppml} {output.bppml}
+        """
+
+
+rule bppml_analysis:
+    params: time="10-00:00:00", mem=10000, ntasks=1, name="bppml_{clade}_{subset}",partition="long",
+        out=pathData + "Output/dNdSOutput/bppml_{clade}_{subset}_out",
+        err=pathData + "Output/dNdSOutput/bppml_{clade}_{subset}_err"
+    input:
+        tree_rooted=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/concatenatAAS.aln.raxml.support",
+        CDS=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatCDS.aln",
+        bppml_param=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/bppml_subsets.bpp"
+    output:
+        params=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/model_ml.params",
+        tree=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatAAS.aln.raxml.support.dnd_1"
+    singularity:
+        sif_directory + "bppsuite_20_11_22.sif"
+    shell:
+        """
+        bppml TREEIN={input.tree_rooted} CDSIN={input.CDS} TREEOUT={output.tree} PARAMSOUT={output.params} param={input.bppml_param} 
+        mv {output.tree}_1 {output.tree}
+        """
+
+
+rule mapnh_dNdS_analysis:
+    params: time="160:00:00", mem=20000, ntasks=1, name="mapnh_analysis_{clade}_{subset}",partition="normal",
+        out=pathData + "Output/dNdSOutput/mapnh_analysis_{clade}_{subset}_out",
+        err=pathData + "Output/dNdSOutput/mapnh_analysis_{clade}_{subset}_err",
+        directory = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS/"
+    input:
+        param=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/model_ml.params",
+        CDS=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatCDS.aln",
+        tree=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatAAS.aln.raxml.support.dnd_1",
+        mapnh_param= pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/mapnh_dNdS_subsets.bpp"
+    output:
+        dS=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS/counts_dS.dnd",
+        dS_norm=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS/counts_dS_norm.dnd",
+        dN=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS/counts_dN.dnd",
+        dN_norm=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS/counts_dN_norm.dnd"
+    singularity:
+        sif_directory + "bppsuite_20_11_22.sif"
+    shell:
+        """
+        mkdir -p {params.directory}
+        mapnh CDSIN={input.CDS} PARAMSIN={input.param} TREEIN={input.tree} PREFIX={params.directory} param={input.mapnh_param}
+        """
+
+rule mapnh_dNdS_SW:
+    params: time="144:00:00", mem=30000, ntasks=1, name="mapnh_analysis_SW_{clade}_{subset}",partition="normal",
+        out=pathData + "Output/dNdSOutput/mapnh_analysis_SW_{clade}_{subset}_out",
+        err=pathData + "Output/dNdSOutput/mapnh_analysis_SW_{clade}_{subset}_err",
+        directory = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS_SW/"
+    input:
+        CDS=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatCDS.aln",
+        param=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/model_ml.params",
+        tree=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/concatenatAAS.aln.raxml.support.dnd_1",
+        mapnh_param=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/mapnh_dNdS_SW_subsets.bpp"
+    output:
+        dN=pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/{subset}/dNdS_SW/counts_dN_X_S->W.dnd"
+    singularity:
+        sif_directory + "bppsuite_20_11_22.sif"
+    shell:
+        """
+        mkdir -p {params.directory}
+        mapnh CDSIN={input.CDS} PARAMSIN={input.param} TREEIN={input.tree} PREFIX={params.directory} param={input.mapnh_param}
+        """
+
+def mapnh_dNdS_output(wildcards):
+    input_dir = pathEch + "dNdS_clade/" + wildcards.clade + "/" + config["ech"] + "/"
+    sample_dirs = os.listdir(input_dir)
+    samples = [d for d in sample_dirs if os.path.isdir(os.path.join(input_dir, d))]
+    return  expand(pathEch + "dNdS_clade/" + wildcards.clade + "/" + config["ech"] + "/{subset}/dNdS/counts_dN_norm.dnd",subset=samples)
+
+def mapnh_dNdS_SW_output(wildcards):
+    input_dir = pathEch + "dNdS_clade/" + wildcards.clade + "/" + config["ech"] + "/"
+    sample_dirs = os.listdir(input_dir)
+    samples = [d for d in sample_dirs if os.path.isdir(os.path.join(input_dir, d))]
+    return expand(pathEch + "dNdS_clade/" + wildcards.clade + "/" + config["ech"] + "/{subset}/dNdS_SW/counts_dN_X_S->W.dnd", subset=samples)
+
+
+rule dnds_collecting:
+    params: time="02:00:00", mem=10000, ntasks=1, name="dnds_collecting_{clade}",partition="normal",
+        out = pathData + "Output/dNdSOutput/dnds_collecting_{clade}_out",
+        err = pathData + "Output/dNdSOutput/dnds_collecting_{clade}_err",
+        pathdNdS = pathEch + "dNdS_clade/{clade}/" + config["ech"] + "/"
+    input:
+        mapnh_dNdS_SW = mapnh_dNdS_SW_output,
+        mapnh_dNdS = mapnh_dNdS_output
+    output:
+        output_table = pathEch + "dNdS_clade/{clade}/" + config["ech"] +"/data_calculation.tab"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        source {pathHome}.bashrc
+        hostname
+        Rscript --vanilla {pathScriptsR}Calculate_dNdS_per_branch.R {params.pathdNdS} {output.output_table}
+        """

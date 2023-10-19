@@ -1,15 +1,15 @@
+# Extract from the original excel files the relevant data.
 options(stringsAsFactors = F, scipen = 999)
 options(java.parameters = "-Xmx1024m")
 library(stringr)
 library(xlsx)
 
-list_species = data.frame(sp_taxid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F))
-list_species$species = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][1])
-list_species$NCBI.taxid = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][2])
+list_species = data.frame(sp_taxid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F)) # Get species.
+list_species$species = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][1]) # Extract scientific name.
+list_species$NCBI.taxid = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][2]) # Extract NCBI taxID.
 rownames(list_species) = list_species$species
 
-read_excel_allsheets <- function(filename, tibble = FALSE) {
-  # fonction de lecture de fichier excel
+read_excel_allsheets <- function(filename, tibble = FALSE) { # Function to read excel files.
   sheets <- readxl::excel_sheets(filename)
   x <-
     lapply(sheets, function(X)
@@ -20,6 +20,7 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
   x
 }
 
+# For embryophyta.
 excel_file = "data/life_history_traits/embryophyta.xls"
 for (file in c(
   "/home/fbenitiere/Documents/embryophyta_species.xls")){
@@ -30,11 +31,13 @@ for (file in c(
       dt_sample$NCBI.taxid = NA
       dt_sample$NCBI.taxid[1] = list_species[species,]$NCBI.taxid
       dt_sample = dt_sample[,c("Species","NCBI.taxid","Socialite","Clade", "Length (cm)","Ref length","Longevity (days)", "Ref longevity","Weight (kg)","Ref weight")]
-      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F)
+      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F) # Save the excel file.
     }
   }
 }
 
+
+# For metazoa.
 excel_file = "data/life_history_traits/metazoa.xls"
 
 for (file in c(
@@ -43,18 +46,14 @@ for (file in c(
   "/home/fbenitiere/Documents/metazoa_species2.xls")){
   mysheets <- read_excel_allsheets(file)
   print(file)
-  # excel_file = "data/life_history_traits/metazoav2.xls"
-  # for (species in names(mysheets)[368:1000]){
   for (species in names(mysheets)){
     if (species %in% list_species$species){print(species)
       dt_sample = mysheets[[species]]
       dt_sample$NCBI.taxid = NA
       dt_sample$NCBI.taxid[1] = list_species[species,]$NCBI.taxid
       dt_sample = dt_sample[,c("Species","NCBI.taxid","Socialite","Clade", "Length (cm)","Ref length","Longevity (days)", "Ref longevity","Weight (kg)","Ref weight")]
-      
       dt_sample = dt_sample[rowSums(is.na(dt_sample))!= ncol(dt_sample),]
-      
-      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F)
+      write.xlsx2(dt_sample,excel_file,sheetName = species,append=T,row.names = F) # Save the excel file.
     }
   }
 }

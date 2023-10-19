@@ -1,4 +1,4 @@
-
+# Collect from the excel files all the life history traits extracted manually (see method).
 options(stringsAsFactors = F, scipen = 999)
 library(readxl)
 library(xlsx)
@@ -25,6 +25,8 @@ for (file in c(
     print(species)
     study = mysheets[[species]]$Group_study[1]
     NCBI.taxid = mysheets[[species]]$NCBI.taxid[1]
+    
+    # For longevity.
     if (length(mysheets[[species]]$`Longevity (days)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
@@ -35,6 +37,7 @@ for (file in c(
       ))
     }
     
+    # For body length.
     if (length(mysheets[[species]]$`Length (cm)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
@@ -45,6 +48,7 @@ for (file in c(
       ))
     }
     
+    # For body mass.
     if (length(mysheets[[species]]$`Weight (kg)`) != 0 ){
       species_clade = rbind(species_clade,data.frame(
         species,
@@ -62,5 +66,5 @@ species_clade = species_clade[order(species_clade$value , decreasing = T) , ]
 
 
 
-write.table(species_clade , paste("data/life_history_traits/all_life_history_traits.tab",sep=""),quote=F,row.names = F,sep="\t")
+write.table(species_clade , paste("data/life_history_traits/all_life_history_traits.tab",sep=""),quote=F,row.names = F,sep="\t") # Save the data.
 

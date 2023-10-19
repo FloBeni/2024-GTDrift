@@ -1,14 +1,14 @@
+# Extract information and metadata for reproducibility from each dN/dS and phylogenetic tree analysis.
 library(stringr)
 library(ape)
 
-list_species = data.frame(sp_taxid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F))
-list_species$species = sapply(list_species$sp_taxid,function(x) str_split(x,"NCBI.taxid")[[1]][1])
-list_species$NCBI.taxid = sapply(list_species$sp_taxid,function(x) str_split(x,"NCBI.taxid")[[1]][2])
+list_species = data.frame(sp_taxid = list.dirs("database/BUSCO_annotations/",recursive = F,full.names = F)) # Get species.
+list_species$species = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][1]) # Extract scientific name.
+list_species$NCBI.taxid = sapply(list_species$sp_taxid,function(x) str_split(x,"_NCBI.taxid")[[1]][2]) # Extract NCBI taxID.
 rownames(list_species) = list_species$species
 
 
-compute_files <- function(name,busco_set,path,raxml,dnds){
-  ## reproducibility phylo
+compute_files <- function(name,busco_set,path,raxml,dnds){ # Function to systematically download and reformat metadata from the original directories.
   
   dir.create( paste("data/dnds_phylo/",name,"/",sep=""),recursive = T)
   
@@ -119,6 +119,7 @@ compute_files <- function(name,busco_set,path,raxml,dnds){
   }
 }
 
+# Execute the function for each analysis.
 compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Eukaryota_v8/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")

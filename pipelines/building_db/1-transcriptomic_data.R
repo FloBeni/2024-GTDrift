@@ -1,5 +1,4 @@
-.libPaths(c( "/beegfs/home/fbenitiere/R/x86_64-pc-linux-gnu-library/4.3"))
-
+# Create and complete the 'Transcriptomic' directory.
 options(stringsAsFactors = F, scipen = 999)
 library(stringr)
 library(taxize)
@@ -20,7 +19,9 @@ for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_d
   print(species)
   if (file.exists(paste(pathData,"Analyses/",species,"/by_gene_analysis.tab",sep=""))){
     Sys.sleep(20)
-    taxID = get_uid_(species)[[1]]["uid"] # Get TaxID
+    taxID = get_uid_(species)[[1]]["uid"] # Get TaxID.
+    
+    # Get Assembly accession from gff.
     con <- file(paste(pathData , "Annotations/",species,"/data_source/annotation.gff",sep=""),"r")
     first_line <- readLines(con,n=10)
     close(con)
@@ -31,19 +32,20 @@ for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_d
     bash_command <- paste("mkdir -p ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,sep="")
     system(bash_command)
     
+    # Get genes table and compress.
     bash_command <- paste("cp ",pathData,"Analyses/",species,"/by_gene_analysis.tab ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,sep="")
     system(bash_command)
-    
     bash_command <- paste("gzip ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/by_gene_analysis.tab",sep="")
     system(bash_command)
     
+    # Get SRA runinfo table.
     bash_command <- paste("cp ",pathData,"Annotations/",species,"/SRAruninfo.tab ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,sep="")
     system(bash_command)
     
     
     sra_tab = read.delim(paste(pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/SRAruninfo.tab",sep=""))
     
-    ## BY INTRON
+    # From original database reformat introns table.
     by_intron = read.delim(file=paste(pathData,"Analyses/",species,"/by_intron_cds.tab",sep=""), header=T , sep="\t",comment.char = "#")
     by_intron$id = paste(by_intron$seqname,by_intron$gene_id,by_intron$splice5,by_intron$splice3,by_intron$strand,sep=";")
     
@@ -75,15 +77,15 @@ for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_d
     colnames(by_intron) = str_replace_all(colnames(by_intron),"n2","na")
     colnames(by_intron) = str_replace_all(colnames(by_intron),"n3","nu")
     
-    
+    # Save introns table.
     bash_command <- paste("grep '^#' ",pathData,"Analyses/",species,"/by_intron_cds.tab | sed 's/n1/ns/g; s/n2/na/g; s/n3/nu/g' > ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/by_intron_analysis.tab",sep="")
     system(bash_command)
     
     write.table(by_intron,paste(pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/by_intron_analysis.tab",sep=""), row.names=F, col.names=T, sep="\t", quote=F, append=TRUE)
     
+    # Compress introns table.
     bash_command <- paste("gzip ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/by_intron_analysis.tab",sep="")
     system(bash_command)
-    ###
     
     con <- file(paste(pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/by_gene_analysis.tab.gz",sep=""),"r")
     first_line <- readLines(con,n=10)
@@ -93,22 +95,21 @@ for (species in list_species[sapply(list_species,function(x) !any(grepl(x,list_d
     sra_list = str_split(str_split(sra_list,": ")[[1]][2]," ")[[1]]
     print(sra_list == sra_tab$Run)
     
-    for (sra in sra_list){
-      
+    for (sra in sra_list){ # for each sra create a directory.
       bash_command <- paste("mkdir -p ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/Run/",sra,sep="")
       system(bash_command)
-  }    
-         
-      bash_command <- paste("python3 transcriptomic_import.py ",pathData,"Analyses/",species,"/by_gene_db.tab.gz ",paste(sra_list,collapse=',')," ", pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/Run/"," /by_gene_db.tab.gz",sep="")
-print(bash_command)
-      system(bash_command)
-      
-      
-      
-      bash_command <- paste("python3 transcriptomic_import.py ", pathData,"Analyses/",species,"/by_intron_db.tab.gz ", paste(sra_list,collapse=',')," ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/Run/"," /by_intron_db.tab.gz",sep="")
-print(bash_command)
-      system(bash_command)
-    }
+    }    
+    
+    # Create genes table per SRA Run.
+    bash_command <- paste("python3 transcriptomic_import.py ",pathData,"Analyses/",species,"/by_gene_db.tab.gz ",paste(sra_list,collapse=',')," ", pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/Run/"," /by_gene_db.tab.gz",sep="")
+    print(bash_command)
+    system(bash_command)
+    
+    # Create introns table per SRA Run.
+    bash_command <- paste("python3 transcriptomic_import.py ", pathData,"Analyses/",species,"/by_intron_db.tab.gz ", paste(sra_list,collapse=',')," ",pathData,"per_species/",species,"_NCBI.taxID",taxID,"/",genome_assembly,"/Run/"," /by_intron_db.tab.gz",sep="")
+    print(bash_command)
+    system(bash_command)
+  }
 }
 
 

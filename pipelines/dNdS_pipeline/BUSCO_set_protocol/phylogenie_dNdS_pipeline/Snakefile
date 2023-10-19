@@ -1,0 +1,103 @@
+import numpy
+import pandas as pd
+import os, zipfile
+
+# snakemake --use-singularity --singularity-args "--bind /beegfs/home/XXXXXXXX:/beegfs/home/XXXXXXXX,/beegfs/data/XXXXXXXX:/beegfs/data/XXXXXXXX" --cluster "sbatch -J {params.name} -p {params.partition} -N 1 --ntasks={params.ntasks} --mem={params.mem} -t {params.time} -o {params.out} -e {params.err}" --config sample="subset_200_ksites_GC3_root" ech="Embryophyta_v2" -j 100 -n
+
+conda_envs = "/beegfs/home/XXXXXXXX/envs/"
+TMPDIR= "/beegfs/data/XXXXXXXX/tmp"
+
+pathData = "/beegfs/data/XXXXXXXX/Projet-SplicedVariants/"
+#pathData = "/home/XXXXXXXX/data/Projet-SplicedVariants/"
+pathHome = "/beegfs/home/XXXXXXXX/"
+#pathHome = "/home/XXXXXXXX/home/"
+pathLogiciels = pathHome + "Logiciels/"
+sif_directory = pathHome + "singularity_sif/sif/"
+pathParam = pathData + "DnDs/param_mapnh_bppml/"
+
+pathFolder = pathData + "DnDs/" + config["ech"] + "/"
+pathdNdS = pathFolder + config["sample"] + "/"
+
+pathScriptsR = pathHome + "Scripts/Projet-SplicedVariants/phylogenie_dNdS_pipeline/"
+
+from os import listdir
+from os.path import isfile, join, isdir
+
+onlyfiles = [f for f in listdir(pathdNdS) if isdir(join(pathdNdS, f))]
+print(onlyfiles)
+
+rule all:
+    input:
+        expand(pathdNdS + "{subset}/concatenatAAS.aln.raxml.support.dnd_1", subset=onlyfiles),
+        expand(pathdNdS + "{subset}/dNdS/counts_dN.dnd", subset=onlyfiles)
+
+
+
+rule preparation:
+    params: time="00:20:00", mem=10000, ntasks=1, partition="normal", name="preparation",
+        out=pathData + "Output/dNdSOutput/preparation_out",
+        err=pathData + "Output/dNdSOutput/preparation_err"
+    input:
+      tree_support = pathFolder + "RAxML/concatenatAAS_cons50.aln.raxml.root",
+        mapnh_dNdS_SW = pathParam + "mapnh_dNdS_SW_subsets.bpp",
+        mapnh_dNdS = pathParam + "mapnh_dNdS_subsets.bpp",
+        bppml = pathParam + "bppml_subsets.bpp"
+    output:
+        tree_support = pathdNdS + "concatenatAAS.aln.raxml.support",
+        mapnh_dNdS_SW = pathdNdS + "mapnh_dNdS_SW_subsets.bpp",
+        mapnh_dNdS = pathdNdS + "mapnh_dNdS_subsets.bpp",
+        bppml = pathdNdS + "bppml_subsets.bpp"
+    shell:
+        """
+        mkdir -p {pathdNdS}
+        cp {input.tree_support} {output.tree_support}
+        cp {input.mapnh_dNdS_SW} {output.mapnh_dNdS_SW}
+        cp {input.mapnh_dNdS} {output.mapnh_dNdS}
+        cp {input.bppml} {output.bppml}
+        """
+
+
+rule bppml:
+    params: time="10-00:00:00", mem=10000, ntasks=1, name="bppml_{subset}",partition="long",
+        out=pathData + "Output/dNdSOutput/bppml_{subset}_out",
+        err=pathData + "Output/dNdSOutput/bppml_{subset}_err"
+    input:
+        tree_rooted=pathdNdS + "concatenatAAS.aln.raxml.support",
+        CDS=pathdNdS + "{subset}/concatenatCDS.aln",
+        bppml_param=pathdNdS + "bppml_subsets.bpp"
+    output:
+        params=pathdNdS + "{subset}/model_ml.params",
+        tree=pathdNdS + "{subset}/concatenatAAS.aln.raxml.support.dnd_1"
+    singularity:
+        sif_directory + "bppsuite_20_11_22.sif"
+    shell:
+        """
+        bppml TREEIN={input.tree_rooted} CDSIN={input.CDS} TREEOUT={output.tree} PARAMSOUT={output.params} param={input.bppml_param}
+        mv {output.tree}_1 {output.tree}
+        """
+
+
+
+rule mapnh_dNdS:
+    params: time="160:00:00", mem=20000, ntasks=1, name="mapnh_dNdS_{subset}",partition="normal",
+        out=pathData + "Output/dNdSOutput/mapnh_dNdS_{subset}_out",
+        err=pathData + "Output/dNdSOutput/mapnh_dNdS_{subset}_err",
+        directory = pathdNdS + "{subset}/dNdS/"
+    input:
+        CDS=pathdNdS + "{subset}/concatenatCDS.aln",
+        param=pathdNdS + "{subset}/model_ml.params",
+        tree=pathdNdS + "{subset}/concatenatAAS.aln.raxml.support.dnd_1",
+        mapnh_param=pathdNdS + "mapnh_dNdS_subsets.bpp"
+    output:
+        dS=pathdNdS + "{subset}/dNdS/counts_dS.dnd",
+        dS_norm=pathdNdS + "{subset}/dNdS/counts_dS_norm.dnd",
+        dN=pathdNdS + "{subset}/dNdS/counts_dN.dnd",
+        dN_norm=pathdNdS + "{subset}/dNdS/counts_dN_norm.dnd"
+    singularity:
+        sif_directory + "bppsuite_20_11_22.sif"
+    shell:
+        """
+        mkdir -p {params.directory}
+        mapnh CDSIN={input.CDS} PARAMSIN={input.param} TREEIN={input.tree} PREFIX={params.directory} param={input.mapnh_param}
+        """
+

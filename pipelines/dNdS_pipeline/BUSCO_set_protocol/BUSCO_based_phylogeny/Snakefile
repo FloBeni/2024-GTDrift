@@ -1,0 +1,133 @@
+import numpy
+import pandas as pd
+import os,zipfile
+
+
+pathData = "/beegfs/XXXXXXXX"
+pathHome = "/beegfs/XXXXXXXX"
+pathLogiciels = pathHome + "Logiciels/"
+pathScriptsR = pathHome + "Scripts/Projet-SplicedVariants/BUSCO_based_phylogeny/"
+pathdNdS = pathData + "DnDs/"
+pathEch = config["pathEch"] + "/"
+# A changer
+pathFolder = pathdNdS + pathEch
+
+sif_directory = pathHome + "singularity_sif/sif/"
+
+from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir(pathFolder+"AAS") if isfile(join(pathFolder+"AAS", f))]
+print(onlyfiles)
+
+
+import numpy
+import pandas as pd
+import os, zipfile
+
+
+species_list = pathFolder + 'gene_No_aas_cds'
+
+# Rules running in local not on the cluster
+localrules: Filter_85, part_files
+
+rule all:
+    input:
+        pathFolder + "log/filter_CDS",
+        pathFolder + "RAxML/aas.part",
+        pathFolder + "RAxML/concatenatAAS_cons50.aln.raxml.support"
+
+rule CDS_Prank:
+	# Aligning CDS.
+    params: time="10-00:00:00", mem=10000,partition="long", ntasks=1, name="CDS_Prank_{gene}",
+            out=pathData + "Output/dNdSOutput/CDS_Prank_{gene}_out",
+            err=pathData + "Output/dNdSOutput/CDS_Prank_{gene}_err"
+    input:
+        CDS=pathFolder + "CDS/{gene}"
+    output:
+        align_CDS = pathFolder + "PRANK_CDS/{gene}-prank.aln"
+    shell:
+        """
+        set +e
+        mkdir -p {pathFolder}PRANK_CDS
+        cd {pathFolder}PRANK_CDS
+        prank -d='{input.CDS}' -o='{output.align_CDS}' -DNA -codon
+        mv {output.align_CDS}.best.fas {output.align_CDS}
+        """
+
+
+def all_CDS(wildcards):
+    return expand(pathFolder + "PRANK_CDS/{gene}-prank.aln",gene=onlyfiles)
+
+rule Filter_85:
+	# Filter CDS with 85% of species.
+    input:
+        all_CDS = all_CDS
+    output:
+        log_executed = pathFolder + "log/filter_CDS"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+        find {pathFolder}PRANK_CDS_at_least_85percent/ -type f -delete
+        Rscript --vanilla {pathScriptsR}Nb_sp_per_cds.R {pathFolder}PRANK_CDS/ {pathFolder}PRANK_CDS_at_least_85percent/ {species_list} {pathFolder}
+        touch {output.log_executed}
+        """
+
+rule concatenate_CDS:
+	# Conccatenate filtered CDS.
+    params: time="24:00:00", mem=50000,partition="normal", ntasks=1, name="concatenate_CDS",
+            out=pathData + "Output/dNdSOutput/concatenate_CDS_out",
+            err=pathData + "Output/dNdSOutput/concatenate_CDS_err",
+            nb_species_consensus = "50"
+    input:
+        log_executed = pathFolder + "log/filter_CDS"
+    output:
+        concatenatePath_raxml = pathFolder + "RAxML/concatenatCDS.aln",
+        concatenatePath_raxmlcons = pathFolder + "RAxML/concatenatCDS_cons50.aln",
+        concatenatePathAAS_raxml = pathFolder + "RAxML/concatenatAAS.aln",
+        concatenatePathAAS_raxmlcons = pathFolder + "RAxML/concatenatAAS_cons50.aln",
+        infoPath_raxml = pathFolder + "RAxML/info",
+        concatenatePath = pathFolder + "concatenatCDS.aln",
+        concatenatePathAAS = pathFolder + "concatenatAAS.aln",
+        infoPath = pathFolder + "info",
+        summary_output = pathFolder + "summary"
+    singularity:
+        sif_directory + "R_4.2.1.sif"
+    shell:
+        """
+	hostname
+        Rscript --vanilla {pathScriptsR}concatenation.R {pathFolder}PRANK_CDS_at_least_85percent/ {output.concatenatePath} {output.concatenatePathAAS} {output.infoPath} {species_list} {output.summary_output} {output.concatenatePath_raxml} {output.concatenatePathAAS_raxml} {output.infoPath_raxml} {output.concatenatePathAAS_raxmlcons} {output.concatenatePath_raxmlcons} {params.nb_species_consensus}
+        """
+
+rule part_files:
+	# Partitioned files creation.
+    input:
+        concatenatePath=pathFolder + "RAxML/concatenatCDS.aln",
+        concatenatePathAAS=pathFolder + "RAxML/concatenatAAS.aln",
+        infoPath = pathFolder + "RAxML/info"
+    output:
+        partAAS = pathFolder + "RAxML/aas.part",
+        partAAS_cons = pathFolder + "RAxML/aas_cons.part",
+        partCDS = pathFolder + "RAxML/cds.part"
+    shell:
+        """
+        Rscript --vanilla {pathScriptsR}partitioned_file.R {input.infoPath} {output.partAAS} {output.partCDS} {output.partAAS_cons}
+        """
+
+
+rule phylogenetic_tree:
+	# Inferring phylogenetic tree.
+    params: time="06-00:00:00", mem=20000,partition="normal", ntasks=16,
+            name="phylogenetic_tree",
+            out=pathData + "Output/dNdSOutput/phylogenetic_tree_out",
+            err=pathData + "Output/dNdSOutput/phylogenetic_tree_err"
+    input:
+        concatenatePathAAS=pathFolder + "RAxML/concatenatAAS_cons50.aln",
+        partAAS = pathFolder + "RAxML/aas_cons.part"
+    output:
+        partAAS = pathFolder + "RAxML/concatenatAAS_cons50.aln.raxml.support"
+    retries: 5
+    shell:
+        """
+        raxml-ng --all --msa {input.concatenatePathAAS} --model {input.partAAS} --threads auto{{{params.ntasks}}} --bs-trees 10 --tree pars{{5}},rand{{5}}
+        """
