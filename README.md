@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/685027688.svg)](https://zenodo.org/doi/10.5281/zenodo.10022493)
+
 This archive includes all processed data that have been generated and used in the database paper 'GTDrift: A resource for exploring the interplay between genetic drift, genomic and transcriptomic characteristics in eukaryotes', as well as the scripts used to analyze the data and to generate the figures.
 
 Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Université de Lyon, Université Lyon 1, CNRS, Laboratoire de Biométrie et Biologie Évolutive UMR 5558, F-69622 Villeurbanne, France.
@@ -42,17 +44,17 @@ Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Universit
 
     -   'Data3_supp.tab' contains to do
 
--   The 'database' directory is empty and corresponds to the zenodo archive XXX that can be download with the script 'upload_database.sh'.
+-   The 'database' directory is empty and corresponds to the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10018013.svg)](https://doi.org/10.5281/zenodo.10018013) that can be download with the script 'upload_database.sh'.
 
 -   The 'pipelines' folder contains the bionformatics pipelines for different purposes.
 
-    - To calculate the dN/dS ratio ('dNdS_pipeline').
-    
-    - To annotate BUSCO gene and analyze various alternative splicing characteristics as part of our study ('Transcriptomic_BUSCO_pipeline').
-    
-    - To generate data table located in the 'data' directory ('data_generator').
-    
-    - To generate data table located in the 'data' directory or to produce the 'database' located at XXXXX ('building_from_source' and 'building_db'); 
+    -   To calculate the dN/dS ratio ('dNdS_pipeline').
+
+    -   To annotate BUSCO gene and analyze various alternative splicing characteristics as part of our study ('Transcriptomic_BUSCO_pipeline').
+
+    -   To generate data table located in the 'data' directory ('data_generator').
+
+    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10018013.svg)](https://doi.org/10.5281/zenodo.10018013) ('building_from_source' and 'building_db');
 
 ### 
 
