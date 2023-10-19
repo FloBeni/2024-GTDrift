@@ -17,19 +17,43 @@ Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Universit
 -   The 'data' directory contains processed data in tab-separated text format, which is used for generating figures and conducting analyses.
 
     -   The directory labeled 'dnds_phylo' houses curated data pertaining to the molecular evolutionary rate, specifically, the dN/dS ratio. This ratio signifies the rate at which non-synonymous substitutions occur in comparison to synonymous substitutions. It encompasses four distinct methods for estimation, each associated with specific taxonomic categories: 'Embryophyta', 'Metazoa', 'Eukaryota'. In an effort to encompass a broader spectrum of our species, a fourth methodology was employed named 'per clade', involving the division of clades within the metazoa taxon (see paper for methods).
-      
-      - The 'readme' file contains characteristics about the analysis.
-      
-      - A 'species_list.tab' table contains the set of species on which was done the analysis.
-    
-      - In the subdirectories 'phylogeny' are stored the outputs of the pipeline, the alignment used to inferred the phylogeny, the RAxML-NG log and the phylogenetic trees.
-      
-      - In the subdirectories 'dnds' are stored the output of the pipeline, the alignment on which was estimated the dN/dS.
 
-    -   The directory labeled 'dnds_phylo'
+        -   The 'readme' file contains characteristics about the analysis.
+
+        -   A 'species_list.tab' table contains the set of species on which was done the analysis.
+
+        -   In the subdirectories 'phylogeny' are stored the outputs of the pipeline, the alignment used to inferred the phylogeny, the RAxML-NG log and the phylogenetic trees.
+
+        -   In the subdirectories 'dnds' are stored the output of the pipeline, the alignment on which was estimated the dN/dS.
+
+    -   The directory labeled 'life_history_traits' contains all analyses pertaining to the collect of life history traits body length, body weight and longevity of each species.
+
+        -   Two excel files, (metazoa.xls and embyophyta.xls) contain the life history traits extracted manually. The 'embryophyta.xls' file, while devoid of data pertaining to life history traits, serves a critical purpose in another script, where it is utilized to compile species and clade lists.
+
+        -   A pdf file 'other_references.pdf' contains sources and information regarding the lifespan and longevity of the species studied.
+
+        -   The subdirectory 'ADW_ML' contains all the script to reproduce and collect the life history traits by a Machin Learning approach.
+
+        -   The subdirectory 'screen_db' contains all the script to reproduce and collect the life history traits by a screening approach.
+
+    -   'Data1_supp.tab' contains to do
+
+    -   'Data2_supp.tab' contains to do
+
+    -   'Data3_supp.tab' contains to do
+
+-   The 'database' directory is empty and corresponds to the zenodo archive XXX that can be download with the script 'upload_database.sh'.
+
+-   The 'pipelines' folder contains the bionformatics pipelines for different purposes.
+
+    - To calculate the dN/dS ratio ('dNdS_pipeline').
     
+    - To annotate BUSCO gene and analyze various alternative splicing characteristics as part of our study ('Transcriptomic_BUSCO_pipeline').
     
+    - To generate data table located in the 'data' directory ('data_generator').
     
+    - To generate data table located in the 'data' directory or to produce the 'database' located at XXXXX ('building_from_source' and 'building_db'); 
+
 ### 
 
 Some packages that you may encounter in these R scripts should be install: - stringr - kableExtra - cowplot - ggplot2 - imager - RColorBrewer ...
