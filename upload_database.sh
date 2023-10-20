@@ -1,5 +1,5 @@
 # Download the archive containing the database
-wget -O database.tar.gz https://zenodo.org/records/10024039/files/database_GTDrift.tar.gz?download=1
+wget -O database.tar.gz https://zenodo.org/records/10025399/files/database_GTDrift.tar.gz?download=1
 
 # Uncompress the archive
 tar -xvzf database.tar.gz
