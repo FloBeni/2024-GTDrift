@@ -38,7 +38,7 @@ Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Universit
 
         -   The subdirectory 'screen_db' contains all the script to reproduce and collect the life history traits by a screening approach.
 
-    -   'Data1_supp.tab' encompasses per species data on life history traits, number of identified genes among the eukaryota BUSCO geneset, and the number of genes that have been associated to one annotated protein-coding gene only (Fig. 1,2,3,5,6,7,8).
+    -   'Data1_supp.tab' encompasses per species data on life history traits, number of identified genes among the eukaryota BUSCO gene set, and the number of genes that have been associated to one annotated protein-coding gene only (Fig. 1,2,3,5,6,7,8).
 
     -   'Data2_supp.tab' contains for each species the sequencing depth and the proportion of annotated introns regarding their category (Fig. 9).
 

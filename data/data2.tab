@@ -1,5 +1,5 @@
 #species: Scientific name of the species.
-#sequencing_depth: Median per-base read coverage across BUSCO genes from eukaryota geneset.
+#sequencing_depth: Median per-base read coverage across BUSCO genes from eukaryota gene set.
 #intron: Number of introns with Ns > 0.
 #annotated: Number of annotated introns.
 #annotated_unclassified: Number of unclassified introns annotated.

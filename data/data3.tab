@@ -1,7 +1,7 @@
 #major: Number of major introns.
 #minor: Number of minor introns.
 #unclassified: Number of unclassified introns.
-#sequencing_depth: Median per-base read coverage across BUSCO genes from eukaryota geneset.
+#sequencing_depth: Median per-base read coverage across BUSCO genes from eukaryota gene set.
 #no_compiled_rna_seq: Number of sub-sampled RNA-seq.
 #replicate: Replicates number.
 #samples: SRA Accession of the RNA-seq samples studied.
