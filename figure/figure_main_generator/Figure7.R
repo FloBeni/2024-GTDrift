@@ -1,6 +1,5 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
-data1 = read.delim("data/data1.tab")
 
 label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
@@ -16,7 +15,7 @@ data1 = merge.data.frame(x=data1,y=per_clade_dnds,by= "species",all=T,suffixes =
 dt_graph = data1
 ylabel = "dNdS"
 xlabel = "max_lifespan_days"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree.nwk")
+arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = (dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
@@ -41,7 +40,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
                 "\nLM: ",lm_eqn(lm(lm_y ~ lm_x)),
                 " / PGLS: ",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),
                 sep="")) +
-  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500),labels=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500)) + xlab("Longevity (days, log scale)")+ 
+  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + xlab("Longevity (days, log scale)")+ 
   ylab("Terminal branches dN/dS per clade set") + annotation_logticks(sides = "b")
 pA
 
@@ -54,7 +53,6 @@ dev.off()
 dt_graph = data1
 ylabel = "dNdS"
 xlabel = "max_weight_kg"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = (dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
@@ -93,7 +91,6 @@ dev.off()
 dt_graph = data1
 ylabel = "dNdS"
 xlabel = "max_length_cm"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = (dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])

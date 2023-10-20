@@ -1,9 +1,9 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
 
 # PANNEL A
 
-dt_db = data.frame(  table(list_species[list_species$expression_data,]$clade_group))
+dt_db = data.frame(  table(data1[data1$expression_data,]$clade_group))
 dt_db$clade = dt_db$Var1
 
 dt_db$clade = factor(dt_db$clade, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))

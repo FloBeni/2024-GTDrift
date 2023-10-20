@@ -23,8 +23,8 @@ Clade_color = c("Other Invertebrates"="#f5b48a","Lepido Diptera"="red","Other Ve
 
 
 
-list_species = read.delim("database/list_species.tab")
-rownames(list_species) = list_species$species
+data1 = read.delim("data/data1.tab",comment.char = "#")
+rownames(data1) = data1$species
 
 
 

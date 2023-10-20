@@ -1,11 +1,10 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
 # PANNEL A
 
-listNomSpecies = tapply(str_replace_all(list_species$species,"_" ," "),list_species$clade_group,list)
+listNomSpecies = tapply(str_replace_all(data1$species,"_" ," "),data1$clade_group,list)
 
-tree_name <- "data/dnds_phylo/timetree_all.nwk"
-tree_name <- "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_clades_v2/RAxML_clade/Construct_phylogenetic_tree/concatenatAAS_cons25.aln.raxml.root_Other_Invertebrates;Other_Vertebrates;Mammalia;Aves;Teleostei;Other_Insecta;Nematoda;Hymenoptera;Lepido_Diptera.nwk"
+tree_name <- "data/dnds_phylo/timetree.nwk"
 tree <- read.tree(tree_name)
 
 tree$tip.label <- str_replace_all(tree$tip.label,"_"," ")
@@ -33,7 +32,7 @@ node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
 
 node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates","branch"))
 
-label_color = paste(names(Clade_color)," N=",table(list_species$clade_group)[names(Clade_color)],sep='')
+label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
 label_color["branch"] =  ""
 

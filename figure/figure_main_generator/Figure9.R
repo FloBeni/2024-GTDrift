@@ -1,10 +1,10 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
 
 # PANNEL A
 
-data3 = read.delim("data/data3.tab")
-pA = ggplot(data3[data3$echantillon == "all introns",],aes(x=sequencing_depth,y = N1_sup0)) + 
+data3 = read.delim("data/data3.tab",comment.char = "#")
+pA = ggplot(data3,aes(x=sequencing_depth,y = N1_sup0)) + 
   # geom_point(aes(fill="N1_sup10"),size=3,pch=21)  + 
   geom_point(aes(y = major,fill="Major"),size=3,pch=21,alpha=.7)+
   geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+
@@ -35,7 +35,7 @@ dev.off()
 
 # PANNEL B
 
-data2 = read.table("data/data2.tab",header = T)
+data2 = read.table("data/data2.tab",header = T,comment.char = "#")
 data2 = data2[ data2$sequencing_depth > 1 , ]
 
 dt = data2[,c("sequencing_depth","prop_annot_major")]

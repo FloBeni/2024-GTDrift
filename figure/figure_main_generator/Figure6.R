@@ -1,4 +1,4 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
 
 met_dnds = read.delim("database/dNdS/Metazoa.tab")
@@ -8,7 +8,7 @@ emb_met_dnds = rbind(met_dnds,emb_dnds)
 euk_dnds = read.delim("database/dNdS/Eukaryota.tab")
 dt = merge.data.frame(x=euk_dnds,y=emb_met_dnds,by= "species",all=T,suffixes = c("_euk","_emb_met"))
 
-dt$clade_group = list_species[dt$species,]$clade_group
+dt$clade_group = data1[dt$species,]$clade_group
 dt$clade_group = factor(dt$clade_group, levels = 
                           c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
@@ -57,7 +57,7 @@ met_dnds = read.delim("database/dNdS/Metazoa.tab")
 per_clade_dnds = read.delim("database/dNdS/per_clade.tab")
 dt = merge.data.frame(x=met_dnds,y=per_clade_dnds,by= "species",all=T,suffixes = c("_met","_perclade"))
 
-dt$clade_group = list_species[dt$species,]$clade_group
+dt$clade_group = data1[dt$species,]$clade_group
 dt$clade_group = factor(dt$clade_group, levels = 
                           c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
@@ -65,7 +65,7 @@ dt$clade_group = factor(dt$clade_group, levels =
 dt_graph = dt
 ylabel = "dNdS_perclade"
 xlabel = "dNdS_met"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree.nwk")
+arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = (dt_graph[,ylabel])
 lm_x = (dt_graph[,xlabel])

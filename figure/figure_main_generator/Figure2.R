@@ -1,23 +1,23 @@
-source("figure/figure_main generator/library_path.R")
+source("figure/figure_main_generator/library_path.R")
 
-data3 = read.delim("data/life_history_traits/all_life_history_traits.tab",header = T,sep="\t")
-data3$db = sapply(data3$db,function(x) str_split(x," ")[[1]][1])
+all_lht = read.delim("data/life_history_traits/all_life_history_traits.tab",header = T,sep="\t")
+all_lht$db = sapply(all_lht$db,function(x) str_split(x," ")[[1]][1])
 
 dt_db = data.frame()
 dt_db = rbind(dt_db , t(data.frame(
-  ADW = table(data3$db,data3$lht)["ADW",]
+  ADW = table(all_lht$db,all_lht$life_history_traits)["ADW",]
 )))
 dt_db = rbind(dt_db , t(data.frame(
-  EOL = table(data3$db,data3$lht)["EOL",]
+  EOL = table(all_lht$db,all_lht$life_history_traits)["EOL",]
 )))
 dt_db = rbind(dt_db , t(data.frame(
-  fishbase = table(data3$db,data3$lht)["fishbase",]
+  fishbase = table(all_lht$db,all_lht$life_history_traits)["fishbase",]
 )))
 dt_db = rbind(dt_db , t(data.frame(
-  AnAge = table(data3$db,data3$lht)["AnAge",]
+  AnAge = table(all_lht$db,all_lht$life_history_traits)["AnAge",]
 )))
 dt_db = rbind(dt_db , t(data.frame(
-  other = colSums(table(data3[!data3$db %in% c("AnAge","fishbase","EOL","ADW") ,]$db,data3[!data3$db %in% c("AnAge","fishbase","EOL","ADW") ,]$lht))
+  other = colSums(table(all_lht[!all_lht$db %in% c("AnAge","fishbase","EOL","ADW") ,]$db,all_lht[!all_lht$db %in% c("AnAge","fishbase","EOL","ADW") ,]$life_history_traits))
 )))
 dt_db$db = rownames(dt_db)
 
@@ -32,7 +32,7 @@ pA = ggplot(dt_db[dt_db$lifespan_days != 0,], aes(x = "", y = lifespan_days/sum(
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(lifespan_days), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("lifespan, Nspecies=",length(unique(data3[data3$lht == "lifespan_days",]$species)),sep=""))+
+  ggtitle(paste("lifespan, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "lifespan_days",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -51,7 +51,7 @@ pB = ggplot(dt_db[dt_db$length_cm != 0,], aes(x = "", y = length_cm/sum(dt_db$le
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(length_cm), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Body length, Nspecies=",length(unique(data3[data3$lht == "length_cm",]$species)),sep=""))+
+  ggtitle(paste("Body length, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "length_cm",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -71,7 +71,7 @@ pC = ggplot(dt_db[dt_db$weight_kg != 0,], aes(x = "", y = weight_kg/sum(dt_db$we
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   # geom_text(aes(label = paste0(round(weight_kg), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   geom_text(aes(label = ifelse(weight_kg >= 10, paste0(round(weight_kg), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Body mass, Nspecies=",length(unique(data3[data3$lht == "weight_kg",]$species)),sep=""))+
+  ggtitle(paste("Body mass, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "weight_kg",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -84,13 +84,13 @@ dev.off()
 
 
 # PANNEL D
-data3$clade_group = list_species[data3$species,]$clade_group
-table(data3$clade_group,data3$db)[,"EOL"]
+all_lht$clade_group = data1[all_lht$species,]$clade_group
+table(all_lht$clade_group,all_lht$db)[,"EOL"]
 
 dt_db = data.frame()
-for (clade in unique(data3$clade_group)){
+for (clade in unique(all_lht$clade_group)){
   dt = data.frame(
-    clade = table(data3[!duplicated(paste(data3$species,data3$db)),]$clade_group,data3[!duplicated(paste(data3$species,data3$db)),]$db)[clade,]
+    clade = table(all_lht[!duplicated(paste(all_lht$species,all_lht$db)),]$clade_group,all_lht[!duplicated(paste(all_lht$species,all_lht$db)),]$db)[clade,]
   )
   colnames(dt) = clade
   dt_db = rbind(dt_db , t(dt))
@@ -109,7 +109,7 @@ pD = ggplot(dt_db[dt_db$ADW != 0,], aes(x = "", y = ADW/sum(dt_db$ADW), fill = c
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(ADW >= 20, paste0(round(ADW), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("ADW, Nspecies=",length(unique(data3[data3$db == "ADW",]$species)),sep=""))+
+  ggtitle(paste("ADW, Nspecies=",length(unique(all_lht[all_lht$db == "ADW",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -128,7 +128,7 @@ pE = ggplot(dt_db[dt_db$EOL != 0,], aes(x = "", y = EOL/sum(dt_db$EOL), fill = c
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(EOL >= 20, paste0(round(EOL), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("EOL, Nspecies=",length(unique(data3[data3$db == "EOL",]$species)),sep=""))+
+  ggtitle(paste("EOL, Nspecies=",length(unique(all_lht[all_lht$db == "EOL",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -147,7 +147,7 @@ pF = ggplot(dt_db[dt_db$AnAge != 0,], aes(x = "", y = AnAge/sum(dt_db$AnAge), fi
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(AnAge >= 20, paste0(round(AnAge), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("AnAge, Nspecies=",length(unique(data3[data3$db == "AnAge",]$species)),sep=""))+
+  ggtitle(paste("AnAge, Nspecies=",length(unique(all_lht[all_lht$db == "AnAge",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))

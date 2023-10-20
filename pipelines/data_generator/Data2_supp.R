@@ -1,3 +1,5 @@
+# Generate Data 2
+options(stringsAsFactors = F, scipen = 999)
 library(dplyr)
 library(tidyr)
 
@@ -18,7 +20,11 @@ for (species in list_species){
   by_gene_path = paste("database/Transcriptomic",species,"/by_gene_analysis.tab",sep="")
   gene_db = read.delim(paste("database/Transcriptomic/",species,"/",contig,"/by_gene_analysis.tab.gz",sep=""), header=T , sep="\t",comment.char = "#")
   
-  busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",contig,"/busco_to_gene_id_eukaryota",sep=""))
+  busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",contig,"/busco_to_gene_id_eukaryota.gz",sep=""))
+  
+  busco_to_gene = busco_to_gene[!(duplicated(busco_to_gene$busco_id,fromLast = FALSE) | duplicated(busco_to_gene$busco_id,fromLast = TRUE)) &
+                                  !(duplicated(busco_to_gene$gene_id,fromLast = FALSE) | duplicated(busco_to_gene$gene_id,fromLast = TRUE)) ,]
+  
   gene_db = gene_db[gene_db$gene_id %in% busco_to_gene$gene_id,]
   
   # by_intron[(by_intron$ns + by_intron$na_spl3 + by_intron$na_spl5) < 10,]$splice_variant_rate = NA
@@ -47,8 +53,8 @@ for (species in list_species){
                   annotated_major,
                   annotated_minor ,
                   prop_annot_unclassified = annotated_unclassified / unclassified,
-                  prop_annot_minor = annotated_minor / minor,
-                  prop_annot_major = annotated_major /major
+                  prop_annot_major = annotated_major /major,
+                  prop_annot_minor = annotated_minor / minor
                 ))
 }
 

@@ -38,13 +38,13 @@ Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Universit
 
         -   The subdirectory 'screen_db' contains all the script to reproduce and collect the life history traits by a screening approach.
 
-    -   'Data1_supp.tab' contains to do
+    -   'Data1_supp.tab' encompasses per species data on life history traits, number of identified genes among the eukaryota BUSCO geneset, and the number of genes that have been associated to one annotated protein-coding gene only (Fig. 1,2,3,5,6,7,8).
 
-    -   'Data2_supp.tab' contains to do
+    -   'Data2_supp.tab' contains for each species the sequencing depth and the proportion of annotated introns regarding their category (Fig. 9).
 
-    -   'Data3_supp.tab' contains to do
+    -   'Data3_supp.tab' analysis of the coverage impacting the proportion of analyzable annotated introns in *Drosophila melanogaster* (Fig. 9).
 
--   The 'database' directory is empty and corresponds to the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10018013.svg)](https://doi.org/10.5281/zenodo.10018013) that can be download with the script 'upload_database.sh'.
+-   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10025399.svg)](https://doi.org/10.5281/zenodo.10025399) that can be download with the script 'upload_database.sh'. A description of the files that it contains is available on the archive.
 
 -   The 'pipelines' folder contains the bionformatics pipelines for different purposes.
 
@@ -54,7 +54,7 @@ Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. Universit
 
     -   To generate data table located in the 'data' directory ('data_generator').
 
-    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10018013.svg)](https://doi.org/10.5281/zenodo.10018013) ('building_from_source' and 'building_db');
+    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10025399.svg)](https://doi.org/10.5281/zenodo.10025399) ('building_from_source' and 'building_db');
 
 ### 
 

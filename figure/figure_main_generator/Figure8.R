@@ -1,6 +1,4 @@
-source("figure/figure_main generator/library_path.R")
-
-data1 = read.delim("data/data1.tab")
+source("figure/figure_main_generator/library_path.R")
 
 # PANNEL A
 

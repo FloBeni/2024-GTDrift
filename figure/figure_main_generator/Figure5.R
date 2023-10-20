@@ -1,6 +1,4 @@
-source("figure/figure_main generator/library_path.R")
-
-data1 = read.delim("data/data1.tab")
+source("figure/figure_main_generator/library_path.R")
 
 label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
@@ -8,13 +6,12 @@ names(label_color) = names(Clade_color)
 sum( table( data1$clade_group ) )
 
 data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
-colnames(dt_graph)
 
 # PANNEL A
 dt_graph = data1
 ylabel = "max_length_cm"
 xlabel = "max_lifespan_days"
-arbrePhylotips = read.tree( "/home/fbenitiere/data/papers/2024-EukGTDrift/data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
+arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = log10(dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
@@ -35,12 +32,12 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) +
-  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500),labels=c(0.05,0.1,0.5,1,5,10,100,365,3650,36500)) + xlab("Longevity (days, log scale)")+
+  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + xlab("Longevity (days, log scale)")+
   scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + ylab("Body length (cm, log scale)")+
   ggtitle(paste("Nspecies = ",nrow(dt_graph),
                 "\nLM: ",lm_eqn(lm(lm_y ~ lm_x)),
                 " / PGLS: ",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),
-                sep=""  ))+ annotation_logticks(sides = "lb")
+                sep=""  )) + annotation_logticks(sides = "lb")
 pA
 
 jpeg(paste(path_pannel,"F5pA.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=700/resolution)

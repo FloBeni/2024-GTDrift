@@ -1,9 +1,10 @@
-
+# Generate Data 3
+options(stringsAsFactors = F, scipen = 999)
 library(stringr)
 species = "Drosophila_melanogaster_NCBI.taxid7227"
 assembly =  list.dirs(paste("database/BUSCO_annotations/",species,sep=""), full.names = F,recursive = F)
 
-busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",assembly,"/busco_to_gene_id_eukaryota",sep=""))
+busco_to_gene = read.delim(paste("database/BUSCO_annotations/",species,"/",assembly,"/busco_to_gene_id_eukaryota.gz",sep=""))
 
 busco_to_gene = busco_to_gene[!(duplicated(busco_to_gene$busco_id,fromLast = FALSE) | duplicated(busco_to_gene$busco_id,fromLast = TRUE)) &
                                 !(duplicated(busco_to_gene$gene_id,fromLast = FALSE) | duplicated(busco_to_gene$gene_id,fromLast = TRUE)) ,]
@@ -32,11 +33,11 @@ if ( length( list_rna ) >= 20 ){ nb = 20 } else { nb = length( list_rna )}
 data3 = data.frame()
 list_major_intron = list()
 
-for ( i in 1:nb ){ # nombre de RNA-seqs compilés
+for ( i in 1:nb ){ # Number of RNA-seq compiled
   no_replicate = 10
   if ( i == 1 ){ no_replicate = length( list_rna )    }
   
-  for ( j in 1:no_replicate ){ # nombre de rééchantillonnages
+  for ( j in 1:no_replicate ){ # Number of replicate
     if ( i == 1 ){
       intervalle = list_rna[j]
       
@@ -73,9 +74,7 @@ for ( i in 1:nb ){ # nombre de RNA-seqs compilés
       unclassified,
       sequencing_depth = median(cov,na.rm = T),
       no_compiled_rna_seq = i,
-      replicate = j,
-      echantillon = "all introns",
-      selection = 0
+      replicate = j
     )
     da$samples = list(intervalle)
     data3 = rbind(data3,da)
