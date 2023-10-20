@@ -40,7 +40,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
                 "\nLM: ",lm_eqn(lm(lm_y ~ lm_x)),
                 " / PGLS: ",lm_eqn(pgls(pgls_y~pgls_x,shorebird)),
                 sep="")) +
-  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + xlab("Longevity (days, log scale)")+ 
+  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000)) + xlab("Longevity (days, log scale)")+ 
   ylab("Terminal branches dN/dS per clade set") + annotation_logticks(sides = "b")
 pA
 
