@@ -141,6 +141,7 @@ dev.off()
 imgA = load.image(paste(path_pannel,"F9pA.jpg",sep=""))
 imgB = load.image(paste(path_pannel,"F9pB.jpg",sep=""))
 
+fly<-readPNG(paste(path_require,"Drosophila_melanogaster.png",sep=""))
 
 {
   pdf(file= paste(path_figure,"Figure9.pdf",sep=""), width=3*5/2, height=2.35*3)
@@ -154,6 +155,11 @@ imgB = load.image(paste(path_pannel,"F9pB.jpg",sep=""))
   
   par(mar=c(1, 0, 1, 1))
   plot(imgA, axes=F)
+  
+  xaxis=1400
+  yaxis=0
+  rasterImage(fly,xleft=0+xaxis, ybottom=900/6+yaxis, xright=900/5+xaxis, ytop=0+yaxis)
+  
   mtext("A",at=20,adj=-2, side=2, line=1, font=2, cex=2,las=2)
   par(mar=c(1, 0, 1, 1))
   plot(imgB, axes=F)
