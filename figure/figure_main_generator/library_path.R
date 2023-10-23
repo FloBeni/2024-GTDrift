@@ -29,6 +29,11 @@ rownames(data1) = data1$species
 
 
 lm_eqn <- function(m=lm(Y ~ X,data)){
-  paste("R2 = ", round(summary(m)$r.squared, 2) , ", p-value = ",formatC(summary(m)$coefficients[2,4], format = "e", digits = 0),sep="")
+  pvalue = summary(m)$coefficients[2,4]
+  if (pvalue<10^-100){
+  paste(" = ", round(summary(m)$r.squared, 2) , ", p-value = 0",sep="")
+  } else {
+  paste(" = ", round(summary(m)$r.squared, 2) , ", p-value = ",formatC(pvalue, format = "e", digits = 0),sep="")
+    }
 }
 

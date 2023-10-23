@@ -30,15 +30,15 @@ pA = ggplot(dt_db[dt_db$lifespan_days != 0,], aes(x = "", y = lifespan_days/sum(
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
-  scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
+  scale_fill_manual("Source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(lifespan_days), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("lifespan, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "lifespan_days",]$species)),sep=""))+
+  ggtitle(paste("lifespan, Nspecies = ",length(unique(all_lht[all_lht$life_history_traits == "lifespan_days",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")
 
-jpeg(paste(path_pannel,"F2pA.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pA.jpg",sep=""), width = 6200/resolution, height = 5500/resolution,res=700/resolution)
 print(pA)
 dev.off()
 
@@ -51,13 +51,13 @@ pB = ggplot(dt_db[dt_db$length_cm != 0,], aes(x = "", y = length_cm/sum(dt_db$le
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   geom_text(aes(label = paste0(round(length_cm), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Body length, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "length_cm",]$species)),sep=""))+
+  ggtitle(paste("Body length, Nspecies = ",length(unique(all_lht[all_lht$life_history_traits == "length_cm",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="none")
 
-jpeg(paste(path_pannel,"F2pB.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pB.jpg",sep=""), width = 5500/resolution, height = 5500/resolution,res=700/resolution)
 print(pB)
 dev.off()
 
@@ -71,13 +71,13 @@ pC = ggplot(dt_db[dt_db$weight_kg != 0,], aes(x = "", y = weight_kg/sum(dt_db$we
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
   # geom_text(aes(label = paste0(round(weight_kg), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   geom_text(aes(label = ifelse(weight_kg >= 10, paste0(round(weight_kg), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Body mass, Nspecies=",length(unique(all_lht[all_lht$life_history_traits == "weight_kg",]$species)),sep=""))+
+  ggtitle(paste("Body mass, Nspecies = ",length(unique(all_lht[all_lht$life_history_traits == "weight_kg",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="none")
 
-jpeg(paste(path_pannel,"F2pC.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pC.jpg",sep=""), width = 5500/resolution, height = 5500/resolution,res=700/resolution)
 print(pC)
 dev.off()
 
@@ -109,13 +109,13 @@ pD = ggplot(dt_db[dt_db$ADW != 0,], aes(x = "", y = ADW/sum(dt_db$ADW), fill = c
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(ADW >= 20, paste0(round(ADW), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("ADW, Nspecies=",length(unique(all_lht[all_lht$db == "ADW",]$species)),sep=""))+
+  ggtitle(paste("ADW, Nspecies = ",length(unique(all_lht[all_lht$db == "ADW",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")
 
-jpeg(paste(path_pannel,"F2pD.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pD.jpg",sep=""), width = 6800/resolution, height = 5000/resolution,res=700/resolution)
 print(pD)
 dev.off()
 
@@ -128,13 +128,13 @@ pE = ggplot(dt_db[dt_db$EOL != 0,], aes(x = "", y = EOL/sum(dt_db$EOL), fill = c
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(EOL >= 20, paste0(round(EOL), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("EOL, Nspecies=",length(unique(all_lht[all_lht$db == "EOL",]$species)),sep=""))+
+  ggtitle(paste("EOL, Nspecies = ",length(unique(all_lht[all_lht$db == "EOL",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="none")
 
-jpeg(paste(path_pannel,"F2pE.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pE.jpg",sep=""), width = 5500/resolution, height = 5500/resolution,res=700/resolution)
 print(pE)
 dev.off()
 
@@ -147,14 +147,14 @@ pF = ggplot(dt_db[dt_db$AnAge != 0,], aes(x = "", y = AnAge/sum(dt_db$AnAge), fi
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(AnAge >= 20, paste0(round(AnAge), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("AnAge, Nspecies=",length(unique(all_lht[all_lht$db == "AnAge",]$species)),sep=""))+
+  ggtitle(paste("AnAge, Nspecies = ",length(unique(all_lht[all_lht$db == "AnAge",]$species)),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="none")
 
 
-jpeg(paste(path_pannel,"F2pF.jpg",sep=""), width = 8200/resolution, height = 5500/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F2pF.jpg",sep=""), width = 5500/resolution, height = 5500/resolution,res=700/resolution)
 print(pF)
 dev.off()
 
@@ -171,29 +171,29 @@ imgF = load.image(paste(path_pannel,"F2pF.jpg",sep=""))
 
 
 {
-  pdf(file= paste(path_figure,"Figure2.pdf",sep=""), width=6.75*5/2, height=2.75*3)
-  m=matrix(rep(NA,15*2), nrow=2)
+  pdf(file= paste(path_figure,"Figure2.pdf",sep=""), width=5.5*5/2, height=2.75*3)
+  m=matrix(rep(NA,15*10*2), nrow=2)
   
-  m[1,]=c(rep(1,5),rep(2,5),rep(3,5))
-  m[2,]=c(rep(4,5),rep(5,5),rep(6,5))
+  m[1,]=c(rep(1,54),rep(2,48),rep(3,48))
+  m[2,]=c(rep(4,60),rep(5,45),rep(6,45))
   
   m
   layout(m)
   
-  par(mar=c(0, 0, 0, 0))
+  par(mar=c(0, 2, 1, 2))
   plot(imgA, axes=F)
-  mtext("A",at=20,adj=-2, side=2, line=1, font=2, cex=2,las=2)
-  # par(mar=c(0, 0, 0, 4))
+  mtext("A",at=50,adj=-1, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgB, axes=F)
-  mtext("B",at=20,adj=0, side=2, line=1, font=2, cex=2,las=2)
+  mtext("B",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgC, axes=F)
-  mtext("C",at=20,adj=0, side=2, line=1, font=2, cex=2,las=2)
+  mtext("C",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
+  par(mar=c(0, 2, 0, 0))
   plot(imgD, axes=F)
-  mtext("D",at=20,adj=-2, side=2, line=1, font=2, cex=2,las=2)
+  mtext("D",at=50,adj=-1, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgE, axes=F)
-  mtext("E",at=20,adj=0, side=2, line=1, font=2, cex=2,las=2)
+  mtext("E",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgF, axes=F)
-  mtext("F",at=20,adj=0, side=2, line=1, font=2, cex=2,las=2)
+  mtext("F",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   
   dev.off()
 }

@@ -15,7 +15,7 @@ pA = ggplot(dt_db, aes(x = "", y = Freq/sum(Freq), fill = clade)) +
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(Freq >= 20, paste0(round(Freq), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Transcriptomic data for Nspecies=",sum(dt_db$Freq),sep=""))+
+  ggtitle(paste("Transcriptomic data for Nspecies = ",sum(dt_db$Freq),sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
@@ -40,9 +40,9 @@ imgC = load.image(paste(path_require,"acronyms.png",sep=""))
   m
   layout(m)
   
-  par(mar=c(0, 0, 0, 0))
+  par(mar=c(0, 0, 1, 0))
   plot(imgA, axes = F)
-  mtext("A", side=2,at=150,adj=-2, line=1, font=2, cex=1.7,las=2)
+  mtext("A", side=2,at=20,adj=-2, line=1, font=2, cex=1.7,las=2)
   par(mar=c(0, 0, 1, 0))
   plot(imgB, axes = F)
   mtext("B",side=2,at=-40,adj=-2,  line=1, font=2, cex=1.7,las=2)
