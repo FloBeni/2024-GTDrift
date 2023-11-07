@@ -3,13 +3,13 @@ library(stringr)
 # abstract
 list_species = read.delim("database/list_species.tab")
 
-paste("of ",nrow(list_species)," distinct species, including ",sum(list_species$clade_group != "Embryophyta")," animal and ",sum(list_species$clade_group == "Embryophyta")," green plant species",sep="")
+paste(" for ",nrow(list_species)," eukaryotic species, including ",sum(list_species$clade_group != "Embryophyta")," animals and ",sum(list_species$clade_group == "Embryophyta")," green plants",sep="")
 
-paste("mass for a subset of ",sum(list_species$lht_data)," species",sep="")
+paste(" mass for a set of ",sum(list_species$lht_data)," species",sep="")
 
-paste("performed on ",sum(list_species$dnds_data)," species using",sep="")
+paste(" in protein-coding sequences for ",sum(list_species$dnds_data)," species.",sep="")
 
-paste("for more than ",sum(list_species$nb_rnaseq)," RNA-seq samples across ",sum(list_species$expression_data)," species",sep="")
+paste(" for more than ",sum(list_species$nb_rnaseq)," RNA-seq samples across ",sum(list_species$expression_data)," species",sep="")
 
 
 
@@ -24,8 +24,10 @@ paste(" with ",sum(list_species$clade_group == "Embryophyta")," green plant spec
 
 # Methods
 
-paste("compilation of ",nrow(list_species)," multicellular eukaryotic organisms",sep="")
-paste(", comprising ",sum(list_species$clade_group != "Embryophyta")," animal species and ",sum(list_species$clade_group == "Embryophyta")," green plant ",sep="")
+# Species selection
+
+paste("We included ",nrow(list_species)," multicellular eukaryotic organisms",sep="")
+paste("This collection encompasses ",sum(list_species$clade_group != "Embryophyta")," animal species as well as ",sum(list_species$clade_group == "Embryophyta")," species of green plants",sep="")
 
 
 # Collecting life history traits
@@ -33,19 +35,18 @@ paste(", comprising ",sum(list_species$clade_group != "Embryophyta")," animal sp
 paste("life history traits for a total of ",sum(list_species$lht_data)," metazoan species.",sep="")
 
 
-# Selection of the Assembly version
-
-paste("This approach was applied successfully to a cohort of ",sum(list_species$clade_group != "Embryophyta")," metazoan and ",sum(list_species$clade_group == "Embryophyta")," embryophyta samples.",sep="")
-
-
 # Phylogenetic tree reconstruction
 list_readme = list.files("data/dnds_phylo",pattern = "readme",recursive = T,full.names = T)
 list_readme = list_readme[!grepl("per_clade",list_readme)]
 dt=data.frame()
 for (i in list_readme){
+  
+  
   di = read.delim(i,header=F)
   rownames(di) = di$V1
-  di = t(di)
+  di = data.frame(t(di))
+  print(list.dirs(str_replace_all(i,"readme","dnds")))
+  di[,"nb_cluster"] = length(list.dirs(str_replace_all(i,"readme","dnds")))-1
   dt = rbind(dt,
              di
   )
@@ -53,47 +54,63 @@ for (i in list_readme){
 dt = dt[!duplicated(dt$busco_set),]
 rownames(dt) = dt$busco_set
 
-paste("selecting alignments with the highest number of species (eukaryota Ngenes=",dt["eukaryota_odb9",]$nb_genes_raxml,
+
+paste(" reducing the eukaryota set to ",dt["eukaryota_odb9",]$nb_genes_at_least_85percent_species,
+      " genes (embryophyta Ngenes=",dt["embryophyta_odb9",]$nb_genes_at_least_85percent_species,
+      ", metazoa Ngenes=",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species,
+      ").",sep="")
+
+paste(" selecting alignments with the highest number of species (eukaryota Ngenes=",dt["eukaryota_odb9",]$nb_genes_raxml,
       ", embryophyta Ngenes=",dt["embryophyta_odb9",]$nb_genes_raxml
       ,", metazoa Ngenes=",dt["metazoa_odb9",]$nb_genes_raxml,").",sep="")
 
+paste(" final alignment for the eukaryota BUSCO dataset included ",dt["eukaryota_odb9",]$nb_species_analyzed
+      ," taxa (embryophyta Nsp=",dt["embryophyta_odb9",]$nb_species_analyzed
+      ,", metazoa Nsp=",dt["metazoa_odb9",]$nb_species_analyzed
+      ,") taxa and ",as.numeric(dt["eukaryota_odb9",]$length_raxml_concat)/1000,
+      " sites (embryophyta N=",as.numeric(dt["embryophyta_odb9",]$length_raxml_concat)/1000,
+      ", metazoa N=",as.numeric(dt["metazoa_odb9",]$length_raxml_concat)/1000,
+      ").",sep="")
 
-
-
-paste(" with a final alignment of (eukaryota Nsp=",dt["eukaryota_odb9",]$nb_species_analyzed,
-      ", embryophyta Nsp=",dt["embryophyta_odb9",]$nb_species_analyzed
-      ,", metazoa Nsp=",dt["metazoa_odb9",]$nb_species_analyzed,")",sep="")
-
-
-paste("and (eukaryota Nsite=",as.numeric(dt["eukaryota_odb9",]$length_raxml_concat)/1000,
-      ", embryophyta Nsite=",as.numeric(dt["embryophyta_odb9",]$length_raxml_concat)/1000
-      ,", metazoa Nsite=",as.numeric(dt["metazoa_odb9",]$length_raxml_concat)/1000,") sites (amino acids)",sep="")
-
+paste("We used as a basis for the analysis ",round(as.numeric(dt["metazoa_odb9",]$nb_genes_at_least_85percent_species)/10),
+      " highly prevalent metazoan BUSCO genes among the ",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species,
+      " already preselected in the metazoa analysis.",sep="")
 
 
 # dN/dS computation
-paste("least 85 percent of the species (eukaryota Ngenes=",dt["eukaryota_odb9",]$nb_genes_at_least_85percent_species,
-      ", embryophyta Ngenes=",dt["embryophyta_odb9",]$nb_genes_at_least_85percent_species
-      ,", metazoa Ngenes=",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species,"),",sep="")
 
+paste("BUSCO gene sets: eukaryota (Ngenes=",dt["eukaryota_odb9",]$nb_genes_at_least_85percent_species
+      ,"), embryophyta (Ngenes=",dt["embryophyta_odb9",]$nb_genes_at_least_85percent_species
+      ,"), metazoa and '\textit{per} clade' (Ngenes=",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species
+      ,").",sep="")
 
+paste("This process yielded ",dt["eukaryota_odb9",]$nb_cluster,
+      " groups for eukaryota (embryophyta Ngroup=",dt["embryophyta_odb9",]$nb_cluster,
+      ", metazoa Ngroup=",dt["metazoa_odb9",]$nb_cluster,
+      ").",sep="")
 
 
 # Selection of the RNA-seq
-paste("are ",sum(list_species$expression_data)," species represented, ",sum(list_species[list_species$expression_data,]$clade_group == "Embryophyta"),
-      " plant and ",sum(list_species[list_species$expression_data,]$clade_group != "Embryophyta")," animal,",sep="")
+
+paste("We included more than 50 samples for ",sum(list_species$nb_rnaseq >= 50)," species (",sum(list_species$nb_rnaseq >= 50 & list_species$clade == "Embryophyta"),
+      " embryophyta, ",sum(list_species$nb_rnaseq >= 50 & list_species$clade != "Embryophyta")," metazoa), for which we performed more detailed analyses, considering various tissues or developmental stages.",sep="")
+
+paste(" of ",sum(list_species$expression_data)," distinct species, including ",
+      sum(list_species[list_species$expression_data,]$clade_group == "Embryophyta"),
+      " plants and ",
+      sum(list_species[list_species$expression_data,]$clade_group != "Embryophyta")," animals",sep="")
 
 
-# Data Records
-paste("At the time of publication, the database contained over ",sum(list_species$nb_rnaseq)," RNA-seq distributed over ",nrow(list_species)," embryophytes and metazoans ",sep="")
-
+# Results
 
 # Life History Traits
-paste("body mass, and body weight for ",sum(list_species$lht_data)," species",sep="")
+
+paste("(longevity, body mass, and body weight), for ",sum(list_species$lht_data)," species.",sep="")
 
 
 
 # Technical Validation
+
 library(stringr)
 
 manual_truth = read.delim(paste("data/life_history_traits/all_life_history_traits.tab",sep=""))
