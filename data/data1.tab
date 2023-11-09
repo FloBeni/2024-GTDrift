@@ -1,3 +1,17 @@
+#species: Scientific name of the species.
+#clade: Clade corresponding to the species, it can be the class for vertebrates or the order for insects.
+#NCBI.taxid: taxID from the NCBI.
+#clade_group: Clade corresponding to the species, mostly the rank.
+#expression_data: Does the species have transcriptomic data.
+#dnds_data: Does the species have molecular rate (dN/dS) data.
+#lht_data: Does the species have life history traits.
+#assembly_accession: Assembly accession used.
+#nb_rnaseq: Number of RNA-seq studied.
+#max_lifespan_days: Maximum value found for life history trait longevity (days).
+#max_length_cm: Maximum value found for life history trait body length (cm).
+#max_weight_kg: Maximum value found for life history trait body weight (kg).
+#nb_busco_gene_eukaryota: Number of BUSCO gene from eukaryota gene set identified.
+#nb_busco_gene_unique_eukaryota: Number of BUSCO gene from eukaryota gene set identified to only one protein-coding genes.
 species	clade	NCBI.taxid	clade_group	expression_data	dnds_data	lht_data	assembly_accession	nb_rnaseq	max_lifespan_days	max_length_cm	max_weight_kg	nb_busco_gene_eukaryota	nb_busco_gene_unique_eukaryota
 Rangifer_tarandus	Mammalia	9870	Mammalia	FALSE	TRUE	TRUE	GCA_951394145.1	0	7957	230	318	296	273
 Equus_quagga	Mammalia	89248	Mammalia	FALSE	TRUE	TRUE	GCF_021613505.1	0	14600	NA	300	299	275
