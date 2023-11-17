@@ -17,9 +17,9 @@ for (group in unique(edge_group)){
   }
 }
 edge_clade_prev = edge_clade
-list_inclusion =  list("Other Invertebrates"=c("Lepido Diptera","Other Insecta","Nematoda","Hymenoptera","Other Invertebrates"),
-                       "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insecta"=c("Lepido Diptera","Other Insecta","Hymenoptera"),
-                       Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Lepido Diptera"="Lepido Diptera",Embryophyta="Embryophyta"
+list_inclusion =  list("Other Invertebrates"=c("Mecopterida","Other Insecta","Nematoda","Hymenoptera","Other Invertebrates"),
+                       "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insecta"=c("Mecopterida","Other Insecta","Hymenoptera"),
+                       Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Mecopterida"="Mecopterida",Embryophyta="Embryophyta"
 )
 
 
@@ -30,7 +30,7 @@ for (clade in names(list_inclusion)){
 }
 node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
 
-node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates","branch"))
+node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates","branch"))
 
 label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
@@ -67,7 +67,7 @@ dev.off()
 
 imgA <- image_read(paste(path_pannel,"F1pA.jpg",sep=""))
 imgA <- image_flip(imgA)
-legend<-image_read(paste(path_require,"legend_F1pA.jpg",sep=""))
+legend<-image_read(paste(path_require,"legend_F1pA.png",sep=""))
 
 
 aves<-readPNG(paste(path_require,"aves.png",sep=""))

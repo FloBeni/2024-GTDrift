@@ -7,7 +7,7 @@ dt = merge.data.frame(x=met_dnds,y=per_clade_dnds,by= "species",all=T,suffixes =
 
 dt$clade_group = data1[dt$species,]$clade_group
 dt$clade_group = factor(dt$clade_group, levels = 
-                          c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+                          c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 
 
@@ -62,7 +62,7 @@ dt = merge.data.frame(x=euk_dnds,y=emb_met_dnds,by= "species",all=T,suffixes = c
 
 dt$clade_group = data1[dt$species,]$clade_group
 dt$clade_group = factor(dt$clade_group, levels = 
-                          c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+                          c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 dt_graph = dt
 ylabel = "dNdS_euk"

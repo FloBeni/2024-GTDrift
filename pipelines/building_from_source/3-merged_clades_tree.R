@@ -17,10 +17,10 @@ rownames(clade_dt) = clade_dt$species
 clade_dt$clade_group = str_replace_all(clade_dt$clade_group," ","_")
 
 # Which clade is included in an other clades.
-ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates","Nematoda"),"Other_Vertebrates"=c("Mammalia","Aves","Teleostei"),"Other_Insecta"=c("Hymenoptera","Lepido_Diptera"))
+ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates","Nematoda"),"Other_Vertebrates"=c("Mammalia","Aves","Teleostei"),"Other_Insecta"=c("Hymenoptera","Mecopterida"))
 
 # Start from one clade and add the other clade one by one to the tree
-order_clade = c("Other_Invertebrates","Other_Vertebrates","Mammalia","Aves","Teleostei","Other_Insecta", "Nematoda","Hymenoptera","Lepido_Diptera"    )
+order_clade = c("Other_Invertebrates","Other_Vertebrates","Mammalia","Aves","Teleostei","Other_Insecta", "Nematoda","Hymenoptera","Mecopterida"    )
 
 clade_ref = order_clade[1]
 clade_ref_group = order_clade[1]

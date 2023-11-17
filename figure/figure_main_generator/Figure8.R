@@ -7,7 +7,7 @@ names(label_color) = names(Clade_color)
 
 sum(table(data1$clade_group))
 
-data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 pA = ggplot(data1 , aes(y = nb_busco_gene_eukaryota/303 * 100 , fill = clade_group, x = clade_group)) + 
   geom_point(pch=21,size=3,alpha=0.8) + geom_boxplot(outlier.shape = NA,alpha=0.8) + 

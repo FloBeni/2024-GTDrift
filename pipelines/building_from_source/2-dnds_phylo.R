@@ -124,7 +124,7 @@ compute_files(name = "Eukaryota",busco_set="eukaryota_odb9",path = "/home/fbenit
 compute_files(name = "Embryophyta",busco_set="embryophyta_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Embryophyta_v2/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 compute_files(name = "Metazoa",busco_set="metazoa_odb9",path = "/home/fbenitiere/data/Projet-SplicedVariants/DnDs/Metazoa_v11/",raxml="RAxML/",dnds="subset_200_ksites_GC3_root")
 
-for (clade in c("Aves","Hymenoptera","Lepido_Diptera","Mammalia","Nematoda","Other_Insecta","Other_Invertebrates","Other_Vertebrates","Teleostei")){
+for (clade in c("Aves","Hymenoptera","Mecopterida","Mammalia","Nematoda","Other_Insecta","Other_Invertebrates","Other_Vertebrates","Teleostei")){
   print(clade)
   compute_files(
     name = paste("per_clade/",clade,sep=""),

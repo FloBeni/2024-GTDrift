@@ -6,7 +6,7 @@ names(label_color) = names(Clade_color)
 
 sum(table(data1$clade_group))
 
-data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 per_clade_dnds = read.delim("database/dNdS/per_clade.tab")
 data1 = merge.data.frame(x=data1,y=per_clade_dnds,by= "species",all=T,suffixes = c("","_perclade"))
@@ -86,7 +86,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
                                                             lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
                                                             pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird))))
   )+
-  scale_x_log10(breaks=c(0.000001,0.001,0.1,1,10,100,5000,1000000),labels=c(0.000001,0.001,0.1,1,10,100,5000,1000000),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+ 
+  scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+
   ylab("") +  theme(legend.position="none")+ annotation_logticks(sides = "b")
 pB
 

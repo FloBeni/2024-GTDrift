@@ -99,7 +99,7 @@ dt_db$clade = rownames(dt_db)
 
 
 
-dt_db$clade = factor(dt_db$clade, levels = c("Embryophyta","Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+dt_db$clade = factor(dt_db$clade, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
 
 
 

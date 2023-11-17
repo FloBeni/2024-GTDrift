@@ -35,15 +35,6 @@ clade_list = list(dico.keys())
 
 list_genes = [f for f in listdir(pathRef + "PRANK_CDS_at_least_85percent") if isfile(join(pathRef + "PRANK_CDS_at_least_85percent", f))]
 list_genes = [ genes.replace('.fa-prank.aln', '') for genes in list_genes]
-# list_genes = list_genes[0:10]
-
-#clade_list = [ i for i in clade_list if i != "Other_Invertebrates"]
-localrules: part_files_per_clade
-
-clade_list=["Other_Vertebrates","Other_Insecta","Other_Invertebrates"]
-# clade_list=["Aves"]
-
-# clade_list = [i for i in clade_list if i != "Other_Invertebrates"]
 
 rule all:
     input:
@@ -51,9 +42,6 @@ rule all:
          expand(pathEch + "RAxML_clade/{clade}/aas_cons.part",clade=clade_list),
          expand(pathEch + "RAxML_clade/{clade}/concatenatAAS_cons25.aln.raxml.support",clade=clade_list),
         # expand( pathEch + "GC_content.tab")
-        # expand(pathEch + "PRANK_CDS_clade/{gene}/{clade}.fa-prank.aln",gene=list_genes,clade=clade_list),
-        # expand(pathEch+ "dNdS_clade/{clade}/" + config["ech"] + "/1/concatenatCDS.aln",clade=clade_list),
-        # expand(pathEch + "dNdS_clade/{clade}/" + config["ech"] + "/data_calculation.tab",clade=clade_list)
 
 
 

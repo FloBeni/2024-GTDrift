@@ -56,7 +56,7 @@ compute_files <- function(name){ # Function to create 2 tree (dN and dS) based o
   write.table(data , paste("data/dnds_phylo/",name,"/dnds/dNdS.tab",sep=""),quote=F,row.names = F,sep="\t") # Save summary table.
 }
 
-for (clade in c("Aves","Hymenoptera","Lepido_Diptera","Mammalia","Nematoda","Other_Insecta","Other_Invertebrates","Other_Vertebrates","Teleostei")){
+for (clade in c("Aves","Hymenoptera","Mecopterida","Mammalia","Nematoda","Other_Insecta","Other_Invertebrates","Other_Vertebrates","Teleostei")){
   compute_files(name =  paste("per_clade/",clade,sep="")) # Execute the function for each clade.
 }
 
@@ -80,10 +80,10 @@ rownames(clade_dt) = clade_dt$species
 clade_dt$clade_group = str_replace_all(clade_dt$clade_group," ","_")
 
 # Which clade is included in an other clades.
-ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates","Nematoda"),"Other_Vertebrates"=c("Mammalia","Aves","Teleostei"),"Other_Insecta"=c("Hymenoptera","Lepido_Diptera"))
+ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates","Nematoda"),"Other_Vertebrates"=c("Mammalia","Aves","Teleostei"),"Other_Insecta"=c("Hymenoptera","Mecopterida"))
 
 # Start from one clade and add the other clade one by one to the tree
-order_clade = c("Other_Invertebrates","Other_Vertebrates","Mammalia","Aves","Teleostei","Other_Insecta", "Nematoda","Hymenoptera","Lepido_Diptera"    )
+order_clade = c("Other_Invertebrates","Other_Vertebrates","Mammalia","Aves","Teleostei","Other_Insecta", "Nematoda","Hymenoptera","Mecopterida"    )
 
 
 for (type in c("dS","dN")){ # For dS and dN do.
