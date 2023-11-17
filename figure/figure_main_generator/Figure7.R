@@ -17,7 +17,7 @@ ylabel = "dNdS"
 xlabel = "max_lifespan_days"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = (dt_graph[,ylabel])
+lm_y = dt_graph[,ylabel]
 lm_x = log10(dt_graph[,xlabel])
 shorebird <- comparative.data(arbrePhylotips, 
                               data.frame(species=dt_graph$species,
