@@ -1,6 +1,5 @@
 source("figure/figure_main_generator/library_path.R")
 
-
 # PANNEL A
 
 dt_db = data.frame(  table(data1[data1$expression_data,]$clade_group))
@@ -15,7 +14,7 @@ pA = ggplot(dt_db, aes(x = "", y = Freq/sum(Freq), fill = clade)) +
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Clades",values = Clade_color) +  # Use the custom color palette
   geom_text(aes(label = ifelse(Freq >= 20, paste0(round(Freq), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Transcriptomic data for Nspecies = ",sum(dt_db$Freq),sep=""))+
+  ggtitle(paste("Transcriptomic data for N = ",sum(dt_db$Freq)," species",sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))

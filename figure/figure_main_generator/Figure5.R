@@ -39,7 +39,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     caption = substitute(paste("LM: "," R"^2,lm_eqn," / PGLS:"," R"^2,pgls_eq), list(nbspecies=nrow(dt_graph),
                                                                                      lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
                                                                                      pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird)))),
-    title = substitute(paste("Nspecies = ",nbspecies), list(nbspecies=nrow(dt_graph),
+    title = substitute(paste("N = ",nbspecies," species",sep=""), list(nbspecies=nrow(dt_graph),
                                                             lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
                                                             pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird))))
   ) + annotation_logticks(sides = "lb") 
@@ -81,7 +81,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     caption = substitute(paste("LM: "," R"^2,lm_eqn," / PGLS:"," R"^2,pgls_eq), list(nbspecies=nrow(dt_graph),
                                                                                                              lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
                                                                                                              pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird)))),
-    title = substitute(paste("Nspecies = ",nbspecies), list(nbspecies=nrow(dt_graph),
+    title = substitute(paste("N = ",nbspecies," species",sep=""), list(nbspecies=nrow(dt_graph),
                                                                                                              lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
                                                                                                              pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird))))
   ) + annotation_logticks(sides = "lb")

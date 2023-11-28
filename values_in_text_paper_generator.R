@@ -108,6 +108,10 @@ paste(" of ",sum(list_species$expression_data)," distinct species, including ",
 paste("(longevity, body mass, and body weight), for ",sum(list_species$lht_data)," species.",sep="")
 
 
+# Protein-coding sequence evolution features
+
+paste("(longevity, body mass, and body weight), for ",sum(list_species$dnds_data)," species.",sep="")
+
 
 # Technical Validation
 

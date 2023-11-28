@@ -91,27 +91,27 @@ cnidaria<-readPNG(paste(path_require,"cnidaria.png",sep=""))
   
   xaxis=1000
   yaxis=2765
-  rasterImage(tree,xleft=0+xaxis, ybottom=0+yaxis, xright=900/5+xaxis, ytop=900/5+yaxis)
+  rasterImage(tree,xleft=0+xaxis, ybottom=0+yaxis, xright=800/5+xaxis, ytop=900/5+yaxis)
   
   xaxis=550
   yaxis=2500
   rasterImage(cnidaria,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=700/4+yaxis)
   
-  xaxis=600
+  xaxis=550
   yaxis=2270
-  rasterImage(bee,xleft=0+xaxis, ybottom=0+yaxis, xright=900/5+xaxis, ytop=700/5+yaxis)
+  rasterImage(bee,xleft=0+xaxis, ybottom=0+yaxis, xright=1100/5+xaxis, ytop=700/5+yaxis)
   
   xaxis=630
   yaxis=2000
-  rasterImage(fly,xleft=0+xaxis, ybottom=0+yaxis, xright=900/7+xaxis, ytop=900/7+yaxis)
+  rasterImage(fly,xleft=0+xaxis, ybottom=0+yaxis, xright=1200/8+xaxis, ytop=900/8+yaxis)
   
   xaxis=800
   yaxis=1000
-  rasterImage(monkey,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=900/4+yaxis)
+  rasterImage(monkey,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4.5+xaxis, ytop=900/4.5+yaxis)
   
   xaxis=700
   yaxis=1550
-  rasterImage(teleostei,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=500/4+yaxis)
+  rasterImage(teleostei,xleft=0+xaxis, ybottom=0+yaxis, xright=900/4+xaxis, ytop=400/4+yaxis)
   
   xaxis=1000
   yaxis=300
