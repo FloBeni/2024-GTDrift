@@ -12,9 +12,9 @@ measure_distance = function(tree,tip1,tip2){
 
 
 
-clade_dt = read.delim("database/list_species.tab")
+clade_dt = read.delim("data/dnds_phylo/list_species_dnds.tab")
 rownames(clade_dt) = clade_dt$species
-clade_dt$clade_group = str_replace_all(clade_dt$clade_group," ","_")
+clade_dt$clade_dnds = str_replace_all(clade_dt$clade_dnds," ","_")
 
 # Which clade is included in an other clades.
 ref_group_list = list("Other_Invertebrates"=c("Other_Insecta","Other_Vertebrates","Nematoda"),"Other_Vertebrates"=c("Mammalia","Aves","Teleostei"),"Other_Insecta"=c("Hymenoptera","Mecopterida"))
@@ -30,19 +30,19 @@ for (clade in order_clade[2:9]){print(clade) # Basically it starts with one tree
   clade_togreff = clade
   clade_togreff_group = names(ref_group_list)[grepl(clade,ref_group_list)]
   
-  out_name = paste(clade_ref,clade_togreff,sep=";")
+  out_name = paste(clade_ref,clade_togreff , sep=";")
   
   subtree_to_add <- read.tree(paste("data/dnds_phylo/per_clade/",clade_togreff,"/phylogeny/raxml.root.nwk",sep="")) # Extract the tree to incorporate.
   
-  species_1 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_group == clade_ref_group  ,]$species # Identify the species shared by both tree that corresponds to the upper clade.
-  species_2 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_group == clade  ,]$species # Identify the species shared by both tree that corresponds to the clade to incorporate.
+  species_1 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_dnds == clade_ref_group  ,]$species # Identify the species shared by both tree that corresponds to the upper clade.
+  species_2 = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_dnds == clade  ,]$species # Identify the species shared by both tree that corresponds to the clade to incorporate.
   
   max_distance = max(measure_distance(original_tree,species_1,species_2), measure_distance(subtree_to_add,species_1,species_2)) # Measure the maximum distance between both species in the two trees.
   
   print( unlist(ref_group_list[clade_togreff]))
-  species_to_remove_from_original = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_group %in% unlist(ref_group_list[clade_togreff])  ,]$species # Remove species from original tree.
+  species_to_remove_from_original = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & clade_dt$clade_dnds %in% unlist(ref_group_list[clade_togreff])  ,]$species # Remove species from original tree.
   print(species_to_remove_from_original)
-  species_to_remove_from_greff = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & !clade_dt$clade_group %in% unlist(c(clade,ref_group_list[clade_togreff]))  ,]$species # Remove species from the tree to incorporate.
+  species_to_remove_from_greff = clade_dt[clade_dt$species %in% original_tree$tip.label & clade_dt$species %in% subtree_to_add$tip.label & !clade_dt$clade_dnds %in% unlist(c(clade,ref_group_list[clade_togreff]))  ,]$species # Remove species from the tree to incorporate.
   print(species_to_remove_from_greff)
   
   tree_to_greff <- drop.tip(subtree_to_add, species_to_remove_from_greff)

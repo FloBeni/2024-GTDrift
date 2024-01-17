@@ -34,12 +34,11 @@ rownames(species_clade) = species_clade$species
 
 # Identify to which 'clade_group' each species belongs.
 table_ncbi = read.delim(paste("data/taxonomy.tab",sep=""))
-species_clade$clade_group = "Other Invertebrates"
+species_clade$clade_group = "Other Metazoans"
 species_clade[ table_ncbi[table_ncbi$name == "Vertebrata",]$species,]$clade_group = "Other Vertebrates"
 species_clade[ table_ncbi[table_ncbi$name == "Insecta",]$species,]$clade_group = "Other Insecta"
-species_clade[ table_ncbi[table_ncbi$name %in% c("Diptera","Lepidoptera"),]$species,]$clade_group = "Mecopterida"
-species_clade[ table_ncbi[table_ncbi$name %in% c("Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade_group =
-  species_clade[ table_ncbi[table_ncbi$name %in% c("Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade
+species_clade[ table_ncbi[table_ncbi$name %in% c("Diptera","Lepidoptera","Coleoptera","Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade_group =
+  species_clade[ table_ncbi[table_ncbi$name %in% c("Diptera","Lepidoptera","Coleoptera","Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade
 
 # Identify which species has transcriptomic data in the database.
 species_clade$expression_data = species_clade$species %in% list.dirs("database/Transcriptomic",recursive = F,full.names = F)

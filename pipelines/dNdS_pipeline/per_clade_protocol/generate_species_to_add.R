@@ -43,9 +43,9 @@ table(list_species_metazoa$clade)
 # list_species_metazoa[,"clade_group"] = "Other Invertebrates"
 # list_species_metazoa[list_species_metazoa$clade %in% c("Vertebrates","Amphibia","Mammalia","Aves","Lepidosauria","Testudines","Crocodylia","Teleostei","Anura","Chondrichthyes"),"clade_group"] = "Other Vertebrates"
 # list_species_metazoa[list_species_metazoa$clade %in% c("Blattodea","Coleoptera","Ephemeroptera","Hemiptera","Thysanoptera"),"clade_group"] = "Other Insecta"
-# list_species_metazoa[list_species_metazoa$clade %in% c("Diptera","Lepidoptera"),"clade_group"] = "Lepido Diptera"
+# list_species_metazoa[list_species_metazoa$clade %in% c("Diptera","Lepidoptera"),"clade_group"] = "Mecopterida"
 # list_species_metazoa[list_species_metazoa$clade %in% c("Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),"clade_group"] = list_species_metazoa[list_species_metazoa$clade %in% c("Hymenoptera","Nematoda","Mammalia","Aves","Teleostei","Embryophyta"),"clade"]
-# list_species_metazoa$clade_group = factor(list_species_metazoa$clade_group, levels = c("Lepido Diptera","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Mammalia","Aves","Teleostei","Other Vertebrates","Embryophyta"))
+# list_species_metazoa$clade_group = factor(list_species_metazoa$clade_group, levels = c("Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Mammalia","Aves","Teleostei","Other Vertebrates","Embryophyta"))
 
 df = data.frame()
 for (species_name in list_species_metazoa$species){print(species_name)
@@ -57,7 +57,7 @@ for (species_name in list_species_metazoa$species){print(species_name)
 list_species_metazoa[ df[df$name == "Metazoa",]$species,"clade_group"] = "Other Invertebrates"
 list_species_metazoa[ df[df$name == "Vertebrata",]$species,]$clade_group = "Other Vertebrates"
 list_species_metazoa[ df[df$name == "Insecta",]$species,]$clade_group = "Other Insecta"
-list_species_metazoa[ df[df$name %in% c("Diptera","Lepidoptera"),]$species,]$clade_group = "Lepido Diptera"
+list_species_metazoa[ df[df$name %in% c("Diptera","Lepidoptera"),]$species,]$clade_group = "Mecopterida"
 list_species_metazoa[ df[df$name %in% c("Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade_group =
   list_species_metazoa[ df[df$name %in% c("Nematoda","Hymenoptera","Mammalia","Aves","Teleostei","Embryophyta"),]$species,]$clade
 
