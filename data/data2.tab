@@ -3,11 +3,11 @@
 #intron: Number of introns with Ns > 0.
 #annotated: Number of annotated introns.
 #annotated_unclassified: Number of unclassified introns annotated.
-#annotated_major: Number of major introns annotated.
-#annotated_minor: Number of minor introns annotated.
+#annotated_major: Number of major-isoform introns annotated.
+#annotated_minor: Number of minor-isoform introns annotated.
 #prop_annot_unclassified: Proportion of unclassified introns annotated.
-#prop_annot_major: Proportion of major introns annotated.
-#prop_annot_minor: Proportion of minor introns annotated.
+#prop_annot_major: Proportion of major-isoform introns annotated.
+#prop_annot_minor: Proportion of minor-isoform introns annotated.
 species	sequencing_depth	intron	annotated	annotated_unclassified	annotated_major	annotated_minor	prop_annot_unclassified	prop_annot_major	prop_annot_minor
 Abrus_precatorius_NCBI.taxid3816	4.69570198426869	71813	69505	58916	9705	884	0.969938428105759	0.999073502161828	0.651436993367723
 Acanthocheilonema_viteae_NCBI.taxid6277	1043.43350027824	154383	71593	2418	66572	2603	0.615894039735099	0.888728690242567	0.0344540039708802

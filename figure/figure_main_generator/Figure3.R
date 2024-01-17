@@ -5,7 +5,7 @@ source("figure/figure_main_generator/library_path.R")
 dt_db = data.frame(  table(data1[data1$expression_data,]$clade_group))
 dt_db$clade = dt_db$Var1
 
-dt_db$clade = factor(dt_db$clade, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+dt_db$clade = factor(dt_db$clade, levels = names(Clade_color))
 
 
 pA = ggplot(dt_db, aes(x = "", y = Freq/sum(Freq), fill = clade)) +
@@ -16,6 +16,7 @@ pA = ggplot(dt_db, aes(x = "", y = Freq/sum(Freq), fill = clade)) +
   geom_text(aes(label = ifelse(Freq >= 20, paste0(round(Freq), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("Transcriptomic data for N = ",sum(dt_db$Freq)," species",sep=""))+
   theme(
+    legend.title =  element_text(color="black", size=35, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")

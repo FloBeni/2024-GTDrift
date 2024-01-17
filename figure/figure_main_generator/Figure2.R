@@ -34,6 +34,7 @@ pA = ggplot(dt_db[dt_db$lifespan_days != 0,], aes(x = "", y = lifespan_days/sum(
   geom_text(aes(label = paste0(round(lifespan_days), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("lifespan, N = ",length(unique(all_lht[all_lht$life_history_traits == "lifespan_days",]$species))," species",sep=""))+
   theme(
+    legend.title =  element_text(color="black", size=35, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")
@@ -99,7 +100,7 @@ dt_db$clade = rownames(dt_db)
 
 
 
-dt_db$clade = factor(dt_db$clade, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+dt_db$clade = factor(dt_db$clade, levels = names(Clade_color))
 
 
 
@@ -111,6 +112,7 @@ pD = ggplot(dt_db[dt_db$ADW != 0,], aes(x = "", y = ADW/sum(dt_db$ADW), fill = c
   geom_text(aes(label = ifelse(ADW >= 20, paste0(round(ADW), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("ADW, N = ",length(unique(all_lht[all_lht$db == "ADW",]$species))," species",sep=""))+
   theme(
+    legend.title =  element_text(color="black", size=35, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")
@@ -189,11 +191,11 @@ imgF = load.image(paste(path_pannel,"F2pF.jpg",sep=""))
   mtext("C",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   par(mar=c(0, 2, 0, 0))
   plot(imgD, axes=F)
-  mtext("D",at=50,adj=-1, side=2, line=1, font=2, cex=2.3,las=2)
+  mtext("D",at=-50,adj=-1, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgE, axes=F)
-  mtext("E",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
+  mtext("E",at=-50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   plot(imgF, axes=F)
-  mtext("F",at=50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
+  mtext("F",at=-50,adj=2, side=2, line=1, font=2, cex=2.3,las=2)
   
   dev.off()
 }

@@ -6,8 +6,8 @@ source("figure/figure_main_generator/library_path.R")
 data3 = read.delim("data/data3.tab",comment.char = "#")
 pA = ggplot(data3,aes(x=sequencing_depth,y = N1_sup0)) + 
   # geom_point(aes(fill="N1_sup10"),size=3,pch=21)  + 
-  geom_point(aes(y = major,fill="Major"),size=3,pch=21,alpha=.7)+
-  geom_point(aes(y = minor,fill="Minor"),size=3,pch=21,alpha=.7)+
+  geom_point(aes(y = major,fill="Major-isoform"),size=3,pch=21,alpha=.7)+
+  geom_point(aes(y = minor,fill="Minor-isoform"),size=3,pch=21,alpha=.7)+
   geom_point(aes(y = unclassified ,fill="Unclassified"),size=3,pch=21,alpha=.7)+
   theme_bw() + theme(
     axis.title.x = element_text(color="black", size=26,family="economica"),
@@ -40,12 +40,12 @@ data2 = read.table("data/data2.tab",header = T,comment.char = "#")
 data2 = data2[ data2$sequencing_depth > 1 , ]
 
 dt = data2[,c("sequencing_depth","prop_annot_major")]
-dt$group = "Major"
+dt$group = "Major-isoform"
 colnames(dt) = c("sequencing_depth","proportion","group")
 
 
 da = data2[,c("sequencing_depth","prop_annot_minor")]
-da$group = "Minor"
+da$group = "Minor-isoform"
 colnames(da) = c("sequencing_depth","proportion","group")
 dt = rbind(dt , da)
 
@@ -109,7 +109,7 @@ ydensity <- ggplot(dt, aes(y=proportion, fill=group)) +
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
-  )+theme(legend.position=c(0.3,0.6), legend.justification=c(0,1))+
+  )+theme(legend.position=c(0.2,0.6), legend.justification=c(0,1))+
   # theme(legend.position = "none") +
   xlab("Density")
 ydensity

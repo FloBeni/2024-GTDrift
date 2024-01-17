@@ -7,7 +7,7 @@ names(label_color) = names(Clade_color)
 
 sum(table(data1$clade_group))
 
-data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+data1$clade_group = factor(data1$clade_group, levels =  names(Clade_color))
 
 pA = ggplot(data1 , aes(y = nb_busco_gene_eukaryota/303 * 100 , fill = clade_group, x = clade_group)) + 
   geom_point(pch=21,size=3,alpha=0.8) + geom_boxplot(outlier.shape = NA,alpha=0.8) + 
@@ -18,7 +18,7 @@ pA = ggplot(data1 , aes(y = nb_busco_gene_eukaryota/303 * 100 , fill = clade_gro
     axis.text.x =  element_text(color="black", size=25, family="economica",angle=60,hjust=1),
     title =  element_text(color="black", size=31, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
-    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 7)),
+    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 3)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=23, family="economica"),
     plot.caption.position =  "plot"
   ) + xlab("") + ylab("Percentage of eukaryota BUSCO\ngenes identified") + scale_y_continuous(labels = paste(seq(0,100,25),"%"))

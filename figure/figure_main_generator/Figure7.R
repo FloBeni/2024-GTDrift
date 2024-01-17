@@ -6,7 +6,7 @@ names(label_color) = names(Clade_color)
 
 sum(table(data1$clade_group))
 
-data1$clade_group = factor(data1$clade_group, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+data1$clade_group = factor(data1$clade_group, levels = names(Clade_color))
 
 per_clade_dnds = read.delim("database/dNdS/per_clade.tab")
 data1 = merge.data.frame(x=data1,y=per_clade_dnds,by= "species",all=T,suffixes = c("","_perclade"))
@@ -116,8 +116,9 @@ pC = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     axis.text.x =  element_text(color="black", size=26, family="economica"),
     title =  element_text(color="black", size=20, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
-    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
+    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 5)),
     plot.caption = element_text(hjust = 0.25, face= "italic", size=20, family="economica"),
+    legend.title =  element_text(color="black", size=27, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) +
   labs(

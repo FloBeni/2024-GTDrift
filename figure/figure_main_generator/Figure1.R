@@ -17,20 +17,20 @@ for (group in unique(edge_group)){
   }
 }
 edge_clade_prev = edge_clade
-list_inclusion =  list("Other Invertebrates"=c("Mecopterida","Other Insecta","Nematoda","Hymenoptera","Other Invertebrates"),
-                       "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insecta"=c("Mecopterida","Other Insecta","Hymenoptera"),
-                       Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Mecopterida"="Mecopterida",Embryophyta="Embryophyta"
+list_inclusion =  list("Other Metazoans"=c("Diptera","Lepidoptera","Coleoptera","Other Insects","Nematoda","Hymenoptera","Other Metazoans"),
+                       "Other Vertebrates"=c("Teleostei","Aves","Mammalia","Other Vertebrates"),"Other Insects"=c("Diptera","Lepidoptera","Coleoptera","Other Insects","Hymenoptera"),
+                       Nematoda="Nematoda",Teleostei="Teleostei",Hymenoptera="Hymenoptera",Aves="Aves",Mammalia="Mammalia","Diptera"="Diptera","Lepidoptera"="Lepidoptera","Coleoptera"="Coleoptera",Embryophyta="Embryophyta"
 )
 
 
-clade="Other Invertebrates"
+clade="Other Metazoans"
 
 for (clade in names(list_inclusion)){
   edge_clade[ which.edge(tree,  tree$edge[,2][edge_clade_prev %in% unlist(list_inclusion[clade])] ) ] = clade
 }
 node_metadata = data.frame(node=tree$edge[,2],color=edge_clade)
 
-node_metadata$color = factor(node_metadata$color, levels = c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates","branch"))
+node_metadata$color = factor(node_metadata$color, levels = names(Clade_color))
 
 label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clade_color)],sep='')
 names(label_color) = names(Clade_color)
@@ -56,7 +56,6 @@ pA <- pA %<+% node_metadata  + aes(color=color) +
 pA
 
 resolution=2
-# jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 6000/resolution, height = 6000/resolution,res=700/resolution)
 jpeg(paste(path_pannel,"F1pA.jpg",sep=""),width = 3000/resolution, height = 6000/resolution,res=700/resolution)
 print(pA)
 dev.off()

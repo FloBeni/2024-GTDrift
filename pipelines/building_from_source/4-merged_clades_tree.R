@@ -1,5 +1,6 @@
 # Infer the general phylogenetic tree for the per clades analysis.
 library(ape)
+library(stringr)
 library(castor)
 
 measure_distance = function(tree,tip1,tip2){

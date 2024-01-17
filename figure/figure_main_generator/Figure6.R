@@ -6,8 +6,7 @@ per_clade_dnds = read.delim("database/dNdS/per_clade.tab")
 dt = merge.data.frame(x=met_dnds,y=per_clade_dnds,by= "species",all=T,suffixes = c("_met","_perclade"))
 
 dt$clade_group = data1[dt$species,]$clade_group
-dt$clade_group = factor(dt$clade_group, levels = 
-                          c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+dt$clade_group = factor(dt$clade_group, levels = names(Clade_color))
 
 
 
@@ -61,8 +60,7 @@ euk_dnds = read.delim("database/dNdS/Eukaryota.tab")
 dt = merge.data.frame(x=euk_dnds,y=emb_met_dnds,by= "species",all=T,suffixes = c("_euk","_emb_met"))
 
 dt$clade_group = data1[dt$species,]$clade_group
-dt$clade_group = factor(dt$clade_group, levels = 
-                          c("Embryophyta","Mecopterida","Hymenoptera","Other Insecta","Nematoda","Other Invertebrates","Teleostei","Mammalia","Aves","Other Vertebrates"))
+dt$clade_group = factor(dt$clade_group, levels = names(Clade_color))
 
 dt_graph = dt
 ylabel = "dNdS_euk"
@@ -79,8 +77,9 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     axis.text.x =  element_text(color="black", size=26, family="economica"),
     title =  element_text(color="black", size=20, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
-    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 10)),
+    legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 3)),
     plot.caption = element_text(hjust = 0.4, face= "italic", size=20, family="economica"),
+    legend.title =  element_text(color="black", size=27, family="economica"),
     plot.caption.position =  "plot"
   )+ guides(fill = guide_legend(override.aes = list(size=5))) +  
   labs(
