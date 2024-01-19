@@ -15,12 +15,11 @@ xlabel = "max_weight_kg"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = log10(dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
-shorebird <- comparative.data(arbrePhylotips, 
-                              data.frame(species=dt_graph$species,
-                                         pgls_x=lm_x,
-                                         pgls_y=lm_y), species, vcv=TRUE)
 
-pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_point(pch=21,size=3,alpha=.6)  + 
+model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+
+pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
+  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.6)  +
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + guides(fill = guide_legend(override.aes = list(size=5))) +theme(legend.position="none")  +
   scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+
   scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + theme(
@@ -31,18 +30,12 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     title =  element_text(color="black", size=20, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 5)),
-    plot.caption = element_text(hjust = 0.7, face= "italic", size=20, family="economica"),
+    plot.caption = element_text(hjust = 0.65, face= "italic", size=20, family="economica"),
     plot.caption.position =  "plot"
   )+ ylab("Body length (cm, log scale)")+
-  
   labs(
-    
-    caption = substitute(paste("LM: "," R"^2,lm_eqn," / PGLS:"," R"^2,pgls_eq), list(nbspecies=nrow(dt_graph),
-                                                                                     lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
-                                                                                     pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird)))),
-    title = substitute(paste("N = ",nbspecies," species",sep=""), list(nbspecies=nrow(dt_graph),
-                                                                       lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
-                                                                       pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird))))
+    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) + annotation_logticks(sides = "lb")
 pA
 
@@ -59,12 +52,11 @@ xlabel = "max_lifespan_days"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 lm_y = log10(dt_graph[,ylabel])
 lm_x = log10(dt_graph[,xlabel])
-shorebird <- comparative.data(arbrePhylotips, 
-                              data.frame(species=dt_graph$species,
-                                         pgls_x=lm_x,
-                                         pgls_y=lm_y), species, vcv=TRUE)
 
-pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_point(pch=21,size=3,alpha=.6)  + 
+model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+
+pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + 
+  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) +geom_point(pch=21,size=3,alpha=.6)  + geom_point(pch=21,size=3,alpha=.6)  + 
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=31, family="economica"),
@@ -73,24 +65,19 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + geom_
     title =  element_text(color="black", size=20, family="economica"),
     text =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=24, family="economica",vjust = 1.5,margin = margin(t = 5)),
-    plot.caption = element_text(hjust = 0.33, face= "italic", size=20, family="economica"),
+    plot.caption = element_text(hjust = 0.39, face= "italic", size=20, family="economica"),
     legend.title =  element_text(color="black", size=27, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) + 
   scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + xlab("Longevity (days, log scale)")+
-  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + 
+  scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) +
   labs(
-    
-    caption = substitute(paste("LM: "," R"^2,lm_eqn," / PGLS:"," R"^2,pgls_eq), list(nbspecies=nrow(dt_graph),
-                                                                                     lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
-                                                                                     pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird)))),
-    title = substitute(paste("N = ",nbspecies," species",sep=""), list(nbspecies=nrow(dt_graph),
-                                                                       lm_eqn=lm_eqn(lm(lm_y ~ lm_x)),
-                                                                       pgls_eq=lm_eqn(pgls(pgls_y~pgls_x,shorebird))))
-  ) + annotation_logticks(sides = "lb") + ylab("")
+    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    title = paste("N = ",nrow(dt_graph)," species",sep="")
+  )  + annotation_logticks(sides = "lb") + ylab("")
 pB
 
-jpeg(paste(path_pannel,"F5pB.jpg",sep=""),width = 7000/resolution, height = 4000/resolution,res=700/resolution)
+jpeg(paste(path_pannel,"F5pB.jpg",sep=""), width = 7000/resolution, height = 4000/resolution,res=700/resolution)
 print(pB)
 dev.off()
 
