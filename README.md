@@ -45,7 +45,7 @@ Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5
 
     -   'Data3_supp.tab' analysis of the coverage impacting the proportion of analyzable annotated introns in *Drosophila melanogaster* (Fig. 9).
 
--   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10527331.svg)](https://doi.org/10.5281/zenodo.10527331) that can be download with the script 'upload_database.sh'. A description of the files that it contains is available on the archive.
+-   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10529523.svg)](https://doi.org/10.5281/zenodo.10529523) that can be download with the script 'upload_database.sh'. A description of the files that it contains is available on the archive.
 
 -   The 'pipelines' folder contains the bionformatics pipelines for different purposes.
 
@@ -55,7 +55,7 @@ Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5
 
     -   To generate data table located in the 'data' directory ('data_generator').
 
-    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10527331.svg)](https://doi.org/10.5281/zenodo.10527331) ('building_from_source' and 'building_db');
+    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10529523.svg)](https://doi.org/10.5281/zenodo.10529523) ('building_from_source' and 'building_db');
 
 ### 
 
