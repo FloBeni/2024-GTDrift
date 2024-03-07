@@ -2,7 +2,7 @@
 
 This archive includes all processed data that have been generated and used in the database paper 'GTDrift: A resource for exploring the interplay between genetic drift, genomic and transcriptomic characteristics in eukaryotes', as well as the scripts used to analyze the data and to generate the figures.
 
-Developed by Florian Bénitière, Anamaria Necsulea and Laurent Duret. 
+Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. 
 Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5558, Villeurbanne, France.
 
 ### Directories content
