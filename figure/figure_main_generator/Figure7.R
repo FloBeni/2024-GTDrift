@@ -17,10 +17,8 @@ ylabel = "dNdS"
 xlabel = "max_lifespan_days"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = dt_graph[,ylabel]
-lm_x = log10(dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y= dt_graph[,ylabel],label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.6)  + 
@@ -36,7 +34,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5)))+  theme(legend.position="none")+
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) +
   scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000)) + xlab("Longevity (days, log scale)")+ 
@@ -53,10 +51,8 @@ dt_graph = data1
 ylabel = "dNdS"
 xlabel = "max_weight_kg"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = (dt_graph[,ylabel])
-lm_x = log10(dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 
 pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
@@ -73,7 +69,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5)))+
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) +
   scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+
@@ -90,10 +86,8 @@ dt_graph = data1
 ylabel = "dNdS"
 xlabel = "max_length_cm"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = (dt_graph[,ylabel])
-lm_x = log10(dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 
 pC = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
@@ -111,7 +105,7 @@ pC = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) +
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) +
   scale_x_log10(breaks=c(0.01,0.1,1,10,100,1000),labels=c(0.01,0.1,1,10,100,1000)) + xlab("Body length (cm, log scale)") +

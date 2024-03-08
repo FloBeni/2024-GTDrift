@@ -16,10 +16,8 @@ ylabel = "dNdS_perclade"
 xlabel = "dNdS_met"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = (dt_graph[,ylabel])
-lm_x = (dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x= (dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + 
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.8)  +  
@@ -35,7 +33,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   )+ guides(fill = guide_legend(override.aes = list(size=5))) + theme(legend.position="none") +
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )+  ylab("Terminal branches dN/dS per clade set") + xlab("Terminal branches dN/dS Metazoa set")
 pA
@@ -61,10 +59,8 @@ dt_graph = dt
 ylabel = "dNdS_euk"
 xlabel = "dNdS_emb_met"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) ,]
-lm_y = (dt_graph[,ylabel])
-lm_x = (dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=NA,display_other=F)
+model_to_use = fitted_model(x=(dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=NA,display_other=F)
 
 pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group"))+
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept)  + geom_point(pch=21,size=3,alpha=.8)  +  

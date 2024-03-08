@@ -13,10 +13,8 @@ dt_graph = data1
 ylabel = "max_length_cm"
 xlabel = "max_weight_kg"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = log10(dt_graph[,ylabel])
-lm_x = log10(dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=log10(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.6)  +
@@ -34,7 +32,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   )+ ylab("Body length (cm, log scale)")+
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) + annotation_logticks(sides = "lb")
 pA
@@ -50,10 +48,8 @@ dt_graph = data1
 ylabel = "max_length_cm"
 xlabel = "max_lifespan_days"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
-lm_y = log10(dt_graph[,ylabel])
-lm_x = log10(dt_graph[,xlabel])
 
-model_to_use = fitted_model(x=lm_x,y=lm_y,label=dt_graph$species,tree=arbrePhylotips,display_other=F)
+model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=log10(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + 
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) +geom_point(pch=21,size=3,alpha=.6)  + geom_point(pch=21,size=3,alpha=.6)  + 
@@ -69,10 +65,11 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     legend.title =  element_text(color="black", size=27, family="economica"),
     plot.caption.position =  "plot"
   ) + guides(fill = guide_legend(override.aes = list(size=5))) + 
-  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + xlab("Longevity (days, log scale)")+
+  scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000,100000)) + 
+  xlab("Longevity (days, log scale)")+
   scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) +
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )  + annotation_logticks(sides = "lb") + ylab("")
 pB
