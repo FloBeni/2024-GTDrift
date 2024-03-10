@@ -72,7 +72,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) +
-  scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+
+  scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body mass (kg, log scale)")+
   ylab("") +  theme(legend.position="none")+ annotation_logticks(sides = "b")
 pB
 
