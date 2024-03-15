@@ -3231,6 +3231,7 @@ Syrrhaptes_paradoxus	302527	0.256	EOL	weight_kg
 Rhopalosiphum_maidis	43146	0.256	ADW	length_cm
 Callithrix_jacchus	9483	0.2552	AnAge	weight_kg
 Athene_cunicularia	194338	0.255	ADW	weight_kg
+Cynoglossus_semilaevis	244447	0.25	Lynch et al. 2023	weight_kg
 Sinocyclocheilus_grahami	75366	0.25	EOL	weight_kg
 Sinocyclocheilus_grahami	75366	0.25	fishbase	weight_kg
 Acyrthosiphon_pisum	7029	0.25	EOL image	length_cm
@@ -3310,7 +3311,9 @@ Xenopus_laevis	8355	0.13	AnAge	weight_kg
 Struthidea_cinerea	181839	0.13	ADW	weight_kg
 Cuculus_canorus	55661	0.13	ADW format	weight_kg
 Piaya_cayana	33601	0.129	EOL	weight_kg
+Caenorhabditis_brenneri	135651	0.1273	Vielle et al. 2016	length_cm
 Rana_temporaria	8407	0.127	EOL	weight_kg
+Caenorhabditis_nigoni	1611254	0.1266	Vielle et al. 2016	length_cm
 Rousettus_aegyptiacus	9407	0.125	AnAge	weight_kg
 Mesocricetus_auratus	10036	0.125	ADW	weight_kg
 Rostratula_benghalensis	118793	0.121	EOL	weight_kg
@@ -3318,6 +3321,7 @@ Phyllostomus_hastatus	9423	0.12041	ADW	weight_kg
 Phyllostomus_discolor	89673	0.1204	ADW Phyllostomus hastatus	weight_kg
 Arvicola_amphibius	1047088	0.12	AnAge	weight_kg
 Carlito_syrichta	1868482	0.1192	AnAge	weight_kg
+Caenorhabditis_remanei	31234	0.1187	Vielle et al. 2016	length_cm
 Eleutherodactylus_coqui	57060	0.117	ADW	weight_kg
 Mustela_erminea	36723	0.116	ADW	weight_kg
 Coturnix_japonica	93934	0.115	AnAge	weight_kg
@@ -3328,6 +3332,7 @@ Mustela_erminea	36723	0.1103	AnAge	weight_kg
 Eurystomus_gularis	325343	0.11	EOL	weight_kg
 Arvicanthis_niloticus	61156	0.11	AnAge	weight_kg
 Calidris_pugnax	198806	0.11	BirdFacts	weight_kg
+Caenorhabditis_briggsae	6238	0.1061	Vielle et al. 2016	length_cm
 Monodelphis_domestica	13616	0.105	AnAge	weight_kg
 Mesocricetus_auratus	10036	0.105	AnAge	weight_kg
 Cnemophilus_loriae	254448	0.101	EOL	weight_kg
@@ -3345,6 +3350,7 @@ Jacana_jacana	54508	0.0875	EOL	weight_kg
 Pluvianellus_socialis	227228	0.087	EOL	weight_kg
 Gymnodraco_acuticeps	8218	0.0862	fishbase	weight_kg
 Upupa_epops	57439	0.086	EOL	weight_kg
+Caenorhabditis_angaria	860376	0.0849	Vielle et al. 2016	length_cm
 Tokudaia_osimensis	73109	0.08465	EOL	weight_kg
 Toxostoma_redivivum	99882	0.0844	AnAge	weight_kg
 Toxostoma_redivivum	99882	0.0844	EOL	weight_kg
@@ -3438,6 +3444,7 @@ Melospiza_melodia	44397	0.0457	EOL	weight_kg
 Loxia_curvirostra	64802	0.0454	ADW	weight_kg
 Antechinus_flavipes	38775	0.045	AnAge	weight_kg
 Chaetorhynchus_papuensis	254446	0.045	EOL	weight_kg
+Fukomys_damarensis	885580	0.045	Lynch et al. 2023	weight_kg
 Myotis_myotis	51298	0.045	ADW	weight_kg
 Sarcoptes_scabiei	52283	0.045	ADW	length_cm
 Apus_apus	8895	0.0449	ADW	weight_kg
@@ -3677,18 +3684,36 @@ Bombina_bombina	8345	0.00317	BDJ biodiversity data journal	weight_kg
 Patella_vulgata	6465	0.00312	EOL	weight_kg
 Suncus_etruscus	109475	0.003	ADW	weight_kg
 Lottia_gigantea	225164	0.00255	EOL	weight_kg
+Syngnathus_scovelli	161590	0.0025	Lynch et al. 2023	weight_kg
 Anolis_carolinensis	28377	0.002455	AnAge	weight_kg
 Engystomops_pustulosus	76066	0.00236	EOL	weight_kg
 Suncus_etruscus	109475	0.0021	AnAge	weight_kg
 Dreissena_polymorpha	45954	0.00204	EOL	weight_kg
 Gambusia_affinis	33528	0.002	EOL	weight_kg
+Bombyx_mori	7091	0.001416	Lynch et al. 2023	weight_kg
+Amphiprion_ocellaris	80972	0.001	Lynch et al. 2023	weight_kg
 Bombus_affinis	309941	0.0008	ADW	weight_kg
 Dermacentor_andersoni	34620	0.0007	ADW	weight_kg
 Polioptila_caerulea	66707	0.00064	EOL	weight_kg
+Betta_splendens	158456	0.000625	Lynch et al. 2023	weight_kg
 Sphaerodactylus_townsendi	933632	0.0005	EOL	weight_kg
+Bombus_terrestris	30195	0.0003	Lynch et al. 2023	weight_kg
 Hermetia_illucens	343691	0.00022	ADW	weight_kg
 Blattella_germanica	6973	0.00012	ADW	weight_kg
 Armadillidium_vulgare	13347	0.000116	ADW	weight_kg
+Apis_mellifera	7460	0.00002245	Lynch et al. 2023	weight_kg
 Atta_cephalotes	12957	0.00002	ADW Atta sexdens	weight_kg
 Musca_domestica	7370	0.000012	ADW	weight_kg
 Linepithema_humile	83485	0.0000043	ADW	weight_kg
+Drosophila_pseudoobscura	7237	0.000001	Lynch et al. 2023	weight_kg
+Acyrthosiphon_pisum	7029	0.0000005	Lynch et al. 2023	weight_kg
+Anopheles_stephensi	30069	0.0000004175	Lynch et al. 2023	weight_kg
+Drosophila_melanogaster	7227	0.000000354	Lynch et al. 2023	weight_kg
+Anopheles_coluzzii	1518534	0.00000035	Lynch et al. 2023	weight_kg
+Drosophila_simulans	7240	0.000000263	Lynch et al. 2023	weight_kg
+Daphnia_magna	35525	0.0000001633943	Lynch et al. 2023	weight_kg
+Daphnia_pulex	6669	0.00000002223609	Lynch et al. 2023	weight_kg
+Daphnia_galeata	27404	0.000000007400516	Lynch et al. 2023	weight_kg
+Pristionchus_pacificus	54126	0.0000000011492	Lynch et al. 2023	weight_kg
+Caenorhabditis_elegans	6239	0.0000000001786858	Lynch et al. 2023	weight_kg
+Caenorhabditis_briggsae	6238	0.000000000102	Lynch et al. 2023	weight_kg
