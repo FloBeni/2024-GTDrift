@@ -66,7 +66,7 @@ data_lifehistory_traits$Ne = supp_lynch_2023[data_lifehistory_traits$species,]$N
 
 data_lifehistory_traits = data_lifehistory_traits[!is.na(data_lifehistory_traits$lifespan_days) | 
                                                     !is.na(data_lifehistory_traits$length_cm) |
-                                                    !is.na(data_lifehistory_traits$mass_kg)|
+                                                    !is.na(data_lifehistory_traits$mass_kg) |
                                                     !is.na(data_lifehistory_traits$Ne),]
 
 data_lifehistory_traits = data_lifehistory_traits[order(data_lifehistory_traits$species),]
