@@ -9,5 +9,66 @@ max_lht = species_clade[!duplicated(paste(species_clade$life_history_traits , sp
 max_lht$db = tapply(species_clade$db,paste(species_clade$species , species_clade$life_history_traits) , function(x) paste(x,collapse = ";"))[paste(max_lht$species,max_lht$life_history_traits)] # Get all the db that refer this maximum value.
 
 
-write.table(max_lht , paste("database/life_history_traits.tab",sep=""),quote=F,row.names = F,sep="\t") # Save the table.
+data_lifehistory_traits = data.frame(species = unique(species_clade$species))
+mass_dt = max_lht[max_lht$life_history_traits == "mass_kg",]
+rownames(mass_dt) = mass_dt$species
+data_lifehistory_traits$mass_kg = mass_dt[data_lifehistory_traits$species,]$value
+data_lifehistory_traits$mass_db = mass_dt[data_lifehistory_traits$species,]$db
+
+mass_dt = max_lht[max_lht$life_history_traits == "lifespan_days",]
+rownames(mass_dt) = mass_dt$species
+data_lifehistory_traits$lifespan_days = mass_dt[data_lifehistory_traits$species,]$value
+data_lifehistory_traits$lifespan_db = mass_dt[data_lifehistory_traits$species,]$db
+
+mass_dt = max_lht[max_lht$life_history_traits == "length_cm",]
+rownames(mass_dt) = mass_dt$species
+data_lifehistory_traits$length_cm = mass_dt[data_lifehistory_traits$species,]$value
+data_lifehistory_traits$length_db = mass_dt[data_lifehistory_traits$species,]$db
+
+# Generate a list of the species within the database and which characteristics is available from excel original excel files.
+options(stringsAsFactors = F, scipen = 999)
+library(readxl)
+library(xlsx)
+
+read_excel_allsheets <- function(filename, tibble = FALSE) {
+  sheets <- readxl::excel_sheets(filename)
+  x <-
+    lapply(sheets, function(X)
+      readxl::read_excel(filename, sheet = X))
+  if (!tibble)
+    x <- lapply(x, as.data.frame)
+  names(x) <- sheets
+  x
+}
+
+
+# Extract every species, the NCBI taxID and the clade. Detect the assembly accession used from the GFF.
+species_clade = data.frame()
+for (file in c(
+  "data/life_history_traits/metazoa.xls",
+  "data/life_history_traits/embryophyta.xls"
+)){
+  mysheets <- read_excel_allsheets(file)
+  for (species in names(mysheets)) {
+    species_clade = rbind(species_clade,data.frame(
+      species,
+      NCBI.taxid = mysheets[[species]]$NCBI.taxid[1]
+    ))
+  }
+}
+
+data_lifehistory_traits = merge.data.frame(x=species_clade,y=data_lifehistory_traits, by = "species" ,all=T)
+
+supp_lynch_2023 = read.delim(paste("data/supp_lynch_2023.tab",sep="")) # Download all life history traits.
+rownames(supp_lynch_2023) = supp_lynch_2023$Species
+
+data_lifehistory_traits$Ne = supp_lynch_2023[data_lifehistory_traits$species,]$Ne
+
+data_lifehistory_traits = data_lifehistory_traits[!is.na(data_lifehistory_traits$lifespan_days) | 
+                                                    !is.na(data_lifehistory_traits$length_cm) |
+                                                    !is.na(data_lifehistory_traits$mass_kg)|
+                                                    !is.na(data_lifehistory_traits$Ne),]
+
+data_lifehistory_traits = data_lifehistory_traits[order(data_lifehistory_traits$species),]
+write.table(data_lifehistory_traits , paste("database/life_history_traits_Ne.tab",sep=""), quote=F , row.names = F,sep="\t") # Save the table.
 

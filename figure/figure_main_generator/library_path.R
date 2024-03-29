@@ -93,7 +93,10 @@ fitted_model <- function(x=dt_graph[,xlabel],y=dt_graph[,ylabel],label=dt_graph$
   
   model = paste(dt_fit$model,sep="")
   R2 = paste(round(dt_fit$r.squared, 2),sep="")
-  pvalue = paste(formatC(dt_fit$p_val_slope, format = "e", digits = 0),sep="")
+  
+  if (dt_fit$p_val_slope < 1e-16){pvalue = "< 1e-16"} else {
+    pvalue = paste("= ",formatC(dt_fit$p_val_slope, format = "e", digits = 0),sep="")
+  }
   model_non_opti = ""
   
   if ( length(tree) != 1 & display_other){

@@ -55,7 +55,7 @@ for (file in c(
         NCBI.taxid ,
         value = as.numeric(mysheets[[species]]$`Weight (kg)`),
         db = mysheets[[species]]$`Ref weight`,
-        life_history_traits="weight_kg"
+        life_history_traits="mass_kg"
       ))
     }
   }
@@ -63,8 +63,6 @@ for (file in c(
 species_clade = species_clade[!is.na(species_clade$value),]
 
 species_clade = species_clade[order(species_clade$value , decreasing = T) , ]
-
-
-
+species_clade = species_clade[order(species_clade$species) , ]
 write.table(species_clade , paste("data/life_history_traits/all_life_history_traits.tab",sep=""),quote=F,row.names = F,sep="\t") # Save the data.
 

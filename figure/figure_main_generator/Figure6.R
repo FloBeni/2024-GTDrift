@@ -20,7 +20,7 @@ dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_g
 model_to_use = fitted_model(x= (dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
 
 pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) + 
-  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.8)  +  
+  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.6)  +  
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw()  + theme(
     axis.title.x = element_text(color="black", size=26,family="economica"),
     axis.title.y = element_text(color="black", size=26, family="economica"),
@@ -33,7 +33,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   )+ guides(fill = guide_legend(override.aes = list(size=5))) + theme(legend.position="none") +
   labs(
-    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )+  ylab("Terminal branches dN/dS per clade set") + xlab("Terminal branches dN/dS Metazoa set")
 pA
@@ -63,7 +63,7 @@ dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) ,]
 model_to_use = fitted_model(x=(dt_graph[,xlabel]),y=(dt_graph[,ylabel]),label=dt_graph$species,tree=NA,display_other=F)
 
 pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group"))+
-  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept)  + geom_point(pch=21,size=3,alpha=.8)  +  
+  geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept)  + geom_point(pch=21,size=3,alpha=.6)  +  
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + theme(
     axis.title.x = element_text(color="black", size=26,family="economica"),
     axis.title.y = element_text(color="black", size=26, family="economica"),
@@ -77,7 +77,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group"))+
     plot.caption.position =  "plot"
   )+ guides(fill = guide_legend(override.aes = list(size=5)))  +
   labs(
-    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model," :",aic," R"^2,"= ",r2,", p-value ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )+  ylab("Terminal branches dN/dS Eukaryota set") + xlab("Terminal branches dN/dS Metazoa and Emrbyophyta sets")
 pB

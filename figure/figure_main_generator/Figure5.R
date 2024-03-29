@@ -11,7 +11,7 @@ arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.n
 
 dt_graph = data1
 ylabel = "max_length_cm"
-xlabel = "max_weight_kg"
+xlabel = "max_mass_kg"
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,]
 
 model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=log10(dt_graph[,ylabel]),label=dt_graph$species,tree=arbrePhylotips,display_other=F)
@@ -19,7 +19,7 @@ model_to_use = fitted_model(x=log10(dt_graph[,xlabel]),y=log10(dt_graph[,ylabel]
 pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
   geom_abline(lwd=1,slope = model_to_use$slope, intercept = model_to_use$intercept) + geom_point(pch=21,size=3,alpha=.6)  +
   scale_fill_manual("Clades",values = Clade_color ) + theme_bw() + guides(fill = guide_legend(override.aes = list(size=5))) +theme(legend.position="none")  +
-  scale_x_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^6),labels=label_log(digits = 2),limits = c(0.000001,1000000)) + xlab("Body Weight (kg, log scale)")+
+  scale_x_log10(breaks=c(10^-12,10^-9,10^-6,10^-3,10^0,10^3,10^6,10^9),labels=label_log(digits = 2),limits = c(0.0000000001,1000000)) + xlab("Body mass (kg, log scale)")+
   scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) + theme(
     axis.title.x = element_text(color="black", size=31,family="economica"),
     axis.title.y = element_text(color="black", size=31, family="economica"),
@@ -32,7 +32,7 @@ pA = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     plot.caption.position =  "plot"
   )+ ylab("Body length (cm, log scale)")+
   labs(
-    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   ) + annotation_logticks(sides = "lb")
 pA
@@ -69,7 +69,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
   xlab("Longevity (days, log scale)")+
   scale_y_log10(breaks=c(0.01,0.1,1,10,100,1000,5000),labels=c(0.01,0.1,1,10,100,1000,5000)) +
   labs(
-    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value = ",pvalue,model_non_opti), model_to_use),
+    caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value ",pvalue,model_non_opti), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )  + annotation_logticks(sides = "lb") + ylab("")
 pB

@@ -15,7 +15,7 @@ read_excel_allsheets <- function(filename, tibble = FALSE) {
 }
 
 
-# Extract every species, the NCBI taxID and the clade.
+# Extract every species, the NCBI taxID and the clade. Detect the assembly accession used from the GFF.
 species_clade = data.frame()
 for (file in c(
   "data/life_history_traits/metazoa.xls",
@@ -25,8 +25,9 @@ for (file in c(
   for (species in names(mysheets)) {
     species_clade = rbind(species_clade,data.frame(
       species,
-      clade = mysheets[[species]]$Clade[1],
-      NCBI.taxid = mysheets[[species]]$NCBI.taxid[1]
+      NCBI.taxid = mysheets[[species]]$NCBI.taxid[1],
+      assembly_accession = sapply(paste(species,"_NCBI.taxid",mysheets[[species]]$NCBI.taxid[1],sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) ),
+      clade = mysheets[[species]]$Clade[1]
     ))
   }
 }
@@ -34,6 +35,7 @@ rownames(species_clade) = species_clade$species
 
 # Identify to which 'clade_group' each species belongs.
 table_ncbi = read.delim(paste("data/taxonomy.tab",sep=""))
+entire_taxonomy = tapply(paste(table_ncbi$rank,table_ncbi$name,sep=":"),table_ncbi$species,function(x) paste(x,collapse = ";"))
 species_clade$clade_group = "Other Metazoans"
 species_clade[ table_ncbi[table_ncbi$name == "Vertebrata",]$species,]$clade_group = "Other Vertebrates"
 species_clade[ table_ncbi[table_ncbi$name == "Insecta",]$species,]$clade_group = "Other Insects"
@@ -54,12 +56,8 @@ for (file in list.files(paste("database/dNdS",sep=""),recursive = F,full.names =
 species_clade$dnds_data = species_clade$species %in% dnds_data$species
 
 # Identify which species has life history traits data in the database.
-lht_tab = read.delim("database/life_history_traits.tab")
-species_clade$lht_data = species_clade$species %in% lht_tab$species
-
-
-# Detect the assembly accession used from the GFF.
-species_clade$assembly_accession = sapply(paste(species_clade$species,"_NCBI.taxid",species_clade$NCBI.taxid,sep=""),function(x)  list.dirs(paste("database/BUSCO_annotations/",x,sep=""),recursive = F,full.names = F) )
+lht_tab = read.delim("database/life_history_traits_Ne.tab")
+species_clade$lht_Ne_data = species_clade$species %in% lht_tab$species
 
 # Quantify the number of RNA-seq used in the study.
 species_clade$nb_rnaseq = NA
@@ -67,4 +65,8 @@ species_clade$nb_rnaseq = apply(species_clade,1,
                                 function(x) length( list.dirs(paste("database/Transcriptomic/",x["species"],"_NCBI.taxid",x["NCBI.taxid"],"/",x["assembly_accession"],"/Run",sep=""),recursive = F,full.names = F))
 )
 
+# Entire taxonomy
+species_clade$entire_taxonomy = entire_taxonomy[species_clade$species]
+
+species_clade = species_clade[order(species_clade$species),]
 write.table( species_clade , paste("database/list_species.tab",sep=""),quote=F,row.names = F,sep="\t") # Save the table.

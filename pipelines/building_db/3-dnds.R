@@ -54,6 +54,7 @@ compute_files <- function(name){ # Function to create 2 tree (dN and dS) based o
   )
   data$dNdS = data$dN / data$dS
   
+  data = data[order(data$species),]
   write.table(data , paste("database/dNdS/",name,".tab",sep=""),quote=F,row.names = F,sep="\t") # Save summary table.
   file.copy(paste("data/dnds_phylo/",name,"/phylogeny/raxml.root.nwk",sep=""),paste("database/dNdS/phylogeny/",name,"_root.nwk",sep="")) # Copy in the database the phylogenetic tree.
 }

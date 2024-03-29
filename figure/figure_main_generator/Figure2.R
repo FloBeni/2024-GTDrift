@@ -31,13 +31,14 @@ pA = ggplot(dt_db[dt_db$lifespan_days != 0,], aes(x = "", y = lifespan_days/sum(
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("Source",values = fill_set) +  # Use the custom color palette
-  geom_text(aes(label = paste0(round(lifespan_days), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
+  geom_text(aes( label = ifelse(lifespan_days >= 45, paste0(round(lifespan_days), ""), NA_character_)) , position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("lifespan, N = ",length(unique(all_lht[all_lht$life_history_traits == "lifespan_days",]$species))," species",sep=""))+
   theme(
     legend.title =  element_text(color="black", size=35, family="economica"),
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))
   ) + theme(legend.position="left")
+pA
 
 jpeg(paste(path_pannel,"F2pA.jpg",sep=""), width = 6200/resolution, height = 5500/resolution,res=700/resolution)
 print(pA)
@@ -51,7 +52,7 @@ pB = ggplot(dt_db[dt_db$length_cm != 0,], aes(x = "", y = length_cm/sum(dt_db$le
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
-  geom_text(aes(label = paste0(round(length_cm), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
+  geom_text(aes(label = ifelse(length_cm >= 45, paste0(round(length_cm), ""), NA_character_)) , position = position_stack(vjust = 0.5),size=10, family="economica")  +
   ggtitle(paste("Body length, N = ",length(unique(all_lht[all_lht$life_history_traits == "length_cm",]$species))," species",sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
@@ -65,14 +66,14 @@ dev.off()
 
 # PANNEL C
 
-pC = ggplot(dt_db[dt_db$weight_kg != 0,], aes(x = "", y = weight_kg/sum(dt_db$weight_kg), fill = db)) +
+pC = ggplot(dt_db[dt_db$mass_kg != 0,], aes(x = "", y = mass_kg/sum(dt_db$mass_kg), fill = db)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar("y", start = 0) +
   theme_void() +  # Remove unnecessary background elements
   scale_fill_manual("source",values = fill_set) +  # Use the custom color palette
-  # geom_text(aes(label = paste0(round(weight_kg), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  geom_text(aes(label = ifelse(weight_kg >= 10, paste0(round(weight_kg), ""), NA_character_)), position = position_stack(vjust = 0.5),size=10, family="economica")  +
-  ggtitle(paste("Body mass, N = ",length(unique(all_lht[all_lht$life_history_traits == "weight_kg",]$species))," species",sep=""))+
+  # geom_text(aes(label = paste0(round(mass_kg), "")), position = position_stack(vjust = 0.5),size=10, family="economica")  +
+  geom_text(aes(label = ifelse(mass_kg >= 45, paste0(round(mass_kg), ""), NA_character_)) , position = position_stack(vjust = 0.5),size=10, family="economica")  +
+  ggtitle(paste("Body mass, N = ",length(unique(all_lht[all_lht$life_history_traits == "mass_kg",]$species))," species",sep=""))+
   theme(
     title =  element_text(color="black", size=31, family="economica"),
     legend.text =  element_text(color="black", size=30, family="economica",vjust = 1.5,margin = margin(t = 10))

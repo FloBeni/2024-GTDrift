@@ -36,7 +36,6 @@ label_color = paste(names(Clade_color)," N=",table(data1$clade_group)[names(Clad
 names(label_color) = names(Clade_color)
 label_color["branch"] =  ""
 
-
 pA = ggtree(tree, layout="ellipse",size=0.2)  
 pA <- pA %<+% node_metadata  + aes(color=color) + 
   scale_color_manual("Clades",values=Clade_color[unique(edge_clade)]

@@ -152,6 +152,7 @@ data = data.frame(species = original_tree$tip.label,
 )
 data$dNdS = data$dN / data$dS
 
+data = data[order(data$species),]
 write.table(data , paste("database/dNdS/per_clade.tab",sep=""),quote=F,row.names = F,sep="\t") # Save summary table.
 
 
