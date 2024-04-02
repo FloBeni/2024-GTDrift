@@ -38,10 +38,10 @@ pA = ggplot(data1[data1$clade!="Embryophyta",] , aes_string(x=xlabel,y=ylabel,fi
     caption = substitute(paste(model,lambda," :",aic," R"^2,"= ",r2,", p-value ",pvalue,model_non_opti,
                                "; LM"," : R"^2,"= ",LMr2,", p-value = ",LMpval), model_to_use),
     title = paste("N = ",nrow(dt_graph)," species",sep="")
-  ) + scale_shape_manual(expression(paste(italic("N"[e])," estimates")),values=c(24,21)) +
+  ) +
   scale_y_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^5,10^6,10^7),labels=label_log(digits = 2),limits=c(10000,10000000)) +
   scale_x_log10(breaks=c(0.05,0.1,0.5,1,5,10,100,1000,10000),labels=c(0.05,0.1,0.5,1,5,10,100,1000,10000),limit=c(10,100000)) + xlab("Longevity (days, log scale)")+ 
-  ylab(expression(paste(italic("N"[e])))) + annotation_logticks(sides = "lb")  +
+  ylab(expression(paste("Polymorphism-derived ",italic("N"[e])))) + annotation_logticks(sides = "lb")  +
   guides(fill = guide_legend(byrow = TRUE,override.aes = list(size=5,pch=21)),
          shape = guide_legend(byrow = TRUE,override.aes = list(fill="black")))  +
   theme(legend.spacing.y = unit(.3, 'cm')) 
@@ -80,7 +80,7 @@ pB = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
   ) + scale_shape_manual(values=c(21,23,24)) +
   scale_y_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^5,10^6,10^7),labels=label_log(digits = 2),limits=c(10000,10000000)) +
   scale_x_log10(breaks=c(10^-12,10^-9,10^-6,10^-3,10^0,10^3,10^6,10^9),labels=label_log(digits = 2),limits = c(0.0000000001,1000000))  + xlab("Body mass (kg, log scale)")+
-  ylab(expression(paste(italic("N"[e]))))+  theme(legend.position="none")+ annotation_logticks(sides = "lb") 
+  ylab(expression(paste("Polymorphism-derived ",italic("N"[e]))))+  theme(legend.position="none")+ annotation_logticks(sides = "lb") 
 pB
 
 jpeg(paste(path_pannel,"F7pB.jpg",sep=""),width = 4800/resolution, height = 4000/resolution,res=700/resolution)
@@ -117,7 +117,7 @@ pC = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )  + scale_shape_manual(values=c(21,23,24)) +
   scale_x_log10(breaks=c(0.01,0.1,1,10,100,1000),labels=c(0.01,0.1,1,10,100,1000)) + xlab("Body length (cm, log scale)") +
-  ylab(expression(paste(italic("N"[e]))))+  annotation_logticks(sides = "lb") + 
+  ylab(expression(paste("Polymorphism-derived ",italic("N"[e]))))+  annotation_logticks(sides = "lb") + 
   scale_y_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^5,10^6,10^7),labels=label_log(digits = 2),limits=c(10000,50000000)) +  theme(legend.position="none")
 pC
 
@@ -155,7 +155,7 @@ pD = ggplot(dt_graph , aes_string(x=xlabel,y=ylabel,fill="clade_group")) +
     title = paste("N = ",nrow(dt_graph)," species",sep="")
   )  + scale_shape_manual(values=c(21,23,24)) +
   scale_x_log10() + 
-  ylab(expression(paste(italic("N"[e]))))+ xlab("Terminal branches dN/dS per clade set") + annotation_logticks(sides = "lb") +   
+  ylab(expression(paste("Polymorphism-derived ",italic("N"[e]))))+ xlab("Terminal branches dN/dS per clade set") + annotation_logticks(sides = "lb") +   
   scale_y_log10(breaks=c(10^-6,10^-4,10^-2,10^0,10^2,10^4,10^5,10^6,10^7),labels=label_log(digits = 2),limits=c(10000,50000000)) + theme(legend.position="none")
 pD
 
