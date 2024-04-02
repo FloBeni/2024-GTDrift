@@ -56,11 +56,11 @@ for (file in list.files(paste("database/dNdS",sep=""),recursive = F,full.names =
 species_clade$dnds_data = species_clade$species %in% dnds_data$species
 
 # Identify which species has life history traits data in the database.
-lht_tab = read.delim("database/life_history_traits_Ne.tab")
+lht_tab = read.delim("database/life_history_traits_and_polymorphism_derived_Ne.tab")
 species_clade$lht_data = species_clade$species %in% lht_tab[!is.na(lht_tab$lifespan_days) | 
                                                              !is.na(lht_tab$length_cm) |
                                                              !is.na(lht_tab$mass_kg),]$species
-species_clade$Ne_data = species_clade$species %in% lht_tab[!is.na(lht_tab$Ne),]$species
+species_clade$Ne_data = species_clade$species %in% lht_tab[!is.na(lht_tab$polymorphism_derived_Ne),]$species
 
 # Quantify the number of RNA-seq used in the study.
 species_clade$nb_rnaseq = NA

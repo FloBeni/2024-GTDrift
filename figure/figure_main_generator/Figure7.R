@@ -12,7 +12,7 @@ data1 = merge.data.frame(x=data1,y=per_clade_dnds,by= "species",all=T,suffixes =
 
 # PANNEL A
 dt_graph = data1
-ylabel = "Ne"
+ylabel = "polymorphism_derived_Ne"
 xlabel = "max_lifespan_days"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,] 
@@ -53,7 +53,7 @@ dev.off()
 
 # PANNEL B
 dt_graph = data1
-ylabel = "Ne"
+ylabel = "polymorphism_derived_Ne"
 xlabel = "max_mass_kg"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,] 
@@ -90,7 +90,7 @@ dev.off()
 
 # PANNEL C
 dt_graph = data1
-ylabel = "Ne"
+ylabel = "polymorphism_derived_Ne"
 xlabel = "max_length_cm"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,] 
@@ -128,7 +128,7 @@ dev.off()
 
 # PANNEL D
 dt_graph = data1
-ylabel = "Ne"
+ylabel = "polymorphism_derived_Ne"
 xlabel = "dNdS"
 arbrePhylotips = read.tree( "data/dnds_phylo/per_clade/merged_clades_tree_root.nwk")
 dt_graph = dt_graph[!is.na(dt_graph[,xlabel]) & !is.na(dt_graph[,ylabel]) & dt_graph$species %in% arbrePhylotips$tip.label,] 

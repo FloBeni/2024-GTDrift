@@ -59,16 +59,16 @@ for (file in c(
 
 data_lifehistory_traits = merge.data.frame(x=species_clade,y=data_lifehistory_traits, by = "species" ,all=T)
 
-supp_lynch_2023 = read.delim(paste("data/supp_lynch_2023.tab",sep="")) # Download all life history traits.
+supp_lynch_2023 = read.delim(paste("data/supp_lynch_2023.tab",sep=""),comment="#") # Download all life history traits.
 rownames(supp_lynch_2023) = supp_lynch_2023$Species
 
-data_lifehistory_traits$Ne = supp_lynch_2023[data_lifehistory_traits$species,]$Ne
+data_lifehistory_traits$polymorphism_derived_Ne = supp_lynch_2023[data_lifehistory_traits$species,]$Ne
 
 data_lifehistory_traits = data_lifehistory_traits[!is.na(data_lifehistory_traits$lifespan_days) | 
                                                     !is.na(data_lifehistory_traits$length_cm) |
                                                     !is.na(data_lifehistory_traits$mass_kg) |
-                                                    !is.na(data_lifehistory_traits$Ne),]
+                                                    !is.na(data_lifehistory_traits$polymorphism_derived_Ne),]
 
 data_lifehistory_traits = data_lifehistory_traits[order(data_lifehistory_traits$species),]
-write.table(data_lifehistory_traits , paste("database/life_history_traits_Ne.tab",sep=""), quote=F , row.names = F,sep="\t") # Save the table.
+write.table(data_lifehistory_traits , paste("database/life_history_traits_and_polymorphism_derived_Ne.tab",sep=""), quote=F , row.names = F,sep="\t") # Save the table.
 

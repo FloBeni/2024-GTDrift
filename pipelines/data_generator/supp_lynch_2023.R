@@ -20,6 +20,7 @@ colnames(embr202357561) = c("Species","Base-substitution Mutation rate","v1","Si
 
 embr202357561 = embr202357561[,-c(3,6)]
 
+# Add data for C.nigoni
 embr202357561[nrow(embr202357561)+1,] = c("Caenorhabditis nigoni",
                                                 1.3e-9,
                                                 0.06,

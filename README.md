@@ -2,8 +2,7 @@
 
 This archive includes all processed data that have been generated and used in the database paper 'GTDrift: A resource for exploring the interplay between genetic drift, genomic and transcriptomic characteristics in eukaryotes', as well as the scripts used to analyze the data and to generate the figures.
 
-Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. 
-Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5558, Villeurbanne, France.
+Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5558, Villeurbanne, France.
 
 ### Directories content
 
@@ -27,7 +26,7 @@ Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5
 
         -   In the subdirectories 'phylogeny' are stored the outputs of the pipeline, the alignment used to inferred the phylogeny, the RAxML-NG log and the phylogenetic trees.
 
-        -   In the subdirectories 'dnds' are stored the output of the pipeline, the alignment on which was estimated the dN/dS.
+        -   In the subdirectories 'dnds' are stored the output of the pipeline, the alignments on which was estimated the dN/dS.
 
     -   The directory labeled 'life_history_traits' contains all analyses pertaining to the collect of life history traits body length, body weight and longevity of each species.
 
@@ -39,11 +38,11 @@ Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5
 
         -   The subdirectory 'screen_db' contains all the script to reproduce and collect the life history traits by a screening approach.
 
-    -   'Data1_supp.tab' encompasses per species data on life history traits, number of identified genes among the eukaryota BUSCO gene set, and the number of genes that have been associated to one annotated protein-coding gene only (Fig. 1,2,3,5,6,7,8).
+    -   'data1.tab' encompasses per species data on life history traits, number of identified genes among the eukaryota BUSCO gene set, and the number of genes that have been associated to one annotated protein-coding gene only (Fig. 1,2,3,5,6,7,8).
 
-    -   'Data2_supp.tab' contains for each species the sequencing depth and the proportion of annotated introns regarding their category (Fig. 9).
+    -   'data2.tab' contains for each species the sequencing depth and the proportion of annotated introns regarding their category (Fig. 9).
 
-    -   'Data3_supp.tab' analysis of the coverage impacting the proportion of analyzable annotated introns in *Drosophila melanogaster* (Fig. 9).
+    -   'data3.tab' analysis of the coverage impacting the proportion of analyzable annotated introns in *Drosophila melanogaster* (Fig. 9).
 
 -   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10529523.svg)](https://doi.org/10.5281/zenodo.10529523) that can be download with the script 'upload_database.sh'. A description of the files that it contains is available on the archive.
 
@@ -59,7 +58,7 @@ Laboratoire de Biométrie et Biologie Évolutive, Université Lyon 1, UMR CNRS 5
 
 ### 
 
-Some packages that you may encounter in these R scripts should be install: - stringr - kableExtra - cowplot - ggplot2 - imager - RColorBrewer ...
+Some packages that you may encounter in these R scripts should be install: - stringr - kableExtra - cowplot - ggplot2 - imager - RColorBrewer *etc.*
 
 ### 
 

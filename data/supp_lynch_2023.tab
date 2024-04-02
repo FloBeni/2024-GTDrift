@@ -1,3 +1,4 @@
+# Extracted from Lynch et al. (2023) (DOI embr.202357561)
 Species	Base-substitution Mutation rate	Silent-site diversity	Ne	ref mutation rate	ref silent-site Diversity
 Acanthaster_cf.	0.00000000913	NA	125000	Popovic et al. (2023)	NA
 Acyrthosiphon_pisum	0.00000000027	0.00425	3951981.10488093	Fazalova and Nevado (2020)	Fazalova and Nevado (2020)
