@@ -1,3 +1,20 @@
+#species: Scientific name of the species.
+#NCBI.taxid: taxID from the NCBI.
+#assembly_accession: Assembly accession used.
+#clade: Clade corresponding to the species, it can be the class for vertebrates or the order for insects.
+#clade_group: Clade corresponding to the species, mostly the rank.
+#expression_data: Does the species have transcriptomic data.
+#dnds_data: Does the species have molecular rate (dN/dS) data.
+#lht_data: Does the species have life history traits.
+#Ne_data: Does the species have polymorphism-derived Ne estimate.
+#nb_rnaseq: Number of RNA-seq studied.
+#entire_taxonomy: Concatenation of the NCBI taxonomy, collected from the R package taxize.
+#max_lifespan_days: Maximum value found for life history trait longevity (days).
+#max_length_cm: Maximum value found for life history trait body length (cm).
+#max_mass_kg: Maximum value found for life history trait body mass (kg).
+#polymorphism_derived_Ne: Polymorphism-derived Ne estimates.
+#nb_busco_gene_eukaryota: Number of BUSCO gene from eukaryota gene set identified.
+#nb_busco_gene_unique_eukaryota: Number of BUSCO gene from eukaryota gene set identified to only one protein-coding genes.
 species	NCBI.taxid	assembly_accession	clade	clade_group	expression_data	dnds_data	lht_data	Ne_data	nb_rnaseq	entire_taxonomy	max_lifespan_days	max_length_cm	max_mass_kg	polymorphism_derived_Ne	nb_busco_gene_eukaryota	nb_busco_gene_unique_eukaryota
 Abrus_precatorius	3816	GCF_003935025.1	Embryophyta	Embryophyta	TRUE	TRUE	FALSE	FALSE	6	no rank:cellular organisms;superkingdom:Eukaryota;kingdom:Viridiplantae;phylum:Streptophyta;subphylum:Streptophytina;clade:Embryophyta;clade:Tracheophyta;clade:Euphyllophyta;clade:Spermatophyta;class:Magnoliopsida;clade:Mesangiospermae;clade:eudicotyledons;clade:Gunneridae;clade:Pentapetalae;clade:rosids;clade:fabids;order:Fabales;family:Fabaceae;subfamily:Papilionoideae;clade:50 kb inversion clade;clade:NPAAA clade;clade:indigoferoid/millettioid clade;tribe:Abreae;genus:Abrus;species:Abrus precatorius	NA	NA	NA	NA	301	248
 Acanthaster_planci	133434	GCF_001949145.1	Echinodermata	Other Metazoans	FALSE	TRUE	TRUE	FALSE	0	no rank:cellular organisms;superkingdom:Eukaryota;clade:Opisthokonta;kingdom:Metazoa;clade:Eumetazoa;clade:Bilateria;clade:Deuterostomia;phylum:Echinodermata;clade:Eleutherozoa;superclass:Asterozoa;class:Asteroidea;superorder:Valvatacea;order:Valvatida;family:Acanthasteridae;genus:Acanthaster;species:Acanthaster planci	6205	70	NA	NA	302	301
