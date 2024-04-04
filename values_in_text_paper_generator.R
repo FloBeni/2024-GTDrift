@@ -9,8 +9,6 @@ paste(" mass for a set of ",sum(list_species$lht_data)," species",sep="")
 
 paste(" in protein-coding sequences for ",sum(list_species$dnds_data)," species.",sep="")
 
-paste("estimates for ",sum(list_species$Ne_data)," species.",sep="")
-
 paste(" for more than ",sum(list_species$nb_rnaseq)," RNA-seq samples across ",sum(list_species$expression_data)," species",sep="")
 
 
@@ -25,9 +23,6 @@ paste(" with ",sum(list_species$clade_group == "Embryophyta")," green plant spec
 
 
 # Methods
-# Figure 1
-
-paste("Not all species studied are present (N=",length(read.tree("data/dnds_phylo/timetree.nwk")$tip.label),")",sep="")
 
 # Species selection
 
@@ -37,7 +32,7 @@ paste("This collection encompasses ",sum(list_species$clade_group != "Embryophyt
 
 # Collecting life history traits
 
-paste("the acquisition of life history traits for ",sum(list_species$lht_data)," metazoan species.",sep="")
+paste("life history traits for a total of ",sum(list_species$lht_data)," metazoan species.",sep="")
 
 
 # Phylogenetic tree reconstruction
