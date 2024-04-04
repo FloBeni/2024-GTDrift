@@ -114,6 +114,7 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = lht_auto_df[order(lht_auto_df$value_used,decreasing = T),]
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$V1)) & lht_auto_df$V1 %in% unique(lht_auto_df[lht_auto_df$V2 == lht,]$V1),] # ne prendre reproduction section que si lifespan section existe
   lht_auto_df$category = lht
+  if (lht == "weight"){lht_auto_df$category = "mass"}
   
   ml_data = rbind(ml_data,lht_auto_df)
   

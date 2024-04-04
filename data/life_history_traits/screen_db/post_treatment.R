@@ -6,7 +6,7 @@ real = data.frame()
 screen_data = data.frame()
 for (lht in c("weight","lifespan","length")){print(lht)
   # for (lht in c("length")){print(lht)
-  lht_auto_df = read.csv(paste("data/life_history_traits/screen_db/",lht,".tab",sep=""),header = F,sep="\n",quote="")
+  lht_auto_df = read.csv(paste("data/life_history_traits/screen_db/pipeline/",lht,".tab",sep=""),header = F,sep="\n",quote="")
   
   lht_auto_df$V1 = str_replace_all(lht_auto_df$V1,",","")
   
@@ -123,6 +123,7 @@ for (lht in c("weight","lifespan","length")){print(lht)
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species,lht_auto_df$db)),]
   
   lht_auto_df$category = lht
+  if (lht == "weight"){lht_auto_df$category = "mass"}
   screen_data = rbind(screen_data,lht_auto_df)
   
   lht_auto_df = lht_auto_df[!duplicated(paste(lht_auto_df$species)),]
