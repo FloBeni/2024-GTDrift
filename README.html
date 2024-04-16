@@ -364,6 +364,9 @@ CNRS 5558, Villeurbanne, France.</p>
 <div id="directories-content" class="section level3">
 <h3>Directories content</h3>
 <ul>
+<li><p>The ‘database’ directory is deposited on the zenodo archive <a href="https://doi.org/10.5281/zenodo.10529523"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICAgd2lkdGg9IjE5MC44NTkzNzUiIGhlaWdodD0iMjAiPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPG1hc2sgaWQ9ImEiIHdpZHRoPSIxOTAuODU5Mzc1IiBoZWlnaHQ9IjIwIj4KICAgICAgICAgICAgPHJlY3Qgd2lkdGg9IjE5MC44NTkzNzUiIGhlaWdodD0iMjAiIHJ4PSIzIgogICAgICAgICAgICBmaWxsPSIjZmZmIi8+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDxnIG1hc2s9InVybCgjYSkiPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDMxLjM3NXYyMEgweiIgLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iIzAwN2VjNiIKICAgICAgICAgICAgZD0iTTMxLjM3NSAwaDE1OS40ODQzNzV2MjBIMzEuMzc1eiIKICAgICAgICAgICAgLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTAuODU5Mzc1djIwSDB6IiAvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsCiAgICAgICAgVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSI+CiAgICAgICAgICAgIDx0ZXh0IHg9IjE2LjE4NzUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIgogICAgICAgICAgICBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgICAgICAgICAgIERPSQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjE2LjE4NzUiIHk9IjE0Ij4KICAgICAgICAgICAgICAgIERPSQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjExMC42MTcxODc1IgogICAgICAgICAgICB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgICAgICAgICAgICAxMC41MjgxL3plbm9kby4xMDUyOTUyMwogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjExMC42MTcxODc1IiB5PSIxNCI+CiAgICAgICAgICAgICAgICAxMC41MjgxL3plbm9kby4xMDUyOTUyMwogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgPC9nPgogICAgPC9zdmc+" alt="DOI" /></a> that can be downloaded with the script
+‘upload_database.sh’. A description of the files that it contains is
+available on the respective archive.</p></li>
 <li><p>The folder ‘figure’ contains the necessary materials to produce
 the figures of the manuscript:</p>
 <ul>
@@ -390,30 +393,30 @@ encompass a broader spectrum of our species, a fourth methodology was
 employed named ‘per clade’, involving the division of clades within the
 metazoa taxon (see paper for methods).</p>
 <ul>
-<li><p>The ‘readme’ file contains characteristics about the
+<li><p>The ‘readme’ files contain characteristics about the
 analysis.</p></li>
 <li><p>A ‘species_list.tab’ table contains the set of species on which
 was done the analysis.</p></li>
 <li><p>In the subdirectories ‘phylogeny’ are stored the outputs of the
-pipeline, the alignment used to inferred the phylogeny, the RAxML-NG log
-and the phylogenetic trees.</p></li>
+pipeline, the alignments used to inferred the phylogeny, the RAxML-NG
+log and the phylogenetic trees.</p></li>
 <li><p>In the subdirectories ‘dnds’ are stored the output of the
-pipeline, the alignments on which was estimated the dN/dS.</p></li>
+pipeline, the alignments on which was estimated the dN/dS <em>per</em>
+concatenate.</p></li>
 </ul></li>
 <li><p>The directory labeled ‘life_history_traits’ contains all analyses
-pertaining to the collect of life history traits body length, body
-weight and longevity of each species.</p>
+pertaining to the collect of life history traits body length, body mass
+and longevity of each species.</p>
 <ul>
 <li><p>Two excel files, (metazoa.xls and embyophyta.xls) contain the
 life history traits extracted manually. The ‘embryophyta.xls’ file,
 while devoid of data pertaining to life history traits, serves a
 critical purpose in another script, where it is utilized to compile
 species and clade lists.</p></li>
-<li><p>A pdf file ‘other_references.pdf’ contains sources and
-information regarding the lifespan and longevity of the species
-studied.</p></li>
+<li><p>A pdf file ‘lht_references.pdf’ contains sources regarding the
+life history trait values collected from articles.</p></li>
 <li><p>The subdirectory ‘ADW_ML’ contains all the script to reproduce
-and collect the life history traits by a Machin Learning
+and collect the life history traits by a Machine Learning
 approach.</p></li>
 <li><p>The subdirectory ‘screen_db’ contains all the script to reproduce
 and collect the life history traits by a screening approach.</p></li>
@@ -428,10 +431,13 @@ the proportion of annotated introns regarding their category (Fig.
 <li><p>‘data3.tab’ analysis of the coverage impacting the proportion of
 analyzable annotated introns in <em>Drosophila melanogaster</em> (Fig.
 9).</p></li>
+<li><p>‘supp_lynch_2023.tab’ represents the data from the paper of Lynch
+et al. (2023) (DOI embr.202357561) pertaining to polymorphism-derived
+Ne.</p></li>
+<li><p>‘taxonomy.tab’ is a compilation of all the species’ taxonomy
+collected with the R package taxize using the taxID from the
+NCBI.</p></li>
 </ul></li>
-<li><p>The ‘database’ directory is deposited on the zenodo archive <a href="https://doi.org/10.5281/zenodo.10529523"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICAgd2lkdGg9IjE5MC44NTkzNzUiIGhlaWdodD0iMjAiPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPG1hc2sgaWQ9ImEiIHdpZHRoPSIxOTAuODU5Mzc1IiBoZWlnaHQ9IjIwIj4KICAgICAgICAgICAgPHJlY3Qgd2lkdGg9IjE5MC44NTkzNzUiIGhlaWdodD0iMjAiIHJ4PSIzIgogICAgICAgICAgICBmaWxsPSIjZmZmIi8+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDxnIG1hc2s9InVybCgjYSkiPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDMxLjM3NXYyMEgweiIgLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iIzAwN2VjNiIKICAgICAgICAgICAgZD0iTTMxLjM3NSAwaDE1OS40ODQzNzV2MjBIMzEuMzc1eiIKICAgICAgICAgICAgLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTAuODU5Mzc1djIwSDB6IiAvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsCiAgICAgICAgVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSI+CiAgICAgICAgICAgIDx0ZXh0IHg9IjE2LjE4NzUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIgogICAgICAgICAgICBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgICAgICAgICAgIERPSQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjE2LjE4NzUiIHk9IjE0Ij4KICAgICAgICAgICAgICAgIERPSQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjExMC42MTcxODc1IgogICAgICAgICAgICB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgICAgICAgICAgICAxMC41MjgxL3plbm9kby4xMDUyOTUyMwogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjExMC42MTcxODc1IiB5PSIxNCI+CiAgICAgICAgICAgICAgICAxMC41MjgxL3plbm9kby4xMDUyOTUyMwogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgPC9nPgogICAgPC9zdmc+" alt="DOI" /></a> that can be download with the script
-‘upload_database.sh’. A description of the files that it contains is
-available on the archive.</p></li>
 <li><p>The ‘pipelines’ folder contains the bionformatics pipelines for
 different purposes.</p>
 <ul>

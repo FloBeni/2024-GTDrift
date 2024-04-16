@@ -34,7 +34,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
         -   Two excel files, (metazoa.xls and embyophyta.xls) contain the life history traits extracted manually. The 'embryophyta.xls' file, while devoid of data pertaining to life history traits, serves a critical purpose in another script, where it is utilized to compile species and clade lists.
 
-        -   A pdf file 'other_references.pdf' contains sources and information regarding the lifespan and longevity of the species studied.
+        -   A pdf file 'lht_references.pdf' contains sources regarding the life history trait values collected from articles.
 
         -   The subdirectory 'ADW_ML' contains all the script to reproduce and collect the life history traits by a Machine Learning approach.
 
