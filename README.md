@@ -26,7 +26,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
         -   A 'species_list.tab' table contains the set of species on which was done the analysis.
 
-        -   In the subdirectories 'phylogeny' are stored the outputs of the pipeline, the alignments used to inferred the phylogeny, the RAxML-NG log and the phylogenetic trees.
+        -   In the subdirectories 'phylogeny' are stored the outputs of the pipeline, the alignments used to infer the phylogeny, the RAxML-NG log and the phylogenetic trees.
 
         -   In the subdirectories 'dnds' are stored the output of the pipeline, the alignments on which was estimated the dN/dS *per* concatenate.
 
@@ -47,6 +47,10 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
     -   'data3.tab' analysis of the coverage impacting the proportion of analyzable annotated introns in *Drosophila melanogaster* (Fig. 9).
     
     -   'supp_lynch_2023.tab' represents the data from the paper of Lynch et al. (2023) (DOI embr.202357561) pertaining to polymorphism-derived Ne.
+    
+    -   'supp_table1.tab' supplementary data table shared along with the article presenting the list of species.
+    
+    -   'supp_table2.tab' supplementary data table shared along with the article presenting the RNA-seq samples used in the study.
     
     -   'taxonomy.tab' is a compilation of all the species' taxonomy collected with the R package taxize using the taxID from the NCBI.
 

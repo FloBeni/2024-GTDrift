@@ -86,9 +86,9 @@ library(ape)
               " sites, metazoa N=",as.numeric(dt["metazoa_odb9",]$length_raxml_concat)/1000,
               " sites).",sep=""))
   
-  print(paste("We used as a basis for the analysis ",round(as.numeric(dt["metazoa_odb9",]$nb_genes_at_least_85percent_species)/10),
-              " metazoan BUSCO genes that are the most frequently annotated among the ",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species,
-              " already preselected in the metazoa analysis.",sep=""))
+  print(paste("We ranked the ",dt["metazoa_odb9",]$nb_genes_at_least_85percent_species,
+              " metazoan BUSCO genes in decreasing order of the number of species in which they were annotated. We then selected as a basis for the analyses the ",round(as.numeric(dt["metazoa_odb9",]$nb_genes_at_least_85percent_species)/10),
+              " genes at the top of this list",sep=""))
   
   
   # dN/dS computation
