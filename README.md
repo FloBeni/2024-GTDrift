@@ -62,7 +62,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
     -   To generate data table located in the 'data' directory ('data_generator').
 
-    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10529523.svg)](https://doi.org/10.5281/zenodo.10529523) ('building_from_source' and 'building_db');
+    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10908656.svg)](https://doi.org/10.5281/zenodo.10908656) ('building_from_source' and 'building_db');
 
 ### 
 
