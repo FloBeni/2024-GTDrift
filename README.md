@@ -6,7 +6,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
 ### Directories content
 
--   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10529523.svg)](https://doi.org/10.5281/zenodo.10529523) that can be downloaded with the script 'upload_database.sh'. A description of the files that it contains is available on the respective archive.
+-   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10908656.svg)](https://doi.org/10.5281/zenodo.10908656) that can be downloaded with the script 'upload_database.sh'. A description of the files that it contains is available on the respective archive.
 
 -   The folder 'figure' contains the necessary materials to produce the figures of the manuscript:
 
