@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/685027688.svg)](https://zenodo.org/doi/10.5281/zenodo.10022493)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10022493.svg)](https://doi.org/10.5281/zenodo.10022493)
 
 This archive includes all processed data that have been generated and used in the database paper 'GTDrift: A resource for exploring the interplay between genetic drift, genomic and transcriptomic characteristics in eukaryotes', as well as the scripts used to analyze the data and to generate the figures.
 
