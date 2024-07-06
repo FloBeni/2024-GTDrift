@@ -6,7 +6,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
 ### Directories content
 
--   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10908656.svg)](https://doi.org/10.5281/zenodo.10908656) that can be downloaded with the script 'upload_database.sh'. A description of the files that it contains is available on the respective archive.
+-   The 'database' directory is deposited on the zenodo archive [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10017653.svg)](https://doi.org/10.5281/zenodo.10017653) that can be downloaded with the script 'upload_database.sh'. A description of the files that it contains is available on the respective archive.
 
 -   The folder 'figure' contains the necessary materials to produce the figures of the manuscript:
 
@@ -62,7 +62,7 @@ Developed by Florian Bénitière, Laurent Duret and Anamaria Necsulea. Laboratoi
 
     -   To generate data table located in the 'data' directory ('data_generator').
 
-    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10908656.svg)](https://doi.org/10.5281/zenodo.10908656) ('building_from_source' and 'building_db');
+    -   To generate data table located in the 'data' directory or to produce the 'database' located at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10017653.svg)](https://doi.org/10.5281/zenodo.10017653) ('building_from_source' and 'building_db');
 
 ### 
 
